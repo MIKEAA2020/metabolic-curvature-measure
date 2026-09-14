@@ -143,39 +143,37 @@
 \small
 \textbf{Abstract.} We develop the categorical and
 homotopy-theoretic framework for viability-weighted curvature: the
-geometric object that measures how non-commuting sequences of
-individually manageable environmental changes accumulate into a
-viability threat through the policy holonomy they induce. The
-framework has four layers. (i)~The SAVGS object assembles a control
-base, a policy bundle with Fisher--Rao geometry, a viability margin,
-a maintenance graph, and a $2$-categorical boundary span into a
-single stratified $G_C$-reduced bundle. (ii)~The $2$-category
-$\mathbf{StCon}(B)$ of stratified $G_C$-connections carries a
-lax-functorial gluing theorem and a piecewise holonomy formula; we
-state the small-loop expansion for closed loops that cross a
-constraint-switching wall transversally in \emph{pairs}, with the
-boundary-reset contribution at its true order, in agreement with the
-machine-verified numerics. On constant-active-set strata the
-Fisher-minimal transport law defines the connection in closed form
-(KKT projection), and the small-loop viability--holonomy theorem
-bounds endpoint erosion of a viability margin by the
-viability-weighted curvature, the worst-case positive-part
-contraction of the curvature $2$-form with the active survival
-covectors. (iii)~A single composition theorem types seven
-heterogeneous domain bridges as optics, realizes the composed update
-on a complete metric state space, and establishes, for an explicit
+geometric object measuring how non-commuting sequences of
+individually manageable changes accumulate into a viability threat
+through the policy holonomy they induce.
+(i)~The SAVGS object assembles a control base, a Fisher--Rao
+policy bundle, a viability margin, a maintenance graph, and a
+$2$-categorical boundary span into one stratified $G_C$-reduced
+bundle. (ii)~The $2$-category $\mathbf{StCon}(B)$ of stratified
+$G_C$-connections carries a lax-functorial gluing theorem, a
+piecewise-holonomy formula, and the small-loop expansion for closed
+loops crossing a constraint-switching wall transversally in
+\emph{pairs}, with the boundary-reset contribution at its true
+order; on constant-active-set strata the Fisher-minimal transport
+law (KKT projection) defines the connection, and the small-loop
+viability--holonomy theorem bounds endpoint erosion of a viability
+margin by the viability-weighted curvature, its worst-case
+positive-part contraction with the active survival covectors.
+(iii)~A single composition theorem types seven heterogeneous
+domain bridges as optics and establishes, for an explicit
 seven-map instantiation, a per-optic Lipschitz product bound and a
 Banach contraction of the Krasnoselskii--Mann-averaged update; the
-projected CPTP channel contraction settles the Zeno self-reference
-resolution.
-(iv)~The filtered-colimit construction of RAF sets is proved at the
-Set level with an adapter-level optic statement, and verified at
-scale; and the $\infty$-categorical extension via homotopy type
-theory is developed with its proof-sketch status explicitly marked.
-An application of this framework to metabolic flux rerouting --- the
-atomic curvature measure of parametric flux balance analysis and its
-genome-scale empirical validation --- appears in a companion
-application paper.
+projected CPTP contraction settles the Zeno self-reference.
+(iv)~The filtered-colimit construction of RAF sets is proved at Set
+level with an adapter-level optic statement and verified at scale;
+the $\infty$-categorical extension is developed in homotopy type
+theory with proof-sketch status marked. The validation battery is
+medium-robust: correcting the carbon source and limiting oxygen
+leave the genome-scale essentiality labels invariant and the
+association intact, with re-stratification only at the anaerobic
+regime switch. The companion application paper develops the atomic
+curvature measure of parametric flux balance analysis and its
+genome-scale validation.
 \par
 \vspace{0.4em}
 \emph{Status: standalone theory paper; the application paper
@@ -4984,6 +4982,90 @@ every association strengthens without a single essentiality label
 changing, and why the cross-rebuild sign flip reverses: the
 trehalose fluxes enter the iML1515 knockout solutions differently
 than the iJO1366 ones, contaminating the rank comparison itself.
+\end{remark}
+
+\begin{proposition}[Second perturbation probe: oxygen-limited medium]
+\label{prop:keio-o2-limited}
+Tightening the oxygen exchange --- the electron-acceptor axis, with
+the glucose-only medium otherwise unchanged, the protocol identical,
+and labels declared at $5\%$ of each level's own wild type --- gives
+a dose response $\mathrm{EX\_o2\_e}\in\{-10,-5,-2.5\}$ on iJO1366
+and $\{-5,0\}$ on iML1515. Wild-type optima fall from $0.982$ to
+$0.711$, $0.491$, $0.367$ (iJO1366; acetate--formate overflow at
+$-10$, ethanol--formate--acetate fermentation at $-5$ and $-2.5$)
+and from $0.822$ to $0.353$ and $0.134$ (iML1515), yet the
+essentiality sets are unchanged at every non-anaerobic level:
+$289/1{,}367$ at each of $-10$, $-5$, $-2.5$ and $286/1{,}516$ at
+$-5$ --- zero label changes, Cohen's $\kappa=1.000$ throughout ---
+and the label-based strata (model gaps $30$ and $13$; iJO1366
+medium-mismatch $180$) are correspondingly unchanged. The
+association degrades only gracefully: transitive calibration
+$r(\log\kappa^{\mathrm{flux}}_V,\Delta b)=+0.775$ at $-10$ ---
+\emph{above} the unlimited-oxygen value $+0.603$, with held-out ROC
+AUC $0.9999$, MCC $0.993$, P@$200=1.0$ --- then $+0.607$ at $-5$
+and $+0.519$ at $-2.5$ (bootstrap CIs $[0.584,0.628]$ and
+$[0.496,0.542]$; AUCs $0.980$ and $0.971$); on iML1515 at $-5$,
+$r=+0.559$ (AUC $0.994$). Direct-arm AUC is stable across the
+gradient ($0.732$, $0.744$, $0.726$ on iJO1366; $0.818$ on iML1515,
+against $0.813$ unlimited) while the direct Pearson decays from
+$+0.264$ to $+0.162$ as limitation deepens --- the rank metric is
+the robust one, the point-biserial tail the sensitive one. At the
+anaerobic endpoint the two reconstructions diverge. iJO1366's
+wild-type optimum is exactly zero: de novo ubiquinone-chain
+synthesis requires the oxygen-dependent hydroxylase step
+($2$-octaprenylphenol $\to$ $2$-octaprenyl-6-hydroxyphenol, OPHHX)
+and pyridoxal-$5'$-phosphate biosynthesis the oxygen-dependent step
+(PDX5POi), neither with an anaerobic alternative in this
+reconstruction (the second hydroxylase step does have one), so the
+biomass reaction is infeasible at positive rate and the
+$5\%$-relative threshold degenerates --- an oxygen trace of
+$0.01$~mmol/gDW/h restores $0.231$; this is reported as a
+model-level degeneracy of the label construction, not a label
+change. iML1515, which carries the oxygen-free route for the
+blocking step and grows anaerobically ($0.134$), provides the
+non-degenerate endpoint: $286\to291$ labels, six gains
+(\emph{eno}, \emph{pgk}, \emph{gapA}, \emph{gpmA}, \emph{gpmM},
+\emph{hemN}) and one loss (\emph{fabZ}), $\kappa=0.985$, Jaccard
+$0.976$, five of the seven flips in glycolysis/gluconeogenesis (a
+thirty-fold enrichment over the genome share); the transitive
+calibration falls to $r=+0.260$ (AUC $0.672$), the direct arm to
+$r=+0.118$ (AUC $0.673$), and the model-gap set is unchanged at
+$13$.
+\end{proposition}
+
+\begin{remark}[What the second axis adds to the invariance claim]
+\label{rem:keio-o2-invariance}
+The carbon-source correction
+(Proposition~\ref{prop:keio-glucose-only}) and the oxygen probe
+(Proposition~\ref{prop:keio-o2-limited}) agree at every
+non-anaerobic level: a medium perturbation that leaves the growth
+regime intact --- however strongly it reduces the wild-type optimum
+($63\%$ at $\mathrm{EX\_o2\_e}=-2.5$) or reroutes the flux
+distribution (overflow, then fermentation byproducts) --- moves no
+gene across the $5\%$ relative line in either reconstruction, and
+the curvature--phenotype association is the invariant object
+(held-out AUC $\ge 0.97$ throughout, rising to $0.9999$ under
+moderate limitation). The anaerobic endpoint locates the boundary of
+the claim: when the growth mode switches to exclusive
+substrate-level phosphorylation, the lower-glycolysis module becomes
+uniquely load-bearing --- the six gained genes retain $70$--$84\%$
+of wild type aerobically, where the Entner--Doudoroff and
+pentose-phosphate routes carry $8.4$ of $10$ glucose around an
+enolase knockout, but are strictly lethal anaerobically ---
+\emph{hemN}'s oxygen-independent heme route becomes required (its
+aerobic knockout is exactly neutral; the oxygen-dependent route
+covers), and the single loss \emph{fabZ} traces to its two
+quinone-side-chain dehydratase reactions (OGMEACPD/OPMEACPD, its
+only reactions without a \emph{fabA} alternative; restoring exactly
+those two restores the aerobic optimum $0.822$), not to its
+fatty-acid role. The label set thus carries the environmental
+regime, and the association degrades precisely when the regime
+changes --- so the bimodal-ratio mechanism of
+Remark~\ref{rem:keio-invariance} and the regime-switch mechanism
+now bracket the invariance claim from both ends, and the
+medium-robustness statement of the battery is: labels invariant
+under any perturbation that preserves the growth regime;
+association invariant to within a graceful degradation beyond it.
 \end{remark}
 
 \subsection{Benchmark against the structural closure instruments}

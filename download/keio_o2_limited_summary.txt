@@ -1,0 +1,30 @@
+SECOND PERTURBATION PROBE: OXYGEN-LIMITED MEDIUM
+Label invariance beyond the carbon source (iJO1366 + iML1515)
+==============================================================================
+Baseline: glucose-only corrected medium (trehalose closed),
+O2 -20 (deposited glucose-only run). Probe: EX_o2_e bound.
+
+iJO1366 baseline (O2 -20): WT 0.9824, 289/1367 essential, r = +0.6034, AUC 0.9769
+O2 = -10.0: WT 0.7108 (O2 uptake 10.00); labels 289 -> 289 (+0 / -0, kappa 1.0000); r = +0.7749, held-out AUC 0.9999, MCC 0.9927; direct r +0.2641, AUC 0.7323
+O2 =  -5.0: WT 0.4915 (O2 uptake 5.00); labels 289 -> 289 (+0 / -0, kappa 1.0000); r = +0.6067, held-out AUC 0.9798, MCC 0.9387; direct r +0.2199, AUC 0.7441
+O2 =  -2.5: WT 0.3668 (O2 uptake 2.50); labels 289 -> 289 (+0 / -0, kappa 1.0000); r = +0.5189, held-out AUC 0.9711, MCC 0.8870; direct r +0.1619, AUC 0.7257
+O2 =   0.0: WT -0.0000 (O2 uptake -0.00); labels 289 -> 70 (+50 / -269, kappa 0.0316); r = +0.1606, held-out AUC 0.7744, MCC 0.0000; direct r +0.0942, AUC 0.5487
+
+iML1515 baseline (O2 -20): WT 0.8218, 286/1516 essential, direct r +0.3760, AUC 0.8128
+iML1515 O2 = -5.0: WT 0.3534; labels 286 -> 286 (+0 / -0, kappa 1.0000); direct r +0.2363, AUC 0.8184; transitive r +0.5592, held-out AUC 0.9945
+iML1515 O2 = 0.0: WT 0.1341; labels 286 -> 291 (+6 / -1, kappa 0.9850); direct r +0.1178, AUC 0.6726; transitive r +0.2595, held-out AUC 0.6724
+
+Anaerobic endpoint (O2 = 0): iJO1366 wild-type growth is
+exactly zero (ubiquinol-8 biomass requirement: the OPHHX/
+OMPHHX hydroxylase steps of the ubiquinone pathway consume
+molecular oxygen and iJO1366 lacks the O2-independent
+alternatives; 0.01 mmol/gDW/h of O2 restores 0.231 growth),
+so the 5%-relative threshold degenerates (threshold = 0)
+and the iJO1366 anaerobic label set is not meaningful --
+reported as a disclosed degeneracy, not a label change.
+iML1515 grows anaerobically (O2-independent q8 route) and
+provides the non-degenerate anaerobic endpoint.
+
+Top subsystem enrichments of the iJO1366 flip set per level:
+  iJO1366 O2 = 0.0: Cofactor and Prosthetic Group Biosynthesis (97 vs exp 42.0); Lipopolysaccharide Biosynthesis / Recycling (24 vs exp 13.1); Alternate Carbon Metabolism (24 vs exp 41.5); Tyrosine, Tryptophan, and Phenylalanine Metabolism (21 vs exp 5.6); Cell Envelope Biosynthesis (19 vs exp 12.4)
+  iML1515 O2 = 0.0: Glycolysis/Gluconeogenesis (5 vs exp 0.2); Cofactor and Prosthetic Group Biosynthesis (3 vs exp 0.9); Metabolite Repair (1 vs exp 0.0); Cell Envelope Biosynthesis (1 vs exp 0.3)

@@ -1,0 +1,301 @@
+{
+  "probe": "oxygen-limited medium, iML1515 cross-rebuild",
+  "baseline_medium": "glucose -10, O2 -20, minerals -10, EX_tre_e CLOSED",
+  "levels": {
+    "-5.0": {
+      "o2_bound": -5.0,
+      "wild_type_biomass": 0.35343632816628134,
+      "o2_uptake_at_optimum": 5.0,
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.5592254778244219,
+        "pearson_p_value": 1.8514986788522035e-125,
+        "spearman_rho": 0.547764329154242,
+        "spearman_p_value": 1.951056278225342e-119,
+        "partial_r_given_n_gpr_rxns": 0.5534730716321452,
+        "partial_p_value": 2.0876631317945542e-122,
+        "bootstrap_95ci": [
+          0.5321484398057612,
+          0.5908844983972131
+        ],
+        "n_essential": 286,
+        "n_genes": 1516,
+        "held_out": {
+          "n_test": 455,
+          "n_test_essential": 86,
+          "accuracy": 0.9758241758241758,
+          "mcc": 0.9274525267153888,
+          "roc_auc": 0.9944538980273523,
+          "sensitivity": 1.0,
+          "specificity": 0.9701897018970189,
+          "confusion": {
+            "tn": 358,
+            "fp": 11,
+            "fn": 0,
+            "tp": 86
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 1.0,
+            "base_rate": 0.18865435356200527,
+            "lift": 5.300699300699301
+          },
+          "K=25": {
+            "precision": 0.44,
+            "base_rate": 0.18865435356200527,
+            "lift": 2.332307692307692
+          },
+          "K=50": {
+            "precision": 0.62,
+            "base_rate": 0.18865435356200527,
+            "lift": 3.2864335664335664
+          },
+          "K=100": {
+            "precision": 0.81,
+            "base_rate": 0.18865435356200527,
+            "lift": 4.293566433566434
+          },
+          "K=200": {
+            "precision": 0.895,
+            "base_rate": 0.18865435356200527,
+            "lift": 4.744125874125874
+          },
+          "K=500": {
+            "precision": 0.572,
+            "base_rate": 0.18865435356200527,
+            "lift": 3.032
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1331,
+        "binary_n": 1325,
+        "binary_n_E": 114,
+        "pearson_r": 0.23632245619612044,
+        "pearson_p": 2.833572238459185e-18,
+        "spearman_rho": 0.309417899823954,
+        "spearman_p": 8.623833465928332e-31,
+        "point_biserial_r": 0.23632245619612044,
+        "bootstrap_95ci": [
+          0.17692872176547467,
+          0.28834326760537904
+        ],
+        "roc_auc": 0.8184188795688644,
+        "held_out": {
+          "n_test": 398,
+          "n_test_E": 34,
+          "accuracy": 0.7989949748743719,
+          "sensitivity": 0.6764705882352942,
+          "specificity": 0.8104395604395604,
+          "precision": 0.25,
+          "f1": 0.36507936507936506,
+          "mcc": 0.3228377784129329,
+          "roc_auc": 0.7377989657401423,
+          "confusion": {
+            "tp": 23,
+            "fp": 69,
+            "tn": 295,
+            "fn": 11
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.8081236012877129,
+          "n_high_conf": 69,
+          "low_conf_auc": 0.8120294360518774,
+          "n_low_conf": 34
+        },
+        "n_model_gaps_pecE_insilicoN": 13,
+        "n_medium_mismatch_insilicoE_keioN": 175
+      },
+      "flips_vs_glucose_only": {
+        "label": "iML1515 O2=-5.0 vs glucose-only (O2=-20)",
+        "n_compared": 1516,
+        "n_essential_base": 286,
+        "n_essential_new": 286,
+        "n_gain_essential": 0,
+        "n_loss_essential": 0,
+        "n_both_essential": 286,
+        "cohen_kappa": 1.0,
+        "jaccard": 1.0,
+        "gains": [],
+        "losses": [],
+        "subsystem_enrichment_top": []
+      }
+    },
+    "0.0": {
+      "o2_bound": 0.0,
+      "wild_type_biomass": 0.13410915918519603,
+      "o2_uptake_at_optimum": -0.0,
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.25950784297310475,
+        "pearson_p_value": 9.393511320067919e-25,
+        "spearman_rho": 0.2552648211956423,
+        "spearman_p_value": 5.6089041703045285e-24,
+        "partial_r_given_n_gpr_rxns": 0.25888070614719677,
+        "partial_p_value": 1.225848839662647e-24,
+        "bootstrap_95ci": [
+          0.23201648795394283,
+          0.28475975417165056
+        ],
+        "n_essential": 291,
+        "n_genes": 1516,
+        "held_out": {
+          "n_test": 455,
+          "n_test_essential": 87,
+          "accuracy": 0.8087912087912088,
+          "mcc": 0.0,
+          "roc_auc": 0.6723825587206397,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "confusion": {
+            "tn": 368,
+            "fp": 0,
+            "fn": 87,
+            "tp": 0
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 1.0,
+            "base_rate": 0.19195250659630606,
+            "lift": 5.209621993127148
+          },
+          "K=25": {
+            "precision": 1.0,
+            "base_rate": 0.19195250659630606,
+            "lift": 5.209621993127148
+          },
+          "K=50": {
+            "precision": 1.0,
+            "base_rate": 0.19195250659630606,
+            "lift": 5.209621993127148
+          },
+          "K=100": {
+            "precision": 1.0,
+            "base_rate": 0.19195250659630606,
+            "lift": 5.209621993127148
+          },
+          "K=200": {
+            "precision": 0.86,
+            "base_rate": 0.19195250659630606,
+            "lift": 4.480274914089347
+          },
+          "K=500": {
+            "precision": 0.36,
+            "base_rate": 0.19195250659630606,
+            "lift": 1.8754639175257732
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1331,
+        "binary_n": 1325,
+        "binary_n_E": 114,
+        "pearson_r": 0.11777131546134448,
+        "pearson_p": 1.7245568704316802e-05,
+        "spearman_rho": 0.1677707186512849,
+        "spearman_p": 8.00718586672576e-10,
+        "point_biserial_r": 0.11777131546134448,
+        "bootstrap_95ci": [
+          0.07091510399588352,
+          0.15875290969342568
+        ],
+        "roc_auc": 0.672631723818216,
+        "held_out": {
+          "n_test": 398,
+          "n_test_E": 34,
+          "accuracy": 0.4396984924623116,
+          "sensitivity": 0.6764705882352942,
+          "specificity": 0.4175824175824176,
+          "precision": 0.09787234042553192,
+          "f1": 0.17100371747211895,
+          "mcc": 0.05346075608803291,
+          "roc_auc": 0.6112233354880413,
+          "confusion": {
+            "tp": 23,
+            "fp": 212,
+            "tn": 152,
+            "fn": 11
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.6747208559221627,
+          "n_high_conf": 69,
+          "low_conf_auc": 0.6651891970661097,
+          "n_low_conf": 34
+        },
+        "n_model_gaps_pecE_insilicoN": 13,
+        "n_medium_mismatch_insilicoE_keioN": 178
+      },
+      "flips_vs_glucose_only": {
+        "label": "iML1515 O2=0.0 vs glucose-only (O2=-20)",
+        "n_compared": 1516,
+        "n_essential_base": 286,
+        "n_essential_new": 291,
+        "n_gain_essential": 6,
+        "n_loss_essential": 1,
+        "n_both_essential": 285,
+        "cohen_kappa": 0.9850172248263399,
+        "jaccard": 0.976027397260274,
+        "gains": [
+          {
+            "gene_id": "b2779",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2926",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1779",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3612",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0755",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3867",
+            "gene_name": ""
+          }
+        ],
+        "losses": [
+          {
+            "gene_id": "b0180",
+            "gene_name": ""
+          }
+        ],
+        "subsystem_enrichment_top": [
+          {
+            "subsystem": "Glycolysis/Gluconeogenesis",
+            "n_flip": 5,
+            "expected": 0.2,
+            "ratio": 30.08
+          },
+          {
+            "subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+            "n_flip": 3,
+            "expected": 0.9,
+            "ratio": 3.51
+          },
+          {
+            "subsystem": "Metabolite Repair",
+            "n_flip": 1,
+            "expected": 0.0,
+            "ratio": 72.19
+          },
+          {
+            "subsystem": "Cell Envelope Biosynthesis",
+            "n_flip": 1,
+            "expected": 0.3,
+            "ratio": 3.73
+          }
+        ]
+      }
+    }
+  }
+}

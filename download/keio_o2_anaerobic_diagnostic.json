@@ -1,0 +1,233 @@
+{
+  "ijo_o2_0_biomass": 0.0,
+  "ijo_o2_0_status": "optimal",
+  "ijo_biomass_reactions": [
+    "BIOMASS_Ec_iJO1366_WT_53p95M",
+    "BIOMASS_Ec_iJO1366_core_53p95M"
+  ],
+  "ijo_q8_in_biomass": [
+    [
+      "BIOMASS_Ec_iJO1366_WT_53p95M",
+      "q8h2_c",
+      -0.000223
+    ]
+  ],
+  "ijo_q8_pathway_o2_dependent_reactions": [],
+  "ijo_all_o2_consuming_reaction_ids": [],
+  "ijo_q8_reactions_without_o2": [
+    {
+      "id": "ASPO3",
+      "reaction": "asp__L_c + q8_c --> h_c + iasp_c + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "CYTBDpp",
+      "reaction": "2.0 h_c + 0.5 o2_c + q8h2_c --> h2o_c + 2.0 h_p + q8_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "CYTBO3_4pp",
+      "reaction": "4.0 h_c + 0.5 o2_c + q8h2_c --> h2o_c + 4.0 h_p + q8_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "DHORD2",
+      "reaction": "dhor__S_c + q8_c --> orot_c + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "DMSOR2",
+      "reaction": "2dmmql8_c + dmso_c --> 2dmmq8_c + dms_c + h2o_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "DMSOR2pp",
+      "reaction": "2dmmql8_c + dmso_p --> 2dmmq8_c + dms_p + h2o_p",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "DSBAO1",
+      "reaction": "dsbard_p + q8_c --> dsbaox_p + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "FDH4pp",
+      "reaction": "for_p + 2.0 h_c + q8_c --> co2_p + h_p + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "FRD3",
+      "reaction": "2dmmql8_c + fum_c --> 2dmmq8_c + succ_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "G3PD5",
+      "reaction": "glyc3p_c + q8_c --> dhap_c + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "G3PD7",
+      "reaction": "2dmmq8_c + glyc3p_c --> 2dmmql8_c + dhap_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "GLCDpp",
+      "reaction": "glc__D_p + h2o_p + q8_c --> glcn_p + h_p + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "GLYCTO2",
+      "reaction": "glyclt_c + q8_c --> glx_c + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "GLYCTO4",
+      "reaction": "2dmmq8_c + glyclt_c --> 2dmmql8_c + glx_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "HYD1pp",
+      "reaction": "h2_c + 2.0 h_c + q8_c --> 2.0 h_p + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "HYD3pp",
+      "reaction": "2dmmq8_c + h2_c + 2.0 h_c --> 2dmmql8_c + 2.0 h_p",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "L_LACD2",
+      "reaction": "lac__L_c + q8_c --> pyr_c + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "LDH_D2",
+      "reaction": "lac__D_c + q8_c --> pyr_c + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "MDH2",
+      "reaction": "mal__L_c + q8_c --> oaa_c + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "NADH16pp",
+      "reaction": "4.0 h_c + nadh_c + q8_c --> 3.0 h_p + nad_c + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "NADH18pp",
+      "reaction": "2dmmq8_c + 4.0 h_c + nadh_c --> 2dmmql8_c + 3.0 h_p + nad_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "NADH5",
+      "reaction": "h_c + nadh_c + q8_c --> nad_c + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "NADH9",
+      "reaction": "2dmmq8_c + h_c + nadh_c --> 2dmmql8_c + nad_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "NADPHQR2",
+      "reaction": "h_c + nadph_c + q8_c --> nadp_c + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "NADPHQR4",
+      "reaction": "2dmmq8_c + h_c + nadph_c --> 2dmmql8_c + nadp_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "NO3R1bpp",
+      "reaction": "no3_p + q8h2_c --> h2o_p + no2_p + q8_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "NO3R1pp",
+      "reaction": "2.0 h_c + no3_c + q8h2_c --> h2o_c + 2.0 h_p + no2_c + q8_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "NTRIR3pp",
+      "reaction": "2.0 h_p + no2_p + 3.0 q8h2_c --> 2.0 h2o_p + nh4_p + 3.0 q8_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "POX",
+      "reaction": "h2o_c + pyr_c + q8_c --> ac_c + co2_c + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "QMO2",
+      "reaction": "2.0 o2_c + q8h2_c --> 2.0 h_c + 2.0 o2s_c + q8_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "SUCDi",
+      "reaction": "q8_c + succ_c --> fum_c + q8h2_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "TMAOR2",
+      "reaction": "2dmmql8_c + h_c + tmao_c --> 2dmmq8_c + h2o_c + tma_c",
+      "lb": 0.0,
+      "ub": 1000.0
+    },
+    {
+      "id": "TMAOR2pp",
+      "reaction": "2dmmql8_c + h_p + tmao_p --> 2dmmq8_c + h2o_p + tma_p",
+      "lb": 0.0,
+      "ub": 1000.0
+    }
+  ],
+  "ijo_tiny_o2_relief": {
+    "-0.25": 0.2471642686701956,
+    "-0.1": 0.23692265532749385,
+    "-0.01": 0.23057837513638826
+  },
+  "ijo_o2_0_q8_free_biomass": 9.855224663410648e-16,
+  "ijo_o2_0_q8_free_status": "optimal",
+  "iml_o2_0_biomass": 0.1341091591851952,
+  "iml_o2_0_status": "optimal",
+  "iml_q8_in_biomass": [
+    [
+      "Ec_biomass_iML1515_WT_75p37M",
+      "q8h2_c",
+      -0.000223
+    ]
+  ]
+}

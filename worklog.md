@@ -5490,3 +5490,70 @@ Stage Summary:
   the deliberately-recorded ones (the ratio-form discretization
   bridge as an open problem) and submitter-level items.
 - Frozen lineage untouched; all checks green; commit + push follows.
+
+---
+
+Task ID: o2-probe-round
+Agent: main (Z.ai)
+Task: User 2-point directive: (1) run a second perturbation probe
+(oxygen-limited medium) to test label invariance beyond the carbon
+source; (2) promote in the abstract only if merited while remaining
+under 265 words. Live heads amended in place; frozen lineage
+untouched; PAT push.
+
+Work Log:
+- Executed scripts/o2_limited_keio_probe.py (resumable): iJO1366
+  dose response EX_o2_e in {-10,-5,-2.5,0} under the glucose-only
+  medium (trehalose closed; E12/E15 conventions, seeds 42/20260830);
+  iML1515 arms at -5 and 0 (E16 conventions). Artifacts:
+  download/keio_o2_limited_e12_sweep.csv + _results.json,
+  keio_o2_limited_e16_sweep.csv + _results.json,
+  keio_o2_limited_summary.txt, keio_o2_limited_dose_response.png.
+- Results: labels INVARIANT at every non-anaerobic level in both
+  reconstructions (iJO 289/1367 at -10/-5/-2.5, iML 286/1516 at
+  -5; zero flips, kappa = 1.000) while WT optima fall 0.982 ->
+  0.711/0.491/0.367 and 0.822 -> 0.353 (overflow then fermentation
+  physiology recorded). Association degrades gracefully: r +0.775
+  (CI [0.757,0.792]; AUC 0.9999, MCC 0.993, P@200 = 1.0) at -10,
+  +0.607 at -5, +0.519 at -2.5; iML -5 r +0.559, AUC 0.994; direct
+  AUC stable 0.732-0.744 (iJO) and 0.818 (iML, vs 0.813
+  unlimited); label-based strata unchanged (gaps 30/13, iJO
+  mismatch 180).
+- Anaerobic endpoint: iJO1366 WT growth exactly 0 -- diagnosed by
+  scripts/o2_anaerobic_diagnostic.py (+ targeted LP tests) as a
+  model-level degeneracy: the OPHHX ubiquinone-chain hydroxylase
+  and PDX5POi pyridoxal step lack anaerobic alternatives in that
+  reconstruction (0.01 mmol/gDW/h O2 restores 0.231); reported as
+  degeneracy, not label change. iML1515 carries the O2-free OPHHX3
+  route, grows anaerobically (0.134), and gives the non-degenerate
+  endpoint: 286 -> 291 (+6/-1: eno/pgk/gapA/gpmA/gpmM/hemN gained,
+  fabZ lost; kappa 0.985, Jaccard 0.976; 5/7 flips
+  glycolysis-enriched 30x; six retain 70-84% of WT aerobically
+  where ED+PP routes carry 8.4/10 glucose around an enolase KO;
+  fabZ aerobic lethality traced to its two fabZ-only
+  quinone-side-chain dehydratases OGMEACPD/OPMEACPD -- restoring
+  exactly those two restores 0.8218); anaerobic association
+  r +0.260, AUC 0.672, direct +0.118/AUC 0.673, gaps 13.
+- companion_categorical_v3.tex amended in place: new
+  prop:keio-o2-limited + rem:keio-o2-invariance (the two-axis
+  invariance claim bracketed by bimodal-ratio separation and
+  regime switching); abstract promoted to the medium-robustness
+  statement and trimmed to 262 words (< 265): "The validation
+  battery is medium-robust: correcting the carbon source and
+  limiting oxygen leave the genome-scale essentiality labels
+  invariant and the association intact, with re-stratification
+  only at the anaerobic regime switch."
+- audit_v6_numbers.py: 125/125 PASS (v5's 110 + 15 new O2 checks);
+  two rounding defects found and fixed in the manuscript (iML -5
+  AUC 0.995 -> 0.994; WT reduction 62% -> 63%).
+- Builds: companion 65 -> 66 pp, 0 errors / 0 undefined / 0
+  overfull; ZIPs rebuilt + standalone-reverified (28 / 66 pp);
+  download PDF, TAC cover letter, links doc refreshed; .gitignore
+  extended (scripts/__pycache__/).
+
+Stage Summary:
+- Label invariance now established on two medium axes (carbon-source
+  correction; electron-acceptor limitation) with the association as
+  the invariant object; the anaerobic regime switch re-stratifies
+  7/1516 labels, all in the energy-strategy module. Abstract
+  promotion landed under the 265-word cap. Frozen lineage untouched.

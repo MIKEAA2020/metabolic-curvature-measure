@@ -1,0 +1,1856 @@
+{
+  "probe": "oxygen-limited medium, iJO1366 dose response",
+  "baseline_medium": "glucose -10, O2 -20, minerals -1000, EX_tre_e CLOSED (glucose-only run)",
+  "levels": {
+    "-10.0": {
+      "o2_bound": -10.0,
+      "wild_type_biomass": 0.7108337341354214,
+      "o2_uptake_at_optimum": 10.0,
+      "fermentation_byproducts": {
+        "EX_for_e": 7.196,
+        "EX_ac_e": 7.853
+      },
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.774931506272867,
+        "pearson_p_value": 2.9244657677238376e-274,
+        "spearman_rho": 0.6687252144422222,
+        "spearman_p_value": 6.529354871181391e-178,
+        "partial_r_given_n_gpr_rxns": 0.7735869527981367,
+        "partial_p_value": 1.017730497733155e-272,
+        "bootstrap_95ci": [
+          0.7572067589511902,
+          0.7919509491663135
+        ],
+        "n_essential": 289,
+        "n_genes": 1367,
+        "held_out": {
+          "n_test": 411,
+          "n_test_essential": 87,
+          "accuracy": 0.9975669099756691,
+          "mcc": 0.9927054905567071,
+          "roc_auc": 0.9998580956435362,
+          "sensitivity": 0.9885057471264368,
+          "specificity": 1.0,
+          "confusion": {
+            "tn": 324,
+            "fp": 0,
+            "fn": 1,
+            "tp": 86
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=25": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=50": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=100": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=200": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=500": {
+            "precision": 0.578,
+            "base_rate": 0.21141185076810534,
+            "lift": 2.734
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1212,
+        "binary_n": 1206,
+        "binary_n_E": 130,
+        "pearson_r": 0.26414389420061546,
+        "pearson_p": 1.0613166680580737e-20,
+        "spearman_rho": 0.24963197964295636,
+        "spearman_p": 1.3707502645143655e-18,
+        "point_biserial_r": 0.26414389420061546,
+        "bootstrap_95ci": [
+          0.1996454958805206,
+          0.3255827100246948
+        ],
+        "roc_auc": 0.7323277094652559,
+        "held_out": {
+          "n_test": 362,
+          "n_test_E": 39,
+          "accuracy": 0.7928176795580111,
+          "sensitivity": 0.7692307692307693,
+          "specificity": 0.7956656346749226,
+          "precision": 0.3125,
+          "f1": 0.4444444444444444,
+          "mcc": 0.39675822612537687,
+          "roc_auc": 0.7602206874652695,
+          "confusion": {
+            "tp": 30,
+            "fp": 66,
+            "tn": 257,
+            "fn": 9
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.7004060453177554,
+          "n_high_conf": 84,
+          "low_conf_auc": 0.748659054699947,
+          "n_low_conf": 35
+        },
+        "n_model_gaps_pecE_insilicoN": 30,
+        "n_medium_mismatch_insilicoE_keioN": 180
+      },
+      "flips_vs_glucose_only": {
+        "label": "O2=-10.0 vs glucose-only (O2=-20)",
+        "n_compared": 1367,
+        "n_essential_base": 289,
+        "n_essential_new": 289,
+        "n_gain_essential": 0,
+        "n_loss_essential": 0,
+        "n_both_essential": 289,
+        "cohen_kappa": 1.0,
+        "jaccard": 1.0,
+        "gains": [],
+        "losses": [],
+        "subsystem_enrichment_top": []
+      }
+    },
+    "-5.0": {
+      "o2_bound": -5.0,
+      "wild_type_biomass": 0.491467123922894,
+      "o2_uptake_at_optimum": 5.0,
+      "fermentation_byproducts": {
+        "EX_etoh_e": 1.26,
+        "EX_for_e": 14.618,
+        "EX_ac_e": 11.343
+      },
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.6067399823427277,
+        "pearson_p_value": 3.003172174271542e-138,
+        "spearman_rho": 0.6166892575898916,
+        "spearman_p_value": 5.068563893556886e-144,
+        "partial_r_given_n_gpr_rxns": 0.6035125589597604,
+        "partial_p_value": 2.025509707483054e-136,
+        "bootstrap_95ci": [
+          0.5842529776111335,
+          0.6281154744719347
+        ],
+        "n_essential": 289,
+        "n_genes": 1367,
+        "held_out": {
+          "n_test": 411,
+          "n_test_essential": 87,
+          "accuracy": 0.9781021897810219,
+          "mcc": 0.9386566938390676,
+          "roc_auc": 0.9798495813821484,
+          "sensitivity": 1.0,
+          "specificity": 0.9722222222222222,
+          "confusion": {
+            "tn": 315,
+            "fp": 9,
+            "fn": 0,
+            "tp": 87
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.9,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.257093425605537
+          },
+          "K=25": {
+            "precision": 0.68,
+            "base_rate": 0.21141185076810534,
+            "lift": 3.2164705882352944
+          },
+          "K=50": {
+            "precision": 0.74,
+            "base_rate": 0.21141185076810534,
+            "lift": 3.5002768166089964
+          },
+          "K=100": {
+            "precision": 0.81,
+            "base_rate": 0.21141185076810534,
+            "lift": 3.831384083044983
+          },
+          "K=200": {
+            "precision": 0.88,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.162491349480969
+          },
+          "K=500": {
+            "precision": 0.578,
+            "base_rate": 0.21141185076810534,
+            "lift": 2.734
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1212,
+        "binary_n": 1206,
+        "binary_n_E": 130,
+        "pearson_r": 0.21991456032008044,
+        "pearson_p": 1.128131042371963e-14,
+        "spearman_rho": 0.262222028321991,
+        "spearman_p": 2.0563947807276303e-20,
+        "point_biserial_r": 0.21991456032008044,
+        "bootstrap_95ci": [
+          0.16439951583976986,
+          0.27220174864981533
+        ],
+        "roc_auc": 0.7440556191020875,
+        "held_out": {
+          "n_test": 362,
+          "n_test_E": 39,
+          "accuracy": 0.6298342541436464,
+          "sensitivity": 0.8461538461538461,
+          "specificity": 0.6037151702786377,
+          "precision": 0.20496894409937888,
+          "f1": 0.33,
+          "mcc": 0.2806781990421346,
+          "roc_auc": 0.7768913233309519,
+          "confusion": {
+            "tp": 33,
+            "fp": 128,
+            "tn": 195,
+            "fn": 6
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.7141640113294387,
+          "n_high_conf": 84,
+          "low_conf_auc": 0.7687865108868827,
+          "n_low_conf": 35
+        },
+        "n_model_gaps_pecE_insilicoN": 30,
+        "n_medium_mismatch_insilicoE_keioN": 180
+      },
+      "flips_vs_glucose_only": {
+        "label": "O2=-5.0 vs glucose-only (O2=-20)",
+        "n_compared": 1367,
+        "n_essential_base": 289,
+        "n_essential_new": 289,
+        "n_gain_essential": 0,
+        "n_loss_essential": 0,
+        "n_both_essential": 289,
+        "cohen_kappa": 1.0,
+        "jaccard": 1.0,
+        "gains": [],
+        "losses": [],
+        "subsystem_enrichment_top": []
+      }
+    },
+    "-2.5": {
+      "o2_bound": -2.5,
+      "wild_type_biomass": 0.366799589669811,
+      "o2_uptake_at_optimum": 2.5,
+      "fermentation_byproducts": {
+        "EX_etoh_e": 4.709,
+        "EX_for_e": 15.983,
+        "EX_ac_e": 9.771
+      },
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.5189466324246841,
+        "pearson_p_value": 4.149348358978491e-95,
+        "spearman_rho": 0.5497941544022743,
+        "spearman_p_value": 8.099858511447383e-109,
+        "partial_r_given_n_gpr_rxns": 0.5143387278232399,
+        "partial_p_value": 3.5235384020411093e-93,
+        "bootstrap_95ci": [
+          0.49614701002126504,
+          0.5418045912753684
+        ],
+        "n_essential": 289,
+        "n_genes": 1367,
+        "held_out": {
+          "n_test": 411,
+          "n_test_essential": 87,
+          "accuracy": 0.9610705596107056,
+          "mcc": 0.887032169554976,
+          "roc_auc": 0.9711224634596282,
+          "sensitivity": 0.9425287356321839,
+          "specificity": 0.9660493827160493,
+          "confusion": {
+            "tn": 313,
+            "fp": 11,
+            "fn": 5,
+            "tp": 82
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.8,
+            "base_rate": 0.21141185076810534,
+            "lift": 3.784083044982699
+          },
+          "K=25": {
+            "precision": 0.48,
+            "base_rate": 0.21141185076810534,
+            "lift": 2.270449826989619
+          },
+          "K=50": {
+            "precision": 0.62,
+            "base_rate": 0.21141185076810534,
+            "lift": 2.9326643598615916
+          },
+          "K=100": {
+            "precision": 0.81,
+            "base_rate": 0.21141185076810534,
+            "lift": 3.831384083044983
+          },
+          "K=200": {
+            "precision": 0.88,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.162491349480969
+          },
+          "K=500": {
+            "precision": 0.578,
+            "base_rate": 0.21141185076810534,
+            "lift": 2.734
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1212,
+        "binary_n": 1206,
+        "binary_n_E": 130,
+        "pearson_r": 0.16193769294995408,
+        "pearson_p": 1.5564048961774156e-08,
+        "spearman_rho": 0.24252711508700034,
+        "spearman_p": 1.3253147604593653e-17,
+        "point_biserial_r": 0.16193769294995408,
+        "bootstrap_95ci": [
+          0.10751786884348916,
+          0.21263571120754476
+        ],
+        "roc_auc": 0.725700600514727,
+        "held_out": {
+          "n_test": 362,
+          "n_test_E": 39,
+          "accuracy": 0.4088397790055249,
+          "sensitivity": 0.8974358974358975,
+          "specificity": 0.3498452012383901,
+          "precision": 0.14285714285714285,
+          "f1": 0.24647887323943662,
+          "mcc": 0.16392625349117432,
+          "roc_auc": 0.7642295784710645,
+          "confusion": {
+            "tp": 35,
+            "fp": 210,
+            "tn": 113,
+            "fn": 4
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.6835501858736059,
+          "n_high_conf": 84,
+          "low_conf_auc": 0.7731678173127987,
+          "n_low_conf": 35
+        },
+        "n_model_gaps_pecE_insilicoN": 30,
+        "n_medium_mismatch_insilicoE_keioN": 180
+      },
+      "flips_vs_glucose_only": {
+        "label": "O2=-2.5 vs glucose-only (O2=-20)",
+        "n_compared": 1367,
+        "n_essential_base": 289,
+        "n_essential_new": 289,
+        "n_gain_essential": 0,
+        "n_loss_essential": 0,
+        "n_both_essential": 289,
+        "cohen_kappa": 1.0,
+        "jaccard": 1.0,
+        "gains": [],
+        "losses": [],
+        "subsystem_enrichment_top": []
+      }
+    },
+    "0.0": {
+      "o2_bound": 0.0,
+      "wild_type_biomass": -9.449629182554199e-32,
+      "o2_uptake_at_optimum": -0.0,
+      "fermentation_byproducts": {
+        "EX_etoh_e": 1.26,
+        "EX_for_e": 2.52,
+        "EX_ac_e": 1.26
+      },
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.1605836088460452,
+        "pearson_p_value": 2.3637168679294107e-09,
+        "spearman_rho": -0.280157239072483,
+        "spearman_p_value": 4.520046310291755e-26,
+        "partial_r_given_n_gpr_rxns": 0.16040364318764602,
+        "partial_p_value": 2.4639566907180947e-09,
+        "bootstrap_95ci": [
+          0.07445864944737261,
+          0.2284805258312331
+        ],
+        "n_essential": 70,
+        "n_genes": 1367,
+        "held_out": {
+          "n_test": 411,
+          "n_test_essential": 21,
+          "accuracy": 0.948905109489051,
+          "mcc": 0.0,
+          "roc_auc": 0.7743589743589743,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "confusion": {
+            "tn": 390,
+            "fp": 0,
+            "fn": 21,
+            "tp": 0
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.4,
+            "base_rate": 0.051207022677395755,
+            "lift": 7.811428571428572
+          },
+          "K=25": {
+            "precision": 0.2,
+            "base_rate": 0.051207022677395755,
+            "lift": 3.905714285714286
+          },
+          "K=50": {
+            "precision": 0.1,
+            "base_rate": 0.051207022677395755,
+            "lift": 1.952857142857143
+          },
+          "K=100": {
+            "precision": 0.2,
+            "base_rate": 0.051207022677395755,
+            "lift": 3.905714285714286
+          },
+          "K=200": {
+            "precision": 0.26,
+            "base_rate": 0.051207022677395755,
+            "lift": 5.077428571428571
+          },
+          "K=500": {
+            "precision": 0.104,
+            "base_rate": 0.051207022677395755,
+            "lift": 2.0309714285714286
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1212,
+        "binary_n": 1206,
+        "binary_n_E": 130,
+        "pearson_r": 0.09419439025785645,
+        "pearson_p": 0.0010565132161980833,
+        "spearman_rho": 0.05256365877788134,
+        "spearman_p": 0.06803519294691203,
+        "point_biserial_r": 0.09419439025785645,
+        "bootstrap_95ci": [
+          0.0271402842165399,
+          0.1658955013174894
+        ],
+        "roc_auc": 0.548731055190163,
+        "held_out": {
+          "n_test": 362,
+          "n_test_E": 39,
+          "accuracy": 0.7044198895027625,
+          "sensitivity": 0.358974358974359,
+          "specificity": 0.7461300309597523,
+          "precision": 0.14583333333333334,
+          "f1": 0.2074074074074074,
+          "mcc": 0.07382067051573904,
+          "roc_auc": 0.5301262205286973,
+          "confusion": {
+            "tp": 14,
+            "fp": 82,
+            "tn": 241,
+            "fn": 25
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.547729686670207,
+          "n_high_conf": 84,
+          "low_conf_auc": 0.5491901221455124,
+          "n_low_conf": 35
+        },
+        "n_model_gaps_pecE_insilicoN": 81,
+        "n_medium_mismatch_insilicoE_keioN": 57
+      },
+      "flips_vs_glucose_only": {
+        "label": "O2=0.0 vs glucose-only (O2=-20)",
+        "n_compared": 1367,
+        "n_essential_base": 289,
+        "n_essential_new": 70,
+        "n_gain_essential": 50,
+        "n_loss_essential": 269,
+        "n_both_essential": 20,
+        "cohen_kappa": 0.0315794382768555,
+        "jaccard": 0.058997050147492625,
+        "gains": [
+          {
+            "gene_id": "b4034",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4036",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3622",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3793",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3785",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3792",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2341",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1851",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1054",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1855",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2378",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0903",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0902",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2579",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0662",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2907",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0350",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3835",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2965",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0693",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2373",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1387",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1394",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1014",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1391",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1390",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1392",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1388",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1389",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1398",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1489",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0114",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0115",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1638",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0766",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3546",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1723",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3952",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3951",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2913",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0767",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3385",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0688",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2297",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1854",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2683",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3572",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4197",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2882",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3565",
+            "gene_name": ""
+          }
+        ],
+        "losses": [
+          {
+            "gene_id": "b1377",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2215",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0929",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0241",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0180",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1093",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2323",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1095",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0004",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0159",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3197",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2708",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1094",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "s0001",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2316",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3255",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0185",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3256",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3959",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2818",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0078",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3670",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3671",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0077",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1091",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3957",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3200",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4261",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3201",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4262",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3199",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1276",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0118",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1748",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3359",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1096",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1812",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3360",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0474",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2750",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1131",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4177",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3018",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3958",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4006",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0522",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0523",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0092",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0381",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1190",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4053",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0774",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3994",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1263",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1264",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0776",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0414",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3960",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3172",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3433",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0131",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4245",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4244",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0002",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4024",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3940",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2574",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0928",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2019",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0827",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3857",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3856",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4214",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0775",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3196",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3040",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1208",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2600",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2599",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2329",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4039",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0155",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1592",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3816",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0914",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0783",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0781",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0720",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2780",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3008",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2414",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2421",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1622",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0910",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2838",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3809",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0175",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3041",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0778",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1704",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2601",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0754",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3648",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3771",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0031",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2478",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0048",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1606",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2315",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3058",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1062",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3177",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3389",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1693",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0421",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0029",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0099",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1865",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0103",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3774",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0425",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1098",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0173",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0420",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1779",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2764",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2763",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0475",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0684",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2895",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0025",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3730",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0154",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3608",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1415",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3729",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1297",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3870",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2312",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3967",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1210",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2400",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2507",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2153",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1277",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4040",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0339",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0126",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2020",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2022",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3805",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2103",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0142",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0003",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4013",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2021",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2530",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3807",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1136",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2023",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2025",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1262",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3770",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0073",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0071",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0072",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0074",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0918",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3198",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1215",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4054",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0777",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1092",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0149",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0635",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3396",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0084",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2515",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2746",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2747",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2942",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4019",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3829",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0784",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3633",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3917",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0763",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2423",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0765",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2425",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2422",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0764",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2424",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0134",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0009",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2519",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1069",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0785",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0826",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3941",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2615",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1740",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2518",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0451",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0639",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0109",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3412",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3974",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0369",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3639",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3850",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4005",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2499",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2026",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2476",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2557",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2024",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0908",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4160",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2585",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3634",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1692",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0750",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1662",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0415",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2687",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2751",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2752",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2472",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3607",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3368",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3281",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0388",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3390",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3939",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0915",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0166",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3772",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3117",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3992",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3990",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0423",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4407",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2935",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2465",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2827",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0417",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3993",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1260",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1261",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3991",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0179",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0085",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0181",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3189",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0090",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0088",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0091",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3972",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0841",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3057",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0174",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0086",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0096",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0171",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3803",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3804",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3997",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0524",
+            "gene_name": ""
+          }
+        ],
+        "subsystem_enrichment_top": [
+          {
+            "subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+            "n_flip": 97,
+            "expected": 42.0,
+            "ratio": 2.31
+          },
+          {
+            "subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+            "n_flip": 24,
+            "expected": 13.1,
+            "ratio": 1.84
+          },
+          {
+            "subsystem": "Alternate Carbon Metabolism",
+            "n_flip": 24,
+            "expected": 41.5,
+            "ratio": 0.58
+          },
+          {
+            "subsystem": "Tyrosine, Tryptophan, and Phenylalanine Metabolism",
+            "n_flip": 21,
+            "expected": 5.6,
+            "ratio": 3.75
+          },
+          {
+            "subsystem": "Cell Envelope Biosynthesis",
+            "n_flip": 19,
+            "expected": 12.4,
+            "ratio": 1.54
+          },
+          {
+            "subsystem": "Valine, Leucine, and Isoleucine Metabolism",
+            "n_flip": 16,
+            "expected": 3.7,
+            "ratio": 4.29
+          },
+          {
+            "subsystem": "Inorganic Ion Transport and Metabolism",
+            "n_flip": 15,
+            "expected": 19.4,
+            "ratio": 0.77
+          },
+          {
+            "subsystem": "Purine and Pyrimidine Biosynthesis",
+            "n_flip": 15,
+            "expected": 5.1,
+            "ratio": 2.92
+          },
+          {
+            "subsystem": "Nucleotide Salvage Pathway",
+            "n_flip": 14,
+            "expected": 18.2,
+            "ratio": 0.77
+          },
+          {
+            "subsystem": "Threonine and Lysine Metabolism",
+            "n_flip": 14,
+            "expected": 4.9,
+            "ratio": 2.86
+          },
+          {
+            "subsystem": "Arginine and Proline Metabolism",
+            "n_flip": 13,
+            "expected": 9.8,
+            "ratio": 1.33
+          },
+          {
+            "subsystem": "Membrane Lipid Metabolism",
+            "n_flip": 10,
+            "expected": 3.5,
+            "ratio": 2.86
+          }
+        ]
+      }
+    }
+  }
+}

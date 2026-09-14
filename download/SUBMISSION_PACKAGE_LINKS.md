@@ -6,7 +6,7 @@ links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
 
 Revision note (2026-09-14): main is now `journal_manuscript_v4.tex`
-(28 pp) and the companion is `companion_categorical_v3.tex` (65 pp).
+(28 pp) and the companion is `companion_categorical_v3.tex` (66 pp).
 The companion implements the eight-item repair set of the external
 audit's synthesized ledger (one optic formalism, corrected
 optic-colimit scope, one Hordijk-Steel catalysis condition, gluing
@@ -20,6 +20,19 @@ sentence softened, generic-weights uniqueness step, semiconvexity
 law, label/title fixes) plus the selection-rule count harmonization;
 its figure directory is renamed `association_robustness/` (was
 `association_robustness/`).
+
+Revision note (2026-09-14, second perturbation probe round): the
+companion adds the oxygen-limited medium probe (the second
+perturbation axis, beyond the carbon-source correction): a four-
+level dose response on iJO1366 (EX_o2_e at −10/−5/−2.5) plus the
+cross-rebuild and non-degenerate anaerobic endpoint on iML1515
+(−5 and 0). Labels are invariant at every non-anaerobic level in
+both reconstructions (zero flips; κ = 1.000) with the association
+degrading only gracefully (held-out AUC ≥ 0.971, 0.9999 at −10);
+the anaerobic endpoint re-stratifies 7/1516 labels (lower
+glycolysis + hemN gained; fabZ lost), and the iJO1366 anaerobic
+zero-growth is disclosed as a model-level degeneracy. The abstract
+promotes the medium-robustness finding (262 words).
 
 - Repository: https://github.com/MIKEAA2020/metabolic-curvature-measure
   (renamed 2026-09-03 from the earlier internal name; GitHub redirects
@@ -89,7 +102,7 @@ upload directory and the repository layout
 
 **Title:** Stratified Connections, Optic Composition, and the Homotopy
 Fixed-Point Extension: A Categorical Framework for Viability-Weighted
-Curvature (Research Article; 65 pp; electronic-only, free — no author charges).
+Curvature (Research Article; 66 pp; electronic-only, free — no author charges).
 
 ### Journal / submission links (all verified)
 
@@ -112,7 +125,7 @@ only after acceptance.
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (65 pp, 3rd-wave repair + glucose-only re-run revision: the eight-item repair set, the six restored citations, the Keio/COT-NE external closures, the medium-corrected glucose-only Keio re-run, and the viability-kernel + Poincare/averaging bridges, on top of the restoration revision) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
+| Manuscript PDF (66 pp, 3rd-wave repair + glucose-only re-run + oxygen-probe revision: the eight-item repair set, the six restored citations, the Keio/COT-NE external closures, the medium-corrected glucose-only Keio re-run, the oxygen-limited second perturbation probe with the abstract promotion, and the viability-kernel + Poincare/averaging bridges, on top of the restoration revision) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
 | LaTeX source | [scripts/companion_categorical_v3.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v3.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v3.tex) |
 
@@ -242,3 +255,29 @@ the T7c Poincare/averaging bridge (occupation fraction as a
 phase-invariant orbit statistic); companion 63→65 pp, 0 errors/0
 undefined/0 overfull; audit_v5 110/110 PASS; new artifacts
 download/keio_glucose_only_e12/e15/e16 (csv/txt/json/png).
+
+Second-probe round (same files, amended in place on the live heads;
+frozen lineage untouched): the oxygen-limited medium probe executed
+on the electron-acceptor axis (glucose-only medium retained, EX_o2_e
+tightened) — iJO1366 dose response at −10/−5/−2.5 with wild-type
+optima 0.711/0.491/0.367 (overflow, then fermentation physiology) and
+289/1367 essential at every level (zero label changes, κ = 1.000;
+calibration r +0.775/+0.607/+0.519, held-out AUC 0.9999/0.980/0.971,
+MCC 0.993/0.939/0.887, P@200 = 1.0 at −10); iML1515 at −5 (WT 0.353,
+286/1516 unchanged, r +0.559, AUC 0.994, direct AUC 0.818) and at
+the anaerobic endpoint 0 (WT 0.134): 286→291 labels (+6/−1: eno,
+pgk, gapA, gpmA, gpmM, hemN gained; fabZ lost; κ = 0.985, 5/7 flips
+glycolysis-enriched), calibration r +0.260/AUC 0.672, direct
++0.118/AUC 0.673, model gaps unchanged at 13; the iJO1366 anaerobic
+zero-growth disclosed as a model-level degeneracy (OPHHX + PDX5POi
+lack anaerobic alternatives in that reconstruction; 0.01 mmol/gDW/h
+O₂ restores 0.231; iML1515 carries the O₂-free OPHHX3 route);
+landed as prop:keio-o2-limited + rem:keio-o2-invariance; abstract
+promoted to the medium-robustness statement (262 words < 265);
+companion 65→66 pp, 0 errors/0 undefined/0 overfull; audit_v6
+125/125 PASS (the v5 audit's 110 plus 15 new O2 checks; two
+rounding defects found and fixed: iML −5 AUC 0.995→0.994, WT
+reduction 62%→63%); new artifacts download/keio_o2_limited_e12/
+e16 (sweep csv + results json), keio_o2_limited_summary.txt,
+keio_o2_limited_dose_response.png, keio_o2_anaerobic_diagnostic.json
+(scripts o2_limited_keio_probe.py + o2_anaerobic_diagnostic.py).

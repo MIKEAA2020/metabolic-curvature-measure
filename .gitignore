@@ -31,3 +31,6 @@ scripts/companion_categorical_v3.toc
 scripts/companion_categorical_v3.blg
 scripts/companion_categorical_v3.log
 scripts/journal_manuscript_v4.log
+
+# Python bytecode of repo scripts (not committed)
+scripts/__pycache__/

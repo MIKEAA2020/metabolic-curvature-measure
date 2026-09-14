@@ -44,10 +44,14 @@ four layers, each stated with its proof status explicitly labeled:
    statement and verified at scale, with a three-phase autopoiesis
    closure test; its external anchor on the Keio
    single-gene-deletion collection (transitive, direct, and
-   cross-rebuild arms, with a disclosed medium audit and its
+   cross-rebuild arms, with a disclosed medium audit, its
    glucose-only re-run: both in-silico essentiality sets invariant,
    every rank-level association strengthened, and the negative
-   cross-rebuild verdict reversed as a medium artifact); its
+   cross-rebuild verdict reversed as a medium artifact; and a second
+   perturbation probe on the oxygen axis, where the labels stay
+   invariant under a four-fold oxygen reduction in both
+   reconstructions and re-stratify only at the anaerobic regime
+   switch); its
    viability-kernel reading as a finite-time, feedback-certifying
    probe of kernel and capture-basin membership (with the Nagumo
    tangentiality condition); the Poincare/averaging analysis of its
