@@ -1,0 +1,20 @@
+GLUCOSE-ONLY RE-RUN: CROSS-REBUILD KEIO STRESS TEST (iML1515)
+==============================================================================
+
+Medium: glucose -10, O2 -20, minerals -10, EX_tre_e CLOSED
+Wild-type biomass: 0.821798 (deposited medium gave 0.925933)
+Genes processed: 1516; essential in silico: 286 (18.87%)
+Merged to raw Keio: 1331 (E=114); binary n=1325
+
+DIRECT VALIDATION:
+  Pearson r = +0.3760 (p=9.600e-46)
+  Spearman rho = +0.3039 (p=1.035e-29)
+  bootstrap 95% CI: [0.3176, 0.4298]
+  ROC AUC = 0.8128
+
+HELD-OUT 70/30:
+  n_test=398 (E=34); acc=0.7990
+  sens=0.6765 spec=0.8104 prec=0.2500
+  MCC=0.3228 AUC=0.7112
+
+Model gaps (Keio=E, PEC=E, in-silico=N): 13

@@ -1,0 +1,42 @@
+{
+  "task": "Glucose-only re-run of the cross-rebuild Keio stress test (E16 medium correction)",
+  "model": "iML1515 (local BiGG JSON)",
+  "medium": "glucose -10, O2 -20, minerals -10, EX_tre_e CLOSED",
+  "wild_type_biomass": 0.8217979336265955,
+  "essential_threshold_5pct": 0.04108989668132978,
+  "n_genes_processed": 1516,
+  "n_essential_in_silico": 286,
+  "n_merged": 1331,
+  "n_keio_E": 114,
+  "binary_subset": {
+    "n": 1325,
+    "n_E": 114
+  },
+  "direct_validation": {
+    "pearson_r": 0.3759696624201929,
+    "pearson_p": 9.600403160120568e-46,
+    "spearman_rho": 0.303908895979654,
+    "spearman_p": 1.0347614007023717e-29,
+    "bootstrap_95ci": [
+      0.31763218179495056,
+      0.4298499352204053
+    ],
+    "roc_auc": 0.8127834035956945
+  },
+  "held_out_70_30": {
+    "n_test": 398,
+    "accuracy": 0.7989949748743719,
+    "sensitivity": 0.6764705882352942,
+    "specificity": 0.8104395604395604,
+    "precision": 0.25,
+    "mcc": 0.3228377784129329,
+    "roc_auc": 0.7112152553329024,
+    "confusion": {
+      "tp": 23,
+      "fp": 69,
+      "tn": 295,
+      "fn": 11
+    }
+  },
+  "n_model_gaps_pecE_insilicoN": 13
+}

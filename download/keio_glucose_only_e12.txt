@@ -1,0 +1,30 @@
+GLUCOSE-ONLY RE-RUN OF THE TRANSITIVE KEIO ANCHOR (E12 correction)
+==============================================================================
+
+Medium: glucose -10, O2 -20, minerals -1000, EX_tre_e CLOSED
+Wild-type biomass: 0.982372 h^-1 (deposited medium gave 15.444242)
+Genes processed: 1367
+Essential (< 5% WT = 0.0491): 289 (21.14%)
+
+CALIBRATION:
+  Pearson  r(log kV, db) = +0.6034  (p=2.21e-136)
+  Spearman rho            = +0.5915  (p=8.65e-130)
+  Partial r | n_gpr_rxns  = +0.6010  (p=5.42e-135)
+  Bootstrap 95% CI        = [+0.5782, +0.6311]
+
+HELD-OUT 70/30 ESSENTIALITY:
+  n_test = 411 (essential 87)
+  acc=0.9611 sens=0.8851 spec=0.9815 prec=0.9277
+  F1=0.9059 MCC=0.8817 ROC AUC=0.9769
+  confusion (tn,fp,fn,tp)=(318,6,10,77)
+
+PRECISION @ K:
+  K=10: 0.600 (base 0.211)
+  K=25: 0.440 (base 0.211)
+  K=50: 0.720 (base 0.211)
+  K=100: 0.830 (base 0.211)
+  K=200: 0.915 (base 0.211)
+  K=500: 0.560 (base 0.211)
+
+LABEL FLIPS vs DEPOSITED (trehalose-medium) RUN:
+  old essential 289 -> new 289; +0 / -0; 289 common essential

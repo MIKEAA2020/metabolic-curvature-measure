@@ -42,9 +42,17 @@ four layers, each stated with its proof status explicitly labeled:
 3. **A filtered-colimit construction of RAF sets** in
    Optic(Set), proved at the Set level with an adapter-level optic
    statement and verified at scale, with a three-phase autopoiesis
-   closure test, its external anchor on the Keio
+   closure test; its external anchor on the Keio
    single-gene-deletion collection (transitive, direct, and
-   cross-rebuild arms), and a benchmark against the structural
+   cross-rebuild arms, with a disclosed medium audit and its
+   glucose-only re-run: both in-silico essentiality sets invariant,
+   every rank-level association strengthened, and the negative
+   cross-rebuild verdict reversed as a medium artifact); its
+   viability-kernel reading as a finite-time, feedback-certifying
+   probe of kernel and capture-basin membership (with the Nagumo
+   tangentiality condition); the Poincare/averaging analysis of its
+   pathwise levels (the occupation fraction as a phase-invariant
+   orbit statistic); and a benchmark against the structural
    closure instruments of chemical-organization theory and network
    expansion.
 

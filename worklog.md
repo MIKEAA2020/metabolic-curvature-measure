@@ -5373,3 +5373,120 @@ Stage Summary:
 - Frozen lineage untouched: journal_manuscript.tex, journal_manuscript_v2.tex, journal_manuscript_v3.tex, companion_categorical.tex, companion_categorical_v2.tex, scripts/versions/, and the frozen download PDFs (restored post-baseline) all unmodified; every revision is a new file.
 - All verifications green: 98/98 numeric audit on v4; RAF re-enumeration unchanged under the corrected catalysis condition; both manuscripts compile 0 errors/0 undefined; ZIPs standalone-reverified.
 - Open items remain submitter-level only (author name, submission dates, TAC receiving editor, BMB registration), plus the disclosed methodological items (the Keio medium-audit glucose-only re-run; the ratio-form discretization bridge, now recorded as an open problem).
+
+---
+Task ID: glucose-t7-round
+Agent: main (Z.ai)
+Task: User 3-point directive: (1) remaining points from audits — look in
+places not yet examined; (2) the glucose-only Keio re-run; (3) T7b
+(viability-kernel bridge) + T7c (Poincare remark, Phase III). Repo
+checked first (the v4-round commit 27aaa18 was already on the remote;
+tracking ref synced).
+
+Work Log:
+- Remaining-points scan, unexamined places: upload/deepseek general
+  chat.txt (16,271 lines; the only never-read audit-relevant file —
+  zero worklog mentions) read and cross-checked against the current
+  manuscripts. Its content is the generative pre-history (TSRC
+  rate-distortion/automata bridge; "geometrizing autopoiesis";
+  epistemic principal bundle; the statistical-bundle construction with
+  its stability theorem; the rigorous "Map" program; grid-world
+  minimal test; n=3 unit test). Its own internal critiques (principal-
+  vs-vector-bundle conflation; "exact predictive variance"; RAF-causes-
+  curvature; automaton-toggle falsity; 2-state cross-catalysis
+  equilibration; Poincare absorption of Phase III) target constructs
+  that were ALL excised in the two-paper split; the surviving material
+  (def:ard with UTM/distortion; the Fisher-Weyl frame-bundle structure
+  with declared O/SO/CO reductions; the KKT Fisher-minimal transport
+  law; the O7 n=3 Fisher-Rao optic) is already in repaired form.
+  Conclusion: no new unimplemented audit points beyond the user's
+  items 2 and 3; audit round 1/ was byte-identical to the root GPT
+  audit (md5); 2nd wave + unifying object + 3rd wave were previously
+  read and jointly assessed.
+- Glucose-only Keio re-run executed (scripts/glucose_only_keio_e12.py,
+  _e15.py, _e16.py): the full E12 protocol re-run on iJO1366 with
+  EX_tre_e CLOSED as the sole change (WT 15.444242 -> 0.982372, the
+  canonical glucose-minimal optimum); the E15 direct merge re-run on
+  the corrected kV values (same raw Keio Sup Tables 6/7 parsing, same
+  seeds); the E16 cross-rebuild re-run on iML1515 with EX_tre_e closed
+  (WT 0.925933 -> 0.821798). RESULTS: both in-silico essentiality
+  sets are IDENTICAL (289/1367 and 286/1516; zero label changes;
+  binary matched sets unchanged: 1206 E=130; 1325 E=114); every
+  rank-level association STRENGTHENS: E12 Pearson 0.370 -> 0.603
+  (p=2.2e-136), Spearman 0.390 -> 0.591, partial 0.364 -> 0.601,
+  held-out AUC 0.953 -> 0.977, MCC 0.719 -> 0.882, P@200 0.805 ->
+  0.915; E15 Pearson 0.085 -> 0.230, Spearman 0.228 -> 0.256, AUC
+  0.713 -> 0.737, held-out MCC 0.085 -> 0.283, strata 84/35 unchanged,
+  model gaps 30 unchanged, medium-mismatch stratum 217 -> 180; E16
+  Pearson -0.018 -> +0.376 (p=9.6e-46), Spearman -0.070 -> +0.304,
+  AUC 0.428 -> 0.813 — the "honestly negative" cross-rebuild verdict
+  was itself an artifact of the trehalose contamination and reverses
+  under the corrected medium (model gaps 13 unchanged). Artifacts:
+  download/keio_glucose_only_e12/e15/e16 (csv/txt/json/png/sweep).
+- companion_categorical_v3.tex amended in place (live head; frozen
+  lineage untouched) via scripts/companion_v3_patch_d.py (10
+  count-asserted edits): pointer sentences in prop:keio-e12/e15/e16;
+  rem:keio-medium-audit rewritten from "open methodological item" to
+  the executed re-run with the verdict-flip disclosure; new
+  prop:keio-glucose-only + rem:keio-invariance (label invariance via
+  the bimodal relative-ratio separation; kV dilution via absolute
+  flux aggregation); pFBA -> FBA at the three Keio sites (the solver
+  convention is plain FBA, per the medium-audit reproduction).
+- T7b implemented: new prop:closure-viability (closure test as a
+  finite-time viability probe) + proof + rem:closure-viability after
+  the closure-test definition: the knockout-drop-recover protocol
+  read in control form (repair-reaction rates as controls; endogenous
+  law = pre-knockout feedback); (i) feedback-viability-kernel
+  membership suffices for step (iii); (ii) passing steps (i)-(iii)
+  gives recovery-set membership at T, and uniform persistence gives
+  the omega-limit-set containment in V (the trajectory-level
+  relaxation of kernel membership); (iii) step (v) = the
+  finite-horizon capture problem for {x*}; remark: Nagumo
+  tangentiality at the threshold face as the shadow of the contingent-
+  cone projected differential inclusion eq:pdi; the deliberate
+  endogenous-feedback fixing (non-circularity); the invariance-kernel
+  scope; aubin2011 cited.
+- T7c implemented: new prop:poincare-averaging + proof +
+  rem:poincare-averaging after rem:phase3-operational: the occupation
+  fraction converges to the periodic orbit's phase average, phase-
+  shift invariant (the endpoint statistic samples one phase — the
+  mechanism of the ALA 0.498 / FBP 0.853 endpoint failures); the path
+  reparameterization of def:autopoiesis-phase3 item (3) is the
+  infinity-groupoid packaging of this phase invarience; non-periodic
+  bounded recoveries -> occupation measures on the omega-limit set =
+  the occupation-measure form of prop:closure-viability(ii);
+  guckenheimer1983 + sandersverhulst2007 added to the bib (54 -> 56).
+- journal_manuscript_v4.tex amended via scripts/main_v4_patch_b.py:
+  one Discussion sentence registering the companion's viability-kernel
+  + Poincare/averaging closures in the division-of-labor list.
+- Builds: companion_categorical_v3.pdf 63 -> 65 pp, 0 errors, 0
+  undefined, 0 overfull; journal_manuscript_v4.pdf 28 pp, 0 errors, 0
+  undefined, overfull profile identical to the v4 baseline (the same
+  two pre-existing sub-4pt sites). Render-verified: all new
+  propositions/remarks present, Guckenheimer/Sanders/Aubin resolved.
+- audit_v5_numbers.py (audit_v4 + 12 new Keio-section checks; three
+  boundary-rounding quotes corrected during verification: Spearman
+  0.592 -> 0.591, specificity 0.982 -> 0.981, E15' AUC 0.738 ->
+  0.737): 110 PASS / 0 FAIL.
+- Packaging: ZIPs rebuilt via build_submission_zips_v4.sh and
+  standalone-reverified in fresh dirs (28 pp / 65 pp, exit 0);
+  download PDFs refreshed; cover_letter_tac.md extended (the re-run +
+  the two bridges); SUBMISSION_PACKAGE_LINKS.md updated (65 pp, audit
+  v5 110/110, the follow-up round note); .gitignore extended
+  (overleaf_stage_v4/ + the v4-round LaTeX artifacts).
+
+Stage Summary:
+- The glucose-only re-run closes the last disclosed methodological
+  item of the Keio section with a scientifically strong outcome:
+  essentiality calls invariant, all associations improved, and the
+  cross-rebuild verdict reversed (the negative was the artifact).
+- T7b and T7c landed as proved propositions + remarks in the
+  companion, in the verified/strengthened form (kernel/capture-basin
+  directions separated; Poincare/averaging as the classical content
+  of the Phase III pathwise levels); one integration sentence in the
+  main.
+- The unexamined-places scan (the 16k-line deepseek chat log) found
+  no further unimplemented audit points; the remaining open items are
+  the deliberately-recorded ones (the ratio-form discretization
+  bridge as an open problem) and submitter-level items.
+- Frozen lineage untouched; all checks green; commit + push follows.

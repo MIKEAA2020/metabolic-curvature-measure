@@ -6,7 +6,7 @@ links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
 
 Revision note (2026-09-14): main is now `journal_manuscript_v4.tex`
-(28 pp) and the companion is `companion_categorical_v3.tex` (63 pp).
+(28 pp) and the companion is `companion_categorical_v3.tex` (65 pp).
 The companion implements the eight-item repair set of the external
 audit's synthesized ledger (one optic formalism, corrected
 optic-colimit scope, one Hordijk-Steel catalysis condition, gluing
@@ -89,7 +89,7 @@ upload directory and the repository layout
 
 **Title:** Stratified Connections, Optic Composition, and the Homotopy
 Fixed-Point Extension: A Categorical Framework for Viability-Weighted
-Curvature (Research Article; 63 pp; electronic-only, free — no author charges).
+Curvature (Research Article; 65 pp; electronic-only, free — no author charges).
 
 ### Journal / submission links (all verified)
 
@@ -112,7 +112,7 @@ only after acceptance.
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (63 pp, 3rd-wave repair revision: the eight-item repair set, the six restored citations, and the Keio/COT-NE external closures, on top of the restoration revision) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
+| Manuscript PDF (65 pp, 3rd-wave repair + glucose-only re-run revision: the eight-item repair set, the six restored citations, the Keio/COT-NE external closures, the medium-corrected glucose-only Keio re-run, and the viability-kernel + Poincare/averaging bridges, on top of the restoration revision) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
 | LaTeX source | [scripts/companion_categorical_v3.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v3.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v3.tex) |
 
@@ -220,9 +220,25 @@ transitive, E15 direct, E16 cross-rebuild, with the medium-audit
 note) and the COT/NE structural benchmark (E14). The main paper
 carries the four line-level corrections of the cross-check plus
 framing edits, and its figure directory is renamed
-association_robustness/. Main now 28 pp, companion 63 pp; both
-compile with 0 errors and 0 undefined refs; the v4 audit passes
-98/98; the RAF enumeration was re-verified under the corrected
+association_robustness/. Main now 28 pp, companion 65 pp; both
+compile with 0 errors and 0 undefined refs; the v5 audit passes
+110/110 (the v4 audit's 98 plus the 12 new Keio-section checks); the RAF enumeration was re-verified under the corrected
 catalysis condition (16 RAFs / 21 inclusions / R_max unchanged);
-ZIPs rebuilt as the v4 round and standalone-reverified (28 / 63
+ZIPs rebuilt as the v4 round and standalone-reverified (28 / 65
 pp).
+
+Follow-up round (same files, amended in place on the live heads;
+frozen lineage untouched): the glucose-only Keio re-run executed
+with the trehalose exchange closed as the sole change — both
+in-silico essentiality sets unchanged (289/1367 and 286/1516, zero
+label changes), every rank-level association strengthened (E12
+Pearson 0.370→0.603, held-out AUC 0.953→0.977, MCC 0.719→0.882;
+E15 Pearson 0.085→0.230, AUC 0.713→0.737), and the E16
+cross-rebuild negative verdict reversed as a medium artifact
+(Pearson −0.018→+0.376, AUC 0.428→0.813) — plus the T7b
+viability-kernel bridge (closure test as a finite-time,
+feedback-certifying probe of kernel/capture-basin membership) and
+the T7c Poincare/averaging bridge (occupation fraction as a
+phase-invariant orbit statistic); companion 63→65 pp, 0 errors/0
+undefined/0 overfull; audit_v5 110/110 PASS; new artifacts
+download/keio_glucose_only_e12/e15/e16 (csv/txt/json/png).

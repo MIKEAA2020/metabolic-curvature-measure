@@ -1,0 +1,88 @@
+{
+  "task": "Glucose-only re-run of the direct Keio validation (E15 medium correction)",
+  "kappa_source": "keio_glucose_only_e12.csv (EX_tre_e CLOSED)",
+  "n_merged": 1212,
+  "n_keio_E": 130,
+  "n_keio_N": 1076,
+  "n_keio_u": 6,
+  "binary_subset": {
+    "n": 1206,
+    "n_E": 130,
+    "base_rate": 0.1077943615257048
+  },
+  "direct_validation": {
+    "pearson_r": 0.2296930028264968,
+    "pearson_p": 6.658792732458588e-16,
+    "spearman_rho": 0.2555410339133769,
+    "spearman_p": 1.9652361576291164e-19,
+    "point_biserial_r": 0.2296930028264968,
+    "point_biserial_p": 6.658792732458588e-16,
+    "bootstrap_95ci": [
+      0.18233373434358713,
+      0.27605665295738324
+    ],
+    "roc_auc": 0.7374714040606234
+  },
+  "held_out_70_30": {
+    "n_test": 362,
+    "n_test_E": 39,
+    "accuracy": 0.6325966850828729,
+    "sensitivity": 0.8461538461538461,
+    "specificity": 0.6068111455108359,
+    "precision": 0.20625,
+    "f1": 0.3316582914572864,
+    "mcc": 0.282789009400702,
+    "roc_auc": 0.7632769707073113,
+    "confusion": {
+      "tp": 33,
+      "fp": 127,
+      "tn": 196,
+      "fn": 6
+    }
+  },
+  "precision_at_k": {
+    "K=10": {
+      "precision": 0.1,
+      "base_rate": 0.1077943615257048,
+      "lift": 0.9276923076923078,
+      "n_top_with_keio_E": 1
+    },
+    "K=25": {
+      "precision": 0.16,
+      "base_rate": 0.1077943615257048,
+      "lift": 1.4843076923076923,
+      "n_top_with_keio_E": 4
+    },
+    "K=50": {
+      "precision": 0.2,
+      "base_rate": 0.1077943615257048,
+      "lift": 1.8553846153846156,
+      "n_top_with_keio_E": 10
+    },
+    "K=100": {
+      "precision": 0.26,
+      "base_rate": 0.1077943615257048,
+      "lift": 2.4120000000000004,
+      "n_top_with_keio_E": 26
+    },
+    "K=200": {
+      "precision": 0.21,
+      "base_rate": 0.1077943615257048,
+      "lift": 1.9481538461538461,
+      "n_top_with_keio_E": 42
+    },
+    "K=500": {
+      "precision": 0.202,
+      "base_rate": 0.1077943615257048,
+      "lift": 1.8739384615384618,
+      "n_top_with_keio_E": 101
+    }
+  },
+  "pec_stratification": {
+    "n_high_conf": 84,
+    "n_low_conf": 35,
+    "high_conf_auc": 0.712587404850416,
+    "low_conf_auc": 0.7460966542750931
+  },
+  "n_model_gaps_pecE_insilicoN": 30
+}

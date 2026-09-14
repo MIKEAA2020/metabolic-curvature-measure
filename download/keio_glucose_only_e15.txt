@@ -1,0 +1,30 @@
+GLUCOSE-ONLY RE-RUN: DIRECT kV vs RAW Baba 2006 KEIO
+==============================================================================
+
+kappa source: keio_glucose_only_e12.csv (EX_tre_e CLOSED)
+merged n = 1212; binary n = 1206 (E=130, N=1076)
+
+DIRECT VALIDATION:
+  Pearson r = +0.2297 (p=6.659e-16)
+  Spearman rho = +0.2555 (p=1.965e-19)
+  bootstrap 95% CI: [0.1823, 0.2761]
+  ROC AUC = 0.7375
+
+HELD-OUT 70/30:
+  n_test=362 (E=39); acc=0.6326
+  sens=0.8462 spec=0.6068 prec=0.2062
+  F1=0.3317 MCC=0.2828 AUC=0.7633
+
+P@K:
+  K=10: 0.1000 (lift 0.93x)
+  K=25: 0.1600 (lift 1.48x)
+  K=50: 0.2000 (lift 1.86x)
+  K=100: 0.2600 (lift 2.41x)
+  K=200: 0.2100 (lift 1.95x)
+  K=500: 0.2020 (lift 1.87x)
+
+PEC stratification: high-conf n=84, low-conf n=35
+  high-conf AUC = 0.7126
+  low-conf AUC = 0.7461
+
+Model gaps (Keio=E, PEC=E, in-silico=N): 30

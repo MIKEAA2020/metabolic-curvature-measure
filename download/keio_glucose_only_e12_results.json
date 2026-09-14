@@ -1,0 +1,80 @@
+{
+  "task": "Glucose-only re-run of the transitive Keio anchor (E12 medium correction)",
+  "model": "iJO1366 (local BiGG JSON)",
+  "medium": "glucose -10, O2 -20, minerals -1000, EX_tre_e CLOSED (deposited E12 list minus trehalose)",
+  "wild_type_biomass": 0.9823718127269575,
+  "essential_threshold_5pct_of_wt": 0.04911859063634788,
+  "n_genes_processed": 1367,
+  "n_essential": 289,
+  "essential_fraction": 0.21141185076810534,
+  "calibration": {
+    "pearson_r_log_kV_delta_b": 0.6034446094458501,
+    "pearson_p_value": 2.2121560968353835e-136,
+    "spearman_rho_kV_delta_b": 0.5914931461939654,
+    "spearman_p_value": 8.651034404214217e-130,
+    "partial_r_given_n_gpr_rxns": 0.6009681059193699,
+    "partial_p_value": 5.416956758014994e-135,
+    "bootstrap_95ci_low": 0.578193619845466,
+    "bootstrap_95ci_high": 0.6311405773158595,
+    "n_bootstrap_resamples": 1000
+  },
+  "held_out_essentiality_prediction": {
+    "test_size_fraction": 0.3,
+    "n_test": 411,
+    "n_test_essential": 87,
+    "accuracy": 0.9610705596107056,
+    "sensitivity": 0.8850574712643678,
+    "specificity": 0.9814814814814815,
+    "precision": 0.927710843373494,
+    "f1": 0.9058823529411765,
+    "mcc": 0.8817475331166467,
+    "roc_auc": 0.9769050659855257,
+    "confusion_matrix": {
+      "tn": 318,
+      "fp": 6,
+      "fn": 10,
+      "tp": 77
+    }
+  },
+  "precision_at_k": {
+    "K=10": {
+      "precision": 0.6,
+      "base_rate": 0.21141185076810534,
+      "lift": 2.838062283737024
+    },
+    "K=25": {
+      "precision": 0.44,
+      "base_rate": 0.21141185076810534,
+      "lift": 2.0812456747404844
+    },
+    "K=50": {
+      "precision": 0.72,
+      "base_rate": 0.21141185076810534,
+      "lift": 3.4056747404844288
+    },
+    "K=100": {
+      "precision": 0.83,
+      "base_rate": 0.21141185076810534,
+      "lift": 3.92598615916955
+    },
+    "K=200": {
+      "precision": 0.915,
+      "base_rate": 0.21141185076810534,
+      "lift": 4.328044982698962
+    },
+    "K=500": {
+      "precision": 0.56,
+      "base_rate": 0.21141185076810534,
+      "lift": 2.6488581314878896
+    }
+  },
+  "label_flip_comparison_vs_deposited": {
+    "n_compared": 1367,
+    "old_essential": 289,
+    "new_essential": 289,
+    "both_essential": 289,
+    "old_only": 0,
+    "new_only": 0,
+    "neither": 1078
+  }
+}
