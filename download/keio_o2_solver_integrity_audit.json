@@ -1,0 +1,209 @@
+{
+  "comparisons": [
+    {
+      "level": "iML baseline",
+      "n_genes": 1516,
+      "n_biomass_discrepant": 0,
+      "n_label_discrepant": 0,
+      "genes": []
+    },
+    {
+      "level": "iML O2 -5",
+      "n_genes": 1516,
+      "n_biomass_discrepant": 0,
+      "n_label_discrepant": 0,
+      "genes": []
+    },
+    {
+      "level": "iML O2 0",
+      "n_genes": 1516,
+      "n_biomass_discrepant": 0,
+      "n_label_discrepant": 0,
+      "genes": []
+    },
+    {
+      "level": "iJO O2 -10",
+      "n_genes": 1367,
+      "n_biomass_discrepant": 0,
+      "n_label_discrepant": 0,
+      "genes": []
+    },
+    {
+      "level": "iJO O2 -5",
+      "n_genes": 1367,
+      "n_biomass_discrepant": 0,
+      "n_label_discrepant": 0,
+      "genes": []
+    },
+    {
+      "level": "iJO O2 -2.5",
+      "n_genes": 1367,
+      "n_biomass_discrepant": 0,
+      "n_label_discrepant": 0,
+      "genes": []
+    },
+    {
+      "level": "iJO baseline",
+      "n_genes": 1367,
+      "n_biomass_discrepant": 0,
+      "n_label_discrepant": 0,
+      "genes": []
+    },
+    {
+      "level": "iJO nh4 -10",
+      "n_genes": 1367,
+      "n_biomass_discrepant": 0,
+      "n_label_discrepant": 0,
+      "genes": []
+    },
+    {
+      "level": "iJO nh4 -2.5",
+      "n_genes": 1367,
+      "n_biomass_discrepant": 0,
+      "n_label_discrepant": 0,
+      "genes": []
+    },
+    {
+      "level": "iJO glu -10",
+      "n_genes": 1367,
+      "n_biomass_discrepant": 0,
+      "n_label_discrepant": 0,
+      "genes": []
+    }
+  ],
+  "total_gene_comparisons": 14117,
+  "total_discrepancies": 0,
+  "discrepant_genes": [],
+  "pre_patch_audit": {
+    "finding": "Before patching, the identical comparison flagged exactly ONE discrepancy: b0180 (fabZ) at iML O2 = 0 (deposited plain b_ko 0.134109 vs fresh canonical 0.0, label 0 vs 1). All 14,116 other comparisons agreed to <1e-6 with identical labels.",
+    "adjudication": "FVA (fraction_of_optimum=0.0, independent min/max solves) on the fresh fabZ-KO anaerobic model gives biomass maximum = 0.0; the WT anaerobic solution routes 2.682e-07 mmol/gDW/h through each of OPMEACPD/OGMEACPD (the ubiquinone side-chain drain, proportional to growth). The true KO optimum is therefore 0.0 (essential); the deposited row was a stale warm-started solution that ignored the bound changes at those two reactions.",
+    "mechanism": "Persistent-solver stale basis: when a plain optimize() has already run on the model object and only bounds are then patched (objective unchanged), glpk can return the previous solution marked optimal. Reproduced verbatim both in the original sequential sweep and in a two-solve (WT then KO) sequence; does not occur when the KO is the first solve of a fresh model instance, nor under pFBA (objective change forces a genuine re-solve)."
+  },
+  "post_patch_audit": {
+    "scope": "Every deposited plain-sweep level with a canonical counterpart (17 levels: the O2/N rounds' ten, the five phosphate levels, and the two iML nitrogen levels closed in the canonical-selection round).",
+    "total_gene_comparisons": 24282,
+    "total_discrepancies": 0,
+    "comparisons": [
+      {
+        "level": "iML baseline",
+        "n_genes": 1516,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iML O2 -5",
+        "n_genes": 1516,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iML O2 0",
+        "n_genes": 1516,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iJO O2 -10",
+        "n_genes": 1367,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iJO O2 -5",
+        "n_genes": 1367,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iJO O2 -2.5",
+        "n_genes": 1367,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iJO baseline",
+        "n_genes": 1367,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iJO nh4 -10",
+        "n_genes": 1367,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iJO nh4 -2.5",
+        "n_genes": 1367,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iJO glu -10",
+        "n_genes": 1367,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iML nh4 -2.5",
+        "n_genes": 1516,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iML glu -10",
+        "n_genes": 1516,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iJO Pi -0.5",
+        "n_genes": 1367,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iJO Pi -0.25",
+        "n_genes": 1367,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iJO Pi -0.1",
+        "n_genes": 1367,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iML Pi -0.25",
+        "n_genes": 1516,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      },
+      {
+        "level": "iML Pi -0.1",
+        "n_genes": 1516,
+        "n_biomass_discrepant": 0,
+        "n_label_discrepant": 0,
+        "genes": []
+      }
+    ],
+    "note": "Post-correction: 0 discrepancies. The eight corrupted calls found and fixed (all trace-quota genes at low growth): iML O2-0 plain fabZ; iJO Pi -0.1 plain fabZ/bioH + canonical bioF; iML Pi -0.1 plain bioC/fabZ/bioH + canonical bioH."
+  }
+}

@@ -12,7 +12,7 @@ O2 =   0.0: WT -0.0000 (O2 uptake -0.00); labels 289 -> 70 (+50 / -269, kappa 0.
 
 iML1515 baseline (O2 -20): WT 0.8218, 286/1516 essential, direct r +0.3760, AUC 0.8128
 iML1515 O2 = -5.0: WT 0.3534; labels 286 -> 286 (+0 / -0, kappa 1.0000); direct r +0.2363, AUC 0.8184; transitive r +0.5592, held-out AUC 0.9945
-iML1515 O2 = 0.0: WT 0.1341; labels 286 -> 291 (+6 / -1, kappa 0.9850); direct r +0.1178, AUC 0.6726; transitive r +0.2595, held-out AUC 0.6724
+iML1515 O2 = 0.0: WT 0.1341; labels 286 -> 292 (+6 / -0, kappa 0.9872); direct r +0.1246, AUC 0.6730; transitive r +0.2583, held-out AUC 0.6815
 
 Anaerobic endpoint (O2 = 0): iJO1366 wild-type growth is
 exactly zero (ubiquinol-8 biomass requirement: the OPHHX/
@@ -24,6 +24,12 @@ and the iJO1366 anaerobic label set is not meaningful --
 reported as a disclosed degeneracy, not a label change.
 iML1515 grows anaerobically (O2-independent q8 route) and
 provides the non-degenerate anaerobic endpoint.
+[CORRECTED per the solver-integrity audit: the fabZ row at this
+level was a stale warm-started solution; fresh re-solve gives
+b_ko = 0 (essential; FVA-confirmed, WT q8 side-chain quota
+2.68e-07 through OPMEACPD/OGMEACPD). Corrected endpoint: 286 ->
+292, six gains, zero losses, kappa 0.987. Damage audit: 0 further
+discrepancies in 14,117 gene-level comparisons.]
 
 Top subsystem enrichments of the iJO1366 flip set per level:
   iJO1366 O2 = 0.0: Cofactor and Prosthetic Group Biosynthesis (97 vs exp 42.0); Lipopolysaccharide Biosynthesis / Recycling (24 vs exp 13.1); Alternate Carbon Metabolism (24 vs exp 41.5); Tyrosine, Tryptophan, and Phenylalanine Metabolism (21 vs exp 5.6); Cell Envelope Biosynthesis (19 vs exp 12.4)

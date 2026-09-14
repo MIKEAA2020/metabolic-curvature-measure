@@ -110,13 +110,13 @@ echo "=== ZIP contents (companion) ==="
 unzip -l download/submission_companion_tac.zip
 
 # ---------- Standalone compile verification (fresh dirs) ----------
-rm -rf /tmp/zipcheck_v4 && mkdir -p /tmp/zipcheck_v4/main /tmp/zipcheck_v4/companion
-unzip -q download/submission_main_bmb.zip -d /tmp/zipcheck_v4/main
-unzip -q download/submission_companion_tac.zip -d /tmp/zipcheck_v4/companion
+rm -rf scripts/zipcheck_v4 && mkdir -p scripts/zipcheck_v4/main scripts/zipcheck_v4/companion
+unzip -q download/submission_main_bmb.zip -d scripts/zipcheck_v4/main
+unzip -q download/submission_companion_tac.zip -d scripts/zipcheck_v4/companion
 echo "=== fresh-dir compile: main v4 ==="
-(cd /tmp/zipcheck_v4/main && tectonic journal_manuscript_v4.tex 2>&1 | tail -2 && \
+(cd scripts/zipcheck_v4/main && tectonic journal_manuscript_v4.tex 2>&1 | tail -2 && \
  pdfinfo journal_manuscript_v4.pdf | grep Pages)
 echo "=== fresh-dir compile: companion v3 ==="
-(cd /tmp/zipcheck_v4/companion && tectonic companion_categorical_v3.tex 2>&1 | tail -2 && \
+(cd scripts/zipcheck_v4/companion && tectonic companion_categorical_v3.tex 2>&1 | tail -2 && \
  pdfinfo companion_categorical_v3.pdf | grep Pages)
 echo "ALL DONE"

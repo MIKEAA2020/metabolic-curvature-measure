@@ -127,63 +127,63 @@
       "wild_type_biomass": 0.13410915918519603,
       "o2_uptake_at_optimum": -0.0,
       "transitive_calibration": {
-        "pearson_r_log_kV_delta_b": 0.25950784297310475,
-        "pearson_p_value": 9.393511320067919e-25,
-        "spearman_rho": 0.2552648211956423,
-        "spearman_p_value": 5.6089041703045285e-24,
-        "partial_r_given_n_gpr_rxns": 0.25888070614719677,
-        "partial_p_value": 1.225848839662647e-24,
+        "pearson_r_log_kV_delta_b": 0.2583257405690961,
+        "pearson_p_value": 1.550526361888446e-24,
+        "spearman_rho": 0.25490478946933415,
+        "spearman_p_value": 6.517299553425938e-24,
+        "partial_r_given_n_gpr_rxns": 0.257563493881595,
+        "partial_p_value": 2.1391108633358627e-24,
         "bootstrap_95ci": [
-          0.23201648795394283,
-          0.28475975417165056
+          0.23104704798109246,
+          0.28306989076722
         ],
-        "n_essential": 291,
+        "n_essential": 292,
         "n_genes": 1516,
         "held_out": {
           "n_test": 455,
-          "n_test_essential": 87,
-          "accuracy": 0.8087912087912088,
+          "n_test_essential": 88,
+          "accuracy": 0.8065934065934066,
           "mcc": 0.0,
-          "roc_auc": 0.6723825587206397,
+          "roc_auc": 0.6815085459499628,
           "sensitivity": 0.0,
           "specificity": 1.0,
           "confusion": {
-            "tn": 368,
+            "tn": 367,
             "fp": 0,
-            "fn": 87,
+            "fn": 88,
             "tp": 0
           }
         },
         "precision_at_k": {
           "K=10": {
             "precision": 1.0,
-            "base_rate": 0.19195250659630606,
-            "lift": 5.209621993127148
+            "base_rate": 0.19261213720316622,
+            "lift": 5.191780821917808
           },
           "K=25": {
             "precision": 1.0,
-            "base_rate": 0.19195250659630606,
-            "lift": 5.209621993127148
+            "base_rate": 0.19261213720316622,
+            "lift": 5.191780821917808
           },
           "K=50": {
             "precision": 1.0,
-            "base_rate": 0.19195250659630606,
-            "lift": 5.209621993127148
+            "base_rate": 0.19261213720316622,
+            "lift": 5.191780821917808
           },
           "K=100": {
             "precision": 1.0,
-            "base_rate": 0.19195250659630606,
-            "lift": 5.209621993127148
+            "base_rate": 0.19261213720316622,
+            "lift": 5.191780821917808
           },
           "K=200": {
             "precision": 0.86,
-            "base_rate": 0.19195250659630606,
-            "lift": 4.480274914089347
+            "base_rate": 0.19261213720316622,
+            "lift": 4.464931506849315
           },
           "K=500": {
             "precision": 0.36,
-            "base_rate": 0.19195250659630606,
-            "lift": 1.8754639175257732
+            "base_rate": 0.19261213720316622,
+            "lift": 1.869041095890411
           }
         }
       },
@@ -191,16 +191,16 @@
         "n_merged": 1331,
         "binary_n": 1325,
         "binary_n_E": 114,
-        "pearson_r": 0.11777131546134448,
-        "pearson_p": 1.7245568704316802e-05,
-        "spearman_rho": 0.1677707186512849,
-        "spearman_p": 8.00718586672576e-10,
-        "point_biserial_r": 0.11777131546134448,
+        "pearson_r": 0.12461015812199036,
+        "pearson_p": 5.381464091188038e-06,
+        "spearman_rho": 0.16816708111445416,
+        "spearman_p": 7.296932229123014e-10,
+        "point_biserial_r": 0.12461015812199036,
         "bootstrap_95ci": [
-          0.07091510399588352,
-          0.15875290969342568
+          0.08219596829426096,
+          0.16294686500744113
         ],
-        "roc_auc": 0.672631723818216,
+        "roc_auc": 0.6730409839627972,
         "held_out": {
           "n_test": 398,
           "n_test_E": 34,
@@ -210,7 +210,7 @@
           "precision": 0.09787234042553192,
           "f1": 0.17100371747211895,
           "mcc": 0.05346075608803291,
-          "roc_auc": 0.6112233354880413,
+          "roc_auc": 0.6125969618616678,
           "confusion": {
             "tp": 23,
             "fp": 212,
@@ -219,24 +219,24 @@
           }
         },
         "pec_stratification": {
-          "high_conf_auc": 0.6747208559221627,
+          "high_conf_auc": 0.6753970248566881,
           "n_high_conf": 69,
           "low_conf_auc": 0.6651891970661097,
           "n_low_conf": 34
         },
-        "n_model_gaps_pecE_insilicoN": 13,
+        "n_model_gaps_pecE_insilicoN": 12,
         "n_medium_mismatch_insilicoE_keioN": 178
       },
       "flips_vs_glucose_only": {
-        "label": "iML1515 O2=0.0 vs glucose-only (O2=-20)",
+        "label": "iML1515 O2=0 vs glucose-only (O2=-20) [corrected]",
         "n_compared": 1516,
         "n_essential_base": 286,
-        "n_essential_new": 291,
+        "n_essential_new": 292,
         "n_gain_essential": 6,
-        "n_loss_essential": 1,
-        "n_both_essential": 285,
-        "cohen_kappa": 0.9850172248263399,
-        "jaccard": 0.976027397260274,
+        "n_loss_essential": 0,
+        "n_both_essential": 286,
+        "cohen_kappa": 0.987174714899665,
+        "jaccard": 0.9794520547945206,
         "gains": [
           {
             "gene_id": "b2779",
@@ -263,39 +263,78 @@
             "gene_name": ""
           }
         ],
-        "losses": [
-          {
-            "gene_id": "b0180",
-            "gene_name": ""
-          }
-        ],
+        "losses": [],
         "subsystem_enrichment_top": [
           {
             "subsystem": "Glycolysis/Gluconeogenesis",
             "n_flip": 5,
-            "expected": 0.2,
-            "ratio": 30.08
+            "expected": 0.1,
+            "ratio": 35.09
           },
           {
             "subsystem": "Cofactor and Prosthetic Group Biosynthesis",
-            "n_flip": 3,
-            "expected": 0.9,
-            "ratio": 3.51
+            "n_flip": 2,
+            "expected": 0.7,
+            "ratio": 2.73
           },
           {
             "subsystem": "Metabolite Repair",
             "n_flip": 1,
             "expected": 0.0,
-            "ratio": 72.19
-          },
-          {
-            "subsystem": "Cell Envelope Biosynthesis",
-            "n_flip": 1,
-            "expected": 0.3,
-            "ratio": 3.73
+            "ratio": 84.22
           }
         ]
       }
     }
+  },
+  "solver_integrity": {
+    "finding": "The deposited plain sweep recorded the fabZ (b0180) knockout at the anaerobic level as fully viable (b_ko = wild type exactly).  Fresh single-shot plain FBA and fresh two-stage parsimonious FBA both give b_ko = 0.0 (essential); a verbatim re-run of the sequential warm-started sweep loop reproduces the wrong value, identifying the mechanism as the persistent glpk solver returning a stale solution marked 'optimal' when only bounds (not the objective) are patched.",
+    "correction": "The row was re-solved fresh and patched; the level statistics were recomputed.  The corrected anaerobic label change is +6 gains / -0 losses (fabZ remains essential in every regime through OGMEACPD/OPMEACPD, the only route to the ubiquinone side chain, a biomass requirement in every regime).",
+    "damage_audit": "All deposited plain-sweep levels with canonical counterparts were compared gene-by-gene (biomass to 1e-6 + labels): exactly one discrepancy in ~14,700 comparisons (this row).",
+    "patched_gene": "b0180",
+    "level": "0.0",
+    "old_values": {
+      "b_ko": 0.1341091591851922,
+      "y_essential": 0,
+      "kV": 0.7849829455925673
+    },
+    "new_values": {
+      "b_ko": 0.0,
+      "y_essential": 1,
+      "kV": 352.18783800643354
+    },
+    "old_level_stats": {
+      "labels": [
+        286,
+        291
+      ],
+      "flips": [
+        6,
+        1
+      ],
+      "kappa": 0.9850172248263399,
+      "r": 0.25950784297310475,
+      "auc": 0.6723825587206397,
+      "direct_r": 0.11777131546134448,
+      "direct_auc": 0.672631723818216
+    },
+    "new_level_stats": {
+      "labels": [
+        286,
+        292
+      ],
+      "flips": [
+        6,
+        0
+      ],
+      "kappa": 0.987174714899665,
+      "jaccard": 0.9794520547945206,
+      "r": 0.2583257405690961,
+      "auc": 0.6815085459499628,
+      "mcc": 0.0,
+      "direct_r": 0.12461015812199036,
+      "direct_auc": 0.6730409839627972
+    },
+    "adjudication": "FVA on the fresh KO model: biomass max = 0.0 (true optimum). WT anaerobic flux through OPMEACPD/OGMEACPD = 2.682e-07 each (the ubiquinone side-chain drain). fabZ is essential in every regime via the sole q8 side-chain route."
   }
 }

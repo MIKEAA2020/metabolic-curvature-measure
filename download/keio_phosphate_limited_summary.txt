@@ -1,0 +1,16 @@
+FOURTH PERTURBATION AXIS: PHOSPHATE-LIMITED MEDIUM
+Supply-side closure of the label-invariance claim (iJO1366 + iML1515)
+==============================================================================
+Baseline: glucose-only corrected medium (trehalose closed), Pi unlimited. Probe: EX_pi_e bound.
+Levels chosen by pre-screen (baseline uptake 0.948 iJO / 0.793 iML): -0.5, -0.25, -0.1.
+
+iJO1366 baseline: WT 0.9824, 289/1367 essential, plain r = +0.6034
+             canonical r = +0.9452 (AUC 1.0000)
+Pi =  -0.5: WT 0.5183 (-47%); labels 289 -> 289 (+0 / -0, kappa 1.0000); plain r = +0.3234 / AUC 0.7224; canonical r = +0.9496 / AUC 0.9877 / MCC 0.9649; PGI FVA width 122.661
+Pi = -0.25: WT 0.2592 (-74%); labels 289 -> 289 (+0 / -0, kappa 1.0000); plain r = +0.0537 / AUC 0.6204; canonical r = +0.9162 / AUC 0.9877 / MCC 0.9649; PGI FVA width 171.93
+Pi =  -0.1: WT 0.1037 (-89%); labels 289 -> 289 (+0 / -0, kappa 1.0000); plain r = -0.0669 / AUC 0.5459; canonical r = +0.9139 / AUC 0.9877 / MCC 0.9516; PGI FVA width 201.492
+
+iML1515 Pi = -0.25: WT 0.2592; labels 286 -> 286 (+0 / -0, kappa 1.0000); plain r = +0.0251 / AUC 0.5057; canonical r = +0.9102 / AUC 0.9864
+iML1515 Pi = -0.1: WT 0.1037; labels 286 -> 286 (+0 / -0, kappa 1.0000); plain r = +0.0900 / AUC 0.5295; canonical r = +0.9003 / AUC 0.9864
+
+Flip details (iJO):

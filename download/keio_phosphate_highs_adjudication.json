@@ -1,0 +1,29 @@
+{
+  "ijo_pi_-0.1": {
+    "WT": {
+      "biomass": 0.10366658338609523,
+      "status": "optimal"
+    },
+    "fabZ KO (b0180)": {
+      "biomass": -0.0,
+      "status": "optimal",
+      "essential": true
+    },
+    "bioF KO (b0776)": {
+      "biomass": -0.0,
+      "status": "optimal",
+      "essential": true
+    },
+    "bioH KO (b3412)": {
+      "biomass": -0.0,
+      "status": "optimal",
+      "essential": true
+    },
+    "bioF+bioH KO": {
+      "biomass": -0.0,
+      "status": "optimal",
+      "essential": true
+    }
+  },
+  "iml_anaerobic_wt_highs": 0.1341091591851944
+}

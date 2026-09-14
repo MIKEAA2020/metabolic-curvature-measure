@@ -1,0 +1,25 @@
+{
+  "pi_level": -0.1,
+  "wild_type_biomass": 0.10366658338784197,
+  "genes": {
+    "b0180": {
+      "plain_solve": 0.0,
+      "fva_biomass_max": 0.0,
+      "essential": true
+    },
+    "b0776": {
+      "plain_solve": 0.0,
+      "fva_biomass_max": 7.809023083451818e-49,
+      "essential": true
+    },
+    "b3412": {
+      "plain_solve": 0.10366658338784433,
+      "fva_biomass_max": 0.0,
+      "essential": true
+    }
+  },
+  "objective_biomass": "BIOMASS_Ec_iJO1366_core_53p95M",
+  "biotin_in_objective_biomass": [
+    "btn_c"
+  ]
+}

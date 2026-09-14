@@ -6,7 +6,7 @@ links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
 
 Revision note (2026-09-14): main is now `journal_manuscript_v4.tex`
-(28 pp) and the companion is `companion_categorical_v3.tex` (67 pp).
+(28 pp) and the companion is `companion_categorical_v3.tex` (70 pp).
 The companion implements the eight-item repair set of the external
 audit's synthesized ledger (one optic formalism, corrected
 optic-colimit scope, one Hordijk-Steel catalysis condition, gluing
@@ -57,6 +57,38 @@ everywhere (r ≥ +0.872, AUC ≥ 0.979; baseline sharpened
 r +0.603 → +0.945). The abstract now carries the three-axis
 medium-robustness statement (263 words, under the 265 cap).
 audit_v7: 143/143 PASS. Companion 66 → 67 pp, 0 errors /
+0 undefined / 0 overfull.
+
+Revision note (2026-09-14, fourth axis + canonical-selection round):
+the companion adds the phosphate-limitation probe (the fourth
+medium axis, chosen over sulfur by a dose-response pre-screen:
+baseline phosphate uptake 0.948/0.793 mmol/gDW/h gives a three-level
+gradient spanning 47–89% growth reduction, where sulfur's 0.25
+uptake compresses to one informative level). Labels are invariant
+at every level in both reconstructions (289/289/289 on iJO1366,
+286/286 on iML1515; zero flips; κ = 1.000) — the supply side of
+the invariance claim is now closed on all four classical
+macronutrient axes (carbon source, electron acceptor, nitrogen,
+phosphate). The reported association statistics are homogenized
+under canonical (parsimonious) vertex selection across all four
+axes (new subsection with an 18-level table): canonical r in
+[+0.87, +0.95], held-out AUC ≥ 0.979, labels κ = 1.000 at every
+level, the baselines sharpened (iJO r +0.603 → +0.945; iML
++0.875 → +0.937), and the iML1515 anaerobic endpoint restored
+across the regime switch itself (r +0.258 → +0.949) — the switch
+moves labels only. The homogenization audit surfaced and corrected
+eight solver-tolerance artifacts (all trace-quota genes — the
+biotin and ubiquinone-side-chain drains scale with growth and fall
+to 2–3×10⁻⁷ mmol/gDW/h at low optima, within ~2× of the simplex's
+primal feasibility tolerance): the deposited anaerobic fabZ "loss"
+(the corrected endpoint is 286 → 292, six gains, no losses; fabZ
+is essential in every regime through OGMEACPD/OPMEACPD) and seven
+calls at the phosphate −0.1 levels, all re-adjudicated with an
+independent LP engine (HiGHS two-stage split-variable pFBA) and
+cross-checked to 0 discrepancies in 24,282 gene-level comparisons
+across 17 levels. The abstract now carries the four-axis
+medium-robustness statement (264 words, under the 265 cap).
+audit_v8: 226/226 PASS. Companion 67 → 70 pp, 0 errors /
 0 undefined / 0 overfull.
 
 - Repository: https://github.com/MIKEAA2020/metabolic-curvature-measure
@@ -127,7 +159,7 @@ upload directory and the repository layout
 
 **Title:** Stratified Connections, Optic Composition, and the Homotopy
 Fixed-Point Extension: A Categorical Framework for Viability-Weighted
-Curvature (Research Article; 67 pp; electronic-only, free — no author charges).
+Curvature (Research Article; 70 pp; electronic-only, free — no author charges).
 
 ### Journal / submission links (all verified)
 
@@ -150,7 +182,7 @@ only after acceptance.
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (67 pp, + nitrogen-axis third-probe revision: prop:keio-n-source + rem:keio-n-invariance and the three-axis abstract, on top of the 3rd-wave repair, glucose-only re-run, oxygen-probe revision, viability-kernel + Poincare/averaging bridges, and the restoration revision) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
+| Manuscript PDF (70 pp, + fourth-axis/canonical-selection revision: prop:keio-phosphate + rem:keio-p-invariance + the canonical-selection subsection with the homogenized 18-level table and the solver-tolerance integrity disclosures, on top of the nitrogen-axis, oxygen-probe, glucose-only, viability-kernel + Poincare/averaging, 3rd-wave repair, and restoration revisions) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
 | LaTeX source | [scripts/companion_categorical_v3.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v3.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v3.tex) |
 

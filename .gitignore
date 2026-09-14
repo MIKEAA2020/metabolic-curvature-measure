@@ -35,3 +35,5 @@ scripts/journal_manuscript_v4.log
 # Python bytecode of repo scripts (not committed)
 scripts/__pycache__/
 scripts/nitrogen_probe.log
+scripts/o2_pfba_control.log
+scripts/zipcheck_v4/

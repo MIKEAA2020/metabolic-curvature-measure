@@ -1,0 +1,1213 @@
+{
+  "plain_fba_reference": {
+    "ijo_baseline": {
+      "pearson_r_log_kV_delta_b": 0.6034446094458502,
+      "pearson_p_value": 2.2121560968347466e-136,
+      "spearman_rho": 0.5914695972267876,
+      "spearman_p_value": 8.90811122841468e-130,
+      "partial_r_given_n_gpr_rxns": 0.6009681059193699,
+      "partial_p_value": 5.416956758014994e-135,
+      "bootstrap_95ci": [
+        0.5781936198454661,
+        0.6311405773158594
+      ],
+      "n_essential": 289,
+      "n_genes": 1367,
+      "held_out": {
+        "n_test": 411,
+        "n_test_essential": 87,
+        "accuracy": 0.9610705596107056,
+        "mcc": 0.8817475331166467,
+        "roc_auc": 0.9769050659855257,
+        "sensitivity": 0.8850574712643678,
+        "specificity": 0.9814814814814815,
+        "confusion": {
+          "tn": 318,
+          "fp": 6,
+          "fn": 10,
+          "tp": 77
+        }
+      },
+      "precision_at_k": {
+        "K=10": {
+          "precision": 0.6,
+          "base_rate": 0.21141185076810534,
+          "lift": 2.838062283737024
+        },
+        "K=25": {
+          "precision": 0.44,
+          "base_rate": 0.21141185076810534,
+          "lift": 2.0812456747404844
+        },
+        "K=50": {
+          "precision": 0.72,
+          "base_rate": 0.21141185076810534,
+          "lift": 3.4056747404844288
+        },
+        "K=100": {
+          "precision": 0.83,
+          "base_rate": 0.21141185076810534,
+          "lift": 3.92598615916955
+        },
+        "K=200": {
+          "precision": 0.915,
+          "base_rate": 0.21141185076810534,
+          "lift": 4.328044982698962
+        },
+        "K=500": {
+          "precision": 0.56,
+          "base_rate": 0.21141185076810534,
+          "lift": 2.6488581314878896
+        }
+      }
+    },
+    "ijo_o2_10": {
+      "pearson_r_log_kV_delta_b": 0.774931506272867,
+      "pearson_p_value": 2.9244657677238376e-274,
+      "spearman_rho": 0.668718615297371,
+      "spearman_p_value": 6.600956312440682e-178,
+      "partial_r_given_n_gpr_rxns": 0.7735869527981367,
+      "partial_p_value": 1.017730497733155e-272,
+      "bootstrap_95ci": [
+        0.7572067589511902,
+        0.7919509491663135
+      ],
+      "n_essential": 289,
+      "n_genes": 1367,
+      "held_out": {
+        "n_test": 411,
+        "n_test_essential": 87,
+        "accuracy": 0.9975669099756691,
+        "mcc": 0.9927054905567071,
+        "roc_auc": 0.9998580956435361,
+        "sensitivity": 0.9885057471264368,
+        "specificity": 1.0,
+        "confusion": {
+          "tn": 324,
+          "fp": 0,
+          "fn": 1,
+          "tp": 86
+        }
+      },
+      "precision_at_k": {
+        "K=10": {
+          "precision": 1.0,
+          "base_rate": 0.21141185076810534,
+          "lift": 4.730103806228374
+        },
+        "K=25": {
+          "precision": 1.0,
+          "base_rate": 0.21141185076810534,
+          "lift": 4.730103806228374
+        },
+        "K=50": {
+          "precision": 1.0,
+          "base_rate": 0.21141185076810534,
+          "lift": 4.730103806228374
+        },
+        "K=100": {
+          "precision": 1.0,
+          "base_rate": 0.21141185076810534,
+          "lift": 4.730103806228374
+        },
+        "K=200": {
+          "precision": 1.0,
+          "base_rate": 0.21141185076810534,
+          "lift": 4.730103806228374
+        },
+        "K=500": {
+          "precision": 0.578,
+          "base_rate": 0.21141185076810534,
+          "lift": 2.734
+        }
+      }
+    },
+    "ijo_o2_5": {
+      "pearson_r_log_kV_delta_b": 0.6067399823427276,
+      "pearson_p_value": 3.003172174271542e-138,
+      "spearman_rho": 0.6168333253284181,
+      "spearman_p_value": 4.1664946411469076e-144,
+      "partial_r_given_n_gpr_rxns": 0.6035125589597602,
+      "partial_p_value": 2.025509707484221e-136,
+      "bootstrap_95ci": [
+        0.5842529776111335,
+        0.6281154744719345
+      ],
+      "n_essential": 289,
+      "n_genes": 1367,
+      "held_out": {
+        "n_test": 411,
+        "n_test_essential": 87,
+        "accuracy": 0.9781021897810219,
+        "mcc": 0.9386566938390676,
+        "roc_auc": 0.9798495813821484,
+        "sensitivity": 1.0,
+        "specificity": 0.9722222222222222,
+        "confusion": {
+          "tn": 315,
+          "fp": 9,
+          "fn": 0,
+          "tp": 87
+        }
+      },
+      "precision_at_k": {
+        "K=10": {
+          "precision": 0.9,
+          "base_rate": 0.21141185076810534,
+          "lift": 4.257093425605537
+        },
+        "K=25": {
+          "precision": 0.68,
+          "base_rate": 0.21141185076810534,
+          "lift": 3.2164705882352944
+        },
+        "K=50": {
+          "precision": 0.74,
+          "base_rate": 0.21141185076810534,
+          "lift": 3.5002768166089964
+        },
+        "K=100": {
+          "precision": 0.81,
+          "base_rate": 0.21141185076810534,
+          "lift": 3.831384083044983
+        },
+        "K=200": {
+          "precision": 0.88,
+          "base_rate": 0.21141185076810534,
+          "lift": 4.162491349480969
+        },
+        "K=500": {
+          "precision": 0.578,
+          "base_rate": 0.21141185076810534,
+          "lift": 2.734
+        }
+      }
+    },
+    "ijo_o2_2.5": {
+      "pearson_r_log_kV_delta_b": 0.5189466324246841,
+      "pearson_p_value": 4.149348358978491e-95,
+      "spearman_rho": 0.549798618288902,
+      "spearman_p_value": 8.060996272147206e-109,
+      "partial_r_given_n_gpr_rxns": 0.5143387278232396,
+      "partial_p_value": 3.5235384020418574e-93,
+      "bootstrap_95ci": [
+        0.49614701002126504,
+        0.5418045912753684
+      ],
+      "n_essential": 289,
+      "n_genes": 1367,
+      "held_out": {
+        "n_test": 411,
+        "n_test_essential": 87,
+        "accuracy": 0.9610705596107056,
+        "mcc": 0.887032169554976,
+        "roc_auc": 0.9711224634596283,
+        "sensitivity": 0.9425287356321839,
+        "specificity": 0.9660493827160493,
+        "confusion": {
+          "tn": 313,
+          "fp": 11,
+          "fn": 5,
+          "tp": 82
+        }
+      },
+      "precision_at_k": {
+        "K=10": {
+          "precision": 0.8,
+          "base_rate": 0.21141185076810534,
+          "lift": 3.784083044982699
+        },
+        "K=25": {
+          "precision": 0.48,
+          "base_rate": 0.21141185076810534,
+          "lift": 2.270449826989619
+        },
+        "K=50": {
+          "precision": 0.62,
+          "base_rate": 0.21141185076810534,
+          "lift": 2.9326643598615916
+        },
+        "K=100": {
+          "precision": 0.81,
+          "base_rate": 0.21141185076810534,
+          "lift": 3.831384083044983
+        },
+        "K=200": {
+          "precision": 0.88,
+          "base_rate": 0.21141185076810534,
+          "lift": 4.162491349480969
+        },
+        "K=500": {
+          "precision": 0.578,
+          "base_rate": 0.21141185076810534,
+          "lift": 2.734
+        }
+      }
+    },
+    "iml_baseline": {
+      "pearson_r_log_kV_delta_b": 0.8751366893148104,
+      "pearson_p_value": 0.0,
+      "spearman_rho": 0.5407434011170088,
+      "spearman_p_value": 7.343699894516555e-116,
+      "partial_r_given_n_gpr_rxns": 0.8739490690610345,
+      "partial_p_value": 0.0,
+      "bootstrap_95ci": [
+        0.8563482585462397,
+        0.893079489542487
+      ],
+      "n_essential": 286,
+      "n_genes": 1516,
+      "held_out": {
+        "n_test": 455,
+        "n_test_essential": 86,
+        "accuracy": 0.9846153846153847,
+        "mcc": 0.9506937833846244,
+        "roc_auc": 0.986449864498645,
+        "sensitivity": 0.9767441860465116,
+        "specificity": 0.986449864498645,
+        "confusion": {
+          "tn": 364,
+          "fp": 5,
+          "fn": 2,
+          "tp": 84
+        }
+      },
+      "precision_at_k": {
+        "K=10": {
+          "precision": 0.0,
+          "base_rate": 0.18865435356200527,
+          "lift": 0.0
+        },
+        "K=25": {
+          "precision": 0.48,
+          "base_rate": 0.18865435356200527,
+          "lift": 2.5443356643356645
+        },
+        "K=50": {
+          "precision": 0.74,
+          "base_rate": 0.18865435356200527,
+          "lift": 3.9225174825174824
+        },
+        "K=100": {
+          "precision": 0.87,
+          "base_rate": 0.18865435356200527,
+          "lift": 4.611608391608391
+        },
+        "K=200": {
+          "precision": 0.935,
+          "base_rate": 0.18865435356200527,
+          "lift": 4.956153846153846
+        },
+        "K=500": {
+          "precision": 0.572,
+          "base_rate": 0.18865435356200527,
+          "lift": 3.032
+        }
+      }
+    },
+    "iml_o2_5": {
+      "pearson_r_log_kV_delta_b": 0.5592254778244219,
+      "pearson_p_value": 1.8514986788522035e-125,
+      "spearman_rho": 0.5477896207247882,
+      "spearman_p_value": 1.8933691468083776e-119,
+      "partial_r_given_n_gpr_rxns": 0.5534730716321452,
+      "partial_p_value": 2.0876631317945542e-122,
+      "bootstrap_95ci": [
+        0.5321484398057611,
+        0.5908844983972131
+      ],
+      "n_essential": 286,
+      "n_genes": 1516,
+      "held_out": {
+        "n_test": 455,
+        "n_test_essential": 86,
+        "accuracy": 0.9758241758241758,
+        "mcc": 0.9274525267153888,
+        "roc_auc": 0.9944538980273523,
+        "sensitivity": 1.0,
+        "specificity": 0.9701897018970189,
+        "confusion": {
+          "tn": 358,
+          "fp": 11,
+          "fn": 0,
+          "tp": 86
+        }
+      },
+      "precision_at_k": {
+        "K=10": {
+          "precision": 1.0,
+          "base_rate": 0.18865435356200527,
+          "lift": 5.300699300699301
+        },
+        "K=25": {
+          "precision": 0.44,
+          "base_rate": 0.18865435356200527,
+          "lift": 2.332307692307692
+        },
+        "K=50": {
+          "precision": 0.62,
+          "base_rate": 0.18865435356200527,
+          "lift": 3.2864335664335664
+        },
+        "K=100": {
+          "precision": 0.81,
+          "base_rate": 0.18865435356200527,
+          "lift": 4.293566433566434
+        },
+        "K=200": {
+          "precision": 0.895,
+          "base_rate": 0.18865435356200527,
+          "lift": 4.744125874125874
+        },
+        "K=500": {
+          "precision": 0.572,
+          "base_rate": 0.18865435356200527,
+          "lift": 3.032
+        }
+      }
+    },
+    "iml_o2_0": {
+      "pearson_r_log_kV_delta_b": 0.25950784297310475,
+      "pearson_p_value": 9.393511320067919e-25,
+      "spearman_rho": 0.25571995980445916,
+      "spearman_p_value": 4.637887238945947e-24,
+      "partial_r_given_n_gpr_rxns": 0.25888070614719677,
+      "partial_p_value": 1.225848839662647e-24,
+      "bootstrap_95ci": [
+        0.23201648795394283,
+        0.2847597541716505
+      ],
+      "n_essential": 291,
+      "n_genes": 1516,
+      "held_out": {
+        "n_test": 455,
+        "n_test_essential": 87,
+        "accuracy": 0.8087912087912088,
+        "mcc": 0.0,
+        "roc_auc": 0.6723825587206397,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "confusion": {
+          "tn": 368,
+          "fp": 0,
+          "fn": 87,
+          "tp": 0
+        }
+      },
+      "precision_at_k": {
+        "K=10": {
+          "precision": 1.0,
+          "base_rate": 0.19195250659630606,
+          "lift": 5.209621993127148
+        },
+        "K=25": {
+          "precision": 1.0,
+          "base_rate": 0.19195250659630606,
+          "lift": 5.209621993127148
+        },
+        "K=50": {
+          "precision": 1.0,
+          "base_rate": 0.19195250659630606,
+          "lift": 5.209621993127148
+        },
+        "K=100": {
+          "precision": 1.0,
+          "base_rate": 0.19195250659630606,
+          "lift": 5.209621993127148
+        },
+        "K=200": {
+          "precision": 0.86,
+          "base_rate": 0.19195250659630606,
+          "lift": 4.480274914089347
+        },
+        "K=500": {
+          "precision": 0.36,
+          "base_rate": 0.19195250659630606,
+          "lift": 1.8754639175257732
+        }
+      }
+    }
+  },
+  "ijo_levels": {
+    "ijo_o2_10": {
+      "wild_type_biomass": 0.7108337341354102,
+      "n_essential": 289,
+      "n_genes": 1367,
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.8952479857792427,
+        "pearson_p_value": 0.0,
+        "spearman_rho": 0.7019752768881273,
+        "spearman_p_value": 1.951763736444401e-203,
+        "partial_r_given_n_gpr_rxns": 0.8941243365438805,
+        "partial_p_value": 0.0,
+        "bootstrap_95ci": [
+          0.8790924765937087,
+          0.9103116293749108
+        ],
+        "n_essential": 289,
+        "n_genes": 1367,
+        "held_out": {
+          "n_test": 411,
+          "n_test_essential": 87,
+          "accuracy": 0.9902676399026764,
+          "mcc": 0.9717206101760651,
+          "roc_auc": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 0.9876543209876543,
+          "confusion": {
+            "tn": 320,
+            "fp": 4,
+            "fn": 0,
+            "tp": 87
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.9,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.257093425605537
+          },
+          "K=25": {
+            "precision": 0.96,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.540899653979238
+          },
+          "K=50": {
+            "precision": 0.98,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.635501730103806
+          },
+          "K=100": {
+            "precision": 0.99,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.6828027681660895
+          },
+          "K=200": {
+            "precision": 0.995,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.706453287197232
+          },
+          "K=500": {
+            "precision": 0.578,
+            "base_rate": 0.21141185076810534,
+            "lift": 2.734
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1212,
+        "binary_n": 1206,
+        "binary_n_E": 130,
+        "pearson_r": 0.33891917030905205,
+        "pearson_p": 8.473839725220323e-34,
+        "spearman_rho": 0.33504717905726056,
+        "spearman_p": 5.04278715666801e-33,
+        "point_biserial_r": 0.33891917030905205,
+        "bootstrap_95ci": [
+          0.2789290895082121,
+          0.3967120660316374
+        ],
+        "roc_auc": 0.763304260794967,
+        "held_out": {
+          "n_test": 362,
+          "n_test_E": 39,
+          "accuracy": 0.7209944751381215,
+          "sensitivity": 0.7692307692307693,
+          "specificity": 0.7151702786377709,
+          "precision": 0.2459016393442623,
+          "f1": 0.37267080745341613,
+          "mcc": 0.3177262539921469,
+          "roc_auc": 0.7798682225926807,
+          "confusion": {
+            "tp": 30,
+            "fp": 92,
+            "tn": 231,
+            "fn": 9
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.7407395114179501,
+          "n_high_conf": 84,
+          "low_conf_auc": 0.7708576739245885,
+          "n_low_conf": 35
+        },
+        "n_model_gaps_pecE_insilicoN": 30,
+        "n_medium_mismatch_insilicoE_keioN": 180
+      },
+      "kV_rank_corr_vs_baseline_canonical": 0.9349457721366449,
+      "label_agreement_fba_vs_pfba_kappa": 1.0,
+      "objective_preservation": {
+        "fba_optimum": 0.710834,
+        "pfba_biomass_flux": 0.710834,
+        "objective_abs_diff": 0.0,
+        "raw_glc_uptake": 10.0,
+        "pfba_glc_uptake": 10.0,
+        "fva_widths": {
+          "EX_glc__D_e": -0.0,
+          "EX_ac_e": 1.449,
+          "EX_for_e": 5.798,
+          "EX_etoh_e": -0.0,
+          "EX_o2_e": -0.0,
+          "PGI": 4.348,
+          "CS": -0.0,
+          "ACKr": 992.561,
+          "PPCK": -0.0,
+          "G6PDH2r": 4.348
+        }
+      },
+      "plain_reference_r": 0.774931506272867,
+      "plain_reference_auc": 0.9998580956435361
+    },
+    "ijo_o2_5": {
+      "wild_type_biomass": 0.4914671239229283,
+      "n_essential": 289,
+      "n_genes": 1367,
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.9390669747972452,
+        "pearson_p_value": 0.0,
+        "spearman_rho": 0.7453184761936341,
+        "spearman_p_value": 1.3627756725163302e-242,
+        "partial_r_given_n_gpr_rxns": 0.9383764258582648,
+        "partial_p_value": 0.0,
+        "bootstrap_95ci": [
+          0.9248968564345056,
+          0.9516048225280872
+        ],
+        "n_essential": 289,
+        "n_genes": 1367,
+        "held_out": {
+          "n_test": 411,
+          "n_test_essential": 87,
+          "accuracy": 1.0,
+          "mcc": 1.0,
+          "roc_auc": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "confusion": {
+            "tn": 324,
+            "fp": 0,
+            "fn": 0,
+            "tp": 87
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=25": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=50": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=100": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=200": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=500": {
+            "precision": 0.578,
+            "base_rate": 0.21141185076810534,
+            "lift": 2.734
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1212,
+        "binary_n": 1206,
+        "binary_n_E": 130,
+        "pearson_r": 0.35303182377494996,
+        "pearson_p": 1.0236916441045895e-36,
+        "spearman_rho": 0.3492987213084449,
+        "spearman_p": 6.260754314641799e-36,
+        "point_biserial_r": 0.35303182377494996,
+        "bootstrap_95ci": [
+          0.2900434678684601,
+          0.4137312218131389
+        ],
+        "roc_auc": 0.7615634829854161,
+        "held_out": {
+          "n_test": 362,
+          "n_test_E": 39,
+          "accuracy": 0.7651933701657458,
+          "sensitivity": 0.7692307692307693,
+          "specificity": 0.7647058823529411,
+          "precision": 0.2830188679245283,
+          "f1": 0.41379310344827586,
+          "mcc": 0.3637896868623342,
+          "roc_auc": 0.7925299674525681,
+          "confusion": {
+            "tp": 30,
+            "fp": 76,
+            "tn": 247,
+            "fn": 9
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.7384160913436006,
+          "n_high_conf": 84,
+          "low_conf_auc": 0.772623473181094,
+          "n_low_conf": 35
+        },
+        "n_model_gaps_pecE_insilicoN": 30,
+        "n_medium_mismatch_insilicoE_keioN": 180
+      },
+      "kV_rank_corr_vs_baseline_canonical": 0.9556396996930406,
+      "label_agreement_fba_vs_pfba_kappa": 1.0,
+      "objective_preservation": {
+        "fba_optimum": 0.491467,
+        "pfba_biomass_flux": 0.491467,
+        "objective_abs_diff": 0.0,
+        "raw_glc_uptake": 10.0,
+        "pfba_glc_uptake": 10.0,
+        "fva_widths": {
+          "EX_glc__D_e": 0.0,
+          "EX_ac_e": 0.0,
+          "EX_for_e": 0.0,
+          "EX_etoh_e": 0.0,
+          "EX_o2_e": 0.0,
+          "PGI": 0.0,
+          "CS": 0.0,
+          "ACKr": 988.943,
+          "PPCK": 0.0,
+          "G6PDH2r": 0.0
+        }
+      },
+      "plain_reference_r": 0.6067399823427276,
+      "plain_reference_auc": 0.9798495813821484
+    },
+    "ijo_o2_2.5": {
+      "wild_type_biomass": 0.36679958966964815,
+      "n_essential": 289,
+      "n_genes": 1367,
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.9450978325889607,
+        "pearson_p_value": 0.0,
+        "spearman_rho": 0.7276871277466024,
+        "spearman_p_value": 9.46288216000888e-226,
+        "partial_r_given_n_gpr_rxns": 0.9444655000779643,
+        "partial_p_value": 0.0,
+        "bootstrap_95ci": [
+          0.9312795405136064,
+          0.9573335787792079
+        ],
+        "n_essential": 289,
+        "n_genes": 1367,
+        "held_out": {
+          "n_test": 411,
+          "n_test_essential": 87,
+          "accuracy": 0.9854014598540146,
+          "mcc": 0.9582067081686761,
+          "roc_auc": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 0.9814814814814815,
+          "confusion": {
+            "tn": 318,
+            "fp": 6,
+            "fn": 0,
+            "tp": 87
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=25": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=50": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=100": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=200": {
+            "precision": 1.0,
+            "base_rate": 0.21141185076810534,
+            "lift": 4.730103806228374
+          },
+          "K=500": {
+            "precision": 0.578,
+            "base_rate": 0.21141185076810534,
+            "lift": 2.734
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1212,
+        "binary_n": 1206,
+        "binary_n_E": 130,
+        "pearson_r": 0.3587835199654512,
+        "pearson_p": 5.992083120649537e-38,
+        "spearman_rho": 0.3439851582089845,
+        "spearman_p": 7.90410649998334e-35,
+        "point_biserial_r": 0.3587835199654512,
+        "bootstrap_95ci": [
+          0.2952102075763756,
+          0.4206860394198066
+        ],
+        "roc_auc": 0.7568665999428081,
+        "held_out": {
+          "n_test": 362,
+          "n_test_E": 39,
+          "accuracy": 0.7707182320441989,
+          "sensitivity": 0.7692307692307693,
+          "specificity": 0.7708978328173375,
+          "precision": 0.28846153846153844,
+          "f1": 0.4195804195804196,
+          "mcc": 0.3700873303608138,
+          "roc_auc": 0.7926887354131935,
+          "confusion": {
+            "tp": 30,
+            "fp": 74,
+            "tn": 249,
+            "fn": 9
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.7331164807930607,
+          "n_high_conf": 84,
+          "low_conf_auc": 0.7677243759957515,
+          "n_low_conf": 35
+        },
+        "n_model_gaps_pecE_insilicoN": 30,
+        "n_medium_mismatch_insilicoE_keioN": 180
+      },
+      "kV_rank_corr_vs_baseline_canonical": 0.9224576094500535,
+      "label_agreement_fba_vs_pfba_kappa": 1.0,
+      "objective_preservation": {
+        "fba_optimum": 0.3668,
+        "pfba_biomass_flux": 0.3668,
+        "objective_abs_diff": 0.0,
+        "raw_glc_uptake": 10.0,
+        "pfba_glc_uptake": 10.0,
+        "fva_widths": {
+          "EX_glc__D_e": -0.0,
+          "EX_ac_e": -0.0,
+          "EX_for_e": -0.0,
+          "EX_etoh_e": -0.0,
+          "EX_o2_e": -0.0,
+          "PGI": 0.0,
+          "CS": 0.0,
+          "ACKr": 990.443,
+          "PPCK": 0.0,
+          "G6PDH2r": 0.0
+        }
+      },
+      "plain_reference_r": 0.5189466324246841,
+      "plain_reference_auc": 0.9711224634596283
+    }
+  },
+  "iml_levels": {
+    "iml_baseline": {
+      "wild_type_biomass": 0.8217979336265792,
+      "n_essential": 286,
+      "n_genes": 1516,
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.9372123045735647,
+        "pearson_p_value": 0.0,
+        "spearman_rho": 0.4853556005647746,
+        "spearman_p_value": 2.048572224986686e-90,
+        "partial_r_given_n_gpr_rxns": 0.9364324224359395,
+        "partial_p_value": 0.0,
+        "bootstrap_95ci": [
+          0.9265378697994063,
+          0.9470580964218581
+        ],
+        "n_essential": 286,
+        "n_genes": 1516,
+        "held_out": {
+          "n_test": 455,
+          "n_test_essential": 86,
+          "accuracy": 0.989010989010989,
+          "mcc": 0.9655305911742128,
+          "roc_auc": 0.9866389361568034,
+          "sensitivity": 1.0,
+          "specificity": 0.986449864498645,
+          "confusion": {
+            "tn": 364,
+            "fp": 5,
+            "fn": 0,
+            "tp": 86
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.5,
+            "base_rate": 0.18865435356200527,
+            "lift": 2.6503496503496504
+          },
+          "K=25": {
+            "precision": 0.48,
+            "base_rate": 0.18865435356200527,
+            "lift": 2.5443356643356645
+          },
+          "K=50": {
+            "precision": 0.74,
+            "base_rate": 0.18865435356200527,
+            "lift": 3.9225174825174824
+          },
+          "K=100": {
+            "precision": 0.87,
+            "base_rate": 0.18865435356200527,
+            "lift": 4.611608391608391
+          },
+          "K=200": {
+            "precision": 0.935,
+            "base_rate": 0.18865435356200527,
+            "lift": 4.956153846153846
+          },
+          "K=500": {
+            "precision": 0.572,
+            "base_rate": 0.18865435356200527,
+            "lift": 3.032
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1331,
+        "binary_n": 1325,
+        "binary_n_E": 114,
+        "pearson_r": 0.4240637121473196,
+        "pearson_p": 5.748703812294067e-59,
+        "spearman_rho": 0.3493548573642886,
+        "spearman_p": 2.5184509604213497e-39,
+        "point_biserial_r": 0.4240637121473196,
+        "bootstrap_95ci": [
+          0.36740475163471953,
+          0.47692154261207853
+        ],
+        "roc_auc": 0.8426412852941603,
+        "held_out": {
+          "n_test": 398,
+          "n_test_E": 34,
+          "accuracy": 0.7914572864321608,
+          "sensitivity": 0.6764705882352942,
+          "specificity": 0.8021978021978022,
+          "precision": 0.24210526315789474,
+          "f1": 0.35658914728682173,
+          "mcc": 0.31386420044092,
+          "roc_auc": 0.7793309631544926,
+          "confusion": {
+            "tp": 23,
+            "fp": 72,
+            "tn": 292,
+            "fn": 11
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.8523438528464917,
+          "n_high_conf": 69,
+          "low_conf_auc": 0.7975299946568222,
+          "n_low_conf": 34
+        },
+        "n_model_gaps_pecE_insilicoN": 13,
+        "n_medium_mismatch_insilicoE_keioN": 175
+      },
+      "kV_rank_corr_vs_baseline_canonical": NaN,
+      "label_agreement_fba_vs_pfba_kappa": 1.0,
+      "objective_preservation": {
+        "fba_optimum": 0.821798,
+        "pfba_biomass_flux": 0.821798,
+        "objective_abs_diff": 0.0,
+        "raw_glc_uptake": 10.0,
+        "pfba_glc_uptake": 10.0,
+        "fva_widths": {
+          "EX_glc__D_e": 0.0,
+          "EX_ac_e": 0.001,
+          "EX_for_e": 0.002,
+          "EX_etoh_e": -0.0,
+          "EX_o2_e": -0.0,
+          "PGI": 0.0,
+          "CS": 0.0,
+          "ACKr": 0.001,
+          "PPCK": 0.0,
+          "G6PDH2r": 0.0
+        }
+      },
+      "plain_reference_r": 0.8751366893148104,
+      "plain_reference_auc": 0.986449864498645
+    },
+    "iml_o2_5": {
+      "wild_type_biomass": 0.35343632816628623,
+      "n_essential": 286,
+      "n_genes": 1516,
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.9414302331025872,
+        "pearson_p_value": 0.0,
+        "spearman_rho": 0.697028698560861,
+        "spearman_p_value": 5.806257554279084e-221,
+        "partial_r_given_n_gpr_rxns": 0.9407012786990068,
+        "partial_p_value": 0.0,
+        "bootstrap_95ci": [
+          0.9286194538013077,
+          0.9536820651853869
+        ],
+        "n_essential": 286,
+        "n_genes": 1516,
+        "held_out": {
+          "n_test": 455,
+          "n_test_essential": 86,
+          "accuracy": 1.0,
+          "mcc": 1.0,
+          "roc_auc": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "confusion": {
+            "tn": 369,
+            "fp": 0,
+            "fn": 0,
+            "tp": 86
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 1.0,
+            "base_rate": 0.18865435356200527,
+            "lift": 5.300699300699301
+          },
+          "K=25": {
+            "precision": 1.0,
+            "base_rate": 0.18865435356200527,
+            "lift": 5.300699300699301
+          },
+          "K=50": {
+            "precision": 1.0,
+            "base_rate": 0.18865435356200527,
+            "lift": 5.300699300699301
+          },
+          "K=100": {
+            "precision": 1.0,
+            "base_rate": 0.18865435356200527,
+            "lift": 5.300699300699301
+          },
+          "K=200": {
+            "precision": 1.0,
+            "base_rate": 0.18865435356200527,
+            "lift": 5.300699300699301
+          },
+          "K=500": {
+            "precision": 0.572,
+            "base_rate": 0.18865435356200527,
+            "lift": 3.032
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1331,
+        "binary_n": 1325,
+        "binary_n_E": 114,
+        "pearson_r": 0.42993386051845023,
+        "pearson_p": 9.824126595245344e-61,
+        "spearman_rho": 0.39868318860368596,
+        "spearman_p": 1.020820389326499e-51,
+        "point_biserial_r": 0.42993386051845023,
+        "bootstrap_95ci": [
+          0.3720998294750374,
+          0.48413542253892083
+        ],
+        "roc_auc": 0.8450497631361641,
+        "held_out": {
+          "n_test": 398,
+          "n_test_E": 34,
+          "accuracy": 0.7814070351758794,
+          "sensitivity": 0.6764705882352942,
+          "specificity": 0.7912087912087912,
+          "precision": 0.23232323232323232,
+          "f1": 0.3458646616541353,
+          "mcc": 0.30240236312584035,
+          "roc_auc": 0.7729072398190046,
+          "confusion": {
+            "tp": 23,
+            "fp": 76,
+            "tn": 288,
+            "fn": 11
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.8528823944757595,
+          "n_high_conf": 69,
+          "low_conf_auc": 0.8015495215427211,
+          "n_low_conf": 34
+        },
+        "n_model_gaps_pecE_insilicoN": 13,
+        "n_medium_mismatch_insilicoE_keioN": 175
+      },
+      "kV_rank_corr_vs_baseline_canonical": 0.897289343738196,
+      "label_agreement_fba_vs_pfba_kappa": 1.0,
+      "objective_preservation": {
+        "fba_optimum": 0.353436,
+        "pfba_biomass_flux": 0.353436,
+        "objective_abs_diff": 0.0,
+        "raw_glc_uptake": 10.0,
+        "pfba_glc_uptake": 10.0,
+        "fva_widths": {
+          "EX_glc__D_e": -0.0,
+          "EX_ac_e": -0.0,
+          "EX_for_e": -0.0,
+          "EX_etoh_e": -0.0,
+          "EX_o2_e": -0.0,
+          "PGI": -0.0,
+          "CS": -0.0,
+          "ACKr": -0.0,
+          "PPCK": -0.0,
+          "G6PDH2r": -0.0
+        }
+      },
+      "plain_reference_r": 0.5592254778244219,
+      "plain_reference_auc": 0.9944538980273523
+    },
+    "iml_o2_0": {
+      "wild_type_biomass": 0.13410915918519312,
+      "n_essential": 292,
+      "n_genes": 1516,
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.9486891072186392,
+        "pearson_p_value": 0.0,
+        "spearman_rho": 0.5145621691826618,
+        "spearman_p_value": 3.0203911181953787e-103,
+        "partial_r_given_n_gpr_rxns": 0.9480135921840219,
+        "partial_p_value": 0.0,
+        "bootstrap_95ci": [
+          0.9350424245418467,
+          0.9627203068642552
+        ],
+        "n_essential": 292,
+        "n_genes": 1516,
+        "held_out": {
+          "n_test": 455,
+          "n_test_essential": 88,
+          "accuracy": 0.9934065934065934,
+          "mcc": 0.97935083876775,
+          "roc_auc": 0.9973371315333168,
+          "sensitivity": 1.0,
+          "specificity": 0.9918256130790191,
+          "confusion": {
+            "tn": 364,
+            "fp": 3,
+            "fn": 0,
+            "tp": 88
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.9,
+            "base_rate": 0.19261213720316622,
+            "lift": 4.6726027397260275
+          },
+          "K=25": {
+            "precision": 0.96,
+            "base_rate": 0.19261213720316622,
+            "lift": 4.984109589041096
+          },
+          "K=50": {
+            "precision": 0.98,
+            "base_rate": 0.19261213720316622,
+            "lift": 5.0879452054794525
+          },
+          "K=100": {
+            "precision": 0.99,
+            "base_rate": 0.19261213720316622,
+            "lift": 5.13986301369863
+          },
+          "K=200": {
+            "precision": 0.995,
+            "base_rate": 0.19261213720316622,
+            "lift": 5.165821917808219
+          },
+          "K=500": {
+            "precision": 0.584,
+            "base_rate": 0.19261213720316622,
+            "lift": 3.032
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1331,
+        "binary_n": 1325,
+        "binary_n_E": 114,
+        "pearson_r": 0.43058133713631014,
+        "pearson_p": 6.240470572724292e-61,
+        "spearman_rho": 0.4323293033441128,
+        "spearman_p": 1.8240272471041374e-61,
+        "point_biserial_r": 0.43058133713631014,
+        "bootstrap_95ci": [
+          0.3729238721733711,
+          0.48612011938044797
+        ],
+        "roc_auc": 0.8379184956611182,
+        "held_out": {
+          "n_test": 398,
+          "n_test_E": 34,
+          "accuracy": 0.7839195979899497,
+          "sensitivity": 0.6764705882352942,
+          "specificity": 0.7939560439560439,
+          "precision": 0.23469387755102042,
+          "f1": 0.3484848484848485,
+          "mcc": 0.30521676542839254,
+          "roc_auc": 0.7608274078862315,
+          "confusion": {
+            "tp": 23,
+            "fp": 75,
+            "tn": 289,
+            "fn": 11
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.8413097332423796,
+          "n_high_conf": 69,
+          "low_conf_auc": 0.7977000048574343,
+          "n_low_conf": 34
+        },
+        "n_model_gaps_pecE_insilicoN": 12,
+        "n_medium_mismatch_insilicoE_keioN": 178
+      },
+      "kV_rank_corr_vs_baseline_canonical": 0.6908601885570386,
+      "label_agreement_fba_vs_pfba_kappa": 1.0,
+      "objective_preservation": {
+        "fba_optimum": 0.134109,
+        "pfba_biomass_flux": 0.134109,
+        "objective_abs_diff": 0.0,
+        "raw_glc_uptake": 10.0,
+        "pfba_glc_uptake": 10.0,
+        "fva_widths": {
+          "EX_glc__D_e": 0.0,
+          "EX_ac_e": 3.581,
+          "EX_for_e": 10.742,
+          "EX_etoh_e": 10.742,
+          "EX_o2_e": 0.0,
+          "PGI": 0.0,
+          "CS": 0.0,
+          "ACKr": 3.581,
+          "PPCK": 0.0,
+          "G6PDH2r": 0.0
+        }
+      },
+      "plain_reference_r": 0.2583257405690961,
+      "plain_reference_auc": 0.6815085459499628
+    }
+  },
+  "method_note": "Canonical kV values are pFBA (parsimonious) vertices for the wild type and every knockout; biomass rates are read from the solution vector at the biomass reaction (cobra's pfba().objective_value returns the minimized L1 total flux, not the growth rate). Objective preservation verified per level against the plain-FBA optimum (fraction_of_optimum = 1.0). Labels are unchanged by construction and verified against the deposited plain sweeps (Cohen kappa).",
+  "skipped": {
+    "ijo_o2_0": "iJO1366 anaerobic endpoint skipped: WT optimum exactly zero (OPHHX/PDX5POi lack anaerobic alternatives), so both the 5%-relative threshold and parsimonious selection degenerate; disclosed in prop:keio-o2-limited."
+  }
+}

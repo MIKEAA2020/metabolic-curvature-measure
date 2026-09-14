@@ -5644,3 +5644,143 @@ Stage Summary:
   substitution-mediated), and the plain-FBA association collapse on
   N-limited optima is a diagnosed solver-vertex artifact (FVA
   evidence + pFBA restoration). Frozen lineage untouched.
+
+---
+Task ID: fourth-axis-canonical-round
+Agent: main (Z.ai)
+Task: User three-part directive: (a) a fourth supply-side axis
+(phosphate or sulfur) to close the supply-side claim without new
+machinery; (b) assess whether the canonical-selection finding
+merits promotion from remark to its own subsection; (c) re-run the
+O2 levels under canonical selection to homogenize all axes'
+reported statistics -- everything useful to humans and merited, not
+empty computational work. Repo checked first (clean at 766e0be, in
+sync with origin/main).
+
+Work Log:
+- Fourth-axis pre-screen (scripts/fourth_axis_prescreen.py): WT
+  dose responses + at-optimum FVA for EX_pi_e and EX_so4_e on both
+  reconstructions. Phosphate selected (baseline uptake 0.948/0.793
+  mmol/gDW/h -> 3-level gradient {-0.5,-0.25,-0.1} spanning 47-89%
+  growth reduction, PGI FVA width 123-201); sulfur rejected (0.25
+  uptake compresses the gradient to a single informative level).
+- (c) O2 canonical control (scripts/o2_pfba_control.py, resumable;
+  PART 0 recomputes plain references from deposited sweeps at zero
+  LP cost): iJO {-10,-5,-2.5} and iML {baseline,-5,0} under pFBA
+  canonical vertex selection with per-level objective-preservation
+  asserts. Result: canonical r +0.895/+0.939/+0.945 (iJO),
+  +0.937/+0.941/+0.949 (iML) against plain +0.775/+0.607/+0.519
+  and +0.875/+0.559/+0.258; AUC 0.987-1.000; label kappa 1.000 at
+  every level. HEADLINE: the iML anaerobic endpoint is restored
+  across the regime switch itself (r +0.258 -> +0.949, AUC 0.682 ->
+  0.997, MCC 0.979) -- the switch moves labels only; the apparent
+  association collapse at the switch was vertex-conditioning.
+- The control doubled as an independent audit and surfaced ONE
+  discrepancy in the deposited plain sweeps: the fabZ (b0180) row
+  at iML O2=0 recorded b_ko = WT exactly. Adjudication: fresh
+  single-shot plain solve = 0.0; FVA biomass max = 0.0; WT anaerobic
+  flux through OPMEACPD/OGMEACPD = 2.682e-07 each (the ubiquinone
+  side-chain drain, proportional to growth). Corrected via
+  scripts/o2_solver_integrity_fix.py (patched row, recomputed level
+  stats): the anaerobic endpoint is 286 -> 292 (+6 glycolysis
+  gains, NO losses), kappa 0.987, Jaccard 0.979; fabZ is essential
+  in every regime through the sole q8 side-chain route. Damage
+  audit: gene-by-gene comparison of every plain level vs its
+  canonical counterpart.
+- (a) Phosphate probe (scripts/phosphate_limited_keio_probe.py,
+  import-safe, resumable; plain + canonical arms per level):
+  labels INVARIANT at every level on both reconstructions (iJO
+  289/289/289, iML 286/286/286; zero flips; kappa 1.000); plain
+  association collapses with degeneracy depth (r +0.323/+0.054/
+  -0.067 iJO; +0.025/+0.090 iML; PGI FVA width 123/172/201 vs 0.0
+  baseline, 4.3 O2-limited); canonical restores everywhere
+  (+0.950/+0.916/+0.914; +0.910/+0.900; AUC 0.986-0.988; MCC
+  0.904-0.965). Supply side of the invariance claim CLOSED on all
+  four classical macronutrient axes.
+- SOLVER-TOLERANCE INTEGRITY (found during the phosphate round; the
+  second adjudication class): at Pi=-0.1 (WT 0.104) three plain
+  calls (bioC b0778, fabZ b0180, bioH b3412) and two canonical
+  calls (bioF b0776 iJO, bioH b3412 iML) were corrupted. Root cause
+  identified as PRIMAL-FEASIBILITY TOLERANCE, not warm-start
+  staleness: the biotin drain (coefficient 2e-06 per biomass unit)
+  scales to 2.07e-07 at growth 0.104, ~2x glpk's 1e-7 bound
+  tolerance, so the simplex can accept solutions violating the hard
+  zero bounds of knocked-out trace-quota steps; one-directional
+  (false viability), confined to growth <~0.14 and trace-quota
+  genes (biotin, q8 side chain). All adjudicated with an
+  independent engine -- scipy/HiGHS two-stage SPLIT-VARIABLE pFBA
+  (scripts/phosphate_highs_adjudication.py; the first patch
+  attempt's signed-sum stage-2 objective was caught and corrected:
+  the true parsimonious WT L1 at pi_-0.1 is 91.965, cross-engine
+  identical; all three iJO biotin KOs share canonical kV 164.9753,
+  the iML ones 253.5509) -- and patched
+  (phosphate_patch_pi01.py / _canonfix.py / _iml_pi01.py).
+- Filename collision found and fixed: the iML canonical arm had
+  overwritten the iJO pi CSVs; iML CSVs renamed to
+  keio_phosphate_pfba_control_iml_*, iJO canonical CSVs regenerated
+  and re-patched (the b0776 corruption reproduces deterministically
+  and was re-fixed).
+- Gap closure for the homogenized table: the two iML nitrogen
+  levels with degenerate plain readings (nh4_-2.5 r -0.112, glu
+  +0.314 -- missed by the N-round control, which iterated iJO
+  levels only) canonically swept
+  (scripts/nitrogen_pfba_control_iml.py): r +0.909 / +0.911, AUC
+  0.986/0.987, kappa 1.000.
+- Extended integrity audit (scripts/extend_integrity_audit.py): 0
+  discrepancies in 24,282 gene-level comparisons across 17 levels
+  (post-correction); 8 corrupted calls total, all trace-quota
+  family, all documented in
+  download/keio_o2_solver_integrity_audit.json.
+- (b) MERIT ASSESSMENT: promotion strongly merited -- the finding
+  now (i) explains the plain collapse on two independent axes via
+  one FVA signature, (ii) sharpens the baselines and the O2
+  gradient, (iii) upgrades the regime-switch story (association
+  survives the switch; labels only re-stratify), and (iv) surfaced
+  and bounded a genuine solver-integrity boundary with an
+  independent-engine protocol. Landed as the new subsection
+  sec:canonical-selection with the homogenized 18-level table.
+- companion_categorical_v3.tex amended in place (patch F +
+  follow-ups): corrected anaerobic endpoint in prop:keio-o2-limited
+  (+6/-0; fabZ essential in every regime; pointer to the
+  subsection); rem:keio-o2-invariance fabZ sentence corrected +
+  regime-degradation qualified (plain reading; canonical restored
+  across the switch); rem:keio-n-invariance phrasing (third axis);
+  NEW prop:keio-phosphate + rem:keio-p-invariance (four-axis
+  closure, quota-scaling isolation); NEW subsection
+  sec:canonical-selection + tab:canonical-selection (18 levels) +
+  rem:canonical-protocol (declared vertex rule + tolerance-aware
+  adjudication of trace-quota calls); abstract -> four axes (264
+  words < 265). One rounding fix (Jaccard 0.980 -> 0.979) and one
+  table fix (iML nh4 -2.5 plain r -0.113 -> -0.112) caught by the
+  audit.
+- audit_v8_numbers.py (built by scripts/build_audit_v8.py from v7 +
+  ~80 round-8 checks): 226/226 PASS after the corrections above.
+- Publication figures: phosphate 4-panel
+  (scripts/phosphate_figure.py); O2 dose-response regenerated from
+  the patched artifacts (scripts/o2_figure_regen.py); nitrogen 4-
+  panel publication figure restored (the probe's module-level
+  legacy 2-panel PART 4 had been clobbering it on import;
+  regenerated via scripts/nitrogen_figure.py, byte-identical to
+  HEAD).
+- Builds: companion 67 -> 70 pp, 0 errors / 0 undefined / 0
+  overfull (prop p. 61, subsection p. 62, table p. 63); ZIPs
+  rebuilt + standalone-reverified in a repo-local fresh dir
+  (28 / 70 pp); download PDF, TAC cover letter, links doc
+  refreshed; .gitignore extended (run log, zip scratch); restored
+  'upload/deepseek general chat.txt' (dropped by the sandbox
+  restore); core.fileMode=false set locally (sandbox had flipped
+  modes on ~200 untouched files).
+
+Stage Summary:
+- The supply side of the label-invariance claim is closed on all
+  four classical macronutrient axes (carbon, electron acceptor,
+  nitrogen, phosphate), with zero label flips at up to 89% growth
+  reduction in both reconstructions; the reported association is
+  homogenized under canonical vertex selection (r in [+0.87,
+  +0.95], AUC >= 0.979 at all 18 canonical levels) and is shown to
+  survive the anaerobic regime switch (labels only re-stratify).
+  The homogenization surfaced a solver-tolerance integrity boundary
+  (trace-quota essentiality calls at low growth): eight corrupted
+  calls found, adjudicated with HiGHS, corrected, and bounded by a
+  24,282-comparison cross-check now clean. Frozen lineage
+  untouched; audit_v8 226/226 PASS.
