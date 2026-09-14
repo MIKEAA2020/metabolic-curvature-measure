@@ -47,11 +47,19 @@ four layers, each stated with its proof status explicitly labeled:
    cross-rebuild arms, with a disclosed medium audit, its
    glucose-only re-run: both in-silico essentiality sets invariant,
    every rank-level association strengthened, and the negative
-   cross-rebuild verdict reversed as a medium artifact; and a second
+   cross-rebuild verdict reversed as a medium artifact; a second
    perturbation probe on the oxygen axis, where the labels stay
    invariant under a four-fold oxygen reduction in both
    reconstructions and re-stratify only at the anaerobic regime
-   switch); its
+   switch; and a third perturbation probe on the nitrogen axis,
+   where the labels are invariant along the whole
+   ammonium-limitation gradient in both reconstructions while
+   nitrogen-source substitution re-stratifies exactly the
+   assimilation module (losses only, every rescue
+   substitution-mediated), the collapsed plain-FBA association on
+   the nitrogen-limited levels is diagnosed as flux-solution
+   degeneracy and restored everywhere by canonical (parsimonious)
+   vertex selection); its
    viability-kernel reading as a finite-time, feedback-certifying
    probe of kernel and capture-basin membership (with the Nagumo
    tangentiality condition); the Poincare/averaging analysis of its

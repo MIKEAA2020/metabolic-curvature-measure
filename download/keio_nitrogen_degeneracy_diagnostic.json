@@ -1,0 +1,359 @@
+{
+  "baseline": {
+    "wild_type_biomass": 0.982372,
+    "raw_vertex": {
+      "glc_uptake": 10.0,
+      "o2_uptake": 17.579,
+      "byproducts": {},
+      "L1_total_flux": 709.9877713224922
+    },
+    "pfba_vertex": {
+      "glc_uptake": 10.0,
+      "o2_uptake": 17.579,
+      "byproducts": {},
+      "L1_total_flux": 699.0222751839394
+    },
+    "fva_at_optimum": {
+      "EX_glc__D_e": {
+        "min": -10.0,
+        "max": -10.0,
+        "width": -0.0
+      },
+      "EX_ac_e": {
+        "min": 0.0,
+        "max": -0.0,
+        "width": -0.0
+      },
+      "EX_for_e": {
+        "min": 0.0,
+        "max": -0.0,
+        "width": -0.0
+      },
+      "EX_etoh_e": {
+        "min": 0.0,
+        "max": -0.0,
+        "width": -0.0
+      },
+      "EX_o2_e": {
+        "min": -19.8355,
+        "max": -17.5789,
+        "width": 2.2566
+      },
+      "PGI": {
+        "min": 5.9181,
+        "max": 5.9181,
+        "width": -0.0
+      },
+      "CS": {
+        "min": 4.8578,
+        "max": 4.8578,
+        "width": -0.0
+      },
+      "ACKr": {
+        "min": -995.9859,
+        "max": 0.5723,
+        "width": 996.5582
+      },
+      "PPCK": {
+        "min": 0.0,
+        "max": -0.0,
+        "width": -0.0
+      },
+      "G6PDH2r": {
+        "min": 4.0819,
+        "max": 4.0819,
+        "width": -0.0
+      }
+    },
+    "fva_total_width": 998.815
+  },
+  "o2_-10": {
+    "wild_type_biomass": 0.710834,
+    "raw_vertex": {
+      "glc_uptake": 10.0,
+      "o2_uptake": 10.0,
+      "byproducts": {
+        "EX_for_e": 7.196,
+        "EX_ac_e": 7.853
+      },
+      "L1_total_flux": 559.4173478377795
+    },
+    "pfba_vertex": {
+      "glc_uptake": 10.0,
+      "o2_uptake": 10.0,
+      "byproducts": {
+        "EX_for_e": 7.196,
+        "EX_ac_e": 7.853
+      },
+      "L1_total_flux": 556.620434846019
+    },
+    "fva_at_optimum": {
+      "EX_glc__D_e": {
+        "min": -10.0,
+        "max": -10.0,
+        "width": -0.0
+      },
+      "EX_ac_e": {
+        "min": 7.8529,
+        "max": 9.3023,
+        "width": 1.4495
+      },
+      "EX_for_e": {
+        "min": 1.3984,
+        "max": 7.1963,
+        "width": 5.7979
+      },
+      "EX_etoh_e": {
+        "min": 0.0,
+        "max": -0.0,
+        "width": -0.0
+      },
+      "EX_o2_e": {
+        "min": -10.0,
+        "max": -10.0,
+        "width": -0.0
+      },
+      "PGI": {
+        "min": 5.6516,
+        "max": 10.0,
+        "width": 4.3484
+      },
+      "CS": {
+        "min": 0.7643,
+        "max": 0.7643,
+        "width": -0.0
+      },
+      "ACKr": {
+        "min": -1000.0,
+        "max": -7.4387,
+        "width": 992.5613
+      },
+      "PPCK": {
+        "min": 0.0,
+        "max": -0.0,
+        "width": -0.0
+      },
+      "G6PDH2r": {
+        "min": 0.0,
+        "max": 4.3484,
+        "width": 4.3484
+      }
+    },
+    "fva_total_width": 1008.505
+  },
+  "nh4_-10": {
+    "wild_type_biomass": 0.925855,
+    "raw_vertex": {
+      "glc_uptake": 10.0,
+      "o2_uptake": 20.0,
+      "byproducts": {
+        "EX_for_e": 0.039
+      },
+      "L1_total_flux": 766.8496636182587
+    },
+    "pfba_vertex": {
+      "glc_uptake": 9.578,
+      "o2_uptake": 16.411,
+      "byproducts": {
+        "EX_ac_e": 0.539
+      },
+      "L1_total_flux": 658.7481648322241
+    },
+    "fva_at_optimum": {
+      "EX_glc__D_e": {
+        "min": -10.0,
+        "max": -9.4322,
+        "width": 0.5678
+      },
+      "EX_ac_e": {
+        "min": 0.0,
+        "max": 2.0963,
+        "width": 2.0963
+      },
+      "EX_for_e": {
+        "min": 0.0,
+        "max": 6.8135,
+        "width": 6.8135
+      },
+      "EX_etoh_e": {
+        "min": 0.0,
+        "max": 1.2387,
+        "width": 1.2387
+      },
+      "EX_o2_e": {
+        "min": -20.0,
+        "max": -15.8268,
+        "width": 4.1732
+      },
+      "PGI": {
+        "min": -22.9422,
+        "max": 22.2453,
+        "width": 45.1875
+      },
+      "CS": {
+        "min": 0.9955,
+        "max": 19.5231,
+        "width": 18.5277
+      },
+      "ACKr": {
+        "min": -1000.0,
+        "max": 15.4115,
+        "width": 1015.4115
+      },
+      "PPCK": {
+        "min": 0.0,
+        "max": 13.5629,
+        "width": 13.5629
+      },
+      "G6PDH2r": {
+        "min": -0.0,
+        "max": 22.992,
+        "width": 22.992
+      }
+    },
+    "fva_total_width": 1130.571
+  },
+  "nh4_-2.5": {
+    "wild_type_biomass": 0.231464,
+    "raw_vertex": {
+      "glc_uptake": 7.145,
+      "o2_uptake": 5.899,
+      "byproducts": {},
+      "L1_total_flux": 287.52981498613013
+    },
+    "pfba_vertex": {
+      "glc_uptake": 2.493,
+      "o2_uptake": 4.693,
+      "byproducts": {
+        "EX_ac_e": 0.135
+      },
+      "L1_total_flux": 180.06297870805722
+    },
+    "fva_at_optimum": {
+      "EX_glc__D_e": {
+        "min": -10.0,
+        "max": -2.4565,
+        "width": 7.5435
+      },
+      "EX_ac_e": {
+        "min": 0.0,
+        "max": 22.8655,
+        "width": 22.8655
+      },
+      "EX_for_e": {
+        "min": 0.0,
+        "max": 50.4988,
+        "width": 50.4988
+      },
+      "EX_etoh_e": {
+        "min": 0.0,
+        "max": 16.4081,
+        "width": 16.4081
+      },
+      "EX_o2_e": {
+        "min": -20.0,
+        "max": -0.0218,
+        "width": 19.9782
+      },
+      "PGI": {
+        "min": -83.998,
+        "max": 93.1988,
+        "width": 177.1969
+      },
+      "CS": {
+        "min": 0.2489,
+        "max": 85.0183,
+        "width": 84.7694
+      },
+      "ACKr": {
+        "min": -1000.0,
+        "max": 70.2404,
+        "width": 1070.2404
+      },
+      "PPCK": {
+        "min": 0.0,
+        "max": 83.5282,
+        "width": 83.5282
+      },
+      "G6PDH2r": {
+        "min": 0.0,
+        "max": 59.3012,
+        "width": 59.3012
+      }
+    },
+    "fva_total_width": 1592.33
+  },
+  "glu_-10": {
+    "wild_type_biomass": 0.925855,
+    "raw_vertex": {
+      "glc_uptake": 10.0,
+      "o2_uptake": 18.685,
+      "byproducts": {
+        "EX_ac_e": 5.929
+      },
+      "L1_total_flux": 688.247727107474
+    },
+    "pfba_vertex": {
+      "glc_uptake": 4.154,
+      "o2_uptake": 16.415,
+      "byproducts": {
+        "EX_for_e": 6.305,
+        "EX_ac_e": 5.187
+      },
+      "L1_total_flux": 543.7071183078222
+    },
+    "fva_at_optimum": {
+      "EX_glc__D_e": {
+        "min": -10.0,
+        "max": -3.2044,
+        "width": 6.7956
+      },
+      "EX_ac_e": {
+        "min": 0.0,
+        "max": 26.9355,
+        "width": 26.9355
+      },
+      "EX_for_e": {
+        "min": 0.0,
+        "max": 62.9619,
+        "width": 62.9619
+      },
+      "EX_etoh_e": {
+        "min": 0.0,
+        "max": 14.8555,
+        "width": 14.8555
+      },
+      "EX_o2_e": {
+        "min": -20.0,
+        "max": -10.714,
+        "width": 9.286
+      },
+      "PGI": {
+        "min": -36.6782,
+        "max": 46.2549,
+        "width": 82.9331
+      },
+      "CS": {
+        "min": 0.0,
+        "max": 36.2804,
+        "width": 36.2804
+      },
+      "ACKr": {
+        "min": -1000.0,
+        "max": 22.2045,
+        "width": 1022.2045
+      },
+      "PPCK": {
+        "min": 0.0,
+        "max": 40.2731,
+        "width": 40.2731
+      },
+      "G6PDH2r": {
+        "min": 0.0,
+        "max": 36.2792,
+        "width": 36.2792
+      }
+    },
+    "fva_total_width": 1338.805
+  }
+}

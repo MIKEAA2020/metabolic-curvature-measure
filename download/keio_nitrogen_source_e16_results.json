@@ -1,0 +1,626 @@
+{
+  "probe": "nitrogen-source axis, iML1515 cross-rebuild",
+  "baseline_medium": "glucose -10, O2 -20, minerals -10, nh4 -10, EX_tre_e CLOSED",
+  "levels": {
+    "nh4_-2.5": {
+      "kind": "limitation",
+      "label": "NH4 -2.5 (severe limitation)",
+      "wild_type_biomass": 0.23148330334080713,
+      "wt_info": {
+        "uptakes": {
+          "EX_nh4_e": 2.5
+        },
+        "glucose_uptake": 10.0,
+        "byproducts": {
+          "EX_ac_e": 1.192
+        },
+        "n_route_fluxes": {
+          "GLUDy": -1.968,
+          "GLNS": 1.532,
+          "ASPTA": -0.756
+        },
+        "nh4_release_routes": []
+      },
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": -0.11245409299777842,
+        "pearson_p_value": 1.139721020413888e-05,
+        "spearman_rho": 0.05209415755549384,
+        "spearman_p_value": 0.042556773656268816,
+        "partial_r_given_n_gpr_rxns": -0.1111206525193364,
+        "partial_p_value": 1.4480673304816544e-05,
+        "bootstrap_95ci": [
+          -0.1754328507314882,
+          -0.0564533363277531
+        ],
+        "n_essential": 286,
+        "n_genes": 1516,
+        "held_out": {
+          "n_test": 455,
+          "n_test_essential": 86,
+          "accuracy": 0.810989010989011,
+          "mcc": 0.0,
+          "roc_auc": 0.5879183210436756,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "confusion": {
+            "tn": 369,
+            "fp": 0,
+            "fn": 86,
+            "tp": 0
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.0,
+            "base_rate": 0.18865435356200527,
+            "lift": 0.0
+          },
+          "K=25": {
+            "precision": 0.0,
+            "base_rate": 0.18865435356200527,
+            "lift": 0.0
+          },
+          "K=50": {
+            "precision": 0.0,
+            "base_rate": 0.18865435356200527,
+            "lift": 0.0
+          },
+          "K=100": {
+            "precision": 0.31,
+            "base_rate": 0.18865435356200527,
+            "lift": 1.6432167832167832
+          },
+          "K=200": {
+            "precision": 0.46,
+            "base_rate": 0.18865435356200527,
+            "lift": 2.4383216783216786
+          },
+          "K=500": {
+            "precision": 0.21,
+            "base_rate": 0.18865435356200527,
+            "lift": 1.1131468531468531
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1331,
+        "binary_n": 1325,
+        "binary_n_E": 114,
+        "pearson_r": -0.0062586147002737565,
+        "pearson_p": 0.8199539329016055,
+        "spearman_rho": 0.060761633509854585,
+        "spearman_p": 0.026986494418563236,
+        "point_biserial_r": -0.0062586147002737565,
+        "bootstrap_95ci": [
+          -0.06625373217556098,
+          0.04772934338716157
+        ],
+        "roc_auc": 0.5625443666970895,
+        "held_out": {
+          "n_test": 398,
+          "n_test_E": 34,
+          "accuracy": 0.6708542713567839,
+          "sensitivity": 0.17647058823529413,
+          "specificity": 0.717032967032967,
+          "precision": 0.05504587155963303,
+          "f1": 0.08391608391608392,
+          "mcc": -0.06675181665714217,
+          "roc_auc": 0.42533936651583704,
+          "confusion": {
+            "tp": 6,
+            "fp": 103,
+            "tn": 261,
+            "fn": 28
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.5983855718713722,
+          "n_high_conf": 69,
+          "low_conf_auc": 0.4966848010880653,
+          "n_low_conf": 34
+        },
+        "n_model_gaps_pecE_insilicoN": 13,
+        "n_medium_mismatch_insilicoE_keioN": 175
+      },
+      "flips_vs_glucose_only": {
+        "label": "iML1515 nh4_-2.5 vs glucose-only (nh4 -10)",
+        "n_compared": 1516,
+        "n_essential_base": 286,
+        "n_essential_new": 286,
+        "n_gain_essential": 0,
+        "n_loss_essential": 0,
+        "n_both_essential": 286,
+        "cohen_kappa": 1.0,
+        "jaccard": 1.0,
+        "gains": [],
+        "losses": [],
+        "subsystem_enrichment_top": []
+      }
+    },
+    "glu_-10": {
+      "kind": "substitution",
+      "label": "Glu -10 sole-N (matched N flux)",
+      "wild_type_biomass": 0.9259332133632519,
+      "wt_info": {
+        "uptakes": {
+          "EX_glu__L_e": 10.0
+        },
+        "glucose_uptake": 10.0,
+        "byproducts": {
+          "EX_for_e": 13.307,
+          "EX_ac_e": 19.183
+        },
+        "n_route_fluxes": {
+          "GLUDy": 2.081,
+          "GLNS": 1.45,
+          "ASPTA": -2.711
+        },
+        "nh4_release_routes": [
+          {
+            "reaction": "GLUDy",
+            "net_production": 2.0809,
+            "genes": "gdhA;gltB;gltD"
+          },
+          {
+            "reaction": "THRD_L",
+            "net_production": 0.269,
+            "genes": "ilvA;tdcB"
+          },
+          {
+            "reaction": "CYSTL",
+            "net_production": 0.1425,
+            "genes": "malY;metC"
+          },
+          {
+            "reaction": "GLYCL",
+            "net_production": 0.0513,
+            "genes": "gcvH;gcvP;gcvT;lpd"
+          },
+          {
+            "reaction": "HMBS",
+            "net_production": 0.0017,
+            "genes": "hemC"
+          },
+          {
+            "reaction": "DHPPDA2",
+            "net_production": 0.0004,
+            "genes": "ribD"
+          }
+        ]
+      },
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.31375889009327707,
+        "pearson_p_value": 5.5191279531727964e-36,
+        "spearman_rho": 0.07620384354685826,
+        "spearman_p_value": 0.002988373436933741,
+        "partial_r_given_n_gpr_rxns": 0.30756151172867296,
+        "partial_p_value": 1.417662206188715e-34,
+        "bootstrap_95ci": [
+          0.28456394539953966,
+          0.3421625791183488
+        ],
+        "n_essential": 279,
+        "n_genes": 1516,
+        "held_out": {
+          "n_test": 455,
+          "n_test_essential": 84,
+          "accuracy": 0.8087912087912088,
+          "mcc": 0.032571761556280915,
+          "roc_auc": 0.6908933384674625,
+          "sensitivity": 0.023809523809523808,
+          "specificity": 0.9865229110512129,
+          "confusion": {
+            "tn": 366,
+            "fp": 5,
+            "fn": 82,
+            "tp": 2
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.3,
+            "base_rate": 0.18403693931398418,
+            "lift": 1.6301075268817202
+          },
+          "K=25": {
+            "precision": 0.48,
+            "base_rate": 0.18403693931398418,
+            "lift": 2.6081720430107524
+          },
+          "K=50": {
+            "precision": 0.74,
+            "base_rate": 0.18403693931398418,
+            "lift": 4.020931899641576
+          },
+          "K=100": {
+            "precision": 0.77,
+            "base_rate": 0.18403693931398418,
+            "lift": 4.1839426523297485
+          },
+          "K=200": {
+            "precision": 0.42,
+            "base_rate": 0.18403693931398418,
+            "lift": 2.2821505376344082
+          },
+          "K=500": {
+            "precision": 0.2,
+            "base_rate": 0.18403693931398418,
+            "lift": 1.0867383512544804
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1331,
+        "binary_n": 1325,
+        "binary_n_E": 114,
+        "pearson_r": 0.14129788991707434,
+        "pearson_p": 2.4121550013206135e-07,
+        "spearman_rho": 0.10656611876735837,
+        "spearman_p": 0.00010171010607021449,
+        "point_biserial_r": 0.14129788991707434,
+        "bootstrap_95ci": [
+          0.10910188685250226,
+          0.17374585992186287
+        ],
+        "roc_auc": 0.6096925840613094,
+        "held_out": {
+          "n_test": 398,
+          "n_test_E": 34,
+          "accuracy": 0.4045226130653266,
+          "sensitivity": 0.7647058823529411,
+          "specificity": 0.3708791208791209,
+          "precision": 0.10196078431372549,
+          "f1": 0.17993079584775087,
+          "mcc": 0.07898846918842374,
+          "roc_auc": 0.6104557207498383,
+          "confusion": {
+            "tp": 26,
+            "fp": 229,
+            "tn": 135,
+            "fn": 8
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.6060029440275734,
+          "n_high_conf": 69,
+          "low_conf_auc": 0.6301792393257881,
+          "n_low_conf": 34
+        },
+        "n_model_gaps_pecE_insilicoN": 13,
+        "n_medium_mismatch_insilicoE_keioN": 168
+      },
+      "flips_vs_glucose_only": {
+        "label": "iML1515 glu_-10 vs glucose-only (nh4 -10)",
+        "n_compared": 1516,
+        "n_essential_base": 286,
+        "n_essential_new": 279,
+        "n_gain_essential": 0,
+        "n_loss_essential": 7,
+        "n_both_essential": 279,
+        "cohen_kappa": 0.984773700340913,
+        "jaccard": 0.9755244755244755,
+        "gains": [],
+        "losses": [
+          {
+            "gene_id": "b0720",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1136",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0451",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3213",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3212",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0118",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1276",
+            "gene_name": ""
+          }
+        ],
+        "subsystem_enrichment_top": [
+          {
+            "subsystem": "Citric Acid Cycle",
+            "n_flip": 4,
+            "expected": 0.1,
+            "ratio": 39.38
+          },
+          {
+            "subsystem": "Glutamate Metabolism",
+            "n_flip": 2,
+            "expected": 0.0,
+            "ratio": 48.13
+          },
+          {
+            "subsystem": "Inorganic Ion Transport and Metabolism",
+            "n_flip": 1,
+            "expected": 0.4,
+            "ratio": 2.49
+          },
+          {
+            "subsystem": "Alternate Carbon Metabolism",
+            "n_flip": 1,
+            "expected": 1.1,
+            "ratio": 0.94
+          }
+        ]
+      }
+    },
+    "arg_-10": {
+      "kind": "substitution",
+      "label": "Arg -10 sole-N (N+C surplus)",
+      "wild_type_biomass": 0.9497821637643493,
+      "wt_info": {
+        "uptakes": {
+          "EX_arg__L_e": 10.0
+        },
+        "glucose_uptake": 10.0,
+        "byproducts": {
+          "EX_ac_e": 22.278
+        },
+        "n_route_fluxes": {
+          "GLUDy": 6.079,
+          "GLNS": 1.488,
+          "ASPTA": -5.202,
+          "ARGDC": 1.715
+        },
+        "nh4_release_routes": [
+          {
+            "reaction": "SADH",
+            "net_production": 16.0085,
+            "genes": "astB"
+          },
+          {
+            "reaction": "GLUDy",
+            "net_production": 6.0789,
+            "genes": "gdhA;gltB;gltD"
+          },
+          {
+            "reaction": "ASPT",
+            "net_production": 2.702,
+            "genes": "aspA"
+          },
+          {
+            "reaction": "THRD_L",
+            "net_production": 0.2759,
+            "genes": "ilvA;tdcB"
+          },
+          {
+            "reaction": "CYSTL",
+            "net_production": 0.1462,
+            "genes": "malY;metC"
+          },
+          {
+            "reaction": "HMBS",
+            "net_production": 0.0017,
+            "genes": "hemC"
+          },
+          {
+            "reaction": "DHPPDA2",
+            "net_production": 0.0004,
+            "genes": "ribD"
+          }
+        ]
+      },
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.9146934350470383,
+        "pearson_p_value": 0.0,
+        "spearman_rho": 0.548866137522768,
+        "spearman_p_value": 5.264972102376726e-120,
+        "partial_r_given_n_gpr_rxns": 0.9135614052663438,
+        "partial_p_value": 0.0,
+        "bootstrap_95ci": [
+          0.8861413123481167,
+          0.940183644467444
+        ],
+        "n_essential": 271,
+        "n_genes": 1516,
+        "held_out": {
+          "n_test": 455,
+          "n_test_essential": 81,
+          "accuracy": 0.9978021978021978,
+          "mcc": 0.9925541237309334,
+          "roc_auc": 0.9973592130454876,
+          "sensitivity": 1.0,
+          "specificity": 0.9973262032085561,
+          "confusion": {
+            "tn": 373,
+            "fp": 1,
+            "fn": 0,
+            "tp": 81
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.4,
+            "base_rate": 0.1787598944591029,
+            "lift": 2.237638376383764
+          },
+          "K=25": {
+            "precision": 0.64,
+            "base_rate": 0.1787598944591029,
+            "lift": 3.5802214022140224
+          },
+          "K=50": {
+            "precision": 0.82,
+            "base_rate": 0.1787598944591029,
+            "lift": 4.587158671586716
+          },
+          "K=100": {
+            "precision": 0.91,
+            "base_rate": 0.1787598944591029,
+            "lift": 5.090627306273063
+          },
+          "K=200": {
+            "precision": 0.955,
+            "base_rate": 0.1787598944591029,
+            "lift": 5.342361623616236
+          },
+          "K=500": {
+            "precision": 0.542,
+            "base_rate": 0.1787598944591029,
+            "lift": 3.0320000000000005
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1331,
+        "binary_n": 1325,
+        "binary_n_E": 114,
+        "pearson_r": 0.42461671006928964,
+        "pearson_p": 3.931611508264893e-59,
+        "spearman_rho": 0.3117568024505685,
+        "spearman_p": 2.9548038384074583e-31,
+        "point_biserial_r": 0.42461671006928964,
+        "bootstrap_95ci": [
+          0.36793285856970837,
+          0.4784122482765783
+        ],
+        "roc_auc": 0.8208853057499239,
+        "held_out": {
+          "n_test": 398,
+          "n_test_E": 34,
+          "accuracy": 0.8040201005025126,
+          "sensitivity": 0.6764705882352942,
+          "specificity": 0.8159340659340659,
+          "precision": 0.25555555555555554,
+          "f1": 0.3709677419354839,
+          "mcc": 0.3290149912212868,
+          "roc_auc": 0.7337992889463478,
+          "confusion": {
+            "tp": 23,
+            "fp": 67,
+            "tn": 297,
+            "fn": 11
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.8063105111358442,
+          "n_high_conf": 69,
+          "low_conf_auc": 0.8175669111575266,
+          "n_low_conf": 34
+        },
+        "n_model_gaps_pecE_insilicoN": 13,
+        "n_medium_mismatch_insilicoE_keioN": 160
+      },
+      "flips_vs_glucose_only": {
+        "label": "iML1515 arg_-10 vs glucose-only (nh4 -10)",
+        "n_compared": 1516,
+        "n_essential_base": 286,
+        "n_essential_new": 271,
+        "n_gain_essential": 0,
+        "n_loss_essential": 15,
+        "n_both_essential": 271,
+        "cohen_kappa": 0.9670147954743255,
+        "jaccard": 0.9475524475524476,
+        "gains": [],
+        "losses": [
+          {
+            "gene_id": "b0720",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1136",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3172",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3958",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3957",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3960",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b4254",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0273",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0451",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3959",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3213",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b3212",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b2818",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b0118",
+            "gene_name": ""
+          },
+          {
+            "gene_id": "b1276",
+            "gene_name": ""
+          }
+        ],
+        "subsystem_enrichment_top": [
+          {
+            "subsystem": "Arginine and Proline Metabolism",
+            "n_flip": 8,
+            "expected": 0.4,
+            "ratio": 19.25
+          },
+          {
+            "subsystem": "Citric Acid Cycle",
+            "n_flip": 4,
+            "expected": 0.2,
+            "ratio": 18.38
+          },
+          {
+            "subsystem": "Glutamate Metabolism",
+            "n_flip": 2,
+            "expected": 0.1,
+            "ratio": 22.46
+          },
+          {
+            "subsystem": "Inorganic Ion Transport and Metabolism",
+            "n_flip": 1,
+            "expected": 0.9,
+            "ratio": 1.16
+          },
+          {
+            "subsystem": "Alternate Carbon Metabolism",
+            "n_flip": 1,
+            "expected": 2.3,
+            "ratio": 0.44
+          }
+        ]
+      }
+    }
+  }
+}

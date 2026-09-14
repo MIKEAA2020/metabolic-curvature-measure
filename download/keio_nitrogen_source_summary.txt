@@ -1,0 +1,38 @@
+THIRD PERTURBATION AXIS: NITROGEN SOURCE
+Label invariance generalization (iJO1366 + iML1515)
+==============================================================================
+Baseline: glucose-only corrected medium (trehalose closed),
+ammonium unlimited on iJO1366 / -10 on iML1515.
+Probe: (a) ammonium-supply limitation gradient;
+(b) nitrogen-source substitution (nh4 closed, sole N
+source = L-glutamate at matched N flux or L-arginine at
+N+C surplus).
+
+iJO1366 baseline (nh4 unlimited): WT 0.9824, 289/1367 essential, r = +0.6034, AUC 0.9769
+  nh4_-10: WT 0.9259 (uptake {'EX_nh4_e': 10.0}); labels 289 -> 289 (+0 / -0, kappa 1.0000); r = +0.3498, held-out AUC 0.7091, MCC 0.0132; direct r +0.1204, AUC 0.5930
+   nh4_-5: WT 0.4629 (uptake {'EX_nh4_e': 5.0}); labels 289 -> 289 (+0 / -0, kappa 1.0000); r = +0.0789, held-out AUC 0.5460, MCC 0.0000; direct r +0.0141, AUC 0.5121
+ nh4_-2.5: WT 0.2315 (uptake {'EX_nh4_e': 2.5}); labels 289 -> 289 (+0 / -0, kappa 1.0000); r = -0.1220, held-out AUC 0.5541, MCC 0.0000; direct r -0.0933, AUC 0.4289
+  glu_-10: WT 0.9259 (uptake {'EX_glu__L_e': 10.0}); labels 289 -> 284 (+0 / -5, kappa 0.9890); r = +0.2134, held-out AUC 0.6711, MCC 0.0000; direct r +0.0522, AUC 0.5814
+  arg_-10: WT 1.2595 (uptake {'EX_arg__L_e': 10.0}); labels 289 -> 275 (+0 / -14, kappa 0.9687); r = +0.8024, held-out AUC 0.9808, MCC 0.9051; direct r +0.2968, AUC 0.7291
+
+iML1515 baseline (nh4 -10): WT 0.8218, 286/1516 essential, direct r +0.3760, AUC 0.8128
+iML1515  nh4_-2.5: WT 0.2315 (uptake {'EX_nh4_e': 2.5}); labels 286 -> 286 (+0 / -0, kappa 1.0000); direct r -0.0063, AUC 0.5625; transitive r -0.1125, held-out AUC 0.5879
+iML1515   glu_-10: WT 0.9259 (uptake {'EX_glu__L_e': 10.0}); labels 286 -> 279 (+0 / -7, kappa 0.9848); direct r +0.1413, AUC 0.6097; transitive r +0.3138, held-out AUC 0.6909
+iML1515   arg_-10: WT 0.9498 (uptake {'EX_arg__L_e': 10.0}); labels 286 -> 271 (+0 / -15, kappa 0.9670); direct r +0.4246, AUC 0.8209; transitive r +0.9147, held-out AUC 0.9974
+
+Matched-N control: glu_L carries one N per molecule, so the
+glu -10 substitution supplies exactly the N flux of the nh4
+-10 limitation; both give WT 0.9259 on iJO1366 (the N-to-
+growth map is the same from either nitrogen donor).
+
+Internal nh4-release routes at the substitution optima:
+  iJO1366 glu_-10: DAAD (b1189) 1.9518; THRD_L (b3117;b3772) 0.269; CYSTL (b1622;b3008) 0.1425; GLUDy (b1761) 0.1295; GLYCL (b0116;b2903;b2904;b2905) 0.0517; HMBS (b3805) 0.0017
+  iJO1366 arg_-10: SADH (b1745) 19.2549; GLUDy (b1761) 7.3233; ASPT (b4139) 2.3476; THRD_L (b3117;b3772) 0.3659; CYSTL (b1622;b3008) 0.1938; HMBS (b3805) 0.0022
+  iML1515 glu_-10: GLUDy (gdhA;gltB;gltD) 2.0809; THRD_L (ilvA;tdcB) 0.269; CYSTL (malY;metC) 0.1425; GLYCL (gcvH;gcvP;gcvT;lpd) 0.0513; HMBS (hemC) 0.0017; DHPPDA2 (ribD) 0.0004
+  iML1515 arg_-10: SADH (astB) 16.0085; GLUDy (gdhA;gltB;gltD) 6.0789; ASPT (aspA) 2.702; THRD_L (ilvA;tdcB) 0.2759; CYSTL (malY;metC) 0.1462; HMBS (hemC) 0.0017
+
+Top subsystem enrichments of the flip sets (non-empty only):
+  iJO1366 glu_-10: Citric Acid Cycle (4 vs exp 0.1); Alternate Carbon Metabolism (1 vs exp 0.7); Inorganic Ion Transport and Metabolism (1 vs exp 0.3)
+  iJO1366 arg_-10: Arginine and Proline Metabolism (9 vs exp 0.4); Citric Acid Cycle (4 vs exp 0.2); Alternate Carbon Metabolism (1 vs exp 1.8); Inorganic Ion Transport and Metabolism (1 vs exp 0.9)
+  iML1515 glu_-10: Citric Acid Cycle (4 vs exp 0.1); Glutamate Metabolism (2 vs exp 0.0); Inorganic Ion Transport and Metabolism (1 vs exp 0.4); Alternate Carbon Metabolism (1 vs exp 1.1)
+  iML1515 arg_-10: Arginine and Proline Metabolism (8 vs exp 0.4); Citric Acid Cycle (4 vs exp 0.2); Glutamate Metabolism (2 vs exp 0.1); Inorganic Ion Transport and Metabolism (1 vs exp 0.9); Alternate Carbon Metabolism (1 vs exp 2.3)

@@ -1,0 +1,686 @@
+{
+  "iJO1366": {
+    "glu_-10": [
+      {
+        "gene": "b1276",
+        "name": "",
+        "reactions": [
+          [
+            "ACONTa",
+            "Aconitase (half-reaction A, Citrate hydro-lyase)"
+          ],
+          [
+            "ACONTb",
+            "Aconitase (half-reaction B, Isocitrate hydro-lyase)"
+          ]
+        ],
+        "b_ko_baseline": -0.0,
+        "b_ko_substitution": 0.925855,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b0118",
+        "name": "",
+        "reactions": [
+          [
+            "ACONTa",
+            "Aconitase (half-reaction A, Citrate hydro-lyase)"
+          ],
+          [
+            "ACONTb",
+            "Aconitase (half-reaction B, Isocitrate hydro-lyase)"
+          ],
+          [
+            "MICITDr",
+            "2-methylisocitrate dehydratase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.925855,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b0720",
+        "name": "",
+        "reactions": [
+          [
+            "CS",
+            "Citrate synthase"
+          ]
+        ],
+        "b_ko_baseline": -0.0,
+        "b_ko_substitution": 0.925855,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b1136",
+        "name": "",
+        "reactions": [
+          [
+            "ICDHyr",
+            "Isocitrate dehydrogenase (NADP)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.925855,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b0451",
+        "name": "",
+        "reactions": [
+          [
+            "NH4tpp",
+            "Ammonia reversible transport (periplasm)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.925855,
+        "b_ko_substitution_N_closed": -0.0,
+        "rescue_is_substitution_mediated": true
+      }
+    ],
+    "arg_-10": [
+      {
+        "gene": "b3959",
+        "name": "",
+        "reactions": [
+          [
+            "ACGK",
+            "Acetylglutamate kinase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 1.259454,
+        "b_ko_substitution_N_closed": -0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b2818",
+        "name": "",
+        "reactions": [
+          [
+            "ACGS",
+            "N-acetylglutamate synthase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 1.259454,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b3957",
+        "name": "",
+        "reactions": [
+          [
+            "NACODA",
+            "N-acetylornithine deacetylase"
+          ],
+          [
+            "ACODA",
+            "Acetylornithine deacetylase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 1.259454,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b1276",
+        "name": "",
+        "reactions": [
+          [
+            "ACONTa",
+            "Aconitase (half-reaction A, Citrate hydro-lyase)"
+          ],
+          [
+            "ACONTb",
+            "Aconitase (half-reaction B, Isocitrate hydro-lyase)"
+          ]
+        ],
+        "b_ko_baseline": -0.0,
+        "b_ko_substitution": 1.240651,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b0118",
+        "name": "",
+        "reactions": [
+          [
+            "ACONTa",
+            "Aconitase (half-reaction A, Citrate hydro-lyase)"
+          ],
+          [
+            "ACONTb",
+            "Aconitase (half-reaction B, Isocitrate hydro-lyase)"
+          ],
+          [
+            "MICITDr",
+            "2-methylisocitrate dehydratase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 1.240651,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b1748",
+        "name": "",
+        "reactions": [
+          [
+            "SOTA",
+            "Succinylornithine transaminase"
+          ],
+          [
+            "ACOTA",
+            "Acetylornithine transaminase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 1.198756,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b3958",
+        "name": "",
+        "reactions": [
+          [
+            "AGPR",
+            "N-acetyl-g-glutamyl-phosphate reductase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 1.259454,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b3960",
+        "name": "",
+        "reactions": [
+          [
+            "ARGSL",
+            "Argininosuccinate lyase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 1.259454,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b3172",
+        "name": "",
+        "reactions": [
+          [
+            "ARGSS",
+            "Argininosuccinate synthase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 1.259454,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b0720",
+        "name": "",
+        "reactions": [
+          [
+            "CS",
+            "Citrate synthase"
+          ]
+        ],
+        "b_ko_baseline": -0.0,
+        "b_ko_substitution": 1.259454,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b1136",
+        "name": "",
+        "reactions": [
+          [
+            "ICDHyr",
+            "Isocitrate dehydrogenase (NADP)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 1.240651,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b0451",
+        "name": "",
+        "reactions": [
+          [
+            "NH4tpp",
+            "Ammonia reversible transport (periplasm)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 1.233022,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b0273",
+        "name": "",
+        "reactions": [
+          [
+            "OCBT",
+            "Ornithine carbamoyltransferase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 1.259454,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b4254",
+        "name": "",
+        "reactions": [
+          [
+            "OCBT",
+            "Ornithine carbamoyltransferase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 1.259454,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      }
+    ],
+    "akg_assimilation_arm": {
+      "baseline": {
+        "biomass": 0.982372,
+        "GLUDy_reductive_assimilation": 8.401,
+        "GLUDx_reductive_assimilation": -0.0,
+        "GLUSy_GOGAT": 0.0,
+        "GLNS": 1.7787,
+        "akg_sinks_biomass_via_AKGPD/other": 3.8015
+      },
+      "glu_-10": {
+        "biomass": 0.925855,
+        "GLUDy_reductive_assimilation": -0.0,
+        "GLUDx_reductive_assimilation": -0.0,
+        "GLUSy_GOGAT": 0.0,
+        "GLNS": 1.6764,
+        "akg_sinks_biomass_via_AKGPD/other": 7.5613
+      },
+      "arg_-10": {
+        "biomass": 1.259454,
+        "GLUDy_reductive_assimilation": -7.3233,
+        "GLUDx_reductive_assimilation": -0.0,
+        "GLUSy_GOGAT": 0.0,
+        "GLNS": 2.2804,
+        "akg_sinks_biomass_via_AKGPD/other": 0.7396
+      }
+    }
+  },
+  "iML1515": {
+    "glu_-10": [
+      {
+        "gene": "b0720",
+        "name": "gltA",
+        "reactions": [
+          [
+            "CS",
+            "citrate synthase"
+          ]
+        ],
+        "b_ko_baseline": -0.0,
+        "b_ko_substitution": 0.925933,
+        "b_ko_substitution_N_closed": -0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b1136",
+        "name": "icd",
+        "reactions": [
+          [
+            "ICDHyr",
+            "isocitrate dehydrogenase (NADP)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.925933,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b0451",
+        "name": "amtB",
+        "reactions": [
+          [
+            "NH4tpp",
+            "ammonia reversible transport (periplasm)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.925933,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b3213",
+        "name": "gltD",
+        "reactions": [
+          [
+            "GLUSy",
+            "glutamate synthase (NADPH)"
+          ],
+          [
+            "GLUDy",
+            "glutamate dehydrogenase (NADP)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.925933,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b3212",
+        "name": "gltB",
+        "reactions": [
+          [
+            "GLUSy",
+            "glutamate synthase (NADPH)"
+          ],
+          [
+            "GLUDy",
+            "glutamate dehydrogenase (NADP)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.925933,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b0118",
+        "name": "acnB",
+        "reactions": [
+          [
+            "ACONTb",
+            "aconitase (half-reaction B, Isocitrate hydro-lyase)"
+          ],
+          [
+            "MICITDr",
+            "2-methylisocitrate dehydratase"
+          ],
+          [
+            "ACONTa",
+            "aconitase (half-reaction A, Citrate hydro-lyase)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.925933,
+        "b_ko_substitution_N_closed": -0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b1276",
+        "name": "acnA",
+        "reactions": [
+          [
+            "ACONTb",
+            "aconitase (half-reaction B, Isocitrate hydro-lyase)"
+          ],
+          [
+            "ACONTa",
+            "aconitase (half-reaction A, Citrate hydro-lyase)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.925933,
+        "b_ko_substitution_N_closed": -0.0,
+        "rescue_is_substitution_mediated": true
+      }
+    ],
+    "arg_-10": [
+      {
+        "gene": "b0720",
+        "name": "gltA",
+        "reactions": [
+          [
+            "CS",
+            "citrate synthase"
+          ]
+        ],
+        "b_ko_baseline": -0.0,
+        "b_ko_substitution": 0.949782,
+        "b_ko_substitution_N_closed": -0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b1136",
+        "name": "icd",
+        "reactions": [
+          [
+            "ICDHyr",
+            "isocitrate dehydrogenase (NADP)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.938276,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b3172",
+        "name": "argG",
+        "reactions": [
+          [
+            "ARGSS",
+            "argininosuccinate synthase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.949782,
+        "b_ko_substitution_N_closed": -0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b3958",
+        "name": "argC",
+        "reactions": [
+          [
+            "AGPR",
+            "N-acetyl-g-glutamyl-phosphate reductase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.949782,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b3957",
+        "name": "argE",
+        "reactions": [
+          [
+            "ACODA",
+            "acetylornithine deacetylase"
+          ]
+        ],
+        "b_ko_baseline": -0.0,
+        "b_ko_substitution": 0.949782,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b3960",
+        "name": "argH",
+        "reactions": [
+          [
+            "ARGSL",
+            "argininosuccinate lyase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.949782,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b4254",
+        "name": "argI",
+        "reactions": [
+          [
+            "OCBT",
+            "ornithine carbamoyltransferase"
+          ]
+        ],
+        "b_ko_baseline": -0.0,
+        "b_ko_substitution": 0.949782,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b0273",
+        "name": "argF",
+        "reactions": [
+          [
+            "OCBT",
+            "ornithine carbamoyltransferase"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.949782,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b0451",
+        "name": "amtB",
+        "reactions": [
+          [
+            "NH4tpp",
+            "ammonia reversible transport (periplasm)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.933743,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b3959",
+        "name": "argB",
+        "reactions": [
+          [
+            "ACGK",
+            "acetylglutamate kinase"
+          ]
+        ],
+        "b_ko_baseline": -0.0,
+        "b_ko_substitution": 0.949782,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b3213",
+        "name": "gltD",
+        "reactions": [
+          [
+            "GLUSy",
+            "glutamate synthase (NADPH)"
+          ],
+          [
+            "GLUDy",
+            "glutamate dehydrogenase (NADP)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.936267,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b3212",
+        "name": "gltB",
+        "reactions": [
+          [
+            "GLUSy",
+            "glutamate synthase (NADPH)"
+          ],
+          [
+            "GLUDy",
+            "glutamate dehydrogenase (NADP)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.936267,
+        "b_ko_substitution_N_closed": -0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b2818",
+        "name": "argA",
+        "reactions": [
+          [
+            "ACGS",
+            "N-acetylglutamate synthase"
+          ]
+        ],
+        "b_ko_baseline": -0.0,
+        "b_ko_substitution": 0.949782,
+        "b_ko_substitution_N_closed": -0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b0118",
+        "name": "acnB",
+        "reactions": [
+          [
+            "ACONTb",
+            "aconitase (half-reaction B, Isocitrate hydro-lyase)"
+          ],
+          [
+            "MICITDr",
+            "2-methylisocitrate dehydratase"
+          ],
+          [
+            "ACONTa",
+            "aconitase (half-reaction A, Citrate hydro-lyase)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.938276,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      },
+      {
+        "gene": "b1276",
+        "name": "acnA",
+        "reactions": [
+          [
+            "ACONTb",
+            "aconitase (half-reaction B, Isocitrate hydro-lyase)"
+          ],
+          [
+            "ACONTa",
+            "aconitase (half-reaction A, Citrate hydro-lyase)"
+          ]
+        ],
+        "b_ko_baseline": 0.0,
+        "b_ko_substitution": 0.938276,
+        "b_ko_substitution_N_closed": 0.0,
+        "rescue_is_substitution_mediated": true
+      }
+    ]
+  }
+}

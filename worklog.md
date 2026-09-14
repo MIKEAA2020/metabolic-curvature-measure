@@ -5557,3 +5557,90 @@ Stage Summary:
   the invariant object; the anaerobic regime switch re-stratifies
   7/1516 labels, all in the energy-strategy module. Abstract
   promotion landed under the 265-word cap. Frozen lineage untouched.
+
+---
+Task ID: nitrogen-probe-round
+Agent: main (Z.ai)
+Task: User directive: run a third perturbation axis (nitrogen source)
+to generalize the label-invariance claim beyond carbon and oxygen.
+Repo checked first (clean at bf5e2d4, in sync with origin); PAT push.
+
+Work Log:
+- Designed and executed scripts/nitrogen_source_keio_probe.py
+  (resumable per level; E12/E15/E16 conventions, seeds
+  42/20260830, labels at 5% of each level's own WT): ammonium
+  limitation EX_nh4_e {-10,-5,-2.5} on iJO1366 and -2.5 on iML1515,
+  plus full nitrogen-source substitution (nh4 closed; sole donor
+  L-glutamate at -10 -- 1 N per molecule, N flux matched to the
+  nh4 -10 level, both optima exactly 0.925855 -- or L-arginine at
+  -10, 4 N + carbon co-substrate, optimum 1.2595 = +28% over
+  baseline). Artifacts download/keio_nitrogen_source_{e12,e16}_*
+  (sweeps, results, summary, response figure).
+- Labels: INVARIANT along the whole limitation gradient in both
+  reconstructions (iJO 289/289 at -10/-5/-2.5, iML 286/286 at -2.5;
+  zero flips, kappa 1.000; WT down 76% at -2.5). Substitution
+  re-stratifies by pure LOSS in the assimilation module: glu -5
+  (iJO: gltA/acnA/acnB/icd/amtB) / -7 (iML: + gltB/gltD GOGAT);
+  arg -14 (iJO: + 8 arg-biosynthesis genes + astC) / -15 (iML: +
+  GOGAT + the 8 arg genes); kappa 0.989/0.969/0.985/0.967;
+  arginine-and-proline metabolism enriched ~21x/20x; zero gains.
+  scripts/nitrogen_flip_verification.py: every one of the 41
+  lost-label backgrounds returns to EXACTLY zero growth when the
+  sole N donor is closed (rescue substitution-mediated); mechanism
+  = the carbon skeleton arrives with its nitrogen (GLUDy
+  assimilation flux 8.401 at baseline -> 0.000 under glu, where
+  the akg arm is fed by transaminases ASPTA 4.99 / ALATA_L 1.77
+  around an icd KO -> -7.323 reversed under arg); amtB is the
+  ammonium channel; nh4-release routes at the optima: dadA/DAAD
+  1.952 (iJO glu), GLUDy 2.081 (iML glu), astB/SADH 19.255/16.009
+  (arg). Label strata otherwise unchanged (gaps 30/13; iJO
+  mismatch 180->175->166 = exactly the loss counts).
+- Association: splits by regime. Arg (carbon re-pinned): intact to
+  stronger (r +0.802 CI [0.780,0.823], AUC 0.981, MCC 0.905,
+  direct +0.297/0.729; iML r +0.915, AUC 0.997, direct
+  +0.425/0.821). Every N-LIMITED level under plain FBA collapses
+  (r +0.350/+0.079/-0.122/+0.213; AUCs 0.546-0.709; non-essential
+  median kV inflates 50->1846; kV ranking decorrelates from
+  baseline, Spearman -0.04).
+- Degeneracy diagnosis + control (scripts/
+  nitrogen_degeneracy_diagnostic.py + nitrogen_pfba_control_
+  remerge.py): at-optimum FVA shows the carbon sector unpinned
+  exactly on the N-limited levels (PGI range 45.2/177.2/82.9 at
+  nh4 -10/-2.5/glu -10 vs 0.0 at baseline and 4.3 at O2 -10);
+  parsimonious WT takes 9.58/2.49/4.15 glucose vs the returned
+  vertices' 10.00/7.14/10.00. Canonical (pFBA) vertex selection
+  restores the association everywhere: r +0.940 (nh4 -10), +0.915
+  (-2.5), +0.872 (glu); AUCs 1.000/0.988/0.979; MCC 0.972/0.965/
+  0.938; canonical-vs-baseline-canonical rank corr +0.975/+0.956/
+  +0.735; labels identical by construction (kappa 1.000; objective
+  preserved to 1e-13, verified per level); and the baseline itself
+  sharpens (r +0.603->+0.945, AUC 0.977->1.000). Implementation
+  note: cobra pfba().objective_value returns the minimized L1
+  total flux, NOT the growth rate -- caught when the nh4 -2.5
+  control labeled only 4 genes; the b columns were re-merged with
+  the plain-FBA optima (mathematically identical to a corrected
+  re-run; objective-preservation checks in the artifact).
+- companion_categorical_v3.tex amended in place (patch E): new
+  prop:keio-n-source + rem:keio-n-invariance (the three-axis
+  bracket with a two-sided boundary: supply perturbations leave
+  labels invariant on all three axes; substitution re-stratifies
+  only the rewired module; the association is the invariant object
+  under canonical selection); abstract promoted to the three-axis
+  medium-robustness sentence (263 words < the 265 cap); publication
+  figure regenerated with the canonical-control panel
+  (scripts/nitrogen_figure.py).
+- audit_v7_numbers.py: 143/143 PASS (v6's 125 + 18 N-checks).
+- Builds: companion 66->67 pp, 0 errors / 0 undefined / 0 overfull
+  (prop p. 60, remark p. 61); ZIPs rebuilt + standalone-reverified
+  (28 / 67 pp fresh-dir compiles); download PDF, TAC cover letter,
+  links doc refreshed.
+
+Stage Summary:
+- Three-axis label invariance established (carbon-source correction,
+  oxygen limitation, nitrogen limitation) with the association as
+  the invariant object under canonical flux selection; the
+  nitrogen axis adds the two-sided boundary: substitution
+  re-stratifies exactly the assimilation module (losses only, all
+  substitution-mediated), and the plain-FBA association collapse on
+  N-limited optima is a diagnosed solver-vertex artifact (FVA
+  evidence + pFBA restoration). Frozen lineage untouched.

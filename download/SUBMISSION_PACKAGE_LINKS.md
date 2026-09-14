@@ -6,7 +6,7 @@ links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
 
 Revision note (2026-09-14): main is now `journal_manuscript_v4.tex`
-(28 pp) and the companion is `companion_categorical_v3.tex` (66 pp).
+(28 pp) and the companion is `companion_categorical_v3.tex` (67 pp).
 The companion implements the eight-item repair set of the external
 audit's synthesized ledger (one optic formalism, corrected
 optic-colimit scope, one Hordijk-Steel catalysis condition, gluing
@@ -33,6 +33,31 @@ the anaerobic endpoint re-stratifies 7/1516 labels (lower
 glycolysis + hemN gained; fabZ lost), and the iJO1366 anaerobic
 zero-growth is disclosed as a model-level degeneracy. The abstract
 promotes the medium-robustness finding (262 words).
+
+Revision note (2026-09-14, third perturbation axis round): the
+companion adds the nitrogen-source probe (the third medium axis):
+an ammonium-limitation gradient (EX_nh4_e at −10/−5/−2.5 on
+iJO1366; −2.5 on iML1515) plus full nitrogen-source substitution
+(ammonium closed; sole donor L-glutamate at −10 — nitrogen flux
+matched to the NH4 −10 level, both optima 0.9259 — or L-arginine
+at −10, a four-nitrogen carbon co-substrate with optimum 1.2595,
+28% above the glucose-minimal baseline). Labels are invariant along
+the entire limitation gradient (289/289 and 286/286; zero flips;
+κ = 1.000; WT down 76%); substitution re-stratifies exactly the
+assimilation module, losses only (glutamate −5 iJO / −7 iML:
+gltA, acnA, acnB, icd, amtB, + gltB/gltD on iML; arginine −14/−15:
+those plus the eight arginine-biosynthesis genes and astC), every
+rescue substitution-mediated (closing the donor returns all 41
+backgrounds to zero growth). The plain-FBA association collapses on
+the nitrogen-limited levels — diagnosed by at-optimum FVA
+(phosphoglucose-isomerase range 45–177 vs 0.0 at baseline, 4.3
+under oxygen limitation) as flux-solution degeneracy, not biology —
+and canonical (parsimonious FBA) vertex selection restores it
+everywhere (r ≥ +0.872, AUC ≥ 0.979; baseline sharpened
+r +0.603 → +0.945). The abstract now carries the three-axis
+medium-robustness statement (263 words, under the 265 cap).
+audit_v7: 143/143 PASS. Companion 66 → 67 pp, 0 errors /
+0 undefined / 0 overfull.
 
 - Repository: https://github.com/MIKEAA2020/metabolic-curvature-measure
   (renamed 2026-09-03 from the earlier internal name; GitHub redirects
@@ -102,7 +127,7 @@ upload directory and the repository layout
 
 **Title:** Stratified Connections, Optic Composition, and the Homotopy
 Fixed-Point Extension: A Categorical Framework for Viability-Weighted
-Curvature (Research Article; 66 pp; electronic-only, free — no author charges).
+Curvature (Research Article; 67 pp; electronic-only, free — no author charges).
 
 ### Journal / submission links (all verified)
 
@@ -125,7 +150,7 @@ only after acceptance.
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (66 pp, 3rd-wave repair + glucose-only re-run + oxygen-probe revision: the eight-item repair set, the six restored citations, the Keio/COT-NE external closures, the medium-corrected glucose-only Keio re-run, the oxygen-limited second perturbation probe with the abstract promotion, and the viability-kernel + Poincare/averaging bridges, on top of the restoration revision) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
+| Manuscript PDF (67 pp, + nitrogen-axis third-probe revision: prop:keio-n-source + rem:keio-n-invariance and the three-axis abstract, on top of the 3rd-wave repair, glucose-only re-run, oxygen-probe revision, viability-kernel + Poincare/averaging bridges, and the restoration revision) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
 | LaTeX source | [scripts/companion_categorical_v3.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v3.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v3.tex) |
 
