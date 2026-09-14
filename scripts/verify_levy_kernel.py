@@ -87,9 +87,9 @@ ax.loglog(a, y, 'o', color='#1f77b4', ms=6, label='Monte-Carlo '
 aa = np.linspace(a.min(), a.max(), 200)
 ax.loglog(aa, C_exact * aa ** 1.5, '-', color='#b5651d', lw=1.8,
           label=r'exact leading term $(\sqrt{5\nu}/2)\,a^{3/2}$')
-ax.loglog(aa, (nu / (2 * np.sqrt(12))) * aa, '--', color='#2ca02c',
-          lw=1.6, label=r'sub-leading L\'evy-area term '
-          r'$(\nu/2\sqrt{12})\,a$')
+ax.loglog(aa, (nu / 4) * aa, '--', color='#2ca02c',
+          lw=1.6, label=r'sub-leading L\'evy-area fluctuation scale '
+          r'$(\nu/4)\,a$')
 ax.loglog(aa, C_hat * aa ** beta_hat, ':', color='#7f7f7f', lw=1.6,
           label=fr'log--log fit $\hat\beta = {beta_hat:.3f}$ '
           fr'($R^2 = {r2:.4f}$)')

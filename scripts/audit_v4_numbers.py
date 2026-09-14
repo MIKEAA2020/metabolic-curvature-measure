@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Numeric consistency audit of journal_manuscript_v3.tex (proof-complete revision round
+Numeric consistency audit of journal_manuscript_v4.tex (3rd-wave repair round: C2/C5/C1 framing edits, APP-1/2/3/5 corrections, figure directory rename
 2026-09-02, residual risk 2 / advice 5: "every number in the manuscript
 must trace to a single committed artifact or script output; run a final
 numeric consistency pass before submission").
@@ -12,8 +12,8 @@ artifact stores only a derived statistic are recomputed from deposited
 per-gene data. FROZEN artifacts are never edited; defects found are
 fixed in the v2 manuscript itself and documented here.
 
-Outputs: download/deepseek_bridge/v3_number_audit.json (full ledger)
-          download/deepseek_bridge/v3_number_audit.md (readable table)
+Outputs: download/deepseek_bridge/v4_number_audit.json (full ledger)
+          download/deepseek_bridge/v4_number_audit.md (readable table)
 """
 import json
 import os
@@ -788,7 +788,7 @@ B_ = E32["sources"]["B_m1_sweep_panels"]
 C1_ = E32["sources"]["C1_e24_gene_panel"]
 C2_ = E32["sources"]["C2_e24_trajectory"]
 tex2 = open(os.path.join(BASE, "scripts",
-                         "journal_manuscript_v3.tex")).read()
+                         "journal_manuscript_v4.tex")).read()
 import math
 
 # --- A1 arm (M4b random cuts, d=1) ---
@@ -1013,7 +1013,7 @@ out = {"experiment": "v3 numeric consistency audit (proof-complete revision of "
        "counts_ledger": [{"value": v, "meaning": m, "source": s}
                          for v, m, s in ledger],
        "checks": checks}
-with open(os.path.join(DB, "v3_number_audit.json"), "w") as f:
+with open(os.path.join(DB, "v4_number_audit.json"), "w") as f:
     json.dump(out, f, indent=1, default=str)
 
 md = ["# v2 numeric consistency audit (2026-09-02; extended "
@@ -1045,7 +1045,7 @@ md += ["", "## Documented artifact quirks", "",
        "committed report script, not the frozen json.",
        "- Frozen v21 E23 numbers 538/524 are typos; v2's 537/525 "
        "match the v16 results json (v21 not edited)."]
-with open(os.path.join(DB, "v3_number_audit.md"), "w") as f:
+with open(os.path.join(DB, "v4_number_audit.md"), "w") as f:
     f.write("\n".join(md))
 
 print(f"\n[AUDIT] {out['n_pass']} PASS / {out['n_fail']} FAIL of "

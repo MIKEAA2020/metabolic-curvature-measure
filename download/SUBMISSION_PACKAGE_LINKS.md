@@ -1,8 +1,25 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-03. All repository links verified live (HTTP 200 at `main`,
-latest `main`); all journal links verified against the official journal or
-society pages. Repository is public, so every link is directly accessible.
+Generated 2026-09-14 (3rd-wave repair round). All repository links follow
+the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
+links verified against the official journal or society pages. Repository
+is public, so every link is directly accessible.
+
+Revision note (2026-09-14): main is now `journal_manuscript_v4.tex`
+(28 pp) and the companion is `companion_categorical_v3.tex` (63 pp).
+The companion implements the eight-item repair set of the external
+audit's synthesized ledger (one optic formalism, corrected
+optic-colimit scope, one Hordijk-Steel catalysis condition, gluing
+hypothesis alignment, Lévy-area normalization, enlarged contraction
+box, battery-table consistency, restricted envelope domination),
+restores the six audit-mandated citations (Hirota, Segura, Dittrich,
+Handorf, Becker, Bravetti), and adds the external-data closures
+(Keio E12/E15/E16; the COT/NE structural benchmark). The main paper
+carries the four line-level corrections of its cross-check (bridge
+sentence softened, generic-weights uniqueness step, semiconvexity
+law, label/title fixes) plus the selection-rule count harmonization;
+its figure directory is renamed `association_robustness/` (was
+`association_robustness/`).
 
 - Repository: https://github.com/MIKEAA2020/metabolic-curvature-measure
   (renamed 2026-09-03 from the earlier internal name; GitHub redirects
@@ -16,7 +33,7 @@ society pages. Repository is public, so every link is directly accessible.
 
 **Title:** A Measure-Theoretic Discrete Curvature Framework for Metabolic Gene
 Sensitivity: From Active-Set Geometry to Transcriptional Response
-(Original Research Article; 27 pp; subscription route — no author charges).
+(Original Research Article; 28 pp; subscription route — no author charges).
 
 
 ### Journal / submission-portal links (all verified)
@@ -38,9 +55,9 @@ Sensitivity: From Active-Set Geometry to Transcriptional Response
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
-| Manuscript PDF (27 pp, full proofs in appendices, declarations in backmatter) | [download/journal_manuscript_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v3.pdf) |
+| Manuscript PDF (28 pp, full proofs in appendices, declarations in backmatter) | [download/journal_manuscript_v4.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v4.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v4.pdf) |
 | Cover letter (with declarations, companion disclosure) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
-| LaTeX source | [scripts/journal_manuscript_v3.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v3.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v3.tex) |
+| LaTeX source | [scripts/journal_manuscript_v4.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v4.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v4.tex) |
 | Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v3_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v3_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v3_bmb_refs.tex) |
 | BibTeX database | [scripts/journal_manuscript_v2_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v2_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v2_refs.bib) |
 | Reference-list generator (audit-checked) | [scripts/build_bmb_refs.py](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/build_bmb_refs.py) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/build_bmb_refs.py) |
@@ -51,18 +68,18 @@ Figures (embedded in the PDF; source PNGs if the portal requests separate files)
 |---|---|
 | Fig. M1 summary (active-set sweep) | [download/m1_m3/fig_m1_summary.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/m1_m3/fig_m1_summary.png) |
 | Coupling figures (Alexandrov bridge) | [download/alexandrov_bridge/coupling_figures.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/alexandrov_bridge/coupling_figures.png) |
-| E24 recalibration | [download/deepseek_bridge/v5_e24_recalibration.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/deepseek_bridge/v5_e24_recalibration.png) |
-| V7 path robustness | [download/deepseek_bridge/v7_path_robustness.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/deepseek_bridge/v7_path_robustness.png) |
-| V8 tie-break robustness (E-V8) | [download/deepseek_bridge/v8_tiebreak_robustness.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/deepseek_bridge/v8_tiebreak_robustness.png) |
-| E32 event-measure stabilization | [download/deepseek_bridge/e32_event_measure_stabilization.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/deepseek_bridge/e32_event_measure_stabilization.png) |
+| E24 recalibration | [download/association_robustness/v5_e24_recalibration.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/association_robustness/v5_e24_recalibration.png) |
+| V7 path robustness | [download/association_robustness/v7_path_robustness.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/association_robustness/v7_path_robustness.png) |
+| V8 tie-break robustness (E-V8) | [download/association_robustness/v8_tiebreak_robustness.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/association_robustness/v8_tiebreak_robustness.png) |
+| E32 event-measure stabilization | [download/association_robustness/e32_event_measure_stabilization.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/association_robustness/e32_event_measure_stabilization.png) |
 
 Build note: for Overleaf or any standalone compiler, upload **the ZIP** (it
 contains the .tex, the input'ed reference list, the .bib database, and all
 six figures at the exact relative subpaths the .tex expects — verified to
-compile standalone, 27 pp, 0 errors). If instead you upload individual
+compile standalone, 28 pp, 0 errors). If instead you upload individual
 files, upload them together with `journal_manuscript_v3_bmb_refs.tex` and
 the three figure subfolders (`m1_m3/`, `alexandrov_bridge/`,
-`deepseek_bridge/`) so the paths resolve; the .tex now searches both the
+`association_robustness/`) so the paths resolve; the .tex now searches both the
 upload directory and the repository layout
 (`\graphicspath{{./}{../download/}}`).
 
@@ -72,7 +89,7 @@ upload directory and the repository layout
 
 **Title:** Stratified Connections, Optic Composition, and the Homotopy
 Fixed-Point Extension: A Categorical Framework for Viability-Weighted
-Curvature (Research Article; 57 pp; electronic-only, free — no author charges).
+Curvature (Research Article; 63 pp; electronic-only, free — no author charges).
 
 ### Journal / submission links (all verified)
 
@@ -95,9 +112,9 @@ only after acceptance.
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (57 pp, restoration revision with the empirical verdict battery, terminal-coalgebra appendix, and declarations) | [download/companion_categorical_v2.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v2.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v2.pdf) |
+| Manuscript PDF (63 pp, 3rd-wave repair revision: the eight-item repair set, the six restored citations, and the Keio/COT-NE external closures, on top of the restoration revision) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
-| LaTeX source | [scripts/companion_categorical_v2.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v2.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v2.tex) |
+| LaTeX source | [scripts/companion_categorical_v3.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v3.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v3.tex) |
 
 Figures (embedded in the PDF; source PNGs):
 
@@ -159,7 +176,7 @@ reworded to formal conventions; the audit passes 98/98 after the edits
 
 Restoration revision executed (2026-09-03), on new frozen-lineage files
 (journal_manuscript_v3.tex + journal_manuscript_v3_bmb_refs.tex;
-companion_categorical_v2.tex — the v2 main and v1 companion are frozen
+companion_categorical_v3.tex — the v2 main and v1 companion are frozen
 and untouched at tag manuscript-v2-final): full proofs for every main-
 paper result (two long technical proofs in a second appendix, textbook
 material cited); companion restoration of the lost empirical battery —
@@ -174,8 +191,38 @@ chain, the terminal-coalgebra characterization of the maximal RAF
 functorial-realization statement demoted to a conjecture), and the
 network closure-test battery (A--K summary, RAF-to-Zeno transfer bound,
 persistent-homology Phase III test, fixed-model essentiality validation
-at kappa = 0.835). Main now 27 pp, companion 57 pp; both compile with
-0 errors and 0 undefined refs; the v3 audit passes 98/98; every
-restored number is artifact-traced; ZIPs rebuilt and standalone-
+at kappa = 0.835). Main then 27 pp, companion 57 pp; both compiled with
+0 errors and 0 undefined refs; the v3 audit passed 98/98; every
+restored number was artifact-traced; ZIPs rebuilt and standalone-
 reverified. Remaining script-name mentions in the companion were
 formalized to deposited-artifact conventions.
+
+3rd-wave repair round executed (2026-09-14), on new frozen-lineage
+files (journal_manuscript_v4.tex; companion_categorical_v3.tex — the
+v3 main and v2 companion are frozen and untouched): the companion
+implements the external audit's eight-item repair set (one optic
+formalism via Riley pairs + a strict feedback representative form;
+the optic-colimit theorem restated in corrected scope — Set-level
+union, adapter-level (colimit, limit) form, general case open; one
+Hordijk-Steel catalysis condition via the food-closure across
+definition, operator, and appendix; the gluing hypothesis aligned
+with the (O3) gauge transform and the piecewise-F remainder
+relabeled O(eps^2); the Levy-area normalization corrected to
+Var(X2) = 1/4 with the fluctuation-language restatement of Claims
+C/D; the contraction box enlarged to [-1.5, 1.5]^d with K
+instantiated; the battery table/AcCoA remark made consistent
+(conversions at H and I, not G) and the step-(v) protocol gap
+disclosed; the envelope domination restricted to active
+surrogates), restores the six audit-mandated citations (Hirota,
+Segura, Dittrich, Handorf, Becker, Bravetti; plus Bousfield-Kan),
+and adds the external-data closures: the Keio anchor (E12
+transitive, E15 direct, E16 cross-rebuild, with the medium-audit
+note) and the COT/NE structural benchmark (E14). The main paper
+carries the four line-level corrections of the cross-check plus
+framing edits, and its figure directory is renamed
+association_robustness/. Main now 28 pp, companion 63 pp; both
+compile with 0 errors and 0 undefined refs; the v4 audit passes
+98/98; the RAF enumeration was re-verified under the corrected
+catalysis condition (16 RAFs / 21 inclusions / R_max unchanged);
+ZIPs rebuilt as the v4 round and standalone-reverified (28 / 63
+pp).

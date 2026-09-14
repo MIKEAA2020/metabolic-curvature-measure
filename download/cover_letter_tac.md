@@ -35,13 +35,18 @@ four layers, each stated with its proof status explicitly labeled:
    Seven bridges are typed as optics; the composed update is realized
    on a complete metric state space, with a per-optic Lipschitz
    product bound and, for an explicit seven-map instantiation, a
-   Banach contraction of the Bregman-regularized update. The projected
+   Banach contraction of the Krasnoselskii–Mann-averaged update. The projected
    CPTP channel contraction settles the Zeno self-reference
    resolution.
 
 3. **A filtered-colimit construction of RAF sets** in
-   Optic(Set), proved componentwise and verified at scale, with a
-   three-phase autopoiesis closure test.
+   Optic(Set), proved at the Set level with an adapter-level optic
+   statement and verified at scale, with a three-phase autopoiesis
+   closure test, its external anchor on the Keio
+   single-gene-deletion collection (transitive, direct, and
+   cross-rebuild arms), and a benchmark against the structural
+   closure instruments of chemical-organization theory and network
+   expansion.
 
 4. **A homotopy-type-theoretic extension** (the homotopy fixed-point
    construction), with its proof-sketch status explicitly marked as
@@ -50,7 +55,11 @@ four layers, each stated with its proof status explicitly labeled:
 Proof discipline is the paper's organizing principle: complete proofs;
 proofs that reduce to cited descent/coherence theory (marked); proof
 sketches (marked); and machine-verified statements whose scripts and
-artifacts are committed. Conjectures stay conjectures. I believe this
+artifacts are committed. Conjectures stay conjectures. Adjacent
+formalizations are cited at their sources (categorical autopoiesis;
+chemical-organization theory; network expansion; contact-geometric
+Noether theory; open-system Zeno dynamics; algorithmic rate
+distortion). I believe this
 combination — 2-categorical structure, optics, filtered colimits, and
 a marked HoTT extension — sits squarely within the journal's scope of
 articles that significantly advance categorical methods.
@@ -69,7 +78,8 @@ Transcriptional Response." The division of labor is deliberate:
   instantiation of the viability-weighted-curvature idea on parametric
   flux balance analysis and an empirical gene-sensitivity study; it
   carries only a brief, adapted summary of the categorical reading
-  and cites this paper for the constructions and proofs.
+  and cites this paper for the constructions, machine verifications,
+  and proofs at the status marked per result.
 
 The two manuscripts share no verbatim passages of length; each is
 self-contained for its own claims; neither presents the other's
@@ -77,7 +87,7 @@ results as its own. The application manuscript is available for the
 editors' inspection in the same public repository as this paper's
 machine-verification code
 (https://github.com/MIKEAA2020/metabolic-curvature-measure, file
-`scripts/journal_manuscript_v3.tex`, compiled PDF included) and will
+`scripts/journal_manuscript_v4.tex`, compiled PDF included) and will
 be provided as a PDF on request; it is not under consideration
 elsewhere.
 
