@@ -542,6 +542,134 @@
       "objective_preservation_abs_diff": 2.02e-14,
       "plain_reference_r": 0.802424980592895,
       "plain_reference_auc": 0.9807522774022921
+    },
+    "nh4_-5": {
+      "wild_type_biomass": 0.46292764329859126,
+      "n_essential": 290,
+      "n_genes": 1367,
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.9224255693820771,
+        "pearson_p_value": 0.0,
+        "spearman_rho": 0.6687745735647154,
+        "spearman_p_value": 6.017810674510941e-178,
+        "partial_r_given_n_gpr_rxns": 0.921522657255935,
+        "partial_p_value": 0.0,
+        "bootstrap_95ci": [
+          0.9034107272527894,
+          0.9401285924913347
+        ],
+        "n_essential": 290,
+        "n_genes": 1367,
+        "held_out": {
+          "n_test": 411,
+          "n_test_essential": 87,
+          "accuracy": 0.9902676399026764,
+          "mcc": 0.9717206101760651,
+          "roc_auc": 0.9907407407407408,
+          "sensitivity": 1.0,
+          "specificity": 0.9876543209876543,
+          "confusion": {
+            "tn": 320,
+            "fp": 4,
+            "fn": 0,
+            "tp": 87
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.0,
+            "base_rate": 0.2121433796634967,
+            "lift": 0.0
+          },
+          "K=25": {
+            "precision": 0.48,
+            "base_rate": 0.2121433796634967,
+            "lift": 2.2626206896551726
+          },
+          "K=50": {
+            "precision": 0.74,
+            "base_rate": 0.2121433796634967,
+            "lift": 3.4882068965517243
+          },
+          "K=100": {
+            "precision": 0.87,
+            "base_rate": 0.2121433796634967,
+            "lift": 4.101
+          },
+          "K=200": {
+            "precision": 0.935,
+            "base_rate": 0.2121433796634967,
+            "lift": 4.407396551724139
+          },
+          "K=500": {
+            "precision": 0.58,
+            "base_rate": 0.2121433796634967,
+            "lift": 2.734
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1212,
+        "binary_n": 1206,
+        "binary_n_E": 130,
+        "pearson_r": 0.3516299457927373,
+        "pearson_p": 2.0265079067396536e-36,
+        "spearman_rho": 0.3242585076886466,
+        "spearman_p": 6.355567060940375e-31,
+        "point_biserial_r": 0.3516299457927373,
+        "bootstrap_95ci": [
+          0.2893589161122688,
+          0.41386313545466435
+        ],
+        "roc_auc": 0.7426758650271662,
+        "held_out": {
+          "n_test": 362,
+          "n_test_E": 39,
+          "accuracy": 0.7762430939226519,
+          "sensitivity": 0.7692307692307693,
+          "specificity": 0.7770897832817337,
+          "precision": 0.29411764705882354,
+          "f1": 0.425531914893617,
+          "mcc": 0.37652545650506036,
+          "roc_auc": 0.779471302691117,
+          "confusion": {
+            "tp": 30,
+            "fp": 72,
+            "tn": 251,
+            "fn": 9
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.72006107275624,
+          "n_high_conf": 84,
+          "low_conf_auc": 0.7554699946893256,
+          "n_low_conf": 35
+        },
+        "n_model_gaps_pecE_insilicoN": 30,
+        "n_medium_mismatch_insilicoE_keioN": 181
+      },
+      "kV_rank_corr_vs_baseline_canonical": 0.9593223762012665,
+      "label_agreement_fba_vs_pfba_kappa": 0.997808848916366,
+      "objective_preservation": {
+        "fba_optimum": 0.462928,
+        "pfba_biomass_flux": 0.462928,
+        "objective_abs_diff": 0.0,
+        "n_source_uptake": 5.0,
+        "raw_glc_uptake": 10.0,
+        "pfba_glc_uptake": 4.855,
+        "fva_widths": {
+          "EX_glc__D_e": 5.218,
+          "EX_ac_e": 16.622,
+          "EX_for_e": 40.998,
+          "EX_etoh_e": 11.385,
+          "EX_o2_e": 15.572,
+          "PGI": 133.194,
+          "CS": 62.689,
+          "ACKr": 1051.964,
+          "PPCK": 60.206,
+          "G6PDH2r": 48.842
+        }
+      }
     }
   },
   "plain_auc": {
@@ -916,5 +1044,6 @@
       "plain_reference_r": 0.9146934350470383,
       "plain_reference_auc": 0.9973592130454876
     }
-  }
+  },
+  "symmetry_note": " nh4_-5 (iJO1366 canonical) restored from the parallel sixth-axis round: r +0.9224, AUC 0.9907, kappa 0.9978 (one boundary gene), artifact keio_nitrogen_pfba_control_nh4_-5.csv."
 }

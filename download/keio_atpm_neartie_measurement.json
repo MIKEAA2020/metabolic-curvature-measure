@@ -1,0 +1,15 @@
+{
+  "model": "iML1515",
+  "level": "ATPM >= 100",
+  "wt_pFBA_L1": 747.6826046580629,
+  "ko_b0870_pFBA_L1": 747.6817474281629,
+  "dL1_absolute": -0.000857229900020684,
+  "dL1_relative": -1.1465157737790627e-06,
+  "fresh_pair_squared_distance": 0.01777063515259339,
+  "note": "fresh-model WT and KO pFBA land on the same tied vertex (sq ~ 0.02); the probe's ~200 floor arises because its WT reference solve and the sweep's warm-started KO solves land on different near-tied vertices -- the L1 gap is within the simplex optimality tolerance either way, so the selection is path-dependent",
+  "floor_census_from_committed_csv": {
+    "n_compensable": 1129,
+    "n_at_floor_190_210": 782,
+    "floor_kv_median": 200.01359920787323
+  }
+}

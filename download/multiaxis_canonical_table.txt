@@ -1,0 +1,38 @@
+MULTI-AXIS CANONICAL-SELECTION TABLE (six-axis round, merged and integrity-corrected)
+Baselines: iJO1366 WT 0.9824 plain +0.603 -> canonical +0.945 (AUC 1.000); iML1515 WT 0.8218 plain +0.875 -> canonical +0.937 (AUC 0.987)
+
+axis               model     level         WTred   plain r   canon r  canAUC   kappa    PGIw
+--------------------------------------------------------------------------------------------
+nitrogen           iJO1366   nh4_-10         -6%   +0.3498   +0.9399  1.0000  1.0000       -
+nitrogen           iJO1366   nh4_-5         -53%   +0.0789   +0.9224  0.9907  0.9978       -
+nitrogen           iJO1366   nh4_-2.5       -76%   -0.1220   +0.9149  0.9877  1.0000       -
+nitrogen           iJO1366   glu_-10         -6%   +0.2134   +0.8718  0.9785  1.0000       -
+nitrogen           iJO1366   arg_-10         28%   +0.8024   +0.9534  0.9909  1.0000       -
+nitrogen           iML1515   nh4_-2.5       -72%   -0.1125   +0.9089  0.9864  1.0000       -
+nitrogen           iML1515   glu_-10         13%   +0.3138   +0.9114  0.9865  1.0000       -
+nitrogen           iML1515   arg_-10         16%   +0.9147   +0.8501  0.9974  1.0000       -
+oxygen             iJO1366   O2 2.5         -63%   +0.5189   +0.9451  1.0000  1.0000       -
+oxygen             iJO1366   O2 5           -50%   +0.6067   +0.9391  1.0000  1.0000       -
+oxygen             iJO1366   O2 10          -28%   +0.7749   +0.8952  1.0000  1.0000       -
+oxygen             iML1515   baseline        -0%   +0.8751   +0.9372  0.9866  1.0000       -
+oxygen             iML1515   O2 5           -57%   +0.5592   +0.9414  1.0000  1.0000       -
+oxygen             iML1515   O2 0           -84%   +0.2583   +0.9487  0.9973  1.0000       -   [anaerobic regime switch]
+phosphate          iJO1366   pi_0.5         -47%   +0.3234   +0.9496  0.9877  1.0000       -
+phosphate          iJO1366   pi_0.25        -74%   +0.0537   +0.9162  0.9877  1.0000       -
+phosphate          iJO1366   pi_0.1         -89%   -0.0669   +0.9139  0.9877  1.0000       -
+phosphate          iML1515   pi_0.25        -68%   +0.0251   +0.9102  0.9864  1.0000       -
+phosphate          iML1515   pi_0.1         -87%   +0.0900   +0.9003  0.9864  1.0000       -
+iron               iJO1366   fe_0.01        -37%   +0.5181   +0.9569  0.9877  1.0000       -
+iron               iJO1366   fe_0.005       -68%   +0.3026   +0.8003  0.9877  1.0000       -
+iron               iJO1366   fe_0.0025      -84%   -0.0110   +0.9132  0.9877  1.0000       -
+iron               iML1515   fe_0.005       -62%   +0.1268   +0.8434  0.9864  1.0000       -
+iron               iML1515   fe_0.0025      -81%   -0.0370   +0.9052  0.9864  1.0000       -
+ATPM (non-medium)  iJO1366   atpm_40        -29%   +0.9489   +0.9685  1.0000  1.0000     0.0
+ATPM (non-medium)  iJO1366   atpm_60        -49%   +0.9252   +0.9494  0.9878  1.0000     0.0
+ATPM (non-medium)  iJO1366   atpm_80        -70%   +0.8210   +0.9639  0.9819  1.0000     0.0
+ATPM (non-medium)  iJO1366   atpm_100       -90%   +0.4444   +0.9371  0.9911  1.0000     0.0
+ATPM (non-medium)  iML1515   atpm_60        -52%   +0.7467   +0.7034  0.9919  1.0000     0.0   [L1 near-tie floor present]
+ATPM (non-medium)  iML1515   atpm_80        -71%   +0.4348   +0.6554  0.9920  1.0000     0.0   [L1 near-tie floor present]
+ATPM (non-medium)  iML1515   atpm_100       -90%   +0.2438   +0.4755  0.9781  1.0000     0.0   [L1 near-tie floor (782/1129 compensables at ~200.01)]
+
+levels (excl. baselines): 30; arm kappa = 1.000 at 30 of 31 rows; kappa min 0.9978; canonical r >= 0.90: 23; canonical AUC >= 0.98: 29 (min 0.9781); canonical r gain > 0.05: 27; max gain +1.0369

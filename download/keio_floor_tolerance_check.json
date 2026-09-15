@@ -1,0 +1,23 @@
+{
+  "model": "iJO1366",
+  "level": "EX_pi_e -0.1",
+  "wild_type_biomass": 0.10366658338784197,
+  "biomass_biotin_coefficient": -2e-06,
+  "demanded_biotin_flux": -2.0733316677568394e-07,
+  "b3412": {
+    "b_ko": 0.1036665833878355,
+    "retention": 0.9999999999999376,
+    "zeroed_reaction": "PMEACPE",
+    "flux_through_zeroed_reaction": 2.0733316677840434e-07
+  },
+  "b0778": {
+    "b_ko": 0.1036665833878355,
+    "retention": 0.9999999999999376,
+    "zeroed_reaction": "DBTS",
+    "flux_through_zeroed_reaction": 2.0733316677567094e-07
+  },
+  "b0180": {
+    "b_ko_this_solve_order": 0.10366658338783573,
+    "note": "fresh single-LP solve returns lethal b_ko=0 (see floor_loss_mechanism2.py output in worklog); the probe sweep order returned full growth -- solve-order dependent at the tolerance boundary"
+  }
+}

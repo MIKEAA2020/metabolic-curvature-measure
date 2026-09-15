@@ -67,13 +67,22 @@ four layers, each stated with its proof status explicitly labeled:
    anaerobic switch itself (r in [+0.80, +0.96], held-out AUC at
    or above 0.979) -- with the plain-FBA collapses diagnosed as
    flux-solution degeneracy by at-optimum variability analysis;
-   and an independent-engine audit (24,282 gene-level comparisons,
-   plus a 7,133-comparison cross-arm scan of the iron levels)
-   that surfaced and corrected eight solver-tolerance artifacts in
-   trace-quota essentiality calls -- with one GLPK simplex hang at
-   a degenerate optimum disclosed and settled by the same
-   independent engine -- and the corrected label sets
-   invariant throughout); its
+   a sixth, non-medium probe on the ATP-maintenance axis
+   (temperature-style stress; labels re-stratifying in one
+   direction only, into the energy-transduction module, already
+   at mild stress; the pre-screen's zero-degeneracy prediction
+   refined -- wild-type uniqueness is no license for plain-FBA
+   readings -- and the canonical rule's own boundary measured:
+   near-tied parsimony optima on one reconstruction's extreme
+   maintenance level, decorrelating the transitive statistic
+   without touching the essentiality ranking); and an
+   independent-engine audit (24,282 gene-level comparisons, a
+   7,133-comparison cross-arm scan of the iron levels, and the
+   six-call ATPM-endpoint adjudication) that surfaced and
+   corrected solver-tolerance artifacts in trace-quota
+   essentiality calls -- with GLPK simplex hangs at degenerate
+   optima disclosed and settled by the same independent engine --
+   and the corrected label sets invariant throughout); its
    viability-kernel reading as a finite-time, feedback-certifying
    probe of kernel and capture-basin membership (with the Nagumo
    tangentiality condition); the Poincare/averaging analysis of its

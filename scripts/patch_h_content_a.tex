@@ -1,0 +1,71 @@
+\begin{proposition}[Sixth perturbation axis: non-medium
+maintenance stress]
+\label{prop:keio-atpm}
+Genome-scale flux balance has no temperature or pH state variable;
+the standard constraint-based surrogate for temperature-style
+stress is escalation of the non-growth-associated ATP maintenance
+demand (the \texttt{ATPM} lower bound; defaults $3.15$ iJO1366 and
+$6.86$ iML1515~mmol ATP/gDW/h). A pre-screen compared this encoding
+head-to-head with proton-leak forcing (the pH-style surrogate): the
+maintenance axis spans $29$--$90\%$ wild-type reduction with
+four-to-five usable levels in both models, while the proton-leak
+axis compresses to two usable levels in iJO1366 (the proton leaves
+partly for free with organic-acid secretion) before hard
+infeasibility --- ATPM is selected, and the axis carries a
+structural property no supply axis has: \emph{zero} wild-type
+carbon-sector degeneracy, phosphoglucose-isomerase at-optimum
+variability $0.0$ at every level in both models against $45$--$202$
+on every supply level. Levels $\{40,60,80,100\}$ (iJO1366) and
+$\{60,80,100\}$ (iML1515) drop the wild-type optima from $0.982$ to
+$0.695$, $0.496$, $0.298$, $0.099$ and from $0.822$ to $0.398$,
+$0.239$, $0.080$. The labels re-stratify in one direction only:
+the nine ATP-synthase genes of the \emph{atp} operon are gained
+already at the mildest level ($289\to298$ and $286\to295$;
+$\kappa=0.981$ on both), and at the $-90\%$ endpoints the gain set
+is $42$/$43$ genes --- the \emph{atp} operon, the
+cytochrome-$bo_3$ operon (\emph{cyoA}--\emph{cyoD}), the
+thirteen-gene NDH-I operon, lower glycolysis (\emph{pgk},
+\emph{eno}), \emph{ackA}, \emph{lpd}, and outer-membrane porins
+(\emph{ompG}, \emph{ompL}), oxidative phosphorylation enriched
+twenty-six-fold over the genome share ($26$ against $3.2$
+expected) --- the mirror image of the anaerobic glycolysis
+enrichment of Proposition~\ref{prop:keio-o2-limited}; after the
+independent-engine adjudication below there are \emph{no} losses at
+any level ($\kappa=0.912$ at the endpoints, gains only). The
+association splits by arm exactly as the degeneracy reading
+predicts, with one refinement. Plain FBA is \emph{strong at
+moderate stress} --- $r=+0.949$, $+0.925$, $+0.821$ on iJO1366, all
+above the baseline $+0.603$ --- and collapses only at the $-90\%$
+endpoints: $r=+0.444$ (iJO1366), $+0.244$ with held-out AUC
+$0.550$ (iML1515). Canonical selection restores the endpoint fully
+on iJO1366 ($r=+0.937$, AUC $0.991$, MCC $0.974$; moderate levels
+$+0.969$, $+0.949$, $+0.964$) and restores the ranking separation
+but not the transitive correlation on iML1515 ($r=+0.703$,
+$+0.655$, $+0.476$; AUC $0.992$, $0.992$, $0.978$; labels
+$\kappa=1.000$ at every level) --- the near-tie boundary of
+Remark~\ref{rem:canonical-protocol}. Since the wild-type optimum is
+unique at every level on this axis, the plain endpoint collapse
+establishes that wild-level flux-variability width is a sufficient
+but not necessary indicator: the operative mechanism is per-knockout
+vertex instability at near-zero-biomass optima, which canonical
+selection repairs wherever the parsimony stage is discriminating.
+\end{proposition}
+
+\begin{remark}[What the sixth axis adds]
+\label{rem:keio-multiaxis}
+The five medium-side supply axes --- carbon source, electron
+acceptor, nitrogen, phosphate, iron --- and the non-medium
+maintenance-stress axis now bracket the claim from both sides. The
+genuine re-stratifications are both regime switches confined to
+the module the perturbation rewires: the anaerobic switch gains
+the substrate-level-phosphorylation module; the maintenance-demand
+switch gains the energy-transduction module, and does so already
+at mild stress --- a $40$~mmol/gDW/h ATP demand makes the ATP
+synthase itself load-bearing. The nitrogen-substitution losses
+remain the only re-wiring-driven losses. The association is the
+invariant object under canonical selection on all five supply
+axes in both models ($r\ge+0.843$, held-out AUC $\ge0.979$),
+is restored on the maintenance axis in iJO1366, and acquires its
+measured boundary on the maintenance axis in iML1515 ---
+to which the selection subsection now turns.
+\end{remark}

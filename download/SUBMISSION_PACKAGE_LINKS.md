@@ -1,6 +1,6 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-14 (3rd-wave repair round). All repository links follow
+Generated 2026-09-15 (six-axis round). All repository links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
@@ -90,6 +90,34 @@ across 17 levels. The abstract now carries the four-axis
 medium-robustness statement (264 words, under the 265 cap).
 audit_v8: 226/226 PASS. Companion 67 → 70 pp, 0 errors /
 0 undefined / 0 overfull.
+
+Revision note (2026-09-15, sixth-axis round, merged): the companion
+adds the non-medium ATPM-maintenance-stress probe (the
+temperature-style surrogate, selected over proton-leak forcing by
+pre-screen) with plain + canonical arms in both reconstructions, and
+extends the trace-ququota integrity protocol to the new axis: six
+corrupted calls at the -90% endpoints (plain fabZ/bioH iJO; plain
+bioD/fabZ and canonical bioF/fabI iML) settled at biomass exactly
+zero by the independent HiGHS engine and corrected -- the endpoint
+re-stratification is purely one-directional (energy-transduction
+gains only, atp/cyo/nuo operons, OXPHOS enriched eight-fold) and
+the plain-vs-canonical arm agreement is kappa 1.000 at all seven
+levels. The canonical-selection subsection gains the measured
+near-tie boundary (iML ATPM L1 near-ties, dL1 1.2e-6 relative,
+782/1129 compensables at the ~200.01 floor) and the sixth feature;
+tab:canonical-selection extended to six axes; the nh4_-5 canonical
+level restored (r +0.922). Companion 71 -> 73 pp, 0 errors / 0
+undefined / 0 overfull; abstract six-axis, 264 words < 265;
+audit_v10 271/271 PASS. New artifacts: keio_atpm_stress_e12/e16,
+keio_atpm_pfba_control[_iml]_atpm_*, keio_atpm_stress_summary.txt,
+keio_nonmedium_prescreen.json,
+keio_atpm_integrity_adjudication.json,
+keio_atpm_neartie_measurement.json, keio_floor_tolerance_check.json,
+multiaxis_canonical_table.json/.txt,
+keio_multiaxis_canonical_response.png (scripts
+atpm_stress_keio_probe.py, atpm_integrity_adjudication.py,
+atpm_integrity_fix.py, multiaxis_table.py, multiaxis_figure.py,
+sixth_axis_artifacts.py; audit_v10_numbers.py).
 
 Revision note (2026-09-15, fifth axis + arginine symmetry round): the
 companion adds the iron-limitation probe (the trace-metal fifth
@@ -211,7 +239,7 @@ only after acceptance.
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (71 pp, + fifth-axis/arginine-symmetry revision: prop:keio-iron + rem:keio-iron-invariance -- the trace-metal axis closing the supply side across all five classical nutrient classes, the arginine-substitution canonical levels completing the axis x selection table symmetry (25-level table) -- on top of the fourth-axis/canonical-selection revision: prop:keio-phosphate + rem:keio-p-invariance + the canonical-selection subsection with the solver-tolerance integrity disclosures, the nitrogen-axis, oxygen-probe, glucose-only, viability-kernel + Poincare/averaging, 3rd-wave repair, and restoration revisions) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
+| Manuscript PDF (73 pp, + sixth-axis revision: prop:keio-atpm + rem:keio-multiaxis -- the non-medium ATPM-maintenance-stress probe with the trace-quota integrity corrections (six HiGHS-adjudicated calls; endpoint re-stratification purely one-directional) and the measured near-tie boundary in the canonical-selection subsection (now a six-axis, 32-row table), plus the restored nh4_-5 canonical level -- on top of the fifth-axis/arginine-symmetry revision: prop:keio-iron + rem:keio-iron-invariance -- the trace-metal axis closing the supply side across all five classical nutrient classes, the arginine-substitution canonical levels completing the axis x selection table symmetry -- on top of the fourth-axis/canonical-selection revision: prop:keio-phosphate + rem:keio-p-invariance + the canonical-selection subsection with the solver-tolerance integrity disclosures, the nitrogen-axis, oxygen-probe, glucose-only, viability-kernel + Poincare/averaging, 3rd-wave repair, and restoration revisions) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
 | LaTeX source | [scripts/companion_categorical_v3.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v3.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v3.tex) |
 

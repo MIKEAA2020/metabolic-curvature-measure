@@ -5896,3 +5896,63 @@ Stage Summary:
   (7,133-comparison cross-arm scan clean at WT 0.156) and adds the
   engine-substitution protocol for solver cycling (b0887,
   disclosed). Frozen lineage untouched; audit_v9 251/251 PASS.
+
+---
+Task ID: six-axis-merged-round
+Agent: main (Super Z)
+Task: Sixth (non-medium ATPM-maintenance) perturbation axis, merged with
+the parallel phosphate/iron lineage on origin/main, with the
+trace-quota integrity protocol extended to the new axis.
+
+Work Log:
+- Divergence reconciled: the local sixth-axis work was rebased onto
+  origin/main's corrected phosphate/iron rounds (2a5e4c9 + 6a00f62).
+  Remote-corrected artifacts kept (phosphate sweeps re-adjudicated;
+  iron re-designed to levels above the 0.14 tolerance boundary);
+  superseded local deep-iron CSVs (unadjudicated) and the local
+  patch-F/G manuscript variants dropped; the genuinely-new sixth-axis
+  files (ATPM probes/artifacts, near-tie + floor-tolerance
+  measurements, multiaxis table/figure) layered on top.
+- The trace-quota integrity protocol extended to the ATPM axis
+  (atpm_integrity_adjudication.py): cross-arm + trace-quota-band
+  scan at the three low-growth ATPM levels flagged 6 corrupted
+  calls -- plain fabZ/bioH (iJO atpm_100), plain bioD/fabZ + canonical
+  bioF/fabI (iML atpm_100) -- every one settled at biomass exactly
+  zero by the independent scipy/HiGHS engine and patched under the
+  repo's correction conventions (atpm_integrity_fix.py; two-stage
+  split-variable pFBA with full reaction bounds; plain rows per-gene
+  HiGHS-vertex distances, canonical rows the shared zero-growth
+  distance 307.217).  Post-correction: ATPM endpoint labels 331/329
+  (gains only, zero losses; kappa 0.912 at the endpoints); plain
+  r corrected to +0.444 (iJO) / +0.244 (iML); arm kappa = 1.000 at
+  all seven ATPM levels.
+- nh4_-5 canonical level restored additively into the nitrogen
+  control (r +0.9224, kappa 0.9978, one boundary gene), completing
+  ammonium-gradient canonical coverage.
+- companion_categorical_v3.tex patch H: prop:keio-atpm (the
+  pre-screen ATPM-vs-proton-leak selection; zero PGI width -- the
+  sufficient-not-necessary refinement of the FVA indicator;
+  one-directional energy-transduction re-stratification;
+  plain strong at moderate stress) + rem:keio-multiaxis (six-axis
+  closure) + seven ATPM rows in tab:canonical-selection (now six
+  axes) + the subsection's fifth feature (the near-tie boundary)
+  + the integrity-paragraph extension + the rem:canonical-protocol
+  near-tie clause + the six-axis abstract (264 words < 265 by the
+  repo counter).  Two rounding defects caught by the audit and
+  fixed: iML atpm_100 canonical r +0.476 -> +0.475 (0.47549);
+  OXPHOS expected 3.2 -> 3.0 with the enrichment phrasing corrected
+  to eight-fold.
+- multiaxis_table.py rebuilt on the merged artifact set: 30 levels
+  (31 rows incl. the iML baseline), arm kappa = 1.000 at 30/31 rows
+  (min 0.9978), canonical AUC min 0.978, canonical r gain > 0.05 at
+  27 rows (max +1.037).  multiaxis_figure.py regenerated.
+- audit_v10_numbers.py: 271/271 PASS (v9's 251 + 20 six-axis
+  checks; N-16/N-17/R8 updated for the six-axis abstract and the
+  nh4_-5 restoration).
+- Builds: companion 71 -> 73 pp, 0 errors / 0 undefined / 0 overfull.
+
+Stage Summary:
+- Six-axis battery complete and integrity-homogeneous across both
+  lineages; the canonical-selection subsection now carries the
+  measured near-tie boundary and the ATPM axis.  All deliverables
+  rebuilt on the merged tree.

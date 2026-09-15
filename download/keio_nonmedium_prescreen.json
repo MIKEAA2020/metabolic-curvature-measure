@@ -1,0 +1,269 @@
+{
+  "iJO1366_atpm": {
+    "kind": "atpm",
+    "levels": {
+      "10": {
+        "biomass": 0.95396,
+        "reduction_pct": 2.9,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {
+          "EX_o2_e": 1.194
+        },
+        "fva_PGI_width": -0.0
+      },
+      "20": {
+        "biomass": 0.893232,
+        "reduction_pct": 9.1,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {
+          "EX_ac_e": 0.001,
+          "EX_for_e": 0.002
+        },
+        "fva_PGI_width": 0.0
+      },
+      "40": {
+        "biomass": 0.694736,
+        "reduction_pct": 29.3,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {
+          "EX_for_e": 0.002
+        },
+        "fva_PGI_width": 0.0
+      },
+      "60": {
+        "biomass": 0.49624,
+        "reduction_pct": 49.5,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {
+          "EX_for_e": 0.001
+        },
+        "fva_PGI_width": 0.0
+      },
+      "80": {
+        "biomass": 0.297744,
+        "reduction_pct": 69.7,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {
+          "EX_for_e": 0.001
+        },
+        "fva_PGI_width": 0.0
+      },
+      "100": {
+        "biomass": 0.099248,
+        "reduction_pct": 89.9,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {},
+        "fva_PGI_width": 0.0
+      },
+      "120": {
+        "biomass": 0.0
+      },
+      "140": {
+        "biomass": 0.0
+      },
+      "160": {
+        "biomass": 0.0
+      },
+      "180": {
+        "biomass": 0.0
+      }
+    },
+    "atpm_default_lb": 3.15,
+    "baseline_biomass": 0.982372
+  },
+  "iJO1366_hleak": {
+    "kind": "hleak",
+    "levels": {
+      "5": {
+        "biomass": 0.982372,
+        "reduction_pct": 0.0,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {
+          "EX_o2_e": 1.007
+        },
+        "fva_PGI_width": -0.0
+      },
+      "10": {
+        "biomass": 0.973632,
+        "reduction_pct": 0.9,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {},
+        "fva_PGI_width": -0.0
+      },
+      "20": {
+        "biomass": 0.880638,
+        "reduction_pct": 10.4,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {},
+        "fva_PGI_width": 0.0
+      },
+      "40": {
+        "biomass": 0.668228,
+        "reduction_pct": 32.0,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {},
+        "fva_PGI_width": 0.0
+      },
+      "60": {
+        "biomass": 0.0
+      },
+      "80": {
+        "biomass": 0.0
+      },
+      "100": {
+        "biomass": 0.0
+      },
+      "120": {
+        "biomass": 0.0
+      }
+    },
+    "atpm_default_lb": 3.15,
+    "baseline_biomass": 0.982372
+  },
+  "iML1515_atpm": {
+    "kind": "atpm",
+    "levels": {
+      "10": {
+        "biomass": 0.796779,
+        "reduction_pct": 3.0,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {
+          "EX_for_e": 0.002
+        },
+        "fva_PGI_width": 0.0
+      },
+      "20": {
+        "biomass": 0.717101,
+        "reduction_pct": 12.7,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {
+          "EX_for_e": 0.002
+        },
+        "fva_PGI_width": 0.0
+      },
+      "40": {
+        "biomass": 0.557745,
+        "reduction_pct": 32.1,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {
+          "EX_for_e": 0.001
+        },
+        "fva_PGI_width": 0.0
+      },
+      "60": {
+        "biomass": 0.39839,
+        "reduction_pct": 51.5,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {
+          "EX_for_e": 0.001
+        },
+        "fva_PGI_width": 0.0
+      },
+      "80": {
+        "biomass": 0.239034,
+        "reduction_pct": 70.9,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {
+          "EX_for_e": 0.001
+        },
+        "fva_PGI_width": 0.0
+      },
+      "100": {
+        "biomass": 0.079678,
+        "reduction_pct": 90.3,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {},
+        "fva_PGI_width": 0.0
+      },
+      "120": {
+        "biomass": 0.0
+      },
+      "140": {
+        "biomass": 0.0
+      },
+      "160": {
+        "biomass": 0.0
+      },
+      "180": {
+        "biomass": 0.0
+      }
+    },
+    "atpm_default_lb": 6.86,
+    "baseline_biomass": 0.821798
+  },
+  "iML1515_hleak": {
+    "kind": "hleak",
+    "levels": {
+      "5": {
+        "biomass": 0.821798,
+        "reduction_pct": 0.0,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {
+          "EX_ac_e": 0.001,
+          "EX_for_e": 0.002
+        },
+        "fva_PGI_width": 0.0
+      },
+      "10": {
+        "biomass": 0.821098,
+        "reduction_pct": 0.1,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {},
+        "fva_PGI_width": -0.0
+      },
+      "20": {
+        "biomass": 0.778572,
+        "reduction_pct": 5.3,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {},
+        "fva_PGI_width": 0.0
+      },
+      "40": {
+        "biomass": 0.593332,
+        "reduction_pct": 27.8,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {},
+        "fva_PGI_width": -0.0
+      },
+      "60": {
+        "biomass": 0.385582,
+        "reduction_pct": 53.1,
+        "pfba_glc_uptake": 10.0,
+        "raw_glc_uptake": 10.0,
+        "fva_widths_excl_ACKr": {},
+        "fva_PGI_width": 0.0
+      },
+      "80": {
+        "biomass": 0.0
+      },
+      "100": {
+        "biomass": 0.0
+      },
+      "120": {
+        "biomass": 0.0
+      }
+    },
+    "atpm_default_lb": 6.86,
+    "baseline_biomass": 0.821798
+  }
+}

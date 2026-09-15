@@ -1,0 +1,217 @@
+{
+  "scan": "cross-arm + trace-quota band",
+  "engine": "scipy.optimize.linprog(method='highs')",
+  "verdicts": [
+    {
+      "model": "iJO1366",
+      "atpm": 100.0,
+      "gene_id": "b0180",
+      "reason": "label-disagreement",
+      "b_plain": 0.0992479883158446,
+      "b_canon": 0.0,
+      "b_highs_true": -0.0
+    },
+    {
+      "model": "iJO1366",
+      "atpm": 100.0,
+      "gene_id": "b3412",
+      "reason": "label-disagreement",
+      "b_plain": 0.0992479883158825,
+      "b_canon": 0.0,
+      "b_highs_true": -0.0
+    },
+    {
+      "model": "iJO1366",
+      "atpm": 100.0,
+      "gene_id": "b0180",
+      "reason": "trace-quota-positive",
+      "b_plain": 0.0992479883158446,
+      "b_canon": 0.0,
+      "b_highs_true": -0.0
+    },
+    {
+      "model": "iJO1366",
+      "atpm": 100.0,
+      "gene_id": "b0767",
+      "reason": "trace-quota-positive",
+      "b_plain": 0.0978657257999846,
+      "b_canon": 0.0978657257999936,
+      "b_highs_true": 0.09786572579998684
+    },
+    {
+      "model": "iJO1366",
+      "atpm": 100.0,
+      "gene_id": "b3412",
+      "reason": "trace-quota-positive",
+      "b_plain": 0.0992479883158825,
+      "b_canon": 0.0,
+      "b_highs_true": -0.0
+    },
+    {
+      "model": "iML1515",
+      "atpm": 100.0,
+      "gene_id": "b0778",
+      "reason": "label-disagreement",
+      "b_plain": 0.0796779070803385,
+      "b_canon": 0.0,
+      "b_highs_true": -0.0
+    },
+    {
+      "model": "iML1515",
+      "atpm": 100.0,
+      "gene_id": "b1288",
+      "reason": "label-disagreement",
+      "b_plain": 4.421217911701249e-16,
+      "b_canon": 0.0796779708835016,
+      "b_highs_true": -0.0
+    },
+    {
+      "model": "iML1515",
+      "atpm": 100.0,
+      "gene_id": "b0180",
+      "reason": "label-disagreement",
+      "b_plain": 0.0796779070803289,
+      "b_canon": 0.0,
+      "b_highs_true": -0.0
+    },
+    {
+      "model": "iML1515",
+      "atpm": 100.0,
+      "gene_id": "b0776",
+      "reason": "label-disagreement",
+      "b_plain": 1.0769331516493716e-15,
+      "b_canon": 0.0796779708834922,
+      "b_highs_true": -0.0
+    },
+    {
+      "model": "iML1515",
+      "atpm": 100.0,
+      "gene_id": "b0767",
+      "reason": "trace-quota-positive",
+      "b_plain": 0.0787849469811612,
+      "b_canon": 0.0787849469811555,
+      "b_highs_true": 0.07878494698115365
+    },
+    {
+      "model": "iML1515",
+      "atpm": 100.0,
+      "gene_id": "b0778",
+      "reason": "trace-quota-positive",
+      "b_plain": 0.0796779070803385,
+      "b_canon": 0.0,
+      "b_highs_true": -0.0
+    },
+    {
+      "model": "iML1515",
+      "atpm": 100.0,
+      "gene_id": "b0180",
+      "reason": "trace-quota-positive",
+      "b_plain": 0.0796779070803289,
+      "b_canon": 0.0,
+      "b_highs_true": -0.0
+    },
+    {
+      "model": "iML1515",
+      "atpm": 80.0,
+      "gene_id": "b0767",
+      "reason": "trace-quota-positive",
+      "b_plain": 0.2363548409434825,
+      "b_canon": 0.2363548409434581,
+      "b_highs_true": 0.23635484094346282
+    },
+    {
+      "model": "iML1515",
+      "atpm": 80.0,
+      "gene_id": "b0116",
+      "reason": "trace-quota-positive",
+      "b_plain": 0.1628241235257093,
+      "b_canon": 0.1628241235263487,
+      "b_highs_true": 0.16282412352634246
+    }
+  ],
+  "patch": {
+    "corrections": [
+      {
+        "model": "iJO1366",
+        "atpm": 100.0,
+        "gene_id": "b0180",
+        "gene_name": "fabZ",
+        "arm": "plain",
+        "b_ko_true": 0.0,
+        "kV": 30854083.894684643,
+        "n_changed": 437
+      },
+      {
+        "model": "iJO1366",
+        "atpm": 100.0,
+        "gene_id": "b3412",
+        "gene_name": "bioH",
+        "arm": "plain",
+        "b_ko_true": 0.0,
+        "kV": 33794447.4675141,
+        "n_changed": 438
+      },
+      {
+        "model": "iML1515",
+        "atpm": 100.0,
+        "gene_id": "b0180",
+        "gene_name": "fabZ",
+        "arm": "plain",
+        "b_ko_true": 0.0,
+        "kV": 30847310.6340664,
+        "n_changed": 431
+      },
+      {
+        "model": "iML1515",
+        "atpm": 100.0,
+        "gene_id": "b0778",
+        "gene_name": "bioD",
+        "arm": "plain",
+        "b_ko_true": 0.0,
+        "kV": 26090687.969457492,
+        "n_changed": 429
+      },
+      {
+        "model": "iML1515",
+        "atpm": 100.0,
+        "gene_id": "b0776",
+        "gene_name": "bioF",
+        "arm": "canonical",
+        "b_ko_true": 0.0,
+        "kV": 307.2173388465731,
+        "n_changed": 407
+      },
+      {
+        "model": "iML1515",
+        "atpm": 100.0,
+        "gene_id": "b1288",
+        "gene_name": "fabI",
+        "arm": "canonical",
+        "b_ko_true": 0.0,
+        "kV": 307.21733884657317,
+        "n_changed": 407
+      }
+    ]
+  },
+  "post_patch": {
+    "iJO_atpm_100": {
+      "plain_r": 0.44443392727179276,
+      "labels": 331,
+      "gains": 42,
+      "losses": 0,
+      "kappa": 0.9125082670193928,
+      "arm_kappa": 1.0
+    },
+    "iML_atpm_100": {
+      "plain_r": 0.24383136674119696,
+      "canon_r": 0.47549545367761054,
+      "canon_auc": 0.9781239359891045,
+      "labels": 329,
+      "gains": 43,
+      "losses": 0,
+      "kappa": 0.9123996172824906,
+      "arm_kappa": 1.0,
+      "canon_n_essential": 329
+    }
+  }
+}

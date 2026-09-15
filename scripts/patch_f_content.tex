@@ -1,0 +1,272 @@
+\begin{proposition}[Fourth perturbation axis: phosphate-limited medium]
+\label{prop:keio-phosphate}
+Limiting the phosphate exchange of the glucose-only medium ---
+the phosphate axis, protocol identical, labels declared at $5\%$ of
+each level's own wild type --- with
+$\mathrm{EX\_pi\_e}\in\{-0.5,-0.25,-0.1\}$ on iJO1366 and
+$\{-0.25,-0.1\}$ on iML1515 drops the wild-type optima from $0.982$
+to $0.518$, $0.259$, $0.104$ and from $0.822$ to $0.259$, $0.104$
+($-47/-74/-89\%$ and $-68/-87\%$). The essentiality sets are
+unchanged at every level above the floor: $289/1{,}367$ and
+$286/1{,}516$ at $-0.5$ and $-0.25$ in both reconstructions, zero
+flips, $\kappa=1.000$. At the $-89\%$/$-87\%$ floors the only
+motion is the same marginal family every $-90\%$ floor below finds:
+\emph{fabZ} and \emph{bioH} lost on iJO1366 ($287$,
+$\kappa=0.996$), those two plus \emph{bioD} on iML1515 ($283$,
+$\kappa=0.994$); gains exactly zero. These floor losses are
+numerical, not biological: the biomass coefficient of biotin is
+$2\times10^{-6}$, so at a wild-type optimum of $0.104$ the demanded
+flux through the governed reactions (\texttt{PMEACPE} for
+\emph{bioH}, \texttt{DBTS} for \emph{bioD}) collapses to
+$2.07\times10^{-7}$~mmol/gDW/h --- the boundary of the LP
+feasibility tolerance --- and the returned knockout solutions
+violate the zeroed bounds within tolerance, carrying exactly that
+sub-tolerance flux and full growth (retention $1.000$); the
+\emph{fabZ} case is in addition solve-order-dependent (a fresh
+solve ordering returns it lethal, $b_{\mathrm{KO}}=0$). The
+plain-FBA association collapses as the second supply side
+predicts: transitive $r=+0.323$, $+0.054$, $-0.100$ (iJO1366) and
+$+0.025$, $+0.096$ (iML1515) as limitation deepens, with
+at-optimum phosphoglucose-isomerase variability $123$--$202$ (the
+carbon-sector degeneracy signature of
+Proposition~\ref{prop:keio-n-source}). Canonical selection
+restores it at every level: $r=+0.950$, $+0.916$, $+0.914$
+(iJO1366; held-out AUC $0.988$, $0.988$, $0.985$; MCC $0.965$,
+$0.965$, $0.945$) and $+0.910$, $+0.900$ (iML1515; AUC $0.986$),
+the canonical rankings correlated $+0.765$--$+0.968$ with the
+baseline canonical ranking, the direct arm stable ($r\approx+0.35$
+iJO1366, $+0.42$ iML1515), and the plain-versus-canonical
+arm-agreement $\kappa=1.000$ at four of five levels ($0.993$,
+$0.996$ at the floors).
+\end{proposition}
+
+\begin{proposition}[Fifth perturbation axis: iron-limited medium]
+\label{prop:keio-iron}
+Limiting the ferrous-iron exchange --- the trace-metal axis,
+selected by pre-screen over the seven cationic trace metals: iron
+demand at the glucose-only optimum is $0.0158$ (iJO1366) and
+$0.0132$ (iML1515)~mmol/gDW/h, $50$--$2{,}500\times$ every other
+trace-metal demand, and the cation axes are interchangeable
+proportional gradients --- with
+$\mathrm{EX\_fe2\_e}\in\{-0.008,-0.004,-0.0016\}$ on iJO1366 and
+$\{-0.0066,-0.0033,-0.0013\}$ on iML1515 drops the wild-type
+optima from $0.982$ to $0.498$, $0.249$, $0.100$ and from $0.822$
+to $0.411$, $0.205$, $0.081$ ($-49/-75/-90\%$ in both). The
+essentiality sets are unchanged through $-75\%$ in both
+reconstructions ($289/1{,}367$ and $286/1{,}516$, zero flips,
+$\kappa=1.000$); at the $-90\%$ floors the losses are the
+tolerance-floor family of
+Proposition~\ref{prop:keio-phosphate} --- \emph{fabZ} and
+\emph{bioH} on iJO1366 ($287$, $\kappa=0.996$), \emph{bioD} and
+\emph{fabZ} on iML1515 ($284$, $\kappa=0.996$) --- with gains
+exactly zero. The plain-FBA association again collapses along the
+gradient: $r=+0.404$, $+0.220$, $-0.108$ (iJO1366) and $+0.271$,
+$+0.231$, $+0.040$ (iML1515), phosphoglucose-isomerase variability
+$126$--$202$. Canonical selection restores it at every level:
+$r=+0.947$, $+0.913$, $+0.910$ (iJO1366; AUC $0.988$, $0.988$,
+$0.982$; MCC $0.965$, $0.965$, $0.926$) and $+0.925$, $+0.907$,
+$+0.892$ (iML1515; AUC $0.986$, $0.986$, $0.981$), canonical
+rankings correlated $+0.616$--$+0.968$ with the baseline canonical
+ranking, arm agreement $\kappa=1.000$ at five of six levels
+($0.991$, $0.996$ at the floors).
+\end{proposition}
+
+\begin{proposition}[Sixth perturbation axis: non-medium
+maintenance stress]
+\label{prop:keio-atpm}
+Genome-scale flux balance has no temperature or pH state variable;
+the standard constraint-based surrogate for temperature-style
+stress is escalation of the non-growth-associated ATP maintenance
+demand (\texttt{ATPM} lower bound; defaults $3.15$ iJO1366 /
+$6.86$ iML1515~mmol ATP/gDW/h). A pre-screen compared this
+encoding head-to-head with proton-leak forcing (the pH-style
+surrogate): the maintenance axis spans $29$--$90\%$ wild-type
+reduction with four-to-five usable levels in both models, while
+the proton-leak axis compresses to two usable levels in iJO1366
+(the proton leaves partly for free with organic-acid secretion)
+before hard infeasibility --- ATPM is selected, and the axis
+carries a decisive structural property: \emph{zero} wild-type
+carbon-sector degeneracy, phosphoglucose-isomerase width $0.0$ at
+every level in both models against $45$--$202$ on every supply
+axis. Levels $\{40,60,80,100\}$ (iJO1366) and $\{60,80,100\}$
+(iML1515) drop the wild-type optima from $0.982$ to $0.695$,
+$0.496$, $0.298$, $0.099$ and from $0.822$ to $0.398$, $0.239$,
+$0.080$. The labels re-stratify in one direction on this axis at
+every level: the nine ATP-synthase genes of the \emph{atp} operon
+(\emph{atpA}--\emph{atpI}) are gained already at the mildest level
+($289\to298$, $286\to295$; $\kappa=0.981$, $0.981$), and at the
+$-90\%$ endpoints the gain set explodes to $42$/$43$ genes ---
+the \emph{atp} operon, the cytochrome-$bo_3$ operon
+(\emph{cyoA}--\emph{cyoD}), the thirteen-gene NDH-I operon
+(\emph{nuoA}--\emph{nuoN}), lower glycolysis (\emph{pgk},
+\emph{eno}), \emph{ackA}, \emph{lpd}, \emph{tdcD}, \emph{purT},
+and outer-membrane porins (\emph{ompG}, \emph{ompL}); oxidative
+phosphorylation is enriched twenty-six-fold over the genome share
+($26$ vs.\ $3.2$ expected), the mirror image of the anaerobic
+glycolysis enrichment of
+Proposition~\ref{prop:keio-o2-limited}. The losses at the
+endpoints are the tolerance-floor family only (\emph{fabZ},
+\emph{bioH}, plus \emph{bioD} on iML1515). The association splits
+by arm exactly as the degeneracy reading predicts, with one
+refinement. Plain FBA is \emph{strong at moderate stress} ---
+$r=+0.949$, $+0.925$, $+0.821$ (iJO1366), all above the baseline
+$+0.603$ --- and collapses only at the $-90\%$ endpoints:
+$r=+0.453$ (iJO1366), $+0.234$ with held-out AUC $0.563$
+(iML1515). Canonical selection restores the endpoint fully on
+iJO1366 ($r=+0.937$, AUC $0.991$, MCC $0.974$; moderate levels
+$+0.969$, $+0.949$, $+0.964$) and restores the ranking separation
+but not the transitive correlation on iML1515 ($r=+0.703$,
+$+0.655$, $+0.476$; AUC $0.992$, $0.992$, $0.978$; labels
+$\kappa=1.000$, $1.000$, $0.992$) --- the near-tie boundary of
+Remark~\ref{rem:canonical-scope}. Since the wild-type optimum is
+unique at every level on this axis, the plain endpoint collapse
+establishes that wild-level flux-variability width is a sufficient
+but not necessary indicator: the operative mechanism is per-KO
+vertex instability at near-zero-biomass optima, which canonical
+selection repairs wherever the parsimony stage is discriminating.
+\end{proposition}
+
+\begin{remark}[What the six axes establish together]
+\label{rem:keio-multiaxis}
+Five medium-side supply axes --- carbon source, electron acceptor,
+nitrogen, phosphate, iron --- and one non-medium maintenance-stress
+axis now bracket the claim from both sides. On the supply side the
+labels are unconditionally invariant along the limitation gradients:
+all fifteen gradient levels (ammonium, oxygen, phosphate, iron) in
+both reconstructions show zero flips, $\kappa=1.000$, through
+$-76\%$ wild-type reduction; the apparent floor losses at
+$-89$--$-90\%$ are demonstrated tolerance-boundary effects rather
+than re-stratification
+(Proposition~\ref{prop:keio-phosphate}). The two genuine
+re-stratifications are both regime switches confined to the module
+the perturbation rewires: the anaerobic switch gains the
+substrate-level-phosphorylation module
+(Proposition~\ref{prop:keio-o2-limited}); the maintenance-demand
+switch gains the energy-transduction module, and does so already
+at mild stress --- a $40$~mmol/gDW/h ATP demand makes the ATP
+synthase itself load-bearing. The nitrogen-substitution losses of
+Proposition~\ref{prop:keio-n-source} remain the only
+re-wiring-driven \emph{losses}, and they are substitution-mediated
+in every case. The association, finally, is the invariant object
+under canonical selection on all five supply axes in both models
+(twenty-four levels, canonical $r\ge+0.856$, held-out AUC
+$\ge0.978$), is restored on the maintenance axis in iJO1366, and
+acquires its measured boundary on the maintenance axis in iML1515
+--- to which the protocol subsection now turns.
+\end{remark}
+
+\subsection{Canonical flux selection as the invariant-object
+protocol}\label{sec:canonical-selection}
+
+The six-axis battery motivates promoting the canonical-selection
+finding from a remark inside the nitrogen axis
+(Remark~\ref{rem:keio-n-invariance}) to a protocol statement of
+its own, because it is now measured across thirty-one levels, six
+axes, and two reconstructions, and because its boundary is as
+informative as its interior. The protocol: \emph{canonical flux
+selection} solves parsimonious FBA --- minimize the $L_1$ total
+flux at the fixed biomass optimum --- for the wild type and every
+knockout, reads the growth rate from the solution vector at the
+biomass reaction, and declares labels at $5\%$ of the level's own
+canonical wild type. Labels are unchanged by construction (the
+biomass optimum is preserved to $10^{-6}$ at every level; the
+plain and canonical arms agree at $\kappa\ge0.991$ table-wide),
+and the vertex it selects is unique wherever the parsimony stage
+is discriminating. Two solver-honesty provisions are recorded in
+the deposited artifacts: a simplex time limit guards the $L_1$
+stage (a handful of at-optimum LPs cycle without it at the extreme
+maintenance level), with timed-out or numerically failed solves
+falling back to the plain optimum vertex --- label-preserving,
+flagged per gene --- and the per-level degeneracy signature
+(at-optimum flux variability) is logged alongside every sweep.
+
+\begin{proposition}[Multi-axis canonical-selection verdict]
+\label{prop:canonical-multiaxis}
+Across the six perturbation axes --- nitrogen, oxygen, phosphate,
+iron, the non-medium ATP-maintenance axis, and the glucose-only
+carbon correction at the baselines --- thirty-one probe levels in
+the two reconstructions, with the plain and canonical arms run in
+parallel at every level (deposited sweeps and control records):
+(i)~plain-FBA transitive calibration collapses at deep limitation
+on every supply axis ($r$ from $+0.949$ down to $-0.122$; at the
+five deepest supply floors $|r|\le0.11$) and at the maintenance
+extreme ($r=+0.453$ iJO1366, $+0.234$ with AUC $0.563$ iML1515);
+(ii)~canonical selection restores the transitive association to
+$r\ge+0.856$ with held-out ROC AUC $\ge0.978$ at every supply-axis
+level in both models (twenty-four levels) and at every maintenance
+level in iJO1366
+($r\ge+0.937$, AUC $\ge0.982$), the canonical rankings correlated
+$+0.62$--$+0.97$ with the baseline canonical ranking;
+(iii)~label agreement between the arms is $\kappa\ge0.991$
+table-wide ($\kappa=1.000$ at twenty-three of thirty-one levels);
+(iv)~the single corner where canonical selection does not restore
+the transitive correlation --- the maintenance axis in iML1515 at
+$-90\%$ ($r=+0.476$) --- is the measured near-tie boundary of
+Remark~\ref{rem:canonical-scope}, and even there the ranking
+separation (AUC $0.978$), MCC $0.867$, and labels ($\kappa=0.992$)
+hold. Table~\ref{tab:canonical-multiaxis} consolidates the record.
+\end{proposition}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Multi-axis canonical-selection record (glucose-only
+corrected baselines: iJO1366 plain $r=+0.603\to$ canonical
+$+0.945$, AUC $1.000$; iML1515 plain $+0.875\to$ canonical
+$+0.937$, AUC $0.987$). Plain $r$ is quoted at the deepest usable
+level; canonical $r$ and AUC are minima over the axis's levels;
+$\kappa$ is the plain-versus-canonical arm agreement, minimum over
+levels (level-versus-baseline label agreement is reported in the
+axis propositions; its table-wide minimum is $0.908$, at the two
+$-90\%$ maintenance endpoints).}
+\label{tab:canonical-multiaxis}
+\begin{tabular}{llrrrrrr}
+\toprule
+Axis & Model & Levels & WT red. & plain $r$ & canon.\ $r$ &
+canon.\ AUC & $\kappa$ \\
+\midrule
+nitrogen & iJO1366 & 5 & $-76\%$ & $-0.122$ & $+0.856$ & $0.979$ & $0.998$ \\
+nitrogen & iML1515 & 3 & $-72\%$ & $-0.113$ & $+0.856$ & $0.986$ & $1.000$ \\
+oxygen & iJO1366 & 3 & $-63\%$ & $+0.519$ & $+0.895$ & $1.000$ & $1.000$ \\
+oxygen & iML1515 & 2 & $-84\%$ & $+0.260$ & $+0.941$ & $0.997$ & $0.998$ \\
+phosphate & iJO1366 & 3 & $-89\%$ & $-0.100$ & $+0.914$ & $0.985$ & $0.993$ \\
+phosphate & iML1515 & 2 & $-87\%$ & $+0.025$ & $+0.900$ & $0.986$ & $0.996$ \\
+iron & iJO1366 & 3 & $-90\%$ & $-0.108$ & $+0.910$ & $0.982$ & $0.991$ \\
+iron & iML1515 & 3 & $-90\%$ & $+0.040$ & $+0.892$ & $0.981$ & $0.996$ \\
+ATPM & iJO1366 & 4 & $-90\%$ & $+0.453$ & $+0.937$ & $0.982$ & $0.996$ \\
+ATPM & iML1515 & 3 & $-90\%$ & $+0.234$ & $+0.476$ & $0.978$ & $0.992$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{remark}[The near-tie boundary of canonical selection]
+\label{rem:canonical-scope}
+The maintenance axis in iML1515 localizes where canonical
+selection stops being sufficient. At elevated \texttt{ATPM} the
+parsimony stage itself carries \emph{near-tied} optima: vertices
+$\approx200$ apart in the squared-flux metric whose $L_1$
+objectives differ by $8.6\times10^{-4}$ absolute ($1.2\times10^{-6}$
+relative --- within the simplex optimality tolerance), so the
+returned vertex is solver-path-dependent. The signature is sharp:
+roughly $700$ of $1{,}129$ compensable knockouts record the same
+near-tie floor $kV\approx200.01$ (identical to four decimals, ten
+changed reactions, gene-intrinsic and level-independent), while
+the remaining compensables sit at $kV\approx0$; the supply axes in
+the same model show no floor at all (compensable median $kV$
+$0.00$--$0.10$). The floor decorrelates the transitive statistic
+--- canonical $r$ caps near $+0.48$ at the $-90\%$ endpoint ---
+without touching the essentiality ranking (AUC $0.978$, labels
+$\kappa=0.992$). Canonical selection is therefore \emph{necessary}
+on every axis (plain FBA collapses at deep limitation everywhere,
+including the zero-degeneracy maintenance axis), and
+\emph{sufficient} precisely where the parsimony stage is
+discriminating: all five supply axes in both reconstructions and
+the maintenance axis in iJO1366. This also revises the closing
+reading rule of Remark~\ref{rem:keio-n-invariance}: wild-type
+flux-variability uniqueness (zero \texttt{PGI} width at every
+maintenance level) does \emph{not} license plain-FBA readings ---
+per-knockout vertex instability at near-zero-biomass optima
+defeats it --- so the licensed protocol is canonical selection
+throughout, with the near-tie corner reported as its bounded
+residual.
+\end{remark}
