@@ -1,0 +1,286 @@
+{
+  "probe": "iron-limited medium, iML1515 cross-rebuild",
+  "baseline_medium": "glucose -10, O2 -20, minerals -10, EX_tre_e CLOSED, EX_fe3_e CLOSED (iron only via EX_fe2_e)",
+  "levels": {
+    "fe_0.005": {
+      "fe_bound": -0.005,
+      "wild_type_biomass": 0.31131311873482337,
+      "fe2_uptake": 0.005,
+      "degeneracy": {
+        "fba_optimum": 0.311313,
+        "pfba_biomass_flux": 0.311313,
+        "objective_abs_diff": 0.0,
+        "raw_glc_uptake": 10.0,
+        "pfba_glc_uptake": 3.783,
+        "fe2_uptake": 0.005,
+        "fva_widths": {
+          "EX_glc__D_e": 6.266,
+          "EX_ac_e": 19.788,
+          "EX_for_e": 47.222,
+          "EX_etoh_e": 13.671,
+          "EX_o2_e": 16.076,
+          "PGI": 139.188,
+          "CS": 65.738,
+          "ACKr": 129.686,
+          "PPCK": 64.068,
+          "G6PDH2r": 50.916
+        }
+      },
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.12681106770851513,
+        "pearson_p_value": 7.291556632971448e-07,
+        "spearman_rho": 0.14176352520884322,
+        "spearman_p_value": 2.970845103055625e-08,
+        "partial_r_given_n_gpr_rxns": 0.1261713350556264,
+        "partial_p_value": 8.297293063444358e-07,
+        "bootstrap_95ci": [
+          0.09869823453138893,
+          0.16003415415459793
+        ],
+        "n_essential": 286,
+        "n_genes": 1516,
+        "held_out": {
+          "n_test": 455,
+          "n_test_essential": 86,
+          "accuracy": 0.810989010989011,
+          "mcc": 0.0,
+          "roc_auc": 0.5788743933950967,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "confusion": {
+            "tn": 369,
+            "fp": 0,
+            "fn": 86,
+            "tp": 0
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.3,
+            "base_rate": 0.18865435356200527,
+            "lift": 1.5902097902097903
+          },
+          "K=25": {
+            "precision": 0.2,
+            "base_rate": 0.18865435356200527,
+            "lift": 1.0601398601398602
+          },
+          "K=50": {
+            "precision": 0.1,
+            "base_rate": 0.18865435356200527,
+            "lift": 0.5300699300699301
+          },
+          "K=100": {
+            "precision": 0.1,
+            "base_rate": 0.18865435356200527,
+            "lift": 0.5300699300699301
+          },
+          "K=200": {
+            "precision": 0.05,
+            "base_rate": 0.18865435356200527,
+            "lift": 0.26503496503496504
+          },
+          "K=500": {
+            "precision": 0.322,
+            "base_rate": 0.18865435356200527,
+            "lift": 1.7068251748251748
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1331,
+        "binary_n": 1325,
+        "binary_n_E": 114,
+        "pearson_r": 0.04358637281415421,
+        "pearson_p": 0.1127792062599573,
+        "spearman_rho": 0.0511289679542943,
+        "spearman_p": 0.0628030925390381,
+        "point_biserial_r": 0.04358637281415421,
+        "bootstrap_95ci": [
+          0.007652734597419429,
+          0.07678882418554794
+        ],
+        "roc_auc": 0.5526243354049865,
+        "held_out": {
+          "n_test": 398,
+          "n_test_E": 34,
+          "accuracy": 0.4648241206030151,
+          "sensitivity": 0.6176470588235294,
+          "specificity": 0.45054945054945056,
+          "precision": 0.09502262443438914,
+          "f1": 0.16470588235294117,
+          "mcc": 0.03835919868295361,
+          "roc_auc": 0.5530866192630898,
+          "confusion": {
+            "tp": 21,
+            "fp": 200,
+            "tn": 164,
+            "fn": 13
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.5415036082289162,
+          "n_high_conf": 69,
+          "low_conf_auc": 0.5700320590664011,
+          "n_low_conf": 34
+        },
+        "n_model_gaps_pecE_insilicoN": 13,
+        "n_medium_mismatch_insilicoE_keioN": 175
+      },
+      "flips_vs_glucose_only": {
+        "label": "iML1515 Fe=-0.005 vs glucose-only (Fe unlimited)",
+        "n_compared": 1516,
+        "n_essential_base": 286,
+        "n_essential_new": 286,
+        "n_gain_essential": 0,
+        "n_loss_essential": 0,
+        "n_both_essential": 286,
+        "cohen_kappa": 1.0,
+        "jaccard": 1.0,
+        "gains": [],
+        "losses": [],
+        "subsystem_enrichment_top": []
+      }
+    },
+    "fe_0.0025": {
+      "fe_bound": -0.0025,
+      "wild_type_biomass": 0.15565655936741168,
+      "fe2_uptake": 0.0025,
+      "degeneracy": {
+        "fba_optimum": 0.155657,
+        "pfba_biomass_flux": 0.155657,
+        "objective_abs_diff": 0.0,
+        "raw_glc_uptake": 8.265,
+        "pfba_glc_uptake": 2.035,
+        "fe2_uptake": 0.0025,
+        "fva_widths": {
+          "EX_glc__D_e": 7.99,
+          "EX_ac_e": 24.297,
+          "EX_for_e": 53.611,
+          "EX_etoh_e": 17.421,
+          "EX_o2_e": 19.578,
+          "PGI": 176.484,
+          "CS": 84.439,
+          "ACKr": 168.817,
+          "PPCK": 83.604,
+          "G6PDH2r": 58.625
+        }
+      },
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": -0.03699992717192892,
+        "pearson_p_value": 0.1498877265999103,
+        "spearman_rho": -0.16907622495662591,
+        "spearman_p_value": 3.461938634177428e-11,
+        "partial_r_given_n_gpr_rxns": -0.03363997169657315,
+        "partial_p_value": 0.19050358780102888,
+        "bootstrap_95ci": [
+          -0.07525549562515468,
+          -0.0033206312180920727
+        ],
+        "n_essential": 286,
+        "n_genes": 1516,
+        "held_out": {
+          "n_test": 455,
+          "n_test_essential": 86,
+          "accuracy": 0.810989010989011,
+          "mcc": 0.0,
+          "roc_auc": 0.5773618201298291,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "confusion": {
+            "tn": 369,
+            "fp": 0,
+            "fn": 86,
+            "tp": 0
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.6,
+            "base_rate": 0.18865435356200527,
+            "lift": 3.1804195804195805
+          },
+          "K=25": {
+            "precision": 0.24,
+            "base_rate": 0.18865435356200527,
+            "lift": 1.2721678321678322
+          },
+          "K=50": {
+            "precision": 0.12,
+            "base_rate": 0.18865435356200527,
+            "lift": 0.6360839160839161
+          },
+          "K=100": {
+            "precision": 0.06,
+            "base_rate": 0.18865435356200527,
+            "lift": 0.31804195804195806
+          },
+          "K=200": {
+            "precision": 0.055,
+            "base_rate": 0.18865435356200527,
+            "lift": 0.2915384615384615
+          },
+          "K=500": {
+            "precision": 0.132,
+            "base_rate": 0.18865435356200527,
+            "lift": 0.6996923076923077
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1331,
+        "binary_n": 1325,
+        "binary_n_E": 114,
+        "pearson_r": 0.0038386694784730965,
+        "pearson_p": 0.8889773722166581,
+        "spearman_rho": -0.016871291084422247,
+        "spearman_p": 0.5394874033274912,
+        "point_biserial_r": 0.0038386694784730965,
+        "bootstrap_95ci": [
+          -0.027230006422399547,
+          0.03295874715132802
+        ],
+        "roc_auc": 0.4826336071392353,
+        "held_out": {
+          "n_test": 398,
+          "n_test_E": 34,
+          "accuracy": 0.5979899497487438,
+          "sensitivity": 0.2647058823529412,
+          "specificity": 0.6291208791208791,
+          "precision": 0.0625,
+          "f1": 0.10112359550561797,
+          "mcc": -0.06175997485667242,
+          "roc_auc": 0.4947478991596639,
+          "confusion": {
+            "tp": 9,
+            "fp": 135,
+            "tn": 229,
+            "fn": 25
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.4825512512117187,
+          "n_high_conf": 69,
+          "low_conf_auc": 0.5105042016806722,
+          "n_low_conf": 34
+        },
+        "n_model_gaps_pecE_insilicoN": 13,
+        "n_medium_mismatch_insilicoE_keioN": 175
+      },
+      "flips_vs_glucose_only": {
+        "label": "iML1515 Fe=-0.0025 vs glucose-only (Fe unlimited)",
+        "n_compared": 1516,
+        "n_essential_base": 286,
+        "n_essential_new": 286,
+        "n_gain_essential": 0,
+        "n_loss_essential": 0,
+        "n_both_essential": 286,
+        "cohen_kappa": 1.0,
+        "jaccard": 1.0,
+        "gains": [],
+        "losses": [],
+        "subsystem_enrichment_top": []
+      }
+    }
+  }
+}

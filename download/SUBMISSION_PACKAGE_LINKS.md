@@ -91,6 +91,35 @@ medium-robustness statement (264 words, under the 265 cap).
 audit_v8: 226/226 PASS. Companion 67 → 70 pp, 0 errors /
 0 undefined / 0 overfull.
 
+Revision note (2026-09-15, fifth axis + arginine symmetry round): the
+companion adds the iron-limitation probe (the trace-metal fifth
+axis, chosen over zinc and manganese by a dose-response pre-screen;
+iron pinned to the single ferrous channel, the ferric exchange
+closed — the closure leaves the wild-type optimum unchanged to
+solver noise): iJO1366 EX_fe2_e at −0.01/−0.005/−0.0025 (37/68/84%
+WT reduction) and iML1515 at −0.005/−0.0025 (62/81%). The pre-screen
+finds the iron dose response identical on both reconstructions to
+six decimals (shared quota; b = fe2/0.0161) — the purest supply
+axis of the battery. Labels are invariant at every level (289/289
+and 286/286; zero flips; κ = 1.000); the plain-FBA statistics
+collapse with the degeneracy signature (PGI FVA width up to 192;
+plain r down to −0.037) and canonical vertex selection restores
+them everywhere (r +0.800 to +0.957, AUC 0.986–0.988, MCC
+0.904–0.965). The arginine-substitution levels re-run under
+canonical selection complete the axis × selection table symmetry
+(25 levels; iJO +0.802 → +0.953, iML +0.915 → +0.850 with AUC
+0.997 / MCC 0.993 — the plain reading was already well posed there,
+so the declared rule is reported uniformly rather than
+cherry-picked). Integrity: a cross-arm scan of the iron levels
+(7,133 gene comparisons, max |Δb| 6×10⁻⁸, no false-viability-band
+calls at WT 0.156, just above the 0.14 tolerance boundary); one
+GLPK simplex hang (b0887, the cysteine/glutathione ABC-exporter
+ATPase) disclosed and settled by the HiGHS engine with the row
+marked as an engine substitution; a patch-F rendering defect
+(double-escaped \emph / \S\ref commands) caught and fixed.
+audit_v9: 251/251 PASS. Companion 70 → 71 pp, 0 errors / 0
+undefined / 0 overfull.
+
 - Repository: https://github.com/MIKEAA2020/metabolic-curvature-measure
   (renamed 2026-09-03 from the earlier internal name; GitHub redirects
   the old URLs, but the links below already use the new name)
@@ -159,7 +188,7 @@ upload directory and the repository layout
 
 **Title:** Stratified Connections, Optic Composition, and the Homotopy
 Fixed-Point Extension: A Categorical Framework for Viability-Weighted
-Curvature (Research Article; 70 pp; electronic-only, free — no author charges).
+Curvature (Research Article; 71 pp; electronic-only, free — no author charges).
 
 ### Journal / submission links (all verified)
 
@@ -182,7 +211,7 @@ only after acceptance.
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (70 pp, + fourth-axis/canonical-selection revision: prop:keio-phosphate + rem:keio-p-invariance + the canonical-selection subsection with the homogenized 18-level table and the solver-tolerance integrity disclosures, on top of the nitrogen-axis, oxygen-probe, glucose-only, viability-kernel + Poincare/averaging, 3rd-wave repair, and restoration revisions) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
+| Manuscript PDF (71 pp, + fifth-axis/arginine-symmetry revision: prop:keio-iron + rem:keio-iron-invariance -- the trace-metal axis closing the supply side across all five classical nutrient classes, the arginine-substitution canonical levels completing the axis x selection table symmetry (25-level table) -- on top of the fourth-axis/canonical-selection revision: prop:keio-phosphate + rem:keio-p-invariance + the canonical-selection subsection with the solver-tolerance integrity disclosures, the nitrogen-axis, oxygen-probe, glucose-only, viability-kernel + Poincare/averaging, 3rd-wave repair, and restoration revisions) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
 | LaTeX source | [scripts/companion_categorical_v3.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v3.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v3.tex) |
 

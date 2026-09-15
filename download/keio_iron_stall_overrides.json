@@ -1,0 +1,14 @@
+{
+  "fe_0.0025": {
+    "ijo": [
+      {
+        "gene_id": "b0887",
+        "csv": "/home/z/my-project/metabolic-curvature-measure/download/keio_iron_stall_fe_0.0025_ijo_b0887.csv",
+        "mu": 0.1556565593674117,
+        "b_ko_plain": 0.1556565593674117,
+        "b_ko_canon": 0.1556565583674117,
+        "note": "GLPK plain-FBA hang (simplex cycling on a degenerate vertex); HiGHS stage-1 / stage-1+2 vertices, E12 KO convention"
+      }
+    ]
+  }
+}

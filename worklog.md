@@ -5784,3 +5784,115 @@ Stage Summary:
   calls found, adjudicated with HiGHS, corrected, and bounded by a
   24,282-comparison cross-check now clean. Frozen lineage
   untouched; audit_v8 226/226 PASS.
+
+---
+Task ID: fifth-axis-argonine-round
+Agent: main (Z.ai)
+Task: User two-part directive: (1) fifth perturbation axis = trace
+metal (iron limitation); (2) run the arginine-substitution levels
+under canonical selection for complete table symmetry; everything
+useful and merited. Repo checked first (clean at 2a5e4c9, confirmed
+in sync with origin via ls-remote; local tracking ref was stale).
+
+Work Log:
+- Pre-screen chose iron over zinc and manganese by data
+  (scripts/fifth_axis_prescreen.py, resumable per block; iron pinned
+  to the single ferrous channel EX_fe2_e with EX_fe3_e closed on
+  iML1515 -- the closure verified to leave WT unchanged to solver
+  noise 3.2e-06). Parsimonious Fe requirement 0.0158 (iJO) / 0.0132
+  (iML); the iron dose response is IDENTICAL on both
+  reconstructions to six decimals (shared quota c_fe = 0.016067;
+  b = fe2/c_fe -- a pure linear biomass-quota scaling); zinc and
+  manganese compress their informative bands to the 1e-4 bound
+  scale (rejected). Levels: iJO {-0.01,-0.005,-0.0025} = 37/68/84%
+  WT reduction; iML {-0.005,-0.0025} = 62/81%; deepest WT 0.156,
+  deliberately above the 0.14 trace-quota tolerance boundary.
+- Iron probe executed (scripts/iron_limited_keio_probe.py; plain +
+  canonical arms per level, E12/E16 conventions, all four sweep
+  arms per-gene checkpointed): labels INVARIANT at every level in
+  both reconstructions (289/289 iJO, 286/286 iML; zero flips;
+  kappa 1.000; strata unchanged). Plain-FBA collapse tracks the
+  degeneracy signature exactly as the N/P axes predicted (PGI
+  at-optimum FVA width 103/162/192 iJO and 139/176 iML vs 0.0 at
+  baseline; parsimonious WT glucose 6.5/3.3/1.7 vs returned-vertex
+  10.0/9.3/5.0; plain r +0.518/+0.303/-0.011 iJO and +0.127/-0.037
+  iML, AUCs down to 0.522); canonical selection restores everywhere
+  (r +0.957/+0.800/+0.913 iJO, +0.843/+0.905 iML; AUC 0.988/0.986;
+  MCC 0.965/0.904; rank corr +0.63..+0.85; labels kappa 1.000 by
+  construction).
+- NEW SOLVER PATHOLOGY found and closed: GLPK simplex CYCLES (hangs)
+  on one degenerate plain LP at the deepest iJO level -- b0887, the
+  ATP-binding component of the cysteine/glutathione ABC exporter
+  (CYSabc2pp/GTHRDabc2pp; non-essential, b_ko = level WT). Settled
+  by the repo's deterministic scipy/HiGHS engine
+  (scripts/iron_stall_override.py: stage-1 plain vertex + stage-1+2
+  min-L1 canonical vertex, E12 KO convention), the row disclosed as
+  an engine substitution in the deposited sweep (engine =
+  highs-stall-override); the probe's sweep functions gained a
+  generic stall-override mechanism wired into all four arms.
+- Integrity scan of the fifth axis (scripts/iron_integrity_scan.py):
+  cross-arm agreement (plain vs canonical b_ko -- both preserve the
+  same optimum) over all five levels = 0 discrepancies in 7,133
+  gene-level comparisons (max |db| 5.95e-08); zero genes in the
+  0.001-0.14 false-viability band on either arm; trace-quota family
+  exactly zero on iJO; 0 corrupted calls (the WT 0.156 level sits
+  between the 0.14 corruption boundary and the 0.23 sufficiency
+  margin -- the one band the phosphate round had not sampled --
+  and is verified clean directly).
+- Arginine canonical controls (scripts/arginine_pfba_control.py;
+  iML arm per-gene checkpointed): arg_-10 on iJO (WT 1.2595,
+  275/1367 essential) canonical r +0.9534 (plain +0.8024), AUC
+  0.9909, MCC 0.9779, rank corr +0.602, kappa 1.0000, objective
+  preserved to 2e-14; on iML (WT 0.9498, 271/1516) canonical r
+  +0.8501 (plain +0.9147), AUC 0.9974, MCC 0.9926, rank corr
+  +0.361, kappa 1.0000. The axis x selection table is now fully
+  symmetric: every level of every axis (limitation + substitution)
+  carries canonical statistics.
+- companion_categorical_v3.tex amended in place (patch G,
+  scripts/companion_v3_patch_g.py, 17 edits): new prop:keio-iron +
+  rem:keio-iron-invariance (five-axis closure; quota purity -- the
+  identical cross-model dose response; the gradient floor set by
+  the 0.14 tolerance arithmetic, not biology); abstract promoted to
+  the five-axis sentence (word-count neutral, 264 < 265);
+  tab:canonical-selection extended 18 -> 25 levels (iron x5 +
+  arginine x2) with the restored range [+0.80,+0.96];
+  sec:canonical-selection gains the fourth feature (substitution-
+  side symmetry: iML canonical +0.850 below the already-valid plain
+  +0.915 with AUC/MCC unchanged-strong -- the declared rule
+  reported uniformly, not cherry-picked) and the iron audit
+  extension; rem:canonical-protocol gains the engine-fallback
+  clause. Also caught and fixed a patch-F RENDERING DEFECT:
+  double-escaped \emph / \S\ref commands in prop:keio-phosphate
+  (bioC/bioF/bioH/fabZ lines) that LaTeX typeset as literal text
+  without errors; verified fixed in the compiled PDF.
+- audit_v9_numbers.py (v8's 226 checks inherited; N-17 / R8-ABS /
+  R8-TAB updated for the five-axis wording; +25 new checks:
+  prescreen/quota-map/fe3, per-level WT/labels/PGI/objpres,
+  table-precision rows, rank corrs, integrity scan, b0887 override
+  row, arginine levels, tex anchors/rows/escapes): 251/251 PASS
+  (one boundary-rounding fix: arg iJO rank-corr claim 0.601 ->
+  0.602 at the artifact's 0.601546).
+- Figures: new iron 4-panel (scripts/iron_figure.py, with the
+  identical iML dose response overlaid); nitrogen 4-panel restored
+  byte-identical to HEAD after the probe-import clobber.
+- Builds: companion 70 -> 71 pp, 0 errors / 0 undefined / 0
+  overfull (iron prop p. 62, remark + subsection p. 63, table
+  p. 64); ZIPs rebuilt + standalone-reverified in a repo-local
+  fresh dir (28 / 71 pp); download PDF, TAC cover letter, links doc
+  refreshed.
+
+Stage Summary:
+- The supply side of the label-invariance claim is closed across
+  ALL FIVE classical nutrient classes (carbon source, electron
+  acceptor, nitrogen, phosphate, iron): zero label flips at up to
+  89% growth reduction, both reconstructions. The iron axis is the
+  purest of the five (identical linear quota map on both models)
+  and replicates the full plain-collapse/canonical-restore pattern
+  at the deepest degeneracy yet recorded (plain r down to -0.037
+  against PGI width 192; canonical +0.905). The axis x selection
+  table is fully symmetric at 25 canonical levels (r in
+  [+0.80,+0.96], AUC >= 0.979, labels kappa 1.000 everywhere).
+  Integrity: the iron round extends the independent-engine audit
+  (7,133-comparison cross-arm scan clean at WT 0.156) and adds the
+  engine-substitution protocol for solver cycling (b0887,
+  disclosed). Frozen lineage untouched; audit_v9 251/251 PASS.

@@ -1,0 +1,657 @@
+{
+  "levels": {
+    "ijo_fe_0.01": {
+      "wild_type_biomass": 0.6226262374694641,
+      "label_threshold": 0.031131311873473205,
+      "n_genes": 1367,
+      "label_disagreements": 0,
+      "cross_arm_max_abs_b_ko_diff": 4.243999207620419e-08,
+      "cross_arm_n_diff_gt_1e-6": 0,
+      "cross_arm_n_diff_gt_1e-9": 1,
+      "cross_arm_top5_diffs": [
+        {
+          "gene_id": "b3059",
+          "b_ko_plain": 0.622626237,
+          "b_ko_canon": 0.62262628,
+          "diff": 4.2e-08
+        },
+        {
+          "gene_id": "b3236",
+          "b_ko_plain": 0.622626237,
+          "b_ko_canon": 0.622626238,
+          "diff": 0.0
+        },
+        {
+          "gene_id": "b0356",
+          "b_ko_plain": 0.622626237,
+          "b_ko_canon": 0.622626237,
+          "diff": 0.0
+        },
+        {
+          "gene_id": "b0173",
+          "b_ko_plain": 0.0,
+          "b_ko_canon": 0.0,
+          "diff": 0.0
+        },
+        {
+          "gene_id": "b0131",
+          "b_ko_plain": 0.0,
+          "b_ko_canon": 0.0,
+          "diff": 0.0
+        }
+      ],
+      "b_ko_census": {
+        "plain": {
+          "exact_zero_lt_1e-9": 289,
+          "tiny_1e-9_to_0p001": 0,
+          "band_0p001_to_0p14": 0,
+          "ge_0p14": 1078
+        },
+        "canon": {
+          "exact_zero_lt_1e-9": 289,
+          "tiny_1e-9_to_0p001": 0,
+          "band_0p001_to_0p14": 0,
+          "ge_0p14": 1078
+        }
+      },
+      "trace_quota_rows": [],
+      "n_trace_quota_nonzero": 0,
+      "n_flagged_for_adjudication": 0
+    },
+    "ijo_fe_0.005": {
+      "wild_type_biomass": 0.31131311873482387,
+      "label_threshold": 0.015565655936741194,
+      "n_genes": 1367,
+      "label_disagreements": 0,
+      "cross_arm_max_abs_b_ko_diff": 5.95367390388013e-08,
+      "cross_arm_n_diff_gt_1e-6": 0,
+      "cross_arm_n_diff_gt_1e-9": 3,
+      "cross_arm_top5_diffs": [
+        {
+          "gene_id": "b3236",
+          "b_ko_plain": 0.311313119,
+          "b_ko_canon": 0.311313059,
+          "diff": 6e-08
+        },
+        {
+          "gene_id": "b3059",
+          "b_ko_plain": 0.311313119,
+          "b_ko_canon": 0.311313086,
+          "diff": 3.3e-08
+        },
+        {
+          "gene_id": "b2794",
+          "b_ko_plain": 0.311313119,
+          "b_ko_canon": 0.311313086,
+          "diff": 3.3e-08
+        },
+        {
+          "gene_id": "b2797",
+          "b_ko_plain": 0.311313119,
+          "b_ko_canon": 0.311313118,
+          "diff": 1e-09
+        },
+        {
+          "gene_id": "b4471",
+          "b_ko_plain": 0.311313119,
+          "b_ko_canon": 0.311313118,
+          "diff": 1e-09
+        }
+      ],
+      "b_ko_census": {
+        "plain": {
+          "exact_zero_lt_1e-9": 289,
+          "tiny_1e-9_to_0p001": 0,
+          "band_0p001_to_0p14": 0,
+          "ge_0p14": 1078
+        },
+        "canon": {
+          "exact_zero_lt_1e-9": 289,
+          "tiny_1e-9_to_0p001": 0,
+          "band_0p001_to_0p14": 0,
+          "ge_0p14": 1078
+        }
+      },
+      "trace_quota_rows": [],
+      "n_trace_quota_nonzero": 0,
+      "n_flagged_for_adjudication": 0
+    },
+    "ijo_fe_0.0025": {
+      "wild_type_biomass": 0.15565655936741263,
+      "label_threshold": 0.007782827968370632,
+      "n_genes": 1367,
+      "label_disagreements": 0,
+      "cross_arm_max_abs_b_ko_diff": 1.6359674614996322e-08,
+      "cross_arm_n_diff_gt_1e-6": 0,
+      "cross_arm_n_diff_gt_1e-9": 2,
+      "cross_arm_top5_diffs": [
+        {
+          "gene_id": "b3059",
+          "b_ko_plain": 0.155656559,
+          "b_ko_canon": 0.155656543,
+          "diff": 1.6e-08
+        },
+        {
+          "gene_id": "b2794",
+          "b_ko_plain": 0.155656559,
+          "b_ko_canon": 0.155656543,
+          "diff": 1.6e-08
+        },
+        {
+          "gene_id": "b0887",
+          "b_ko_plain": 0.155656559,
+          "b_ko_canon": 0.155656558,
+          "diff": 1e-09
+        },
+        {
+          "gene_id": "b2797",
+          "b_ko_plain": 0.155656559,
+          "b_ko_canon": 0.155656559,
+          "diff": 1e-09
+        },
+        {
+          "gene_id": "b4471",
+          "b_ko_plain": 0.155656559,
+          "b_ko_canon": 0.155656559,
+          "diff": 1e-09
+        }
+      ],
+      "b_ko_census": {
+        "plain": {
+          "exact_zero_lt_1e-9": 289,
+          "tiny_1e-9_to_0p001": 0,
+          "band_0p001_to_0p14": 0,
+          "ge_0p14": 1078
+        },
+        "canon": {
+          "exact_zero_lt_1e-9": 289,
+          "tiny_1e-9_to_0p001": 0,
+          "band_0p001_to_0p14": 0,
+          "ge_0p14": 1078
+        }
+      },
+      "trace_quota_rows": [],
+      "n_trace_quota_nonzero": 0,
+      "n_flagged_for_adjudication": 0
+    },
+    "iml_fe_0.005": {
+      "wild_type_biomass": 0.31131311873482337,
+      "label_threshold": 0.015565655936741168,
+      "n_genes": 1516,
+      "label_disagreements": 0,
+      "cross_arm_max_abs_b_ko_diff": 2.463367255912235e-11,
+      "cross_arm_n_diff_gt_1e-6": 0,
+      "cross_arm_n_diff_gt_1e-9": 0,
+      "cross_arm_top5_diffs": [
+        {
+          "gene_id": "b2746",
+          "b_ko_plain": 0.0,
+          "b_ko_canon": 0.0,
+          "diff": 0.0
+        },
+        {
+          "gene_id": "b2615",
+          "b_ko_plain": 0.0,
+          "b_ko_canon": 0.0,
+          "diff": 0.0
+        },
+        {
+          "gene_id": "b0750",
+          "b_ko_plain": 0.0,
+          "b_ko_canon": 0.0,
+          "diff": 0.0
+        },
+        {
+          "gene_id": "b0639",
+          "b_ko_plain": 0.0,
+          "b_ko_canon": 0.0,
+          "diff": 0.0
+        },
+        {
+          "gene_id": "b0425",
+          "b_ko_plain": 0.0,
+          "b_ko_canon": 0.0,
+          "diff": 0.0
+        }
+      ],
+      "b_ko_census": {
+        "plain": {
+          "exact_zero_lt_1e-9": 286,
+          "tiny_1e-9_to_0p001": 0,
+          "band_0p001_to_0p14": 0,
+          "ge_0p14": 1230
+        },
+        "canon": {
+          "exact_zero_lt_1e-9": 286,
+          "tiny_1e-9_to_0p001": 0,
+          "band_0p001_to_0p14": 0,
+          "ge_0p14": 1230
+        }
+      },
+      "trace_quota_rows": [
+        {
+          "gene_id": "b2323",
+          "gene_name": "fabB",
+          "b_ko": -9.234996985586038e-16,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b2232",
+          "gene_name": "ubiG",
+          "b_ko": 0.3113131187348236,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b3843",
+          "gene_name": "ubiD",
+          "b_ko": 1.1950347838395826e-12,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b2265",
+          "gene_name": "menF",
+          "b_ko": 0.3113131187348238,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b2261",
+          "gene_name": "menC",
+          "b_ko": 0.3113131187348234,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b1095",
+          "gene_name": "fabF",
+          "b_ko": 3.150763677435237e-15,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b4040",
+          "gene_name": "ubiA",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b4039",
+          "gene_name": "ubiC",
+          "b_ko": 2.658654104456659e-42,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b1092",
+          "gene_name": "fabD",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b1091",
+          "gene_name": "fabH",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b0778",
+          "gene_name": "bioD",
+          "b_ko": 5.432351167991788e-17,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b0774",
+          "gene_name": "bioA",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b2260",
+          "gene_name": "menE",
+          "b_ko": 0.3113131187348234,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b0954",
+          "gene_name": "fabA",
+          "b_ko": 0.3113131187348234,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b1288",
+          "gene_name": "fabI",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b1093",
+          "gene_name": "fabG",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b3833",
+          "gene_name": "ubiE",
+          "b_ko": 0.3113131187348235,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b3930",
+          "gene_name": "menA",
+          "b_ko": 0.3113131187348235,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b0180",
+          "gene_name": "fabZ",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b0777",
+          "gene_name": "bioC",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b0775",
+          "gene_name": "bioB",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b2263",
+          "gene_name": "menH",
+          "b_ko": 0.3113131187348234,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b2264",
+          "gene_name": "menD",
+          "b_ko": 0.3113131187348234,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b2262",
+          "gene_name": "menB",
+          "b_ko": 0.3113131187348234,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b1686",
+          "gene_name": "menI",
+          "b_ko": 0.3113131187348234,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b0776",
+          "gene_name": "bioF",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b3412",
+          "gene_name": "bioH",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b2907",
+          "gene_name": "ubiH",
+          "b_ko": 0.3113131187348234,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b0662",
+          "gene_name": "ubiF",
+          "b_ko": 0.3113131187348234,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b2906",
+          "gene_name": "ubiI",
+          "b_ko": 0.3113131187348234,
+          "y_essential": 0
+        }
+      ],
+      "n_trace_quota_nonzero": 14,
+      "n_flagged_for_adjudication": 0
+    },
+    "iml_fe_0.0025": {
+      "wild_type_biomass": 0.15565655936741168,
+      "label_threshold": 0.007782827968370584,
+      "n_genes": 1516,
+      "label_disagreements": 0,
+      "cross_arm_max_abs_b_ko_diff": 5.918479595301562e-11,
+      "cross_arm_n_diff_gt_1e-6": 0,
+      "cross_arm_n_diff_gt_1e-9": 0,
+      "cross_arm_top5_diffs": [
+        {
+          "gene_id": "b1761",
+          "b_ko_plain": 0.155656559,
+          "b_ko_canon": 0.155656559,
+          "diff": 0.0
+        },
+        {
+          "gene_id": "b2615",
+          "b_ko_plain": 0.0,
+          "b_ko_canon": 0.0,
+          "diff": 0.0
+        },
+        {
+          "gene_id": "b0142",
+          "b_ko_plain": -0.0,
+          "b_ko_canon": 0.0,
+          "diff": 0.0
+        },
+        {
+          "gene_id": "b0131",
+          "b_ko_plain": 0.0,
+          "b_ko_canon": 0.0,
+          "diff": 0.0
+        },
+        {
+          "gene_id": "b0639",
+          "b_ko_plain": 0.0,
+          "b_ko_canon": 0.0,
+          "diff": 0.0
+        }
+      ],
+      "b_ko_census": {
+        "plain": {
+          "exact_zero_lt_1e-9": 286,
+          "tiny_1e-9_to_0p001": 0,
+          "band_0p001_to_0p14": 0,
+          "ge_0p14": 1230
+        },
+        "canon": {
+          "exact_zero_lt_1e-9": 286,
+          "tiny_1e-9_to_0p001": 0,
+          "band_0p001_to_0p14": 0,
+          "ge_0p14": 1230
+        }
+      },
+      "trace_quota_rows": [
+        {
+          "gene_id": "b2323",
+          "gene_name": "fabB",
+          "b_ko": -5.432351167991789e-17,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b2232",
+          "gene_name": "ubiG",
+          "b_ko": 0.1556565593674118,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b3843",
+          "gene_name": "ubiD",
+          "b_ko": 3.856789625780793e-42,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b2265",
+          "gene_name": "menF",
+          "b_ko": 0.1556565593674117,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b2261",
+          "gene_name": "menC",
+          "b_ko": 0.1556565593674118,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b1095",
+          "gene_name": "fabF",
+          "b_ko": 5.4323511679917906e-17,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b4040",
+          "gene_name": "ubiA",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b4039",
+          "gene_name": "ubiC",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b1092",
+          "gene_name": "fabD",
+          "b_ko": 6.865655792112896e-16,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b1091",
+          "gene_name": "fabH",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b0778",
+          "gene_name": "bioD",
+          "b_ko": 5.432351167991789e-17,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b0774",
+          "gene_name": "bioA",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b2260",
+          "gene_name": "menE",
+          "b_ko": 0.1556565593674117,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b0954",
+          "gene_name": "fabA",
+          "b_ko": 0.1556565593674117,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b1288",
+          "gene_name": "fabI",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b1093",
+          "gene_name": "fabG",
+          "b_ko": -3.439520155474597e-17,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b3833",
+          "gene_name": "ubiE",
+          "b_ko": 0.1556565593674117,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b3930",
+          "gene_name": "menA",
+          "b_ko": 0.1556565593674117,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b0180",
+          "gene_name": "fabZ",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b0777",
+          "gene_name": "bioC",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b0775",
+          "gene_name": "bioB",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b2263",
+          "gene_name": "menH",
+          "b_ko": 0.1556565593674118,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b2264",
+          "gene_name": "menD",
+          "b_ko": 0.1556565593674118,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b2262",
+          "gene_name": "menB",
+          "b_ko": 0.1556565593674118,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b1686",
+          "gene_name": "menI",
+          "b_ko": 0.1556565593674118,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b0776",
+          "gene_name": "bioF",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b3412",
+          "gene_name": "bioH",
+          "b_ko": 0.0,
+          "y_essential": 1
+        },
+        {
+          "gene_id": "b2907",
+          "gene_name": "ubiH",
+          "b_ko": 0.1556565593674118,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b0662",
+          "gene_name": "ubiF",
+          "b_ko": 0.1556565593674117,
+          "y_essential": 0
+        },
+        {
+          "gene_id": "b2906",
+          "gene_name": "ubiI",
+          "b_ko": 0.1556565593674117,
+          "y_essential": 0
+        }
+      ],
+      "n_trace_quota_nonzero": 14,
+      "n_flagged_for_adjudication": 0
+    }
+  },
+  "note": "Cross-arm agreement exploits objective preservation: plain FBA and pFBA return the same optimal growth, so per-gene b_ko must match across the deposited plain and canonical sweeps.  HiGHS re-adjudication uses the repo's deterministic split-variable engine (scripts/lp_engine.py)."
+}

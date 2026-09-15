@@ -47,24 +47,32 @@ four layers, each stated with its proof status explicitly labeled:
    cross-rebuild arms, with a disclosed medium audit, its
    glucose-only re-run: both in-silico essentiality sets invariant,
    every rank-level association strengthened, and the negative
-   cross-rebuild verdict reversed as a medium artifact; three
+   cross-rebuild verdict reversed as a medium artifact; four
    further perturbation probes extending the label-invariance
-   claim across the oxygen, nitrogen, and phosphate axes -- the
+   claim across the oxygen, nitrogen, phosphate, and iron axes -- the
    labels invariant under supply limitations up to a four-fold
    oxygen reduction and 89% growth reduction in both
-   reconstructions, re-stratifying only at the anaerobic regime
+   reconstructions (84% under iron limitation, the trace-metal
+   axis, whose dose response is identical on the two reconstructions
+   through a shared biomass quota), re-stratifying only at the
+   anaerobic regime
    switch (six glycolysis gains, no losses) and at
    nitrogen-source substitution (losses confined to the rewired
    assimilation module, every rescue substitution-mediated); the
    reported association statistics homogenized under canonical
    (parsimonious) vertex selection -- under which the association
-   is invariant at every level of every axis and across the
-   anaerobic switch itself (r in [+0.87, +0.95], held-out AUC at
+   is invariant at every level of every axis, including the
+   substitution levels run under the same rule for complete table
+   symmetry, and across the
+   anaerobic switch itself (r in [+0.80, +0.96], held-out AUC at
    or above 0.979) -- with the plain-FBA collapses diagnosed as
    flux-solution degeneracy by at-optimum variability analysis;
-   and an independent-engine audit (24,282 gene-level comparisons)
+   and an independent-engine audit (24,282 gene-level comparisons,
+   plus a 7,133-comparison cross-arm scan of the iron levels)
    that surfaced and corrected eight solver-tolerance artifacts in
-   trace-quota essentiality calls, with the corrected label sets
+   trace-quota essentiality calls -- with one GLPK simplex hang at
+   a degenerate optimum disclosed and settled by the same
+   independent engine -- and the corrected label sets
    invariant throughout); its
    viability-kernel reading as a finite-time, feedback-certifying
    probe of kernel and capture-basin membership (with the Nagumo

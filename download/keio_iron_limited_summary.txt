@@ -1,0 +1,19 @@
+FIFTH PERTURBATION AXIS: IRON-LIMITED MEDIUM
+Trace-metal supply axis (iJO1366 + iML1515, iron only via EX_fe2_e)
+==============================================================================
+Baseline: glucose-only corrected medium (trehalose closed), Fe unlimited. Probe: EX_fe2_e bound (EX_fe3_e closed; single-channel iron).
+Levels chosen by pre-screen (parsimonious requirement 0.0158 iJO / 0.0132 iML; identical linear quota map b = fe2/0.016067 on both reconstructions):
+  iJO1366: -0.01, -0.005, -0.0025 (37% / 68% / 84% WT reduction)
+  iML1515: -0.005, -0.0025 (62% / 81% WT reduction)
+Zinc and manganese rejected by the pre-screen (compressed informative bands at the 1e-4 bound scale).
+
+iJO1366 baseline: WT 0.9824, 289/1367 essential, plain r = +0.6034
+             canonical r = +0.9452 (AUC 1.0000)
+Fe =   -0.01: WT 0.6226 (-37%); labels 289 -> 289 (+0 / -0, kappa 1.0000); plain r = +0.5181 / AUC 0.8658; canonical r = +0.9569 / AUC 0.9877 / MCC 0.9649; PGI FVA width 102.834
+Fe =  -0.005: WT 0.3113 (-68%); labels 289 -> 289 (+0 / -0, kappa 1.0000); plain r = +0.3026 / AUC 0.7377; canonical r = +0.8003 / AUC 0.9877 / MCC 0.9649; PGI FVA width 162.017
+Fe = -0.0025: WT 0.1557 (-84%); labels 289 -> 289 (+0 / -0, kappa 1.0000); plain r = -0.0110 / AUC 0.5225; canonical r = +0.9132 / AUC 0.9877 / MCC 0.9516; PGI FVA width 191.608
+
+iML1515 Fe = -0.005: WT 0.3113; labels 286 -> 286 (+0 / -0, kappa 1.0000); plain r = +0.1268 / AUC 0.5789; canonical r = +0.8434 / AUC 0.9864
+iML1515 Fe = -0.0025: WT 0.1557; labels 286 -> 286 (+0 / -0, kappa 1.0000); plain r = -0.0370 / AUC 0.5774; canonical r = +0.9052 / AUC 0.9864
+
+Flip details (iJO):

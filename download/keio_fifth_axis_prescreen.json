@@ -1,0 +1,676 @@
+{
+  "iJO1366_iron_exchange_inventory": {
+    "EX_arbtn_fe3_e": [
+      0.0,
+      1000.0
+    ],
+    "EX_fe2_e": [
+      -1000.0,
+      1000.0
+    ],
+    "EX_fe3_e": [
+      -1000.0,
+      1000.0
+    ],
+    "EX_fe3dcit_e": [
+      0.0,
+      1000.0
+    ],
+    "EX_fe3dhbzs_e": [
+      0.0,
+      1000.0
+    ],
+    "EX_fe3hox_e": [
+      0.0,
+      1000.0
+    ],
+    "EX_fe3hox_un_e": [
+      0.0,
+      1000.0
+    ],
+    "EX_fecrm_e": [
+      0.0,
+      1000.0
+    ],
+    "EX_fecrm_un_e": [
+      0.0,
+      1000.0
+    ],
+    "EX_feenter_e": [
+      0.0,
+      1000.0
+    ],
+    "EX_feoxam_e": [
+      0.0,
+      1000.0
+    ],
+    "EX_feoxam_un_e": [
+      0.0,
+      1000.0
+    ]
+  },
+  "iJO1366_iron": {
+    "axis_exchange": "EX_fe2_e",
+    "levels": {
+      "-0.1": {
+        "biomass": 0.982372,
+        "reduction_pct": 0.0,
+        "uptake": 0.01578
+      },
+      "-0.05": {
+        "biomass": 0.982372,
+        "reduction_pct": 0.0,
+        "uptake": 0.01578
+      },
+      "-0.025": {
+        "biomass": 0.982372,
+        "reduction_pct": 0.0,
+        "uptake": 0.01578
+      },
+      "-0.01": {
+        "biomass": 0.622626,
+        "reduction_pct": 36.6,
+        "uptake": 0.01,
+        "pfba_glc_uptake": 6.484,
+        "raw_glc_uptake": 7.814,
+        "pfba_axis_uptake": 0.01,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 3.614,
+          "EX_ac_e": 12.105,
+          "EX_for_e": 34.442,
+          "EX_etoh_e": 7.885,
+          "EX_o2_e": 12.074,
+          "PGI": 102.834,
+          "CS": 47.454,
+          "PPCK": 44.116,
+          "G6PDH2r": 40.549
+        },
+        "fva_PGI_width": 102.834
+      },
+      "-0.005": {
+        "biomass": 0.311313,
+        "reduction_pct": 68.3,
+        "uptake": 0.005,
+        "pfba_glc_uptake": 3.308,
+        "raw_glc_uptake": 9.32,
+        "pfba_axis_uptake": 0.005,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 6.741,
+          "EX_ac_e": 20.717,
+          "EX_for_e": 47.221,
+          "EX_etoh_e": 14.704,
+          "EX_o2_e": 18.613,
+          "PGI": 162.017,
+          "CS": 77.152,
+          "PPCK": 75.483,
+          "G6PDH2r": 55.748
+        },
+        "fva_PGI_width": 162.017
+      },
+      "-0.0025": {
+        "biomass": 0.155657,
+        "reduction_pct": 84.2,
+        "uptake": 0.0025,
+        "pfba_glc_uptake": 1.72,
+        "raw_glc_uptake": 5.08,
+        "pfba_axis_uptake": 0.0025,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 8.305,
+          "EX_ac_e": 24.905,
+          "EX_for_e": 53.611,
+          "EX_etoh_e": 17.751,
+          "EX_o2_e": 20.0,
+          "PGI": 191.608,
+          "CS": 92.001,
+          "PPCK": 91.166,
+          "G6PDH2r": 62.674
+        },
+        "fva_PGI_width": 191.608
+      },
+      "-0.001": {
+        "biomass": 0.062263,
+        "reduction_pct": 93.7,
+        "uptake": 0.001,
+        "pfba_glc_uptake": 0.767,
+        "raw_glc_uptake": 2.536,
+        "pfba_axis_uptake": 0.001,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 9.243,
+          "EX_ac_e": 27.418,
+          "EX_for_e": 57.444,
+          "EX_etoh_e": 19.1,
+          "EX_o2_e": 20.0,
+          "PGI": 209.363,
+          "CS": 100.91,
+          "PPCK": 100.577,
+          "G6PDH2r": 66.83
+        },
+        "fva_PGI_width": 209.363
+      },
+      "-0.0005": {
+        "biomass": 0.031131,
+        "reduction_pct": 96.8,
+        "uptake": 0.0005,
+        "pfba_glc_uptake": 0.45,
+        "raw_glc_uptake": 1.688,
+        "pfba_axis_uptake": 0.0005,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 9.556,
+          "EX_ac_e": 28.256,
+          "EX_for_e": 58.722,
+          "EX_etoh_e": 19.55,
+          "EX_o2_e": 20.0,
+          "PGI": 215.282,
+          "CS": 103.88,
+          "PPCK": 103.713,
+          "G6PDH2r": 68.215
+        },
+        "fva_PGI_width": 215.282
+      }
+    },
+    "baseline_biomass": 0.982372,
+    "baseline_unlimited_uptake_plain": 0.0158,
+    "baseline_unlimited_uptake_pfba": 0.01578
+  },
+  "iJO1366_zinc": {
+    "axis_exchange": "EX_zn2_e",
+    "levels": {
+      "-0.01": {
+        "biomass": 0.982372,
+        "reduction_pct": 0.0,
+        "uptake": 0.00033
+      },
+      "-0.005": {
+        "biomass": 0.982372,
+        "reduction_pct": 0.0,
+        "uptake": 0.00033
+      },
+      "-0.0025": {
+        "biomass": 0.982372,
+        "reduction_pct": 0.0,
+        "uptake": 0.00033
+      },
+      "-0.001": {
+        "biomass": 0.982372,
+        "reduction_pct": 0.0,
+        "uptake": 0.00033
+      },
+      "-0.0005": {
+        "biomass": 0.982372,
+        "reduction_pct": 0.0,
+        "uptake": 0.00033
+      },
+      "-0.00025": {
+        "biomass": 0.733138,
+        "reduction_pct": 25.4,
+        "uptake": 0.00025,
+        "pfba_glc_uptake": 7.612,
+        "raw_glc_uptake": 8.61,
+        "pfba_axis_uptake": 0.00025,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 2.504,
+          "EX_ac_e": 8.908,
+          "EX_for_e": 27.612,
+          "EX_etoh_e": 5.463,
+          "EX_o2_e": 9.476,
+          "PGI": 81.825,
+          "CS": 36.912,
+          "PPCK": 32.981,
+          "G6PDH2r": 34.389
+        },
+        "fva_PGI_width": 81.825
+      },
+      "-0.0001": {
+        "biomass": 0.293255,
+        "reduction_pct": 70.1,
+        "uptake": 0.0001,
+        "pfba_glc_uptake": 3.124,
+        "raw_glc_uptake": 8.828,
+        "pfba_axis_uptake": 0.0001,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 6.923,
+          "EX_ac_e": 21.203,
+          "EX_for_e": 47.962,
+          "EX_etoh_e": 15.089,
+          "EX_o2_e": 18.975,
+          "PGI": 165.45,
+          "CS": 78.875,
+          "PPCK": 77.302,
+          "G6PDH2r": 56.552
+        },
+        "fva_PGI_width": 165.45
+      }
+    },
+    "baseline_biomass": 0.982372,
+    "baseline_unlimited_uptake_plain": 0.0003,
+    "baseline_unlimited_uptake_pfba": 0.00033
+  },
+  "iJO1366_manganese": {
+    "axis_exchange": "EX_mn2_e",
+    "levels": {
+      "-0.01": {
+        "biomass": 0.982372,
+        "reduction_pct": 0.0,
+        "uptake": 0.00068
+      },
+      "-0.005": {
+        "biomass": 0.982372,
+        "reduction_pct": 0.0,
+        "uptake": 0.00068
+      },
+      "-0.0025": {
+        "biomass": 0.982372,
+        "reduction_pct": 0.0,
+        "uptake": 0.00068
+      },
+      "-0.001": {
+        "biomass": 0.982372,
+        "reduction_pct": 0.0,
+        "uptake": 0.00068
+      },
+      "-0.0005": {
+        "biomass": 0.723589,
+        "reduction_pct": 26.3,
+        "uptake": 0.0005,
+        "pfba_glc_uptake": 7.514,
+        "raw_glc_uptake": 7.531,
+        "pfba_axis_uptake": 0.0005,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 2.6,
+          "EX_ac_e": 9.199,
+          "EX_for_e": 28.629,
+          "EX_etoh_e": 5.672,
+          "EX_o2_e": 9.7,
+          "PGI": 83.64,
+          "CS": 37.823,
+          "PPCK": 33.943,
+          "G6PDH2r": 34.929
+        },
+        "fva_PGI_width": 83.64
+      },
+      "-0.00025": {
+        "biomass": 0.361795,
+        "reduction_pct": 63.2,
+        "uptake": 0.00025,
+        "pfba_glc_uptake": 3.823,
+        "raw_glc_uptake": 10.0,
+        "pfba_axis_uptake": 0.00025,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 6.234,
+          "EX_ac_e": 19.356,
+          "EX_for_e": 45.149,
+          "EX_etoh_e": 13.602,
+          "EX_o2_e": 17.6,
+          "PGI": 152.42,
+          "CS": 72.336,
+          "PPCK": 70.396,
+          "G6PDH2r": 53.502
+        },
+        "fva_PGI_width": 152.42
+      },
+      "-0.0001": {
+        "biomass": 0.144718,
+        "reduction_pct": 85.3,
+        "uptake": 0.0001,
+        "pfba_glc_uptake": 1.608,
+        "raw_glc_uptake": 4.782,
+        "pfba_axis_uptake": 0.0001,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 8.415,
+          "EX_ac_e": 25.2,
+          "EX_for_e": 54.06,
+          "EX_etoh_e": 17.909,
+          "EX_o2_e": 20.0,
+          "PGI": 193.688,
+          "CS": 93.045,
+          "PPCK": 92.269,
+          "G6PDH2r": 63.161
+        },
+        "fva_PGI_width": 193.688
+      }
+    },
+    "baseline_biomass": 0.982372,
+    "baseline_unlimited_uptake_plain": 0.0007,
+    "baseline_unlimited_uptake_pfba": 0.00068
+  },
+  "iML1515_fe3_closed_check": {
+    "wt_fe3_open": 0.821798,
+    "wt_fe3_closed": 0.821795,
+    "abs_diff": 3.195e-06,
+    "note": "diff is simplex vertex noise on a degenerate optimum (both iron channels effectively unlimited); the fe3-closed medium is the iron-axis convention",
+    "iron_exchanges_after_closing": {
+      "EX_fe3_e": [
+        0,
+        1000.0
+      ],
+      "EX_fe2_e": [
+        -10,
+        1000.0
+      ],
+      "EX_fe3dcit_e": [
+        0,
+        1000.0
+      ],
+      "EX_fe3hox_e": [
+        0,
+        1000.0
+      ],
+      "EX_fecrm_e": [
+        0,
+        1000.0
+      ],
+      "EX_feenter_e": [
+        0,
+        1000.0
+      ],
+      "EX_feoxam_e": [
+        0,
+        1000.0
+      ],
+      "EX_arbtn_fe3_e": [
+        0,
+        1000.0
+      ],
+      "EX_fe3hox_un_e": [
+        0,
+        1000.0
+      ],
+      "EX_fecrm_un_e": [
+        0,
+        1000.0
+      ],
+      "EX_fe3dhbzs_e": [
+        0,
+        1000.0
+      ],
+      "EX_feoxam_un_e": [
+        0,
+        1000.0
+      ]
+    }
+  },
+  "iML1515_iron": {
+    "axis_exchange": "EX_fe2_e",
+    "levels": {
+      "-0.1": {
+        "biomass": 0.821795,
+        "reduction_pct": 0.0,
+        "uptake": 0.0132
+      },
+      "-0.05": {
+        "biomass": 0.821795,
+        "reduction_pct": 0.0,
+        "uptake": 0.0132
+      },
+      "-0.025": {
+        "biomass": 0.821795,
+        "reduction_pct": 0.0,
+        "uptake": 0.0132
+      },
+      "-0.01": {
+        "biomass": 0.622626,
+        "reduction_pct": 24.2,
+        "uptake": 0.01,
+        "pfba_glc_uptake": 7.281,
+        "raw_glc_uptake": 9.768,
+        "pfba_axis_uptake": 0.01,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 2.818,
+          "EX_ac_e": 10.205,
+          "EX_for_e": 31.112,
+          "EX_etoh_e": 6.147,
+          "EX_o2_e": 7.294,
+          "PGI": 64.596,
+          "CS": 28.336,
+          "PPCK": 24.997,
+          "G6PDH2r": 30.861
+        },
+        "fva_PGI_width": 64.596
+      },
+      "-0.005": {
+        "biomass": 0.311313,
+        "reduction_pct": 62.1,
+        "uptake": 0.005,
+        "pfba_glc_uptake": 3.783,
+        "raw_glc_uptake": 9.833,
+        "pfba_axis_uptake": 0.005,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 6.266,
+          "EX_ac_e": 19.788,
+          "EX_for_e": 47.222,
+          "EX_etoh_e": 13.671,
+          "EX_o2_e": 16.076,
+          "PGI": 139.188,
+          "CS": 65.738,
+          "PPCK": 64.068,
+          "G6PDH2r": 50.916
+        },
+        "fva_PGI_width": 139.188
+      },
+      "-0.0025": {
+        "biomass": 0.155657,
+        "reduction_pct": 81.1,
+        "uptake": 0.0025,
+        "pfba_glc_uptake": 2.035,
+        "raw_glc_uptake": 5.54,
+        "pfba_axis_uptake": 0.0025,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 7.99,
+          "EX_ac_e": 24.297,
+          "EX_for_e": 53.611,
+          "EX_etoh_e": 17.421,
+          "EX_o2_e": 19.578,
+          "PGI": 176.484,
+          "CS": 84.439,
+          "PPCK": 83.604,
+          "G6PDH2r": 58.625
+        },
+        "fva_PGI_width": 176.484
+      },
+      "-0.001": {
+        "biomass": 0.062263,
+        "reduction_pct": 92.4,
+        "uptake": 0.001,
+        "pfba_glc_uptake": 0.989,
+        "raw_glc_uptake": 2.964,
+        "pfba_axis_uptake": 0.001,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 9.022,
+          "EX_ac_e": 26.996,
+          "EX_for_e": 57.444,
+          "EX_etoh_e": 19.1,
+          "EX_o2_e": 20.0,
+          "PGI": 198.862,
+          "CS": 95.66,
+          "PPCK": 95.326,
+          "G6PDH2r": 63.25
+        },
+        "fva_PGI_width": 198.862
+      },
+      "-0.0005": {
+        "biomass": 0.031131,
+        "reduction_pct": 96.2,
+        "uptake": 0.0005,
+        "pfba_glc_uptake": 0.64,
+        "raw_glc_uptake": 2.106,
+        "pfba_axis_uptake": 0.0005,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 9.365,
+          "EX_ac_e": 27.896,
+          "EX_for_e": 58.722,
+          "EX_etoh_e": 19.55,
+          "EX_o2_e": 20.0,
+          "PGI": 206.321,
+          "CS": 99.4,
+          "PPCK": 99.233,
+          "G6PDH2r": 64.792
+        },
+        "fva_PGI_width": 206.321
+      }
+    },
+    "baseline_biomass": 0.821795,
+    "baseline_unlimited_uptake_plain": 0.0132,
+    "baseline_unlimited_uptake_pfba": 0.0132
+  },
+  "iML1515_zinc": {
+    "axis_exchange": "EX_zn2_e",
+    "levels": {
+      "-0.01": {
+        "biomass": 0.821798,
+        "reduction_pct": 0.0,
+        "uptake": 0.00028
+      },
+      "-0.005": {
+        "biomass": 0.821798,
+        "reduction_pct": 0.0,
+        "uptake": 0.00028
+      },
+      "-0.0025": {
+        "biomass": 0.821798,
+        "reduction_pct": 0.0,
+        "uptake": 0.00028
+      },
+      "-0.001": {
+        "biomass": 0.821798,
+        "reduction_pct": 0.0,
+        "uptake": 0.00028
+      },
+      "-0.0005": {
+        "biomass": 0.821798,
+        "reduction_pct": 0.0,
+        "uptake": 0.00028
+      },
+      "-0.00025": {
+        "biomass": 0.733138,
+        "reduction_pct": 10.8,
+        "uptake": 0.00025,
+        "pfba_glc_uptake": 8.522,
+        "raw_glc_uptake": 10.0,
+        "pfba_axis_uptake": 0.00025,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 1.593,
+          "EX_ac_e": 5.884,
+          "EX_for_e": 18.165,
+          "EX_etoh_e": 3.477,
+          "EX_o2_e": 3.424,
+          "PGI": 38.119,
+          "CS": 15.06,
+          "PPCK": 11.127,
+          "G6PDH2r": 19.933
+        },
+        "fva_PGI_width": 38.119
+      },
+      "-0.0001": {
+        "biomass": 0.293255,
+        "reduction_pct": 64.3,
+        "uptake": 0.0001,
+        "pfba_glc_uptake": 3.58,
+        "raw_glc_uptake": 10.0,
+        "pfba_axis_uptake": 0.0001,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 6.466,
+          "EX_ac_e": 20.313,
+          "EX_for_e": 47.963,
+          "EX_etoh_e": 14.107,
+          "EX_o2_e": 16.538,
+          "PGI": 143.516,
+          "CS": 67.908,
+          "PPCK": 66.335,
+          "G6PDH2r": 51.811
+        },
+        "fva_PGI_width": 143.516
+      }
+    },
+    "baseline_biomass": 0.821798,
+    "baseline_unlimited_uptake_plain": 0.0003,
+    "baseline_unlimited_uptake_pfba": 0.00028
+  },
+  "iML1515_manganese": {
+    "axis_exchange": "EX_mn2_e",
+    "levels": {
+      "-0.01": {
+        "biomass": 0.821798,
+        "reduction_pct": 0.0,
+        "uptake": 0.00057
+      },
+      "-0.005": {
+        "biomass": 0.821798,
+        "reduction_pct": 0.0,
+        "uptake": 0.00057
+      },
+      "-0.0025": {
+        "biomass": 0.821798,
+        "reduction_pct": 0.0,
+        "uptake": 0.00057
+      },
+      "-0.001": {
+        "biomass": 0.821798,
+        "reduction_pct": 0.0,
+        "uptake": 0.00057
+      },
+      "-0.0005": {
+        "biomass": 0.723589,
+        "reduction_pct": 12.0,
+        "uptake": 0.0005,
+        "pfba_glc_uptake": 8.415,
+        "raw_glc_uptake": 10.0,
+        "pfba_axis_uptake": 0.0005,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 1.699,
+          "EX_ac_e": 6.274,
+          "EX_for_e": 19.284,
+          "EX_etoh_e": 3.707,
+          "EX_o2_e": 3.793,
+          "PGI": 40.407,
+          "CS": 16.207,
+          "PPCK": 12.326,
+          "G6PDH2r": 20.944
+        },
+        "fva_PGI_width": 40.407
+      },
+      "-0.00025": {
+        "biomass": 0.361795,
+        "reduction_pct": 56.0,
+        "uptake": 0.00025,
+        "pfba_glc_uptake": 4.35,
+        "raw_glc_uptake": 10.0,
+        "pfba_axis_uptake": 0.00025,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 5.707,
+          "EX_ac_e": 18.322,
+          "EX_for_e": 45.15,
+          "EX_etoh_e": 12.451,
+          "EX_o2_e": 14.786,
+          "PGI": 127.093,
+          "CS": 59.673,
+          "PPCK": 57.733,
+          "G6PDH2r": 48.403
+        },
+        "fva_PGI_width": 127.093
+      },
+      "-0.0001": {
+        "biomass": 0.144718,
+        "reduction_pct": 82.4,
+        "uptake": 0.0001,
+        "pfba_glc_uptake": 1.912,
+        "raw_glc_uptake": 5.6,
+        "pfba_axis_uptake": 0.0001,
+        "fva_widths_excl_ACKr": {
+          "EX_glc__D_e": 8.111,
+          "EX_ac_e": 24.613,
+          "EX_for_e": 54.06,
+          "EX_etoh_e": 17.676,
+          "EX_o2_e": 19.792,
+          "PGI": 179.105,
+          "CS": 85.753,
+          "PPCK": 84.977,
+          "G6PDH2r": 59.167
+        },
+        "fva_PGI_width": 179.105
+      }
+    },
+    "baseline_biomass": 0.821798,
+    "baseline_unlimited_uptake_plain": 0.0006,
+    "baseline_unlimited_uptake_pfba": 0.00057
+  }
+}
