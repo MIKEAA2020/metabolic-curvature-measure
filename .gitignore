@@ -37,3 +37,6 @@ scripts/__pycache__/
 scripts/nitrogen_probe.log
 scripts/o2_pfba_control.log
 scripts/zipcheck_v4/
+# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v5.sh)
+scripts/overleaf_stage_v5/
+scripts/zipcheck_v5/
