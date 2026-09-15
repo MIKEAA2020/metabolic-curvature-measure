@@ -74,8 +74,10 @@ four layers, each stated with its proof status explicitly labeled:
    refined -- wild-type uniqueness is no license for plain-FBA
    readings -- and the canonical rule's own boundary measured:
    near-tied parsimony optima on one reconstruction's extreme
-   maintenance level, decorrelating the transitive statistic
-   without touching the essentiality ranking); and an
+   maintenance level, making the transitive statistic
+   solver-path-dependent (measured engine bracket [+0.475,
+   +0.943]; a stateless second engine restores it) while the
+   essentiality ranking stays engine-invariant); and an
    independent-engine audit (24,282 gene-level comparisons, a
    7,133-comparison cross-arm scan of the iron levels, and the
    six-call ATPM-endpoint adjudication) that surfaced and

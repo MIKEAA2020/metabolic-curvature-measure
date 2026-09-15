@@ -1,0 +1,19 @@
+{
+  "model": "iML1515",
+  "level": "nh4_-2.5 (EX_nh4_e lb -2.5)",
+  "wild_type_biomass": 0.23148330334080713,
+  "fva_widths": {
+    "EX_glc__D_e": 7.1501,
+    "EX_ac_e": 22.1063,
+    "EX_for_e": 50.4987,
+    "EX_etoh_e": 15.6002,
+    "EX_o2_e": 18.0919,
+    "PGI": 158.3162,
+    "CS": 75.3292,
+    "ACKr": 149.7549,
+    "PPCK": 74.0876,
+    "G6PDH2r": 54.8698
+  },
+  "PGI_width": 158.3162,
+  "note": "the one previously unrecorded supply-axis PGI width; certifies the manuscript range 45-201 (max deposited 201.492, iJO1366 phosphate -0.1)"
+}

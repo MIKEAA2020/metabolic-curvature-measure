@@ -5350,8 +5350,8 @@ partly for free with organic-acid secretion) before hard
 infeasibility --- ATPM is selected, and the axis carries a
 structural property no supply axis has: \emph{zero} wild-type
 carbon-sector degeneracy, phosphoglucose-isomerase at-optimum
-variability $0.0$ at every level in both models against $45$--$202$
-on every supply level. Levels $\{40,60,80,100\}$ (iJO1366) and
+variability $0.0$ at every level in both models against $45$--$201$
+at every nitrogen-, phosphate-, and iron-limited level. Levels $\{40,60,80,100\}$ (iJO1366) and
 $\{60,80,100\}$ (iML1515) drop the wild-type optima from $0.982$ to
 $0.695$, $0.496$, $0.298$, $0.099$ and from $0.822$ to $0.398$,
 $0.239$, $0.080$. The labels re-stratify in one direction only:
@@ -5375,11 +5375,14 @@ above the baseline $+0.603$ --- and collapses only at the $-90\%$
 endpoints: $r=+0.444$ (iJO1366), $+0.244$ with held-out AUC
 $0.550$ (iML1515). Canonical selection restores the endpoint fully
 on iJO1366 ($r=+0.937$, AUC $0.991$, MCC $0.974$; moderate levels
-$+0.969$, $+0.949$, $+0.964$) and restores the ranking separation
-but not the transitive correlation on iML1515 ($r=+0.703$,
-$+0.655$, $+0.475$; AUC $0.992$, $0.992$, $0.978$; labels
-$\kappa=1.000$ at every level) --- the near-tie boundary of
-Remark~\ref{rem:canonical-protocol}. Since the wild-type optimum is
+$+0.969$, $+0.949$, $+0.964$) and on iML1515 restores the ranking
+separation at every level (AUC $0.992$, $0.992$, $0.978$; labels
+$\kappa=1.000$) while the transitive correlation on the deposited
+simplex path reads $r=+0.703$, $+0.655$, $+0.475$ --- the near-tie
+boundary of Remark~\ref{rem:canonical-protocol}, where a stateless
+second engine resolves the near-tie consistently and restores the
+same statistic to $+0.952$, $+0.968$, $+0.943$ (labels unchanged at
+$\kappa=1.000$; maximum biomass discrepancy $9\times10^{-8}$). Since the wild-type optimum is
 unique at every level on this axis, the plain endpoint collapse
 establishes that wild-level flux-variability width is a sufficient
 but not necessary indicator: the operative mechanism is per-knockout
@@ -5483,7 +5486,10 @@ calibration; $r$ is the Pearson
 coefficient of $\log\kappa^{\mathrm{flux}}_V$ against $\Delta b$,
 AUC/MCC the held-out $70/30$ logistic). Labels agree with the plain
 sweeps at $\kappa=1.000$ at every level (after the
-solver-tolerance corrections below). Under canonical selection the
+solver-tolerance corrections below); the iML1515 maintenance rows'
+canonical $r$ is the deposited simplex path's realization, the
+stateless second engine reading $+0.952$, $+0.968$, $+0.943$
+(Remark~\ref{rem:canonical-protocol}). Under canonical selection the
 association is the invariant object at every level of every axis ---
 including across the anaerobic regime switch, where the plain
 reading collapses ($+0.258 \to +0.949$) and only the labels
@@ -5526,21 +5532,35 @@ plain FBA is strong at moderate stress (above the baseline), and
 the collapse appears only at the near-zero-biomass endpoints ---
 so wild-level variability width is a sufficient but not necessary
 indicator, the operative mechanism being per-knockout vertex
-instability --- and the axis adds the one corner where canonical
-selection is only partially sufficient: at elevated maintenance
-demand the iML1515 parsimony stage itself carries \emph{near-tied}
-optima (vertices $\approx200$ apart in the squared-flux metric
-whose $L_1$ objectives differ by $8.6\times10^{-4}$ absolute,
-$1.2\times10^{-6}$ relative --- within the simplex optimality
-tolerance), so the returned canonical vertex is solver-path
-dependent: $782$ of $1{,}129$ compensable knockouts record the
-near-tie floor $kV\approx200.01$ while the rest sit at $kV\approx0$
-(supply axes carry no floor; compensable medians $0.00$--$0.10$).
-The floor decorrelates the transitive statistic on iML1515
-($r$ caps near $+0.48$) without touching the essentiality ranking
-(AUC $0.978$, labels $\kappa=1.000$ at every level): canonical
-selection is necessary everywhere and sufficient precisely where
-the parsimony stage is discriminating.
+instability --- and the axis adds the one corner where the
+canonical vertex itself is only weakly determined: at elevated
+maintenance demand the iML1515 parsimony stage itself carries
+\emph{near-tied} optima (vertices $\approx200$ apart in the
+squared-flux metric whose $L_1$ objectives differ by
+$8.6\times10^{-4}$ absolute, $1.2\times10^{-6}$ relative --- within
+the simplex optimality tolerance), so the returned canonical vertex
+is solver-path dependent: on the deposited simplex path $782$ of
+$1{,}127$ compensable knockouts record the near-tie floor
+$kV\approx200.01$ while the rest sit at $kV\approx0$ (supply axes
+carry no floor; compensable medians $0.00$--$0.10$), and the floor
+decorrelates that path's transitive statistic on iML1515 ($r$ down
+to $+0.475$) without touching the essentiality ranking (AUC
+$0.978$, labels $\kappa=1.000$ at every level). A full
+second-engine re-run of the three iML1515 levels under the
+stateless cold-start rule (scipy/HiGHS, same two-stage selection)
+measures the path dependence directly: the near-tie itself is
+engine-invariant (wild-type $L_1$ reproduced to $1\times10^{-5}$;
+labels $\kappa=1.000$ at all three levels, maximum biomass
+discrepancy $9\times10^{-8}$, AUC $0.992$/$0.992$/$0.984$), but the
+floor is the deposited path's realization --- the stateless engine
+collapses the floor band to the one genuinely forced knockout
+(\emph{lamB}, $kV=200.0$ at every level) with a single further
+five-gene rerouting block (\emph{dhaKLM}, \emph{fsaA}/\emph{fsaB},
+$kV$ $162$--$416$ across the levels), and restores the transitive
+association to $+0.952$, $+0.968$, $+0.943$. Canonical selection is
+necessary everywhere and sufficient precisely where the parsimony
+stage is discriminating --- or where the engine resolves a near-tie
+consistently.
 
 The canonical control also served as an independent audit of the
 deposited plain sweeps, and it surfaced a solver-integrity boundary
@@ -5629,11 +5649,15 @@ properties of the instrument, and the battery's reported
 statistics now satisfy both. A third requirement is measured, not
 imposed: where the parsimony stage itself carries near-tied optima
 --- the maintenance axis in iML1515, $\Delta L_1$ at
-$1.2\times10^{-6}$ relative --- the canonical vertex is only
-weakly determined and the transitive statistic must be read with
-the near-tie floor in mind; the essentiality ranking is unaffected
-(held-out AUC $\ge0.978$), which is why the table's iML1515
-maintenance rows are reported with their AUC and MCC intact.
+$1.2\times10^{-6}$ relative --- the canonical vertex is only weakly
+determined and the transitive statistic is path-dependent, the
+measured engine bracket at the deepest level being
+$[+0.475,+0.943]$ (the deposited simplex path against the stateless
+second engine of the re-run above); the essentiality ranking is
+engine-invariant (labels $\kappa=1.000$, held-out AUC $\ge0.978$
+under both engines), which is why the table's iML1515 maintenance
+rows are reported with their AUC and MCC intact and their $r$ read
+as the deposited path's realization.
 \end{remark}
 
 \subsection{Benchmark against the structural closure instruments}

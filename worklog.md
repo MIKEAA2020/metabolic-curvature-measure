@@ -5956,3 +5956,82 @@ Stage Summary:
   lineages; the canonical-selection subsection now carries the
   measured near-tie boundary and the ATPM axis.  All deliverables
   rebuilt on the merged tree.
+
+---
+Task ID: proofread-engine-round (repo execution, this sandbox)
+Agent: main (Super Z)
+Task: Final proof-read of the sixth-axis prop (companion pp. 62-65) +
+second-engine (scipy/HiGHS) re-run of the iML1515 ATPM levels to
+test the near-tie floor's engine invariance, per user directive.
+
+Work Log:
+- Pulled the remote sixth-axis round (cc1816a + 069eab5) that had
+  completed the ATPM probe on origin/main; local sandbox state
+  re-verified against the deposited artifacts before any work.
+- Proof-read prop:keio-atpm / rem:keio-multiaxis / the sec 13.6
+  fifth feature / rem:canonical-protocol / the seven ATPM table rows
+  against keio_atpm_* artifacts: every statistic matched at rounding
+  precision. TWO numeric defects found and fixed: (1) the prop's
+  supply-axis PGI at-optimum range "45--202" vs the true max 201.492
+  (the manuscript's own sec 13.6 already said 45--201); qualifier
+  tightened to "at every nitrogen-, phosphate-, and iron-limited
+  level"; the one unrecorded cell (iML1515 nh4_-2.5) measured at
+  158.316 by scripts/iml_nh4_pgi_width_check.py (all 16 supply
+  widths now certified within [45, 201.5]); (2) the fifth-feature
+  compensable count 1,129 was the pre-integrity-patch census; the
+  post-patch CSV census is 1,127.
+- Found and repaired a shipped defect: the sixth-axis commit had
+  clobbered download/keio_nitrogen_source_response.png with the
+  nitrogen probe's module-level legacy figure (129,624 vs 157,682
+  bytes -- the phosphate-round defect reintroduced via the probe
+  import); nitrogen_figure.py regenerated it byte-identical to the
+  6a00f62 blob.
+- Second-engine re-run (scripts/atpm_iml_second_engine.py): full
+  canonical two-stage split-variable pFBA sweep of all 1,516 iML1515
+  genes at ATPM 60/80/100 under stateless cold-start
+  scipy.optimize.linprog(method='highs') with a sparse LP
+  construction, probe-identical medium/knockout/kV/label conventions
+  and the shared statistics functions, 20-gene checkpointing. One
+  sign bug in the sparse biomass-pin row was caught by a staged
+  debug (dense reference vs sparse) before the sweep ran.
+- RESULT: the near-tie floor is NOT engine-invariant -- it is the
+  GLPK warm-start path's realization. Labels fully engine-invariant
+  (kappa 1.000 at all three levels, zero flips, max |db| 9.1e-8,
+  essential counts 295/297/329 identical, infeasible counts
+  14/16/46 identical); the near-tie itself engine-invariant (WT L1
+  747.6826 reproduced to 1.1e-5, b0870 dL1 -8.68e-4 vs -8.57e-4);
+  the kV~200 floor collapses under the stateless engine to 1/1,127
+  compensables (lamB, the one genuinely forced knockout, kV 200.0 at
+  every level; plus the five-gene dhaKLM/fsaA/fsaB rerouting block
+  at kV 162-416) against the deposited path's 500/650/782; the
+  transitive association is restored to +0.9518/+0.9681/+0.9432
+  (AUC 0.9919/0.9920/0.9844), matching iJO1366 at the same levels.
+- Patch I (scripts/companion_v3_patch_i.py, 5 anchored edits):
+  prop:keio-atpm engine-bracket sentence; sec 13.6 fifth feature
+  rewritten ("only partially sufficient" -> "the canonical vertex
+  itself is only weakly determined"; 1,127; the full second-engine
+  measurement inserted; "r caps near +0.48" -> path-dependent
+  reading with the floor identified as the deposited path's
+  realization); rem:canonical-protocol third requirement carries the
+  measured engine bracket [+0.475, +0.943] and the engine-invariant
+  ranking statement; tab:canonical-selection caption clause; the PGI
+  range fix. Cover-letter near-tie clause amended; links doc
+  revision note + PDF row + generation stamp (update_links_doc_v6.py).
+- audit_v11_numbers.py: 285/285 PASS (v10's 271 + 14 new checks
+  P-1..P-14: the engine JSON's WT/label/biomass/r/AUC/floor claims,
+  the recomputed GLPK floor census, the lamB/dhaKLM structure, the
+  near-tie L1 reproduction, the PGI certification, infeasible-count
+  parity, the figure byte size, patch-I presence/regression strings).
+- Builds: companion 73 pp, 0 errors / 0 undefined / 0 overfull (bbl
+  rerun chatter only); ZIPs rebuilt via build_submission_zips_v5.sh
+  + fresh-dir standalone reverified (main 28 pp, companion 73 pp);
+  download PDF, links doc, cover letter refreshed.
+
+Stage Summary:
+- The engine-invariance audit closes the sixth axis honestly: what
+  is engine-invariant (labels, essentiality ranking, the L1 near-tie
+  itself) is now stated as such, and what is path-dependent (the kV
+  floor, hence the transitive r on the iML1515 maintenance levels)
+  is disclosed as the deposited simplex path's realization with the
+  measured engine bracket [+0.475, +0.943]. All deliverables rebuilt
+  on the amended tree.
