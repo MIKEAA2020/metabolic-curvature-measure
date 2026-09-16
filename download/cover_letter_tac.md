@@ -1,7 +1,7 @@
 # Cover Letter — Theory and Applications of Categories
 
 **To:** The Editors, Theory and Applications of Categories
-**Date:** September 16, 2026
+**Date:** September 17, 2026
 **Manuscript type:** Research Article
 **Title:** Stratified Connections, Optic Composition, and the Homotopy
 Fixed-Point Extension: A Categorical Framework for Viability-Weighted
@@ -135,7 +135,7 @@ results as its own. The application manuscript is available for the
 editors' inspection in the same public repository as this paper's
 machine-verification code
 (https://github.com/MIKEAA2020/metabolic-curvature-measure, file
-`scripts/journal_manuscript_v7.tex`, compiled PDF included) and will
+`scripts/journal_manuscript_v8.tex`, compiled PDF included) and will
 be provided as a PDF on request; it is not under consideration
 elsewhere.
 

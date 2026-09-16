@@ -6541,3 +6541,77 @@ Stage Summary:
   upon plan approval; all numbers immutable; audit_v16 301/301 gate; pattern
   filter and "Zai, A." guard mandatory; v7's "(98 checks)" sentence to be
   reconciled with the 301-check audit suite during M5.
+
+---
+Task ID: merged-synthesis-v8-round
+Agent: main (Super Z)
+Task: Implement the merged synthesis implementation plan (v8 main /
+v7 companion) per the approved plan with M3 deferred: evaluate the
+v7 abstract's "piecewise linear, not smooth" phrasing, apply the
+M1/M2/M4/M5/M6 main-paper items and C1-C5 companion items, rebuild
+packages (v11), and push.
+
+Work Log:
+- Adjudicated the v7 abstract's "piecewise linear, not smooth":
+  KEPT as genuinely merited -- it is the factual regularity
+  classification of the parametric-LP optimal map (body: "continuous
+  and piecewise affine", borrelli2003), the premise that
+  necessitates the distributional second derivative, and the
+  comparator behind the slope-1.00-vs-quadratic punchline; it is not
+  in the phantom-negation family (it attributes a property, does
+  not rebut a rival claim) and it clears the author's
+  pedagogical-necessity exception.
+- Created NEW version files (prior versions untouched):
+  scripts/journal_manuscript_v8.tex + journal_manuscript_v8_bmb_refs.tex
+  + journal_manuscript_v8_refs.bib, and scripts/
+  companion_categorical_v7.tex + companion_refs_v7.bib; download
+  copies refreshed.
+- MAIN v8 (M1/M2/M4/M5/M6): abstract robustness clauses compressed to
+  one sentence ("robust to the tie-breaking convention and to
+  random-panel sampling"; rho=0.99998 / five rules / Glivenko-Cantelli
+  kept in the body where fully reported; 238 rendered words, within
+  150-250); abstract parenthetical disambiguated (M3D microarray
+  compendium, n=424 evaluated genes) + two body n=424 sites labeled
+  "genes"; growth-rate gloss at the value function's first
+  appearance (claim structure item iv); zero-cost-pathway-
+  substitution gloss inside the coupling theorem; Discussion
+  layer-separation sentence (kappa_mu +0.395 vs shadow-price +0.032,
+  p=0.93, n=51); Reproducibility check count reconciled 98 -> 301
+  (two sites); process-flavored remark titles recast ("Status of
+  the definition..." -> "Definition, tie-breaking, and layer
+  assignment"; "What this closes" -> "The exact value--flux
+  relation").
+- COMPANION v7 (C1/C2/C4): the boundary-rule three-fold-failure
+  breakdown in rem:2cat-span (horizontal subspaces discontinuous /
+  connection-coefficient jumps / curvature integral undefined +
+  the boundary-specification necessity sentence); the
+  thermostat/cell contrast making the autopoiesis-homeostasis
+  distinction concrete; a physical reading of the Zeno
+  self-measurement schedule in the CPTP subsection; "self-contained"
+  -> "given in full" (riley2023 provenance sentence);
+  "decoupled from definitional rhetoric" -> factual phrasing.
+  C1a (viability-depth remark) and C1c (rem:optics-physical)
+  verified already present in v6.
+- Pattern sweep (scripts/pattern_sweep_v16.py, 16 patterns from the
+  plan's 5.5 list incl. the Zai guard): both manuscripts clean.
+- Builds: main 29 pp, companion 74 pp, zero errors / zero undefined
+  references (all overfull hboxes pre-existing in v7 at identical
+  paragraphs; prior-version PDFs restored after comparison
+  compiles). audit_v16_numbers.py (from v15, paths retargeted,
+  outputs v16_number_audit.*): 301/301 PASS.
+- ZIPs rebuilt via build_submission_zips_v11.sh with fresh-dir
+  standalone tectonic verification (29/74 pp); cover letters
+  retargeted (v8/v7 cross-reference filenames + date 2026-09-17);
+  SUBMISSION_PACKAGE_LINKS.md: new newest-first revision note, all
+  current-package rows retargeted to v8/v7, audit line to v16.
+
+Stage Summary:
+- Latest versions: scripts/journal_manuscript_v8.tex (29-pp PDF at
+  download/journal_manuscript_v8.pdf) and scripts/
+  companion_categorical_v7.tex (74-pp PDF at download/
+  companion_categorical_v7.pdf) with their refs files; submission
+  ZIPs at download/submission_main_bmb.zip and download/
+  submission_companion_tac.zip (v11 package); audit_v16 301/301
+  PASS; M3 (TikZ schematic) deferred per author decision; the
+  merged-synthesis plan fully implemented with seamless-flow
+  grafts only (no rebase).

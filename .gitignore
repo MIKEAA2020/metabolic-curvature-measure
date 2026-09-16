@@ -52,3 +52,7 @@ scripts/overleaf_stage_v8/
 scripts/zipcheck_v8/
 scripts/overleaf_stage_v9/
 scripts/zipcheck_v9/
+
+# v11 staging + verify dirs (rebuilt by build_submission_zips_v11.sh)
+scripts/overleaf_stage_v11/
+scripts/zipcheck_v11/

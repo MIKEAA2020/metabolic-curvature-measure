@@ -1,10 +1,37 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-16 (reader-oriented prose revision + v10 package
-round: journal_manuscript_v7 + companion_categorical_v6). All repository links follow
+Generated 2026-09-17 (merged-synthesis revision + v11 package
+round: journal_manuscript_v8 + companion_categorical_v7). All repository links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-17, merged-synthesis revision + v11 package
+round): new manuscript versions as separate files, prior versions
+untouched -- scripts/journal_manuscript_v8.tex (main, BMB; from v7)
+and scripts/companion_categorical_v7.tex (companion, TAC; from v6).
+The revision implements the merged synthesis plan built from the
+evaluated external humanization attempts (plan at
+download/Humanized_Versions_Evaluation_and_Synthesis_Plan.md):
+main -- the abstract's robustness clauses compressed to one sentence
+with the numbers kept in the body (238 words, within the 150-250
+guideline; hook, primary numbers, punchline placement, and specific
+closer unchanged; the n=424 parenthetical disambiguated to "424
+evaluated genes"); a growth-rate gloss at the value function's first
+appearance; a zero-cost-substitution gloss inside the coupling
+theorem; a Discussion sentence tying the transcription--value-layer
+dissociation to the coupling structure; the Reproducibility
+check-count reconciled (98 -> 301); two process-flavored remark
+titles recast factually. Companion -- the boundary-rule
+three-fold-failure breakdown in the 2-categorical-span remark; the
+thermostat/cell contrast making the autopoiesis--homeostasis
+distinction concrete; a physical reading of the Zeno
+self-measurement schedule; two proof-provenance phrasings recast.
+All numerical claims unchanged: audit_v16_numbers.py 301/301 PASS;
+builds: main 29 pp, companion 74 pp, zero errors / zero undefined
+references; ZIPs rebuilt via build_submission_zips_v11.sh with
+fresh-dir standalone tectonic compiles verified (29/74 pp); cover
+letters retargeted to the new version filenames.
 
 Revision note (2026-09-16, reader-oriented prose revision + v10
 package round): new manuscript versions as separate files, prior
@@ -428,11 +455,11 @@ Sensitivity: From Active-Set Geometry to Transcriptional Response
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
-| Manuscript PDF (28 pp, full proofs in appendices, declarations in backmatter; reader-oriented prose revision: plain-problem abstract, glossed definitions, plan of the paper, restructured Limitations; prior versions retained as separate files) | [download/journal_manuscript_v7.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v7.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v7.pdf) |
+| Manuscript PDF (29 pp, full proofs in appendices, declarations in backmatter; merged-synthesis revision: compressed abstract robustness clause, glossed value function and coupling, reconciled check count; prior versions retained as separate files) | [download/journal_manuscript_v8.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v8.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v8.pdf) |
 | Cover letter (with declarations, companion disclosure) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
-| LaTeX source | [scripts/journal_manuscript_v7.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v7.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v7.tex) |
-| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v7_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v7_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v7_bmb_refs.tex) |
-| BibTeX database | [scripts/journal_manuscript_v7_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v7_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v7_refs.bib) |
+| LaTeX source | [scripts/journal_manuscript_v8.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v8.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v8.tex) |
+| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v8_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v8_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v8_bmb_refs.tex) |
+| BibTeX database | [scripts/journal_manuscript_v8_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v8_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v8_refs.bib) |
 | Reference-list generator (audit-checked) | [scripts/build_bmb_refs.py](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/build_bmb_refs.py) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/build_bmb_refs.py) |
 
 Figures (embedded in the PDF; source PNGs if the portal requests separate files):
@@ -449,8 +476,8 @@ Figures (embedded in the PDF; source PNGs if the portal requests separate files)
 Build note: for Overleaf or any standalone compiler, upload **the ZIP** (it
 contains the .tex, the input'ed reference list, the .bib database, and all
 six figures at the exact relative subpaths the .tex expects — verified to
-compile standalone, 28 pp, 0 errors). If instead you upload individual
-files, upload them together with `journal_manuscript_v7_bmb_refs.tex` and
+compile standalone, 29 pp, 0 errors). If instead you upload individual
+files, upload them together with `journal_manuscript_v8_bmb_refs.tex` and
 the three figure subfolders (`m1_m3/`, `alexandrov_bridge/`,
 `association_robustness/`) so the paths resolve; the .tex searches both the
 upload directory and the repository layout
@@ -462,7 +489,7 @@ upload directory and the repository layout
 
 **Title:** Stratified Connections, Optic Composition, and the Homotopy
 Fixed-Point Extension: A Categorical Framework for Viability-Weighted
-Curvature (Research Article; 74 pp; electronic-only, free — no author charges).
+Curvature (Research Article; 74 pp current build; electronic-only, free — no author charges).
 
 ### Journal / submission links (all verified)
 
@@ -491,10 +518,10 @@ below the abstract of the submitted PDF).
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (75 pp; reader-oriented prose revision: plain-problem abstract opening, glossed introduction, section leads; prior versions retained as separate files) | [download/companion_categorical_v6.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v6.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v6.pdf) |
+| Manuscript PDF (74 pp; merged-synthesis revision: boundary-rule breakdown, autopoiesis contrast, Zeno physical reading; prior versions retained as separate files) | [download/companion_categorical_v7.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v7.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v7.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
-| LaTeX source | [scripts/companion_categorical_v6.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v6.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v6.tex) |
-| BibTeX database | [scripts/companion_refs_v6.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v6.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v6.bib) |
+| LaTeX source | [scripts/companion_categorical_v7.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v7.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v7.tex) |
+| BibTeX database | [scripts/companion_refs_v7.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v7.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v7.bib) |
 
 Figures (embedded in the PDF; source PNGs):
 
@@ -538,8 +565,8 @@ letter); zero cross-paper verbatim prose overlap; author metadata (Amin
 Abaee, Independent Researcher, Tehran, Iran; amin_abaee@ut.ac.ir; ORCID
 0000-0002-0019-1842) at all authorship sites including the cross-citations;
 formal-journal prose with no meta-commentary, changelog, version
-references, or strawman constructions in either paper; audit_v14 301/301
-PASS against journal_manuscript_v7.tex + companion_categorical_v6.tex;
+references, or strawman constructions in either paper; audit_v16 301/301
+PASS against journal_manuscript_v8.tex + companion_categorical_v7.tex;
 no-fee venue for both.
 
 Remaining at submission time: fill the cover-letter `[Submission date]`
