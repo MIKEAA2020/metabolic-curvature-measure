@@ -6216,3 +6216,65 @@ Stage Summary:
   main-paper change; the sole finding (stale abstract phrasing) is
   closed; both submission packages are rebuilt, verified, and links
   doc current. Ready for commit+push.
+---
+Task ID: author-finalization-v7-package
+Agent: main (Super Z)
+Task: Per user directive: (1) push previous and future works with the new
+PAT; (2) author Amin Abaee finalized + journal-guideline checks (BMB main,
+TAC companion; formatting; anonymized-review availability for the
+categorical venue; 6 keywords per paper); (3) ensure both manuscripts are
+up to date; (4) full paths of the latest submission package.
+
+Work Log:
+- Ground truth: prior round (a46babf) complete locally but NOT pushed
+  (remote was at 8b44f08); three loose ends (deleted upload chat file,
+  untracked v6 staging dirs).
+- Journal facts re-verified live: BMB = single-blind (SMB society page),
+  Title Page requires name/affiliation/corresponding-email/ORCID,
+  abstract 150-250 words, 4-6 keywords, continuous line numbering
+  (Springer instructions to authors). TAC = email submission of a
+  compiled PDF to a named Editorial Board member (cc tac@mta.ca),
+  NO anonymized review (authinfo page fetched in full: zero anonymity
+  provisions), keywords + AMS 2020 classification required in source,
+  tac.cls only for the final accepted version. MSC2020 codes confirmed:
+  18D05, 18N99 (18N = higher categories & homotopical algebra), 92B05.
+- Main paper edits: author identity (\author + \thanks footnote, Author
+  Contributions, pdfauthor); abstract trimmed 291 -> 245 rendered words
+  (BMB 150-250) preserving every verified number; keywords re-selected
+  (flux balance analysis; discrete curvature; active set; parametric
+  linear programming; flux rerouting; epistasis -- FBA + epistasis added
+  as non-title search handles; transcriptional response + carbon
+  depletion dropped as title/abstract-indexed duplicates); lineno
+  package + \linenumbers added. Compiled 28 pp, 0 errors.
+- Companion edits: title-block author + affiliation/email/ORCID lines;
+  pdfauthor; visible Keywords line (optic category; stratified connection;
+  2-category; filtered colimit; homotopy type theory; applied category
+  theory) + AMS 2020 Subject Classification (18D05; 18N99; 92B05) after
+  the Status note. Compiled 74 pp, 0 undefined refs.
+- Audit regression run: audit_v4 98/98 PASS (JP-3 confirms 246 words +
+  6 keywords); audit_v12 initially 300/301 -- my Status-note restructure
+  broke the R8-ABS-wordcount anchor (literal "\emph{Status: standalone"
+  followed the abstract); restored the Status note to its audited
+  position with keywords/AMS after it -> 301/301 PASS. Companion
+  abstract back to 264 < 265 words ("application" word reverted).
+- Cover letters: author signature blocks + dates filled (Sep 16, 2026);
+  BMB letter's "98-check audit" claim verified accurate (audit_v4 =
+  98 checks).
+- v7 package: build_submission_zips_v7.sh (READMEs updated: placeholder
+  notes removed, guideline/submission-route notes added); fresh-dir
+  tectonic verification (main 28 pp, companion 74 pp); download PDFs
+  refreshed; links doc updated via update_links_doc_v8.py (new revision
+  note, both PDF rows, BMB single-blind + TAC non-anonymized review-model
+  notes).
+- Git: v6/v7 staging dirs gitignored; all changes staged incl. the
+  worktree-reconciled deletion of the mined upload chat file; committed
+  ef26d44; pushed 8b44f08..ef26d44 (delivered BOTH a46babf and ef26d44);
+  remote URL restored PAT-free after push; worktree clean.
+
+Stage Summary:
+- Both manuscripts now carry the finalized author identity and are
+  guideline-compliant for their targets (BMB: 245-word abstract, 6
+  keywords, line numbers, full title-page metadata; TAC: keywords + AMS
+  class, non-anonymized submission route documented).
+- Both audits green after the edits (98/98 main, 301/301 companion);
+  v7 ZIPs fresh-dir verified; everything pushed to origin/main.
