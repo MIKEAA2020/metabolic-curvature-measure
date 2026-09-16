@@ -6485,3 +6485,59 @@ Stage Summary:
   (PDFs, refs, v10 ZIPs in download/); landmark-calibrated
   reader-oriented prose; all numerical claims unchanged; proofs
   complete and uncondensed.
+---
+Task ID: humanized-evaluation
+Agent: main (Super Z)
+Task: Evaluate, verify, and note strengths/weaknesses of the external humanization
+attempts (external_audits/humanized/: qwen abstract.txt, curvature humanized.txt,
+companion humanized.txt), then deliver a merged synthesis implementation plan
+based on all attempts plus our own v7/v6 approach. New files only; push with PAT.
+
+Work Log:
+- Identified attempt boundaries: curvature = Qwen (1-717, partial Sec 1-3 only),
+  Gemini (718-1704, complete draft), Grok (1705-2070, condensed, truncated
+  mid-proof); companion = Gemini (1-714, accessible survey, heavy content loss),
+  Grok (715-1159, condensed, truncated mid-Lemma 2).
+- Read all five attempts in full (chunked + wrapped extraction for long-line
+  Grok sections).
+- Verified qwen abstract.txt against the OLDER (v5/v6-era) abstract: all six
+  diagnoses correct for that text; mapped which are already adopted in v7
+  (hook, specific closer, glossed jargon, BMB tier) and which remain
+  (robustness-clause compression, term budget).
+- Ran a 33-point numeric verification battery of Gemini/Grok curvature claims
+  against journal_manuscript_v7.tex: 30 direct PASS; 3 explained (fig-level
+  0.932; LaTeX-spaced 1.7e-6 PASS on context check; "98 checks" present in v7
+  itself -> new reconciliation item). Companion battery against
+  companion_categorical_v6.tex: six-axis abstract sentence, ATPM (20 hits),
+  tie-break (8), n=3->n=4 SO(2)/SO(3)/CO(r) remark, five loop geometries x
+  three groups, 375-config grid, 0.697, Krasnoselskii-Mann, Zeno (39),
+  status conventions, x_thresh=0.1, a_rev=1, envelope convention
+  (c2=0.0500 at nu=0.002), operational-curvature circularity, ordering --
+  all present.
+- Key findings: (1) both Gemini attempts hallucinate cross-citation author
+  "Zai, A." (real author Abaee; bibs already corrected in v7/v6); (2) the Qwen
+  attempt contains the exact forbidden meta-commentary sentence and the qwen
+  re-sketch contains the exact forbidden strawman negations -- inputs must be
+  filtered, not adopted wholesale; (3) Grok's abstract regresses to pre-v7
+  text (vague closer); (4) Grok numbering broken (no Theorem 2; Propositions
+  1,2,3,6,7 then 4,5); (5) both Grok attempts truncated; (6) neither model
+  achieved accessible+complete -- v7/v6 remain the only viable bases;
+  (7) ASCII art blocks in all Gemini attempts are not journal-usable.
+- Wrote the evaluation + merged synthesis implementation plan to
+  download/Humanized_Versions_Evaluation_and_Synthesis_Plan.md (new file):
+  Part 1 qwen assessment evaluation (adopt A1-A3, reject strawman re-sketch);
+  Parts 2-3 per-attempt evaluation with verified strengths/weaknesses;
+  Part 4 cross-cutting findings; Part 5 merged synthesis plan (design
+  principles; M1-M7 main-paper items for journal_manuscript_v8.tex; C1-C5
+  companion items for companion_categorical_v7.tex; explicit rejects with
+  reasons; execution order; acceptance criteria incl. the forbidden-pattern
+  grep list and audit_v16 301/301 requirement); appendix with verification
+  evidence.
+
+Stage Summary:
+- Deliverable: download/Humanized_Versions_Evaluation_and_Synthesis_Plan.md.
+- Synthesis strategy: graft-not-rebase on v7/v6; next versions to be created
+  as NEW files journal_manuscript_v8.tex and companion_categorical_v7.tex
+  upon plan approval; all numbers immutable; audit_v16 301/301 gate; pattern
+  filter and "Zai, A." guard mandatory; v7's "(98 checks)" sentence to be
+  reconciled with the 301-check audit suite during M5.
