@@ -1,11 +1,40 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-16 (formal-style completion + cross-citation
-authorship + v9 package round: journal_manuscript_v6 +
-companion_categorical_v5). All repository links follow
+Generated 2026-09-16 (reader-oriented prose revision + v10 package
+round: journal_manuscript_v7 + companion_categorical_v6). All repository links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-16, reader-oriented prose revision + v10
+package round): new manuscript versions as separate files, prior
+versions untouched -- scripts/journal_manuscript_v7.tex (main, BMB;
+from v6) and scripts/companion_categorical_v6.tex (companion, TAC;
+from v5). The revision is a style pass informed by a landmark-paper
+study (Orth/Edwards-Palsson/Segre/Lewis/Baba/Mahadevan on the
+metabolic side; Shannon, Baez-Stay, Baez-Fong, Leinster on the
+formal side; digest at research/landmark_style_digest.md). Main: the
+abstract now opens from the plain problem (piecewise-linear, not
+smooth; all numbers kept, 248 words, within the 150-250 guideline);
+the introduction's "object" paragraph glosses active set and strata
+in words and a plan-of-the-paper paragraph is added; plain-language
+openers precede the core definitions and follow the key displayed
+equations; the Limitations paragraph is restructured from one
+sentence into readable items; the "safe regime" remark is retitled.
+Companion: the abstract opens from the plain problem (264 words,
+under the 265-word cap, with the six-axis sentence and required
+phrases intact); the introduction glosses policy/connection/holonomy
+and optics at first use; one-sentence leads are added to the
+Preliminaries, Noether, hierarchy, composition, and
+filtered-colimit sections. All numerical claims unchanged:
+audit_v15_numbers.py 301/301 PASS; builds: main 28 pp, companion
+75 pp, zero undefined references; ZIPs rebuilt via
+build_submission_zips_v10.sh with fresh-dir standalone tectonic
+compiles verified (28/75 pp); cover letters retargeted (also: the
+BMB letter's stale 98-check audit count corrected to 301, its
+"rather than any smooth curvature" phrasing and
+"replacing earlier total-variation claims" changelog phrasing made
+factual, and the stale section 3.5 pointer corrected to 2.5).
 
 Revision note (2026-09-16, formal-style completion + cross-citation
 authorship + v9 package round): new manuscript versions as separate
@@ -399,11 +428,11 @@ Sensitivity: From Active-Set Geometry to Transcriptional Response
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
-| Manuscript PDF (27 pp, full proofs in appendices, declarations in backmatter; formal-style completion: factual abstract statement, geometric-metric terminology, framework-object Discussion, Abaee cross-citation; prior versions retained as separate files) | [download/journal_manuscript_v6.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v6.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v6.pdf) |
+| Manuscript PDF (28 pp, full proofs in appendices, declarations in backmatter; reader-oriented prose revision: plain-problem abstract, glossed definitions, plan of the paper, restructured Limitations; prior versions retained as separate files) | [download/journal_manuscript_v7.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v7.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v7.pdf) |
 | Cover letter (with declarations, companion disclosure) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
-| LaTeX source | [scripts/journal_manuscript_v6.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v6.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v6.tex) |
-| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v6_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v6_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v6_bmb_refs.tex) |
-| BibTeX database | [scripts/journal_manuscript_v6_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v6_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v6_refs.bib) |
+| LaTeX source | [scripts/journal_manuscript_v7.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v7.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v7.tex) |
+| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v7_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v7_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v7_bmb_refs.tex) |
+| BibTeX database | [scripts/journal_manuscript_v7_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v7_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v7_refs.bib) |
 | Reference-list generator (audit-checked) | [scripts/build_bmb_refs.py](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/build_bmb_refs.py) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/build_bmb_refs.py) |
 
 Figures (embedded in the PDF; source PNGs if the portal requests separate files):
@@ -421,9 +450,9 @@ Build note: for Overleaf or any standalone compiler, upload **the ZIP** (it
 contains the .tex, the input'ed reference list, the .bib database, and all
 six figures at the exact relative subpaths the .tex expects — verified to
 compile standalone, 28 pp, 0 errors). If instead you upload individual
-files, upload them together with `journal_manuscript_v6_bmb_refs.tex` and
+files, upload them together with `journal_manuscript_v7_bmb_refs.tex` and
 the three figure subfolders (`m1_m3/`, `alexandrov_bridge/`,
-`association_robustness/`) so the paths resolve; the .tex now searches both the
+`association_robustness/`) so the paths resolve; the .tex searches both the
 upload directory and the repository layout
 (`\graphicspath{{./}{../download/}}`).
 
@@ -462,10 +491,10 @@ below the abstract of the submitted PDF).
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (74 pp; formal-style completion: earlier-drafts references and uncited prior-formulations framing removed, process vocabulary purged, designed-progression duplication deleted, Abaee cross-citation; prior versions retained as separate files) | [download/companion_categorical_v5.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v5.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v5.pdf) |
+| Manuscript PDF (75 pp; reader-oriented prose revision: plain-problem abstract opening, glossed introduction, section leads; prior versions retained as separate files) | [download/companion_categorical_v6.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v6.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v6.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
-| LaTeX source | [scripts/companion_categorical_v5.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v5.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v5.tex) |
-| BibTeX database | [scripts/companion_refs_v5.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v5.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v5.bib) |
+| LaTeX source | [scripts/companion_categorical_v6.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v6.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v6.tex) |
+| BibTeX database | [scripts/companion_refs_v6.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v6.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v6.bib) |
 
 Figures (embedded in the PDF; source PNGs):
 
@@ -510,7 +539,7 @@ Abaee, Independent Researcher, Tehran, Iran; amin_abaee@ut.ac.ir; ORCID
 0000-0002-0019-1842) at all authorship sites including the cross-citations;
 formal-journal prose with no meta-commentary, changelog, version
 references, or strawman constructions in either paper; audit_v14 301/301
-PASS against journal_manuscript_v6.tex + companion_categorical_v5.tex;
+PASS against journal_manuscript_v7.tex + companion_categorical_v6.tex;
 no-fee venue for both.
 
 Remaining at submission time: fill the cover-letter `[Submission date]`
