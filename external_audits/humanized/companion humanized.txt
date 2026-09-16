@@ -1,0 +1,1160 @@
+gemini:
+# A Geometric and Category-Theoretic Theory of Viability: How Sequential Adaptations Induce Path-Dependent Risk
+
+\begin{abstract}
+When adaptive systems navigate fluctuating environments, they constantly adjust their internal strategies to remain viable. While individual adaptations may appear completely safe, a sequence of individually harmless adjustments can unexpectedly push a system into failure if the environmental shifts occur in a non-commuting order. Here, we develop a comprehensive geometric and category-theoretic framework to define and quantify this phenomenon: **viability-weighted curvature**. 
+
+Our framework rests on four theoretical pillars:
+\begin{enumerate}
+    \item \textbf{The SAVGS Architecture:} We unify environmental parameters, internal policy spaces (equipped with Fisher--Rao information geometry), viability safety margins, internal self-repair networks, and regime-switching boundaries into a single geometric object called a Stratified Autopoietic Viability Geometric System (SAVGS).
+    \item \textbf{Stratified Connections and Boundary Holonomy:} When active survival constraints switch, the system crosses an operational boundary where classical smooth geometry breaks down. We establish a 2-categorical gluing theorem that rigorously stitches these operational regimes together. Across closed environmental cycles, the net path-dependent shift in strategy (holonomy) scales \emph{linearly} ($O(\varepsilon)$) with perturbation size—a defining signature of constraint-switching systems that contrasts sharply with the quadratic ($O(\varepsilon^2)$) scaling of smooth systems. We prove that a system's vulnerability to closed cyclic perturbations is bounded by its viability-weighted curvature, which contracts geometric holonomy directly against active survival margins.
+    \item \textbf{Bidirectional Composition via Optics:} We represent seven distinct domain models—including autocatalytic reaction networks, predictive inference, iterated function systems, and physical conservation laws—as typed bidirectional interfaces (optics). Chaining these models into an interconnected feedback loop, we establish explicit Lipschitz bounds and prove that the averaged system converges to a unique, self-consistent operational balance point via Banach's fixed-point theorem.
+    \item \textbf{Operational Closure and Biological Grounding:} We formulate a rigorous, intervention-based autopoiesis test that distinguishes genuine self-regeneration from externally subsidized homeostasis. Finally, we establish the bridge to empirical biology: while cells transcribe excess pathway capacity to hedge against active-set rerouting bottlenecks, translational buffering prevents these transcriptional shifts from burdening the proteome.
+\end{enumerate}
+\end{abstract}
+
+\noindent\textbf{Keywords:} applied category theory; active-set transitions; information geometry; holonomy; viability theory; autopoiesis; translational buffering\\[0.3em]
+\noindent\textbf{AMS 2020 Subject Classification:} 18D05; 18N99; 92B05
+
+---
+
+# 1. Introduction
+
+Living and engineered adaptive systems must continuously adjust their internal controls to remain functional under shifting external conditions. In classical viability theory, survival is treated primarily as a set-membership problem: a system is viable as long as its state stays within a predefined safe region \citep{aubin2011}. 
+
+However, this static, set-theoretic perspective obscures a subtle and ubiquitous failure mode: **path-dependent vulnerability**. An organism or machine can successfully survive a change in temperature, and it can separately survive a change in nutrient availability. Yet, if these two environmental changes are applied sequentially in a closed cycle—first shifting temperature, then nutrients, then reversing temperature, and finally reversing nutrients—the system may return to its original environment with its internal reserves severely degraded.
+
+```
+                  CYCLIC ENVIRONMENTAL PERTURBATION
+                  
+           (θ_1, θ_2 + ε) ─────── Step 2 ──────► (θ_1 + ε, θ_2 + ε)
+                 ▲                                     │
+                 │                                     │
+               Step 1                                Step 3
+                 │                                     │
+                 │                                     ▼
+             (θ_1, θ_2)  ◄─────── Step 4 ─────── (θ_1 + ε, θ_2)
+             
+                                    │
+                                    ▼
+                     INDUCED POLICY DRIFT (HOLONOMY)
+                     
+             Strategy p_0 ─────────────────────► Strategy p_end ≠ p_0
+                                    │
+                                    ▼
+                         SAFETY MARGIN EROSION
+                 Margin h(p_0) ──────► Margin h(p_end) < h(p_0)
+```
+
+This failure occurs because optimal control strategies frequently do not **commute**: applying adaptation $A$ followed by adaptation $B$ produces a different internal state than applying $B$ followed by $A$. In differential geometry, the net discrepancy accumulated around a closed loop is called **holonomy**, and the intensity of this discrepancy per unit area is called **curvature**.
+
+### The Mathematical Obstruction
+
+Why has this geometric insight not been systematically applied to adaptive systems? The difficulty lies in **active-set switches**. 
+
+In any realistic system, adaptations are governed by active physical bottlenecks (e.g., maximum enzyme capacities, nutrient uptake limits, or thermal boundaries). Inside a regime where the active bottlenecks do not change, the optimal strategy varies smoothly. But when an environmental shift pushes the system across a constraint boundary—releasing an old bottleneck and activating a new one—the system's sensitivity changes abruptly. 
+
+At these boundary interfaces:
+1. The mathematical connection describing strategic adjustments undergoes a discontinuous jump.
+2. Classical smooth calculus and standard curvature integrals completely break down.
+3. Traditional holonomy cannot be evaluated across the interface.
+
+### The Categorical and Geometric Solution
+
+This paper resolves this foundational challenge by constructing a rigorous, stratified geometric framework for adaptive systems. Rather than treating constraint switches as troublesome discontinuities, we show that the boundaries between operational regimes carry their own well-defined, discrete geometric data.
+
+Our core contributions are organized as follows:
+* **The SAVGS Architecture (Section 2):** We construct the Stratified Autopoietic Viability Geometric System, a unified geometric structure integrating control parameters, statistical policy manifolds, viability margins, and self-repair networks.
+* **Stratified Connections and Boundary Holonomy (Section 2.1–2.2):** We define the 2-category $\mathbf{StCon}(B)$ of stratified connections and prove a general gluing theorem. We show that when an environmental loop crosses a constraint-switching wall, the accumulated holonomy scales *linearly* ($O(\varepsilon)$) with loop diameter, contrasting with the quadratic ($O(\varepsilon^2)$) scaling of smooth manifolds.
+* **Viability-Weighted Curvature and Vulnerability Bounds (Section 2.3):** We define the viability-weighted curvature ($\kk$), contracting geometric holonomy directly against active survival margins. We prove that a system's vulnerability to cyclic environmental stress is strictly bounded by this metric.
+* **Operational Autopoiesis vs. Homeostasis (Section 2.4):** We design an intervention-based, falsifiable dynamical test that distinguishes true autopoietic self-regeneration from externally subsidized homeostasis.
+* **Conservation Laws via Information Geometry (Section 3):** We establish a rigorous Noether correspondence connecting symmetries of statistical divergences to conserved informational quantities.
+* **The Seven-Claim Falsification Hierarchy (Section 4):** We formulate seven sharp, quantitative, and experimentally falsifiable predictions generated by the framework.
+* **Unified Composition via Optics (Section 5–6):** We type seven distinct domain models as bidirectional optics, proving that their end-to-end feedback composition forms a strict Banach contraction that stabilizes at a unique operational fixed point.
+
+---
+
+# 2. Mathematical Preliminaries and the SAVGS Framework
+
+## 2.1. Foundational Mathematical Objects
+
+To ensure precision while remaining accessible across disciplines, we first define the core mathematical components of our framework.
+
+\begin{definition}[Viability Depth Functional $D_V$]
+\label{def:kappa-depth}
+Let $M$ be a smooth manifold representing possible internal states, and let $V: M \to \RR$ be a viability function where higher values represent greater health, reaching a maximum at $V_{\max}$. Let $\gamma_a: [0,1] \to M$ be a closed loop of amplitude $a$, traversed at unit speed with total length $|\gamma_a|$. The \emph{viability depth functional} measures the average loss of health experienced along the path:
+\begin{equation}\label{eq:DV}
+  D_V(\gamma_a) \;=\; \frac{1}{|\gamma_a|} \int_0^1 \bigl(V_{\max} - V(\gamma_a(t))\bigr) \, |\dot\gamma_a(t)| \, dt.
+\end{equation}
+\end{definition}
+
+\begin{remark}[Viability Depth is Not Curvature]
+Viability depth $D_V$ simply measures the path-averaged health deficit. It carries no information about loop orientation, path-ordering, or non-commuting adjustments. True geometric curvature ($\kk$, defined below) requires contracting the directional orientation of the loop against the system's survival gradients.
+\end{remark}
+
+\begin{definition}[Information Geometry on the Strategy Space]
+\label{def:struct}
+When a system chooses among $n$ discrete actions, its strategy is a probability distribution $p$ residing on the open probability simplex $\Delta^{n-1}$. The natural metric measuring the statistical distinguishability of nearby strategies is the \emph{Fisher--Rao information metric} $g^F$ \citep{amari2000}. Under the square-root transformation $\psi_i = 2\sqrt{p_i}$, this simplex is mapped directly onto the positive orthant of a sphere of radius 2:
+\begin{equation}\label{eq:fr}
+  d_{\mathrm{FR}}(p, q) \;=\; 2 \arccos\left(\sum_{i=1}^n \sqrt{p_i q_i}\right).
+\end{equation}
+The symmetries of this strategy space are governed by standard transformation groups:
+\begin{itemize}
+    \item For $n=3$ choices (a 2D simplex), directional adjustments are rotations governed by the commutative (abelian) group $SO(2)$.
+    \item For $n=4$ choices (a 3D simplex), adjustments are rotations governed by the non-commutative (non-abelian) group $SO(3)$. Here, rotations around different axes do not commute.
+    \item When an overall scale factor (such as decision precision, temperature, or sensory confidence) varies endogenously, the symmetry group extends to the conformal group $CO(r) = \RR_+ \ltimes SO(r)$ \citep{kobayashinomizu1969}.
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Optics as Bidirectional Interfaces]
+\label{def:optic}
+Complex systems are organized into layers where information flows forward (perception or control) and feedback flows backward (error signals or nutrient consumption). Following \citet{riley2018optics}, an \emph{optic} formalizes this bidirectional interaction. 
+
+An optic between an internal interface $(M, C)$ and an external interface $(M', C')$ consists of:
+\begin{enumerate}
+    \item A forward mapping $f: M \times R \to M'$ that transforms an internal state $M$ and an internal memory/residual $R$ into an external action $M'$.
+    \item A backward mapping $g: R \times C' \to C$ that takes external feedback $C'$ along with the preserved residual $R$ to compute internal adjustments $C$.
+\end{enumerate}
+Two optics compose cleanly by chaining their forward and backward paths while pairing their internal memory spaces ($R_1 \times R_2$).
+\end{definition}
+
+```
+                        ANATOMY OF A BIDIRECTIONAL OPTIC
+                        
+                 Internal                          External
+                 Interface                        Interface
+                 
+                 State M ──────── Forward Map f ────────► Action M'
+                                        │
+                                   Residual R (Memory)
+                                        │
+                 Signal C ◄────── Backward Map g ─────── Feedback C'
+```
+
+\begin{definition}[Autocatalytic RAF Networks]
+\label{def:raf}
+Following \citet{hordijk2011}, a chemical reaction network supplied by a set of background "food" molecules $F$ is \emph{Reflexively Autocatalytic and Food-generated} (RAF) if:
+\begin{enumerate}
+    \item Every reaction in the set is catalyzed by at least one molecule produced within the network or supplied by the food set.
+    \item All reactants can be constructed from the initial food set through a valid sequence of internal reactions.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Viability-Weighted Curvature $\kk$]
+\label{def:kv}
+Let a system's environmental parameters $\theta \in B$ dictate its internal operational policy $p(\theta)$. Let $F$ denote the curvature 2-form describing how policies rotate when parameters change, and let $h_\alpha(\theta, x) > 0$ be a set of active viability margins measuring safety distances to critical failure thresholds.
+
+The \emph{viability-weighted curvature} is the worst-case rate at which a unit-area environmental loop erodes the system's most vulnerable safety margin:
+\begin{equation}\label{eq:kv}
+  \kk(\theta, x) \;=\; \sup_{\substack{u, v \in T_\theta B \\ \|u \wedge v\| = 1}} \; \max_{\alpha} \; \frac{\left[-D_{F(u,v)} h_\alpha(\theta, x)\right]^+}{h_\alpha(\theta, x)},
+\end{equation}
+where $[z]^+ = \max(0, z)$ extracts only the positive, margin-destroying component of the geometric shift.
+\end{definition}
+
+In intuitive terms: $\kk$ ignores harmless rotations, zeroing in exclusively on directional policy shifts that actively consume the system's remaining buffer of survival.
+
+---
+
+## 2.2. The SAVGS Framework
+
+We now assemble these components into a single mathematical structure: the **Stratified Autopoietic Viability Geometric System (SAVGS)**.
+
+\begin{definition}[The SAVGS Architecture]
+\label{def:savgs}
+A SAVGS is a five-tuple $(B, E, \mathcal P, \varepsilon, \Gamma)$ comprising:
+\begin{enumerate}
+    \item \textbf{Control Base Space ($B$):} A continuous manifold of environmental conditions (e.g., nutrient concentrations, danger levels, ambient temperature).
+    \item \textbf{Policy Bundle ($E \to B$):} A geometric fiber bundle where each environmental point $\theta \in B$ is associated with a space of allowable strategies $\mathcal P$ equipped with its Fisher--Rao information metric.
+    \item \textbf{Viability Margin ($\varepsilon$):} A quantitative distance function $\varepsilon \ge \varepsilon_{\min} > 0$ delineating the safe operational interior from lethal operational boundaries.
+    \item \textbf{Maintenance Network ($\Gamma$):} A directed graph $\Gamma = (M, R, E_\Gamma)$ tracking internal maintenance components $M$, regenerative processes $R$, and their functional dependencies $E_\Gamma$.
+    \item \textbf{Boundary Transition Span ($\Stab_1 \leftarrow \mathrm{Boundary} \rightarrow \Stab_2$):} A formal mathematical transition rule that connects different operational regimes across constraint-switching interfaces.
+\end{enumerate}
+\end{definition}
+
+```
+                        THE FIVE SAVGS COMPONENTS
+                        
+     1. Environment Base (B) ────────► Nutrient, danger, temperature coordinates
+     2. Policy Bundle (E -> B) ──────► Statistical manifolds of internal strategies
+     3. Viability Margin (ε) ────────► Quantitative distance to lethal thresholds
+     4. Maintenance Graph (Γ) ───────► Self-repair reactions, components, and catalysts
+     5. Boundary Span ───────────────► 2-categorical gluing rules between regimes
+```
+
+### Why a Boundary Transition Rule is Essential
+
+Inside a single operational regime, the optimal internal strategy adjusts smoothly as environmental parameters change. The connection 1-form $A$ describing these adjustments is smooth, and standard calculus applies.
+
+However, when an environmental shift pushes an enzyme or resource to its absolute limit, the active set of governing constraints abruptly switches. At this boundary wall:
+* The system's sensitivity coefficients jump discontinuously.
+* Smooth horizontal subspaces cease to exist.
+* Classical parallel transport and curvature integrals become undefined.
+
+To resolve this, our framework introduces a 2-categorical structure that explicitly glues separate operational regimes together along their boundary interfaces.
+
+\begin{definition}[The 2-Category of Stratified Connections $\mathbf{StCon}(B)$]
+\label{def:stcon}
+Let parameter space $B$ be divided into distinct strata $\{S_i\}$ separated by boundary walls $B_{ij}$. A \emph{stratified connection} consists of:
+\begin{enumerate}
+    \item A smooth connection 1-form $A_i$ operating inside each stratum $S_i$.
+    \item A smooth transition function $g_{ij}: B_{ij} \to G_C$ along each boundary wall that maps the strategy frame of stratum $S_i$ to that of stratum $S_j$.
+    \item The boundary matching condition:
+    \begin{equation}\label{eq:matching}
+      A_j = g_{ij}^{-1} A_i g_{ij} + g_{ij}^{-1} d g_{ij}.
+    \end{equation}
+    \item A consistency condition on triple-boundary intersections: $g_{ij} \cdot g_{jk} = g_{ik}$.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[2-Categorical Boundary Gluing]
+\label{thm:2cat-gluing}
+Given smooth connections $A_i$ within each operational stratum and consistent transition functions $g_{ij}$ along their interfaces, there exists a unique (up to gauge equivalence) stratified connection on the entire parameter space $B$.
+\end{theorem}
+
+\begin{theorem}[Piecewise Holonomy and the Boundary Scaling Law]
+\label{thm:stratified-holonomy}
+Let $\gamma$ be a closed parameter loop of diameter $\varepsilon$ that crosses a constraint-switching boundary wall $B_{+-}$ transversally at two points, $p_+$ and $p_-$. The net strategy shift (holonomy) accumulated around the loop decomposes into:
+\begin{equation}\label{eq:piecewise-F}
+  \mathrm{Hol}(\gamma_\varepsilon) \;=\; \exp\left( -\varepsilon^2 \iint_\Sigma F \, dA \;-\; \bigl[\log g_{+-}(p_+) - \log g_{+-}(p_-)\bigr] \;+\; O(\varepsilon^2) \right),
+\end{equation}
+where $F$ is the smooth curvature inside the strata and $g_{+-}$ is the boundary transition map. 
+
+Because the loop enters and exits the boundary wall at points separated by distance $|p_+ - p_-| = O(\varepsilon)$, the boundary reset contribution satisfies:
+\begin{equation}
+  \log g_{+-}(p_+) - \log g_{+-}(p_-) \;=\; O(\varepsilon).
+\end{equation}
+Consequently, the net holonomy of a boundary-crossing loop scales \textbf{linearly} ($O(\varepsilon)$) with perturbation diameter.
+\end{theorem}
+
+\begin{remark}[The Scaling Dichotomy: Smooth vs. Constraint-Switching Systems]
+Theorem~\ref{thm:stratified-holonomy} reveals a profound physical dichotomy:
+* In a **smooth system** without constraint switches, traversing a small loop generates a strategy discrepancy that scales with the enclosed *area*: $\text{Holonomy} = O(\varepsilon^2)$.
+* In an **active-set metabolic or control system**, traversing a loop that crosses a constraint bottleneck generates a discrepancy that scales with loop *diameter*: $\text{Holonomy} = O(\varepsilon)$.
+
+This linear scaling was verified to machine precision across five distinct loop geometries (rectangles, triangles, pentagons, circles, and ellipses) and across three mathematical symmetry groups ($U(1)$, $SO(3)$, and $CO(3)$).
+
+```
+                      LOOP HOLONOMY SCALING DICHOTOMY
+                      
+             Smooth Nonlinear Systems        Constraint-Switching Networks
+             Holonomy = O(ε^2)               Holonomy = O(ε)
+             
+                  ▲ Holonomy                      ▲ Holonomy
+                  │         /                     │       /
+                  │        /                      │      /  Empirical
+                  │       /  Slope = 2.00         │     /   Slope = 1.00
+                  │     _.-'                      │    /
+                  │  _.-'                         │   /
+                  └────────────────► Loop Size ε  └────────────────► Loop Size ε
+```
+\end{remark}
+
+---
+
+## 2.3. The Fisher-Minimal Transport Law and Vulnerability Bounds
+
+How does an optimal system adjust its strategy when parameters change inside a single operational regime? Let active constraints be locally expressed as $c(\theta, p) = 0$. When the environment changes at velocity $\dot\theta$, the system must shift its strategy at velocity $v = \dot p$ to maintain constraint satisfaction: $J_p v + J_\theta \dot\theta = 0$.
+
+\begin{proposition}[Fisher-Minimal Strategy Transport]
+\label{prop:kkt}
+The strategy adjustment velocity $v^*$ that satisfies changing environmental constraints while minimizing internal reorganization cost ($\tfrac{1}{2} v^\top G(p) v$, weighted by the Fisher information metric $G$) is uniquely given by the Karush--Kuhn--Tucker (KKT) projection:
+\begin{equation}\label{eq:kkt}
+  v^*(\theta, p, \dot\theta) \;=\; -G(p)^{-1} J_p^\top \bigl(J_p G(p)^{-1} J_p^\top\bigr)^{-1} J_\theta \, \dot\theta.
+\end{equation}
+This projection directly defines the smooth connection 1-form $A_i$ governing optimal strategic adaptation within each stratum.
+\end{proposition}
+
+\begin{theorem}[Small-Loop Viability--Holonomy Bound]
+\label{thm:smallloop}
+Let an adaptive system traverse a small closed parameter loop $\gamma_\varepsilon$ of area $\varepsilon^2$ within a single operational stratum. The net drift in internal strategy is:
+\begin{equation}\label{eq:holo-eps2}
+  p_{\mathrm{end}} - p_0 \;=\; \varepsilon^2 F_{12}(\theta_0, p_0) + O(\varepsilon^3),
+\end{equation}
+where $F_{12}$ is the curvature of the connection defined in Proposition~\ref{prop:kkt}. The resulting change in any active viability margin $h_\alpha$ satisfies:
+\begin{equation}\label{eq:margin-eps2}
+  h_\alpha(p_{\mathrm{end}}) - h_\alpha(p_0) \;=\; \varepsilon^2 D_p h_\alpha\bigl(F_{12}(\theta_0, p_0)\bigr) + O(\varepsilon^3) + \Delta_\alpha^{\mathrm{other}},
+\end{equation}
+where $\Delta_\alpha^{\mathrm{other}}$ accounts for non-returning environmental resource consumption.
+\end{theorem}
+
+\begin{proposition}[The Geometric Vulnerability Upper Bound]
+\label{prop:vulnerability}
+Adaptive systems are not threatened solely by large environmental shocks; they can be systematically destabilized by sequences of small, individually manageable changes whose induced policy holonomy aligns with vulnerable self-maintenance directions. 
+
+The maximum possible rate of viability erosion per unit loop area is strictly bounded above by the viability-weighted curvature:
+\begin{equation}
+  \text{Vulnerability Rate} \;\le\; \kk(\theta, x).
+\end{equation}
+When the connection is completely flat ($\kk \equiv 0$), closed environmental loops induce zero strategy drift, and the vulnerability rate attains its absolute lower bound of $0$.
+\end{proposition}
+
+---
+
+## 2.4. Operational Closure: Autopoiesis vs. Homeostasis
+
+A longstanding conceptual problem in theoretical biology is providing a rigorous, testable criterion that separates **autopoiesis** (true self-creation and self-maintenance) from simple **homeostasis** (passively remaining stable) \citep{dittrich2007cot, aubin2011}. 
+
+* A refrigerator or a thermostat is *homeostatic*: it maintains an internal temperature set-point, but it cannot rebuild its own compressor or sensors if they degrade.
+* A living cell is *autopoietic*: it maintains its internal state *and* actively synthesizes the metabolic enzymes, membranes, and transporters that perform that maintenance.
+
+The SAVGS framework formalizes this distinction through an operational, intervention-based dynamic test.
+
+```
+       HOMEOSTASIS                                AUTOPOIESIS
+       (External Subsidies Allowed)               (Strict Organizational Closure)
+       
+  External Repairs                               Internal Metabolism
+        │                                                │
+        ▼                                                ▼
+  ┌───────────┐                                    ┌───────────┐
+  │ Component │ ──► Passive Function               │ Component │ ──► Active Function
+  └───────────┘                                    └─────┬─────┘
+        ▲                                                │
+        │                                                ▼
+  Requires external technician                     Regenerates its own 
+  or preassembled parts                            repair machinery internally
+```
+
+\begin{definition}[The Dynamic Autopoiesis Closure Test]
+\label{def:autopoiesis}
+Let an organism's internal maintenance network possess concentration dynamics $\dot x = N v(x) - D x + u_{\mathrm{food}}$, where $N$ is stoichiometry, $v(x)$ are reaction rates, $D$ is natural degradation, and $u_{\mathrm{food}}$ is environmental food input. 
+
+To determine whether an essential component $m_j$ (such as an enzyme, transporter, or sensor) is genuinely self-maintained, we apply a five-step intervention protocol:
+\begin{enumerate}
+    \item \textbf{Targeted Knockout:} Artificially silence the internal repair reaction for component $m_j$ ($r_j := 0$) while keeping background food inputs $u_{\mathrm{food}}$ unchanged.
+    \item \textbf{Dynamic Drift:} Allow the system to run forward dynamically for time horizon $T$.
+    \item \textbf{Thresholded Recovery:} Record the concentration $x_j(T)$. The component passes recovery if and only if $x_j(T) > x_{\mathrm{thresh}} > 0$. It must cross a declared, functional viability concentration threshold, ruling out trivial numerical artifacts.
+    \item \textbf{Downstream Cascade Verification:} Any downstream components functionally dependent on $m_j$ must exhibit a temporary drop below $x_{\mathrm{thresh}}$ during the drift phase and recover once $m_j$ recovers.
+    \item \textbf{Restoration Control:} Re-enabling the repair pathway must return the entire network to its healthy steady state $x^*$.
+\end{enumerate}
+A system is **autopoietic** if and only if every essential component passes this dynamic recovery test without requiring preassembled external replacements. If a component fails to recover on its own, the system is merely **homeostatic** with respect to that component.
+\end{definition}
+
+\begin{definition}[Closure-Aware Viability Curvature]
+\label{def:kappa-closure}
+By restricting the general viability curvature $\kk$ specifically to the safety margins of the system's *internal repair machinery* ($h_j^{\mathrm{repair}} = r_j - r_{j,\min}$), we obtain the **closure-aware curvature**:
+\begin{equation}\label{eq:kappa-closure}
+  \kappa_{\mathrm{closure}}(\theta, x) \;=\; \sup_{\|u \wedge v\| = 1} \; \max_{j \in M_{\mathrm{ess}}} \; \frac{\left[-D h_j^{\mathrm{repair}}(F(u, v))\right]^+}{h_j^{\mathrm{repair}}(\theta, x)}.
+\end{equation}
+This metric isolates three distinct physiological outcomes:
+1. **Harmless Behavioral Drift:** The loop induces strategy shifts, but they project entirely onto non-critical operational directions ($\kk = 0, \, \kappa_{\mathrm{closure}} = 0$).
+2. **Direct Metabolic Stress:** The loop erodes immediate operational reserves (e.g., ATP or glucose), but leaves the underlying repair machinery intact ($\kk > 0, \, \kappa_{\mathrm{closure}} = 0$).
+3. **Autopoietic Failure:** The loop actively degrades the enzymes and genetic machinery required to execute future repairs ($\kappa_{\mathrm{closure}} > 0$), permanently undermining the organism's capacity for future adaptation.
+\end{definition}
+
+---
+
+# 3. Information Symmetries and the Bregman--Noether Correspondence
+
+In classical mechanics, Noether's theorem establishes that every continuous symmetry of a physical system gives rise to a conserved quantity (e.g., rotational symmetry yields conservation of angular momentum). In adaptive systems, internal adjustments are often driven by statistical divergences rather than physical kinetic energy. 
+
+Here, we prove that an analogous conservation law governs informational adaptation when costs are modeled using **Bregman divergences** (such as relative entropy or Kullback--Leibler divergence) \citep{bregman1967, amari2000}.
+
+\begin{proposition}[Bregman--Hessian Noether Correspondence]
+\label{prop:noether}
+Let $Q$ be a space of strategy parameters, let $\phi$ be a strictly convex potential generating a Hessian information metric $g_\phi = \nabla^2 \phi$, and let $U(q)$ be a viability potential. Consider the informational action:
+\begin{equation}
+  S[q] \;=\; \int_a^b \left( \tfrac{1}{2} g_\phi(q)(\dot q, \dot q) - U(q) \right) dt.
+\end{equation}
+Let $\xi$ be an affine vector field generating an environmental symmetry that preserves both the information metric ($\mathcal L_\xi g_\phi = 0$) and the viability landscape ($\xi(U) = 0$). 
+
+Then, along any optimal adaptation path $q(t)$, the informational momentum:
+\begin{equation}\label{eq:noether-current}
+  J_\xi(q, \dot q) \;=\; \bigl\langle \nabla^2\phi(q) \dot q, \, \xi(q) \bigr\rangle \;=\; \bigl\langle \dot q^{\mathrm{dual}}, \, \xi(q) \bigr\rangle
+\end{equation}
+is strictly conserved over time: $\frac{d}{dt} J_\xi = 0$. Here, $\dot q^{\mathrm{dual}} = \nabla^2 \phi(q) \dot q$ represents the system's adaptation velocity expressed in dual affine coordinates.
+\end{proposition}
+
+\begin{proof}
+Because $\mathcal L_\xi g_\phi = 0$ and $\xi(U) = 0$, the vector field $\xi$ generates a continuous variational symmetry of the informational Lagrangian $L = \tfrac{1}{2} g_\phi(\dot q, \dot q) - U(q)$. By the classical Euler--Lagrange field equations \citep{olver1993}, the corresponding momentum current is:
+\begin{equation}
+  J_\xi = \frac{\partial L}{\partial \dot q} \cdot \xi(q) = g_\phi(q)(\dot q, \xi(q)) = \langle \nabla^2 \phi(q) \dot q, \, \xi(q) \rangle.
+\end{equation}
+Differentiating along an extremal trajectory shows that $\frac{d}{dt} J_\xi = 0$.
+\end{proof}
+
+\begin{remark}[Gauge Invariance of Viability Curvature]
+Proposition~\ref{prop:noether} guarantees that when an organism's viability margins and information metrics share the same underlying informational symmetries, the viability-weighted curvature $\kk$ is independent of the arbitrary coordinate system chosen to record biological states (gauge covariance).
+\end{remark}
+
+---
+
+# 4. The Seven-Claim Falsification Hierarchy
+
+To ensure the framework provides concrete, falsifiable empirical utility rather than mere mathematical formalism, we establish a seven-level testing hierarchy. Each claim makes a specific, quantitative prediction; failure at any level refutes that component of the model.
+
+\begin{definition}[The Falsification Hierarchy]
+\label{def:hierarchy}
+~
+\begin{itemize}[leftmargin=1.5em]
+    \item[\textbf{Claim A}] \textbf{(Predicting Safety Margin Erosion):} Along smooth parameter loops, the viability-weighted curvature $\kk$ accurately predicts held-out safety margin loss via linear regression with slope $\approx 1.0$ and goodness-of-fit $R^2 \ge 0.90$.
+    \item[\textbf{Claim B}] \textbf{(Orientation Reversal Threshold):} In a two-dimensional strategy space ($SO(2)$), the accumulated holonomy around a loop of amplitude $a$ follows $H(a) = \pi a^2$. The directional orientation of the strategy shift reverses when $|H| > \pi$, establishing an exact critical threshold at amplitude $a_{\mathrm{rev}} = 1.0$.
+    \item[\textbf{Claim C}] \textbf{(Holonomy Scaling and Fluctuations):} For loops of amplitude $a$ under noisy exposure $\sigma^2 = \nu a$, the accumulated holonomy follows a two-term scaling law:
+    \begin{equation}
+      H(a) = c_1 a^2 + c_2 a^{3/2},
+    \end{equation}
+    where $c_1 \approx \pi$ represents the deterministic geometric area and $c_2 = \sqrt{5\nu}/2$ captures the leading stochastic fluctuation scale ($R^2 \ge 0.95$).
+    \item[\textbf{Claim D}] \textbf{(Repeated-Loop Structural Fatigue):} When an organism is subjected to $K$ repeated environmental cycles, the fractional margin erosion accumulates additively:
+    \begin{equation}
+      F_K = \sum_{k=1}^K \left( a_k \kk(a_k) + C_{\mathrm{fat}} a_k^{3/2} \right).
+    \end{equation}
+    Fatigue failure occurs when $F_K \ge 1.0$, predicting the exact cycle count of death within $<15\%$ relative error.
+    \item[\textbf{Claim E}] \textbf{(Geometric Discrimination):} The normalized discrepancy statistic $T = |H_{\mathrm{observed}} - H_{\mathrm{geometric}}| / \sigma_{\mathrm{noise}}$ successfully discriminates true environmental loops from open random walks, satisfying $T_{\mathrm{control}} / T_{\mathrm{loop}} \ge 5.0$.
+    \item[\textbf{Claim F}] \textbf{(Non-Abelian Matrix Commutators):} In policy spaces with four or more choices ($n \ge 4$, corresponding to $SO(3)$ symmetry), rotations around distinct axes do not commute. Perturbing parameter pairs in opposite orders ($AB$ vs. $BA$) yields a non-zero matrix commutator whose magnitude matches the predicted Frobenius norm $\sqrt{2} \alpha_1 \alpha_2$.
+    \item[\textbf{Claim G}] \textbf{(Quantum Zeno Resolution of Self-Prediction):} When an adaptive agent must predict its own future sensory inputs, classical self-referential paradoxes are resolved by lifting the prediction to a quantum channel (CPTP channel). Rapid observation stabilizes the internal state via the quantum Zeno effect, displaying quadratic survival scaling ($\alpha_{\mathrm{Zeno}} \approx 2$) that is statistically distinct from classical exponential decay ($\alpha_{\mathrm{classical}} \approx 1$).
+\end{itemize}
+\end{definition}
+
+```
+                     EXPERIMENTAL FALSIFICATION ROADMAP
+                     
+     Level 1: Foundational Tests (Low Cost)
+     ├── Claim F: Verify non-commuting matrix order in SO(3)
+     └── Claim G: Verify Zeno scaling in self-referential updates
+                          │ (If Passed)
+                          ▼
+     Level 2: Basic Curvature Tests
+     ├── Claim A: Predict held-out margin erosion (R^2 >= 0.90)
+     └── Claim B: Confirm orientation reversal at a = 1.0
+                          │ (If Passed)
+                          ▼
+     Level 3: Multi-Loop & Fatigue Regimes
+     ├── Claim C: Validate the a^(3/2) fluctuation scaling law
+     └── Claim D: Predict cycle count to fatigue failure (<15% error)
+                          │ (If Passed)
+                          ▼
+     Level 4: Full Environmental Discrimination
+     └── Claim E: Discriminate cyclic loops from open walks (Ratio >= 5)
+```
+
+---
+
+# 5. Unification via Bidirectional Optics
+
+A central challenge in systems biology is connecting wildly different levels of description: chemical reaction networks, Bayesian information processing, fractals, conservation laws, and geometric parallel transport. Here, we show that these heterogeneous domains can be formalized as **bidirectional optics** (Definition~\ref{def:optic}) and composed into a single, unified mathematical system.
+
+\begin{construction}[The Seven Domain Optics]
+\label{con:seven}
+We formalize seven core scientific domains as typed optics $\OO_1, \dots, \OO_7$:
+\begin{enumerate}
+    \item $\OO_1$ \textbf{(Autocatalysis / RAF Optic):} Forward: chemical catalytic closure. Backward: molecular resource decoder. Memory: distance to viability boundary.
+    \item $\OO_2$ \textbf{(Self-Prediction / RPSI Optic):} Forward: predictive belief update via a quantum CPTP channel. Backward: posterior state decoder. Memory: ensemble Holevo information bound $\chi$.
+    \item $\OO_3$ \textbf{(Fractal Stability / IFS Optic):} Forward: Hutchinson metric contraction \citep{hutchinson1981}. Backward: spatial deconvolution. Memory: contraction quotient.
+    \item $\OO_4$ \textbf{(Conservation / Noether Optic):} Forward: symmetry transformation. Backward: momentum decoder. Memory: viability-preserving projection.
+    \item $\OO_5$ \textbf{(Information Compression / Perturbation Optic):} Forward: Blahut--Arimoto rate-distortion update \citep{blahut1972}. Backward: distortion decoder. Memory: sensitivity tensor $\partial d / \partial p$.
+    \item $\OO_6$ \textbf{(Worldview-Constrained Learning / WCIG Optic):} Forward: constrained information gain. Backward: prior belief decoder. Memory: Fisher--Rao information metric $g^F$.
+    \item $\OO_7$ \textbf{(Information Geometry / Transport Optic):} Forward: parallel transport on the policy sphere. Backward: coordinate decoder. Memory: enclosed geometric loop area.
+\end{enumerate}
+\end{construction}
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{\textbf{The Seven-Optic Compositional Architecture.} Each scientific domain is rigorously typed as a bidirectional optic with forward actions, backward decoders, and preserved internal memory.}
+\label{tab:optics}
+\begin{tabularx}{\textwidth}{lXXX}
+\toprule
+\textbf{Domain Arc} & \textbf{Forward Action (Encoder)} & \textbf{Backward Action (Decoder)} & \textbf{Internal Memory ($R_i$)} \\
+\midrule
+$\OO_1$ Autocatalysis (RAF)   & Catalytic network closure         & Chemical transition decoder       & Viability margin distance \\
+$\OO_2$ Self-Prediction (RPSI) & CPTP predictive update            & Posterior belief decoder          & Holevo information bound $\chi$ \\
+$\OO_3$ Contraction (IFS)      & Hutchinson state contraction      & Spatial deconvolution             & Contraction ratio $c_i$ \\
+$\OO_4$ Symmetries (Noether)   & Group symmetry action             & Conserved momentum decoder        & Invariant projection \\
+$\OO_5$ Compression (BA)       & Blahut--Arimoto rate-distortion   & Distortion decoder                & Perturbation tensor $\partial d/\partial p$ \\
+$\OO_6$ Learning (WCIG)        & Constrained information update    & Prior belief decoder              & Fisher--Rao metric tensor \\
+$\OO_7$ Geometry (Fisher--Rao) & Parallel transport of strategy    & Geometric frame decoder           & Enclosed loop area \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{theorem}[The Single Composition Theorem]
+\label{thm:composition}
+Let the seven optics $\OO_1, \dots, \OO_7$ be chained sequentially such that the output interface of each domain matches the input interface of the next ($A_i = M_{i+1}$), with an isomorphism $\sigma: I_7 \cong I_0$ closing the loop. The complete seven-fold composite:
+\begin{equation}\label{eq:comp}
+  T \;=\; \sigma \circ \OO_7 \circ \OO_6 \circ \OO_5 \circ \OO_4 \circ \OO_3 \circ \OO_2 \circ \OO_1
+\end{equation}
+is a well-defined **typed endo-optic**. Its forward pass sequentially executes the encoding operations of all seven domains, its backward pass runs their decoding operations in reverse order, and its total internal memory is the cartesian product of their individual residuals:
+\begin{equation}
+  R_{\mathrm{total}} = R_1 \times R_2 \times \dots \times R_7.
+\end{equation}
+\end{theorem}
+
+\begin{remark}[Physical Interpretation of the Composite System]
+Theorem~\ref{thm:composition} captures the complete operational lifecycle of an autonomous adaptive agent in a single mathematical sentence:
+> An autopoietic metabolic network ($\OO_1$) predicts its own future sensory inputs ($\OO_2$); this prediction contracts toward a stable perceptual set ($\OO_3$), anchored by fundamental physical conservation laws ($\OO_4$); the system compresses environmental representations under rate-distortion limits ($\OO_5$), shaped by internal prior beliefs ($\OO_6$), and finally executes its updated survival strategy via parallel transport on the geometric manifold of policies ($\OO_7$).
+\end{remark}
+
+---
+
+# 6. Contraction Dynamics and the Universal Balance Point
+
+Does this elaborate seven-domain feedback loop actually stabilize, or does it oscillate chaotically or diverge? 
+
+To answer this, we evaluate the system as a concrete mathematical mapping $T: X \to X$ operating on a complete metric state space $X = [-1.5, 1.5]^d$. We instantiate the forward maps for the contracting domains ($i \in \{1, 3, 4, 5, 6, 7\}$) as regularized nonlinear transformations:
+\begin{equation}\label{eq:fi-contracting}
+  f_i(x) = (1 - \alpha_i) x + \alpha_i s_i \tanh(W_i x + b_i),
+\end{equation}
+with mixing parameters $\alpha_i = 0.40$, saturation $s_i = 1.00$, and operator norms $\|W_i\|_{\mathrm{op}} = 0.80$. The self-predictive domain ($i = 2$) acts as an expansive mapping:
+\begin{equation}\label{eq:f2-expansion}
+  f_2(x) = \lambda_2 x \quad \text{with } \lambda_2 = 1.15.
+\end{equation}
+
+\begin{lemma}[Per-Optic Lipschitz Bounds]
+\label{lem:lip-per-optic}
+The Lipschitz sensitivity constants of the individual domain mappings satisfy:
+\begin{align}
+  \Lip(f_i) &\le (1 - \alpha_i) + \alpha_i s_i \|W_i\|_{\mathrm{op}} = 0.60 + (0.40)(1.00)(0.80) = 0.92 \quad \text{for } i \in \{1, 3, 4, 5, 6, 7\}, \\
+  \Lip(f_2) &= \lambda_2 = 1.15.
+\end{align}
+\end{lemma}
+
+\begin{theorem}[Unconditional Banach Contraction to a Unique Balance Point]
+\label{thm:unconditional-banach}
+The composite forward feedback mapping $T = f_7 \circ f_6 \circ \dots \circ f_1$ maps the state space $X = [-1.5, 1.5]^d$ strictly into itself. Its overall Lipschitz constant is strictly bounded by the product of its individual components:
+\begin{equation}
+  \Lip(T) \;\le\; \prod_{i=1}^7 \Lip(f_i) \;\le\; (0.92)^6 \times 1.15 \;\approx\; 0.697 \;<\; 1.0.
+\end{equation}
+Because $\Lip(T) < 1.0$, the mapping $T$ is a **strict Banach contraction**. By the Banach Fixed-Point Theorem \citep{banach1922}, the interconnected system possesses a **unique, globally stable operational fixed point** $x^* \in X$. Regardless of its initial starting state, iterative execution of the feedback loop converges exponentially to this self-consistent balance point:
+\begin{equation}
+  \|T^k(x_0) - x^*\| \;\le\; (0.697)^k \frac{\|T(x_0) - x_0\|}{1 - 0.697} \;\xrightarrow{k \to \infty}\; 0.
+\end{equation}
+\end{theorem}
+
+This contraction was confirmed across a 375-configuration numerical test grid spanning dimensions $d \in \{2, 3, 5, 10, 20\}$, confirming that the unified cross-domain architecture is mathematically stable.
+
+---
+
+# 7. Biological Application: Active-Set Curvature and Translational Buffering
+
+In a companion manuscript \citep{zai2026measure}, this geometric framework is applied to genome-scale metabolic models of *Escherichia coli*. Here, we summarize the primary biological insights that emerge from this interdisciplinary bridge.
+
+### The Problem in Metabolic Modeling
+
+Flux Balance Analysis (FBA) models metabolism as a constrained optimization problem: maximizing biomass production subject to mass balance and enzyme capacity limits \citep{varma1994, orth2010}. Under shifting environmental conditions, FBA is a parametric linear program whose optimal fluxes follow piecewise-linear paths.
+
+When environmental nutrients fluctuate, metabolic fluxes do not change smoothly. Instead, the network transitions through a sequence of discrete operational regimes (chambers), each defined by a specific set of active capacity bottlenecks. The second derivative of this response is the discrete active-set curvature measure $\mu = D^2 v^*$ (Definition~\ref{def:mu}).
+
+### Transcriptional Prediction vs. Proteomic Buffering
+
+Integrating this active-set curvature along an environmental starvation path yields the gene sensitivity metric $\kmu$ (Definition~\ref{def:kmu}), which quantifies the total rerouting burden imposed on each metabolic enzyme. Evaluating $\kmu$ across 424 metabolic genes in *E. coli* adapting to carbon starvation revealed a striking physiological dissociation:
+
+```
+                     METABOLIC REROUTING SENSITIVITY (k_mu)
+                                        │
+                ┌───────────────────────┴───────────────────────┐
+                ▼                                               ▼
+    TRANSCRIPTIONAL REGULATION                      PROTEOMIC TRANSLATION
+    (M3D Microarrays, n = 424)                      (Quantitative Proteomics, n = 366)
+    ──────────────────────────                      ──────────────────────────────────
+    Pearson r = +0.395                              Correlation r = -0.083
+    p = 2.6 x 10^-17                                (Completely Decoupled / Null)
+    Partial r = +0.269                              
+    (controlling baseline level)                    Biological Mechanism:
+                                                    Cells transcribe standby mRNA 
+    Robust across 5 tie-break                       for rerouting bottlenecks, but 
+    rules: r in [+0.386, +0.396]                    buffer costly protein synthesis.
+```
+
+1. **Strong Transcriptional Prediction:** Active-set curvature significantly predicts transcriptional log-fold changes during starvation ($r = +0.395, \, p = 2.6 \times 10^{-17}$; partial $r = +0.269$ controlling for baseline expression). Genes associated with high-curvature active-set switches are heavily upregulated. This signal is robust across five distinct optimization tie-breaking conventions ($r \in [+0.386, +0.396]$).
+2. **Complete Proteomic Decoupling:** In matched quantitative proteomics across 366 genes \citep{schmidt2016}, this correlation vanishes entirely ($r = -0.083$). While high-$\kmu$ enzymes maintain high *baseline* concentrations ($r = +0.334$), their dynamic protein fold-changes do not track environmental curvature.
+
+### The Biological Mechanism
+
+This dissociation provides direct, genome-scale evidence for a survival strategy known as **translational buffering** \citep{kochanowski2013}:
+* Synthesizing large metabolic enzyme complexes is energetically expensive. Under starvation, cells cannot afford to translate every enzyme that might be required.
+* Instead, the regulatory network pre-transcribes a pool of messenger RNA for enzymes situated at critical active-set bottlenecks, placing pathway rerouting capacity on "standby."
+* If an active-set boundary is crossed and a metabolic pathway becomes completely blocked, these pre-existing mRNA transcripts can be translated immediately. If the bottleneck clears, the transcripts are recycled at minimal energetic cost.
+
+Cells actively manage the curvature of their metabolic active-set complexes, organizing their transcriptional regulation to buffer against the geometric risks of environmental holonomy.
+
+---
+
+# 8. Conclusion
+
+By integrating applied category theory, discrete differential geometry, and systems biology, this work provides a rigorous foundation for understanding path-dependent vulnerability in adaptive systems:
+
+1. **Constraint Switches as Curvature:** The second derivatives of active-set systems are not intractable singularities; they are discrete, matrix-valued Radon measures concentrated on boundary interfaces.
+2. **Linear Holonomy Scaling:** Systems governed by inequality constraints exhibit holonomy that scales linearly ($O(\varepsilon)$) with perturbation size, explaining why sequential adaptations generate persistent metabolic and operational memory.
+3. **Unified Composition:** Heterogeneous domains—from chemical autocatalysis to information geometry—compose cleanly as bidirectional optics, forming provably stable, contractive feedback loops.
+4. **Biological Validation:** Active-set curvature explains why cells transcribe standby metabolic capacity to prepare for pathway rerouting while buffering actual protein synthesis.
+
+This framework replaces descriptive metaphors of adaptation with predictive, falsifiable geometric mathematics, offering a unified toolkit for analyzing resilience, epistasis, and control across biological and engineered networks.
+
+---
+
+# References
+
+\begin{thebibliography}{25}
+
+\bibitem[Amari and Nagaoka(2000)]{amari2000}
+Amari, S. and Nagaoka, H. (2000).
+\newblock \emph{Methods of Information Geometry}.
+\newblock Translations of Mathematical Monographs, American Mathematical Society, Providence, RI.
+
+\bibitem[Arimoto(1972)]{arimoto1972}
+Arimoto, S. (1972).
+\newblock An algorithm for computing the capacity of arbitrary discrete memoryless channels.
+\newblock \emph{IEEE Transactions on Information Theory}, 18(1):14--20.
+
+\bibitem[Aubin(2011)]{aubin2011}
+Aubin, J.-P. (2011).
+\newblock \emph{Viability Theory}.
+\newblock Modern Birkh{\"a}user Classics, Springer, Boston, 2nd edition.
+
+\bibitem[Banach(1922)]{banach1922}
+Banach, S. (1922).
+\newblock Sur les op{\'e}rations dans les ensembles abstraits et leur application aux {\'e}quations int{\'e}grales.
+\newblock \emph{Fundamenta Mathematicae}, 3(1):133--181.
+
+\bibitem[Bhattacharyya(1943)]{bhattacharyya1943}
+Bhattacharyya, A. (1943).
+\newblock On a measure of divergence between two statistical populations defined by their probability distributions.
+\newblock \emph{Bulletin of the Calcutta Mathematical Society}, 35:99--109.
+
+\bibitem[Blahut(1972)]{blahut1972}
+Blahut, R. (1972).
+\newblock Computation of channel capacity and rate-distortion functions.
+\newblock \emph{IEEE Transactions on Information Theory}, 18(4):460--473.
+
+\bibitem[Borrelli(2003)]{borrelli2003}
+Borrelli, F. (2003).
+\newblock \emph{Constrained Optimal Control of Linear and Hybrid Systems}.
+\newblock Lecture Notes in Control and Information Sciences, Springer, Berlin.
+
+\bibitem[Bregman(1967)]{bregman1967}
+Bregman, L.~M. (1967).
+\newblock The relaxation method of finding the common point of convex sets and its application to the solution of problems in convex programming.
+\newblock \emph{USSR Computational Mathematics and Mathematical Physics}, 7(3):200--217.
+
+\bibitem[Chentsov(1982)]{chentsov1982}
+Chentsov, N.~N. (1982).
+\newblock \emph{Statistical Decision Rules and Optimal Inference}.
+\newblock Translations of Mathematical Monographs, American Mathematical Society, Providence, RI.
+
+\bibitem[Dittrich and Speroni~di Fenizio(2007)]{dittrich2007cot}
+Dittrich, P. and Speroni~di Fenizio, P. (2007).
+\newblock Chemical organization theory.
+\newblock \emph{Bulletin of Mathematical Biology}, 69(4):1199--1231.
+
+\bibitem[Edwards et~al.(2001)]{edwards2001}
+Edwards, J.~S., Ibarra, R.~U., and Palsson, B.~O. (2001).
+\newblock In silico predictions of {Escherichia} coli metabolic capabilities are consistent with experimental data.
+\newblock \emph{Nature Biotechnology}, 19(2):125--130.
+
+\bibitem[Hordijk and Steel(2011)]{hordijk2011}
+Hordijk, W. and Steel, M. (2011).
+\newblock Detecting {RAF} sets in artificial chemistry models.
+\newblock \emph{Natural Computing}, 10(3):1023--1037.
+
+\bibitem[Hutchinson(1981)]{hutchinson1981}
+Hutchinson, J.~E. (1981).
+\newblock Fractals and self similarity.
+\newblock \emph{Indiana University Mathematics Journal}, 30(5):713--747.
+
+\bibitem[Kobayashi and Nomizu(1969)]{kobayashinomizu1969}
+Kobayashi, S. and Nomizu, K. (1969).
+\newblock \emph{Foundations of Differential Geometry}, volume~I \& II.
+\newblock Interscience Publishers, New York.
+
+\bibitem[Kochanowski et~al.(2013)]{kochanowski2013}
+Kochanowski, K., et~al. (2013).
+\newblock Global metabolic adjustments to catabolite limitation are largely passive and governed by {Crp}.
+\newblock \emph{Molecular Systems Biology}, 9:703.
+
+\bibitem[Lewis et~al.(2010)]{lewis2010}
+Lewis, N.~E., et~al. (2010).
+\newblock Omic data interpretation using genome-scale metabolic networks.
+\newblock \emph{Nature Reviews Microbiology}, 10(4):291--305.
+
+\bibitem[Noether(1918)]{noether1918}
+Noether, E. (1918).
+\newblock Invariante {Variationsprobleme}.
+\newblock \emph{Nachrichten von der Gesellschaft der Wissenschaften zu G{\"o}ttingen, Mathematisch-Physikalische Klasse}, 1918:235--257.
+
+\bibitem[Olver(1993)]{olver1993}
+Olver, P.~J. (1993).
+\newblock \emph{Applications of Lie Groups to Differential Equations}.
+\newblock Graduate Texts in Mathematics, Springer, New York, 2nd edition.
+
+\bibitem[Orth et~al.(2010)]{orth2010}
+Orth, J.~D., Thiele, I., and Palsson, B.~O. (2010).
+\newblock What is flux balance analysis?
+\newblock \emph{Nature Biotechnology}, 28(3):245--248.
+
+\bibitem[Riley(2018)]{riley2018optics}
+Riley, M. (2018).
+\newblock Categories of optics.
+\newblock \emph{arXiv preprint arXiv:1809.00738}.
+
+\bibitem[Schmidt et~al.(2016)]{schmidt2016}
+Schmidt, A., et~al. (2016).
+\newblock The quantitative and condition-dependent {Escherichia} coli proteome.
+\newblock \emph{Nature Biotechnology}, 34(1):104--110.
+
+\bibitem[Segr{\`e} et~al.(2002)]{segre2002}
+Segr{\`e}, D., Vitkup, D., and Church, G.~M. (2002).
+\newblock Analysis of optimality in natural and perturbed metabolic networks.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 99(23):15112--15117.
+
+\bibitem[Varma and Palsson(1994)]{varma1994}
+Varma, A. and Palsson, B.~O. (1994).
+\newblock Metabolic flux balancing: basic concepts and dilute run conditions.
+\newblock \emph{Bio/Technology}, 12(10):994--998.
+
+\bibitem[Vereshchagin and Vit{\'a}nyi(2010)]{vereshchagin2010rate}
+Vereshchagin, N. and Vit{\'a}nyi, P. (2010).
+\newblock Rate distortion and denoising of individual data using {Kolmogorov} complexity.
+\newblock \emph{IEEE Transactions on Information Theory}, 56(7):3438--3454.
+
+\bibitem[Zai(2026)]{zai2026measure}
+Zai, A. (2026).
+\newblock A discrete curvature theory of metabolic flux rerouting: active-set geometry, refinement limits, and translational buffering.
+\newblock \emph{Preprint}.
+
+\end{thebibliography}
+grok:
+**Abstract**
+
+We develop a categorical and homotopy-theoretic framework for viability-weighted curvature: a geometric quantity that measures how a sequence of individually manageable, non-commuting changes can accumulate into a viability threat through the holonomy it induces on policy.
+
+(i) The SAVGS object assembles five pieces—a control base, a Fisher–Rao policy bundle, a viability margin, a maintenance graph, and a 2-categorical boundary span—into one stratified, \(G_C\)-reduced bundle.
+
+(ii) The 2-category \(\mathbf{StCon}(B)\) of stratified \(G_C\)-connections carries a lax-functorial gluing theorem and a piecewise holonomy formula. For a closed loop that crosses a constraint-switching wall twice (the generic small-loop geometry), the boundary-reset contribution appears at its true order. On each constant-active-set stratum the Fisher-minimal transport law (a KKT projection) defines the connection, and a small-loop viability–holonomy theorem bounds the endpoint erosion of a viability margin by the viability-weighted curvature—the worst-case contraction of the curvature 2-form against the active survival covectors.
+
+(iii) A single composition theorem types seven heterogeneous domain bridges as optics. For an explicit seven-map instantiation it gives a per-optic Lipschitz product bound and a Banach contraction of the Krasnoselskii–Mann-averaged update. A projected CPTP contraction settles the Zeno self-reference.
+
+(iv) Reflexively autocatalytic food-generated (RAF) sets are constructed as filtered colimits at the Set level, with an adapter-level optic statement, and verified at scale. An \(\infty\)-categorical extension is developed in homotopy type theory; its proof-sketch status is marked.
+
+A six-axis validation battery is robust: carbon, oxygen, nitrogen, phosphate and iron supply, together with non-medium maintenance stress, leave labels invariant and re-stratify only at regime switches. The association is invariant under canonical flux selection; the declared tie-break closes its near-degeneracy boundary. The companion application paper develops the atomic curvature measure and its genome-scale validation.
+
+**Keywords:** optic category; stratified connection; 2-category; filtered colimit; homotopy type theory; applied category theory
+
+**AMS 2020:** 18D05; 18N99; 92B05
+
+# 1. Introduction
+
+An adaptive system that must remain viable while its environment changes is, at each instant, governed by a policy that is optimal subject to the currently active constraints. Classical viability theory supplies set-valued dynamics and tangential conditions, but it does not supply a geometric object that measures how a sequence of individually manageable, non-commuting changes can accumulate into a viability threat. The obstruction is structural. At a constraint-switching boundary the active set changes, the horizontal subspaces jump, the connection 1-form ceases to be defined, and the ordinary holonomy integral fails exactly where the question is most interesting.
+
+This paper constructs the missing object. It is a stratified connection with a boundary gluing law, a viability-weighted curvature that contracts the curvature 2-form against survival covectors, and a compositional semantics (optics) under which heterogeneous domain bridges compose into one typed endomorphism whose fixed point is well-posed and, for an explicit instantiation, contractive.
+
+The contributions are as follows.
+
+1. The SAVGS object (Definition 3): control base, policy bundle with Fisher–Rao geometry, viability margin, maintenance graph, and a 2-categorical boundary span, assembled into one stratified \(G_C\)-reduced bundle.
+
+2. The 2-category \(\mathbf{StCon}(B)\) of stratified \(G_C\)-connections (Definition 4), the 2-categorical gluing theorem (Theorem 2), and the piecewise holonomy formula (Theorem 3). The small-loop expansion is stated for closed loops that cross a switching wall twice, with the boundary-reset contribution at its true order, in agreement with machine-verified numerics in five loop geometries and three structure-group regimes.
+
+3. The Fisher-minimal transport law on constant-active-set strata, in closed KKT form (Proposition 8), and the small-loop viability–holonomy theorem (Theorem 4): endpoint erosion of a viability margin is bounded, to leading order, by the viability-weighted curvature (Definition 2).
+
+4. A Bregman–Hessian Noether correspondence (Proposition 10) with a falsifiable precondition check, giving gauge covariance of the curvature.
+
+5. A single composition theorem (Theorem 5): seven domain bridges typed as optics; a realised update on a complete metric state space (Definition 9); per-optic analytic Lipschitz constants (Lemma 2); Banach contraction of the Krasnoselskii–Mann-averaged update for the chosen seven-map instantiation (Theorem 6); and a projected CPTP channel contraction (Theorem 7) that settles the Zeno self-reference.
+
+6. A filtered-colimit construction of RAF sets, proved at the Set level with an adapter-level optic statement (Theorem 8) and verified at scale (Proposition 13).
+
+7. An \(\infty\)-categorical extension via homotopy type theory (Theorem 9, Corollary 3), with proof-sketch status marked (Remark 16), and a three-phase autopoiesis closure test built on it (Definition 12).
+
+**Relation to the application paper.** An application of this framework to metabolic flux rerouting appears in a separate manuscript. There the viability-weighted-curvature idea is realised measure-theoretically as an atomic curvature measure on the active-set complex of parametric flux-balance analysis; a gene-level sensitivity \(\kappa^\mu\) is derived from it and validated at genome scale against carbon-depletion transcription, with an explicit protein-layer null and selection-rule robustness checks. That paper states the load-bearing definitions of the present framework in brief, adapted form, and cites this paper for constructions, machine checks and proofs at the status marked per result: complete proofs for the gluing formula, the Fisher-minimal transport law, the composition and contraction layers, and the terminal-coalgebra theorem; machine-verified statements for the numerics; citation-level reduction for the stratified descent; proof-sketch status, marked as such, for the homotopy-type-theoretic extension. The present paper develops the full categorical machinery and cites the application paper where the empirical line is concerned. The division of labour is deliberate: the empirical claims of the application paper are statistical, the categorical claims of this paper are mathematical, and neither paper depends on the other’s claims.
+
+**Status conventions.** Theorem-level claims are labelled by proof status throughout: complete proofs; proofs that reduce to cited descent or coherence theory (marked in remarks); proof sketches (marked); and machine-verified statements, whose scripts and artefacts are committed in the project repository and regenerated by them. Open problems are collected in §8.
+
+# 2. Preliminaries
+
+**Definition 1** (Viability depth \(D_V\); distinct from curvature). Let \(M\) be a smooth state manifold, \(V:M\to\mathbb{R}\) a smooth viability function with maximum \(V_{\max}=\max_M V\), and \(\gamma_a:[0,1]\to M\) a smooth policy loop of amplitude \(a\), parametrised at unit speed so that \(|\gamma_a|=\int_0^1|\dot\gamma_a(t)|\,dt\) is the loop length. The viability depth is
+\[
+D_V(\gamma_a)=\frac1{|\gamma_a|}\int_{\gamma_a}(V_{\max}-V)\,ds
+=\frac1{|\gamma_a|}\int_0^1\bigl(V_{\max}-V\circ\gamma_a(t)\bigr)\,|\dot\gamma_a(t)|\,dt.
+\]
+For the radially symmetric viability \(V(x_1,\ldots,x_{n-1})=1-\sum_ix_i^2\) and the circular loop \(\gamma_a(t)=(a\cos 2\pi t,\,a\sin 2\pi t,\,0,\ldots,0)\) at unit speed, \(D_V(a)=a^2\). Depth is a loop-averaged deficit. It is not a curvature 2-form: it carries no orientation, no dependence on path order, and no commutator structure. The curvature-based viability-weighted curvature \(\kappa\) of Definition 2 (the contraction of the curvature 2-form \(F\) against viability covectors) is a different object. The equality \(D_V(a)=\kappa(a)=a^2\) in the radial prototype is a model-specific relation, not an identity.
+
+**Definition 2** (Structure group: \(O(r)\), \(SO(r)\), or \(\mathrm{CO}(r)\) with Weyl scale). The Fisher–Rao metric on a policy fibre of dimension \(r\) admits an orthonormal frame bundle with structure group \(O(r)\). If the policy frame is oriented, the structure group reduces to \(SO(r)\). A further reduction to the conformal group \(\mathrm{CO}(r)=\mathbb{R}_+\ltimes SO(r)\) requires an additional scale (Weyl) structure on the policy bundle: a positive scale bundle \(L\to E\), a conformal class \([g^F]\) of the Fisher metric, and a Weyl connection preserving that class. The three cases are distinct modelling commitments. Chentsov’s uniqueness theorem fixes the Fisher metric under statistical-map invariance but does not, by itself, select among \(O(r)\), \(SO(r)\) and \(\mathrm{CO}(r)\). For the prototypes we use: \(G_C=SO(2)\) for the abelian \(n=3\) prototype; \(G_C=SO(3)\) for the non-abelian \(n=4\) prototype; and \(\mathrm{CO}(r)\) only when an endogenous scale variable (effective precision, temperature, sample size, or Weyl factor) is explicitly modelled (Remark 1).
+
+**Remark 1** (Fisher–Weyl policy structure, when \(\mathrm{CO}(r)\) is justified). A Fisher–Weyl policy structure consists of: (i) a policy bundle \(E\to B\); (ii) a vertical Fisher metric \(g^F\); (iii) a positive scale bundle \(L\to E\); (iv) a conformal class \([g^F]\); (v) a Weyl connection preserving the conformal class. The conformal frame bundle then has structure group \(\mathrm{CO}(r)\). If the cost functional depends only on the conformal class of \(g^F\) and is invariant under positive rescalings of orthonormal frames, its stabilizer contains \(\mathrm{CO}(r)\); if scale is fixed, the stabilizer reduces to \(SO(r)\) or \(O(r)\). This keeps the \(\mathrm{CO}(r)\) ambition with mathematical precision: \(\mathrm{CO}(r)\) is an added modelling structure, not a consequence of Chentsov’s theorem alone.
+
+**Remark 2** (Physical meaning of the \(n=3\to n=4\) transition). At \(n=3\) the policy simplex is two-dimensional, the prototype’s structure group is \(SO(2)\) (the full Fisher–Rao point stabilizer on the simplex is \(O(n-1)\supseteq SO(n-1)\), and \(\mathrm{CO}(2)=\mathbb{R}_+\ltimes SO(2)\) arises only under the Weyl structure of Remark 1), and the Lie algebra \(\mathfrak{so}(2)\) is one-dimensional, generated by a single infinitesimal rotation about the origin. Two rotations about the same origin necessarily commute (they lie in the same one-parameter subgroup), so the holonomy of a sequence of loops is path-independent up to homotopy, and path-ordering in the parallel-transport exponential collapses to ordinary commutative multiplication. The non-abelian signature (Claim F) is then unobservable: the commutator \([R_1,R_2]=0\) identically, regardless of amplitudes. At \(n=4\) the policy simplex is three-dimensional, the prototype’s structure group is \(SO(3)\) (\(\mathrm{CO}(3)\) again only under the Weyl structure), and \(\mathfrak{so}(3)\) is three-dimensional with three independent generators \(\{\mathfrak{l}_x,\mathfrak{l}_y,\mathfrak{l}_z\}\) satisfying \([\mathfrak{l}_z,\mathfrak{l}_x]=\mathfrak{l}_y\) and cyclic. Two rotations about distinct axes (e.g. \(R_z(\alpha_1)R_x(\alpha_2)\) versus \(R_x(\alpha_2)R_z(\alpha_1)\)) no longer commute, and the small-angle commutator is \([R_1,R_2]\approx\alpha_1\alpha_2[\mathfrak{l}_i,\mathfrak{l}_j]\) with Frobenius norm \(\sqrt2\,\alpha_1\alpha_2\) (each \(\mathfrak{so}(3)\) basis element has Frobenius norm \(\sqrt2\)). The non-abelian signature is therefore a quantitative, falsifiable prediction specific to \(n\ge4\); it cannot be tested at \(n=3\) by any experimental design.
+
+**Definition 3** (Optic category). Following Riley, for a monoidal category \((\mathcal{C},\otimes,I)\) with finite limits the optic category \(\mathrm{Optic}(\mathcal{C})\) has as objects pairs \((M,C)\) of a forward carrier \(M\) and a backward carrier \(C\), and as morphisms from \((M,C)\) to \((M',C')\) the equivalence classes \([R,f,g]\) of triples consisting of a residual object \(R\), a forward map \(f:M\otimes R\to M'\), and a backward map \(g:C'\to C\otimes R\), quotiented by the coend relation: \([R,f,g]=[R',f',g']\) whenever there exists \(h:R\to R'\) with \(f'\circ(\mathrm{id}_M\otimes h)=f\) and \((\mathrm{id}_C\otimes h)\circ g'=g\). Composition is Riley’s Proposition 2.3: the composite of \([R,f,g]\) followed by \([R',f',g']\) is \([R\otimes R',\,f'\circ(f\otimes\mathrm{id}_{R'}),\,(g\otimes\mathrm{id}_{R'})\circ g']\), with unit \([I,\rho,\eta]\) given by the left/right unitors of \(\mathcal{C}\). The adapter subcategory is the case \(R=I\) (trivial residual).
+
+**Remark 3** (Strict feedback representatives). The operational sections of this paper (Construction 1, Table 1, Definition 9, and §6) work with strict feedback representatives over \(\mathcal{C}=\mathbf{Set}\) (cartesian monoidal): a morphism from \((M,C)\) to \((M',C')\) is a triple \((R,f,g)\) with \(f:M\times R\to M'\) and \(g:R\times C'\to C\)—the representative-level shape in which the residual, consumed by the forward pass, is reused as the backward pass’s input (the feedback instantiation appropriate when the forward pass transports the residual, as in Definition 9). Strict feedback morphisms compose by
+\[
+(R_2,f_2,g_2)\circ(R_1,f_1,g_1)
+=\bigl(R_1\times R_2,\;
+f_2\circ(f_1\times\mathrm{id}_{R_2}),\;
+g_1\circ(\mathrm{id}_{R_1}\times g_2)\bigr),
+\]
+with unit \((1,\pi,\mathrm{co}\pi)\) on the (co)product projections. Associativity and unitality follow from function composition and the associativity of finite products, and the composite’s residual \(R_1\times R_2\) is the representative-level form of Riley’s \(R\otimes R'\). On the adapter subcategory (\(R=1\)) the strict feedback form and the coend form of Definition 3 coincide. The general translation between the two forms is recorded as an open problem (§8); nothing below depends on it: every statement of this paper is typed in the strict form and every composition law is verified at the representative level.
+
+**Definition 4** (Hordijk–Steel closure and RAF set). Following Hordijk and Steel, given a catalytic reaction network \((X,\mathcal{R},F,c)\) over a molecule set \(X\) with food set \(F\subset X\) and catalysis assignment \(c:\mathcal{R}\to 2^X\), define for each \(A\subseteq\mathcal{R}\) the Hordijk–Steel closure \(\mathrm{cl}_A(F)\) of the food set under \(A\) as the least set of molecules containing \(F\) and closed under the reactions of \(A\):
+\[
+\mathrm{cl}_A(F):=\bigcup_{n\ge0}S_n,\qquad
+S_0=F,\qquad
+S_{n+1}=S_n\cup\bigl\{\mathrm{react}(r)\cup\mathrm{prod}(r):
+r\in A,\;\mathrm{react}(r)\subseteq S_n\bigr\}.
+\]
+A subset \(R'\subseteq\mathcal{R}\) is a reflexively autocatalytic food-generated (RAF) set if (i) every \(r\in R'\) is catalyzed by some element of \(\mathrm{cl}_{R'}(F)\), and (ii) every reactant of every \(r\in R'\) lies in \(\mathrm{cl}_{R'}(F)\). (Both conditions use the closure: catalysts must be food-reachable through \(R'\), not merely present as reactants or products of \(R'\).)
+
+**Definition 5** (CPTP channel). A completely positive, trace-preserving (CPTP) channel on a finite Hilbert space \(\mathcal{H}\) is a linear map \(\Phi:\mathrm{End}(\mathcal{H})\to\mathrm{End}(\mathcal{H})\) of the form \(\Phi(\rho)=\sum_i K_i\rho K_i^\dagger\) with Kraus operators \(\{K_i\}\) satisfying \(\sum_i K_i^\dagger K_i=I\). The measurement schedule of \(\Phi\) is the sequence \((\tau_k,P_k)_{k\ge1}\) of inter-measurement intervals \(\tau_k\) and projective measurements \(P_k\). The Liouvillian \(\mathcal{L}\) of the underlying Markov process has spectral gap \(\Delta=\min_{\lambda\neq0}\mathrm{Re}(\lambda)\).
+
+**Definition 6** (Bregman divergence). A Bregman divergence generated by a strictly convex differentiable function \(\phi\) is
+\[
+D_\phi(p,q)=\phi(p)-\phi(q)-\langle\nabla\phi(q),\,p-q\rangle.
+\]
+The divergence is not symmetric in general. The dual affine coordinates are \(p\) (the primal) and \(\nabla\phi(p)\) (the dual). The Bregman divergence is affine-invariant in the sense that an affine transformation in the primal coordinate, paired with the corresponding affine transformation in the dual, leaves \(D_\phi\) unchanged.
+
+**Definition 7** (Algorithmic rate-distortion distance). Fix a universal Turing machine \(U\), a distortion measure \(d\), and a distortion threshold \(D\ge0\). The algorithmic rate-distortion distance of \(x\) at threshold \(D\) is
+\[
+\mathrm{dist}_D(x)=\min\bigl\{|p|:U(p)\text{ outputs }\hat x,\;d(x,\hat x)\le D\bigr\}.
+\]
+It is monotone non-increasing in \(D\), bounded above by the Kolmogorov complexity \(K(x)\), and upper-semicomputable by dovetailing over all programs. It is a single-string, intrinsically deterministic quantity: no set-average rate and no random-coding gap arise. The construction is the algorithmic rate–distortion distance of Vereshchagin and Vitányi, stated here in its single-string form; Shannon’s set-level rate–distortion theory is the coarse-grained counterpart.
+
+**Definition 8** (Viability-weighted curvature \(\kappa\)). Let \((B,E,\mathcal{P},\varepsilon,\Gamma)\) be a SAVGS (Definition 9) with a \(G_C\)-connection on the policy bundle whose curvature 2-form on a stratum is \(F\). Let
+\[
+h_\alpha(\theta,x)=D_\phi\bigl(\mathrm{dist}_D(x),\,\mathrm{dist}_D(x_0)\bigr)
+\]
+be a viability margin built from a Bregman divergence (Definition 6) evaluated at the algorithmic rate-distortion distance (Definition 7) of the current state relative to a reference \(x_0\), with \(h_\alpha>0\) on the open feasibility set. The per-pair viability-weighted curvature is
+\[
+\kappa_\alpha(\theta,x;u,v)
+=\frac{\bigl[-D_{F(u,v)}h_\alpha\bigr]^+(\theta,x)}{h_\alpha(\theta,x)},
+\]
+where \([\,\cdot\,]^+\) is the positive part: only viability-eroding curvature contributes. The viability-weighted curvature is the worst case over unit-area bivectors and active viability covectors,
+\[
+\kappa(\theta,x)
+=\sup_{\substack{u,v\in T_\theta B\\\|u\wedge v\|_{g_F}=1}}
+\max_{\alpha:h_\alpha(\theta,x)>0}
+\kappa_\alpha(\theta,x;u,v).
+\]
+The quantity \(\kappa(\theta,x)\) is the worst fractional loss of viability margin per unit oriented environmental-loop area, to leading order. It contracts the geometric defect \(F\) against the survival covectors \(Dh_\alpha\) instead of reporting \(\|F\|\) alone. Gauge invariance of \(\kappa\) follows from the square-root embedding (Proposition 9) together with the Bregman–Noether correspondence (Proposition 10); the wedge-norm constraint makes \(\kappa\) a per-area quantity, matching the leading-order expansion of Theorem 4. The instantiation of \(h_\alpha\) above is one admissible choice: any \(C^2\) viability function with the stated positivity works. The application paper realises the measure-theoretic analogue of this object: its atomic crease measure stands in for the curvature 2-form and its value–flux coupling supplies analogue survival covectors, with the per-event mass corresponding, at active atoms, to the positive part of the margin change at the crossed face, normalised by the local margin—a stated correspondence at active atoms, not a proved domination. The ratio-form comparison is recorded as open (§8).
+
+# 3. The SAVGS framework
+
+The Stratified Autopoietic Viability Geometric System (SAVGS) is the minimal object on which viability-weighted curvature can be stated with its type structure, gauge behaviour and premises made explicit. It assembles five components—control base, policy bundle, viability margin, maintenance graph, and boundary span—into one stratified object.
+
+**Definition 9** (SAVGS). The SAVGS is the tuple \((B,E,\mathcal{P},\varepsilon,\Gamma)\):
+
+1. A continuous control base manifold \(B\subset\mathbb{R}^d\), with coordinates including food scarcity, danger intensity and sensor noise.
+
+2. A policy bundle \(\pi:E\to B\) with total space \(E\) and policy fibre \(\mathcal{P}=\pi^{-1}(\theta)\), where \(\mathcal{P}\) is the open simplex \(\Delta^{m-1}_\circ\) (for \(m\) actions), the circle \(S^1\) (abelian \(n=3\) prototype), the rotation group \(SO(3)\) (non-abelian \(n=4\) prototype), or another declared policy manifold. The bundle projection \(\pi:E\to B\) is the canonical projection onto the base; on the trivial bundle \(E=B\times\mathcal{P}\) this is \(\pi(\theta,p)=\theta\).
+
+3. A viability margin \(\varepsilon\ge\varepsilon_{\min}>0\), with the inequality strict on the open feasibility set and non-strict on the closed viability kernel.
+
+4. An endogenous maintenance graph \(\Gamma=(M,R,E_\Gamma)\) of maintenance operations \(M\), regeneration rules \(R\), and maintenance edges \(E_\Gamma\) (renamed to avoid clash with total space \(E\)).
+
+5. A 2-categorical span \(\mathrm{Stab}_1\leftarrow\mathrm{Boundary}\rightarrow\mathrm{Stab}_2\) that resolves the constraint-switching boundary discontinuity between strata (Theorem 2 for the full gluing theorem).
+
+The five components compose into a single object whose geometry is a stratified \(G_C\)-reduced principal bundle over the control manifold, with policy fibres over each stratum and viability kernels defined by non-strict inequalities on each stratum. The viability-weighted curvature of Definition 8 is computed on this object.
+
+**Remark 4** (Why the 2-categorical span is needed). The Ehresmann connection of the geometric construction requires smooth variation of horizontal subspaces across the base. At a constraint-switching boundary—where the active set of inequality constraints on the viability margin \(\varepsilon\) changes—the horizontal subspace jumps. The connection is therefore no longer smooth at the boundary, and the standard holonomy integral breaks down. The fifth SAVGS component resolves this by introducing a 2-categorical span \(\mathrm{Stab}_1\leftarrow\mathrm{Boundary}\rightarrow\mathrm{Stab}_2\) that glues the two smooth strata via a boundary 2-cell; the connection is defined piecewise on each stratum and a matching condition on the boundary supplies the 2-categorical compatibility. The formal development of the 2-categorical structure—the lax-functorial gluing and the coherence of the boundary 2-cell with the connection 1-forms—is given in §3.1, and the homotopy-theoretic well-definedness of the resulting holonomy is treated in §7. The operational requirement on the abelian and non-abelian prototypes is that the active set remains constant along each loop, which places the loop entirely within a single smooth stratum and avoids the boundary discontinuity.
+
+## 3.1 Two-categorical gluing for stratified connections
+
+We now close the 2-categorical gluing agenda of Remark 4 by constructing the 2-category \(\mathbf{StCon}(B)\) of stratified \(G_C\)-connections on a stratified base \(B\), proving the gluing theorem, and deriving the piecewise holonomy formula. Throughout, \(G_C\in\{O(r),SO(r),\mathrm{CO}(r)\}\) is the structure group selected by the policy-fibre geometry (Definition 2).
+
+**Definition 10** (2-category \(\mathbf{StCon}(B)\) of stratified connections). Let \(B\) be a stratified manifold with strata \(\{S_i\}_{i\in I}\) (\(B=\bigsqcup_i S_i\cup\bigcup_{ij}B_{ij}\) where \(B_{ij}=S_i\cap\bar S_j\) are boundary hypersurfaces, and \(T_{ijk}=S_i\cap S_j\cap S_k\) are triple intersections). The 2-category \(\mathbf{StCon}(B)\) of stratified \(G_C\)-connections is:
+
+- *Objects*: stratified principal \(G_C\)-bundles \(P\to B\) with a connection \(A=\{A_i\text{ on }S_i,\,g_{ij}:B_{ij}\to G_C\}\) satisfying:
+  - (O1) \(A_i\) is a smooth connection 1-form on stratum \(S_i\);
+  - (O2) \(g_{ij}:B_{ij}\to G_C\) is a smooth transition function;
+  - (O3) the matching condition on \(B_{ij}\): with the convention that the transition \(g_{ij}\) acts on frames as \(e_j=e_i\cdot g_{ij}\) (so \(g_{ij}\) carries stratum \(S_i\)’s frame to stratum \(S_j\)’s frame), the connection forms are related by the standard gauge transformation
+    \[
+    A_j=g_{ij}^{-1}A_i\,g_{ij}+g_{ij}^{-1}\,dg_{ij},
+    \]
+    whose infinitesimal form (\(g_{ij}=\exp u_{ij}\) near the identity) is \(A_j=A_i+du_{ij}+[A_i,u_{ij}]+O(u_{ij}^2)\). For abelian \(G_C=U(1)\) this reduces to \(A_j-A_i=d\alpha_{ij}\) where \(g_{ij}=e^{i\alpha_{ij}}\). The reverse-direction reading (\(g_{ji}=g_{ij}^{-1}\) carrying \(A_j\) to \(A_i\)) is equivalent and is the one used in the holonomy formula below;
+  - (O4) the Čech cocycle on \(T_{ijk}\): \(g_{ij}\cdot g_{jk}=g_{ik}\) (multiplication in \(G_C\)).
+
+- *1-morphisms*: connection-preserving equivariant bundle maps \(\phi:P\to P'\), smooth on each stratum, with \(\phi\circ g_{ij}=g'_{ij}\circ\phi\) on each boundary \(B_{ij}\).
+
+- *2-morphisms*: gauge transformations \(\eta:\phi\Rightarrow\phi'\) (vertical automorphisms of \(P'\) that conjugate \(\phi\) to \(\phi'\)), smooth on each stratum, with the coherence 2-cell condition at triple intersections (\(\eta\) commutes with \(g_{ij}\) on \(T_{ijk}\) in the sense of strict 2-functorial equality).
+
+**Theorem 2** (2-categorical gluing). Given a stratified base \(B\) with strata \(\{S_i\}\), boundary hypersurfaces \(\{B_{ij}\}\), a smooth Čech cocycle \(\{g_{ij}:B_{ij}\to G_C\}\) satisfying \(g_{ij}\cdot g_{jk}=g_{ik}\) on triple intersections \(T_{ijk}\), and connection 1-forms \(\{A_i\text{ on }S_i\}\) satisfying the matching condition (O3) of Definition 10 on each \(B_{ij}\),
+\[
+A_j|_{B_{ij}}=g_{ij}^{-1}A_i\,g_{ij}+g_{ij}^{-1}\,dg_{ij},
+\]
+there exists a unique (up to 2-isomorphism) object \((P,A)\) in \(\mathbf{StCon}(B)\) whose restriction to each \(S_i\) is \(A_i\) and whose transition on each \(B_{ij}\) is \(g_{ij}\).
+
+*Proof.* The argument is 2-descent in the 2-stack of stratified \(G_C\)-bundles with connection. The 2-stack property (objects glue uniquely up to 2-isomorphism on overlaps; 1-morphisms glue uniquely up to 2-isomorphism; 2-morphisms glue strictly) follows from the Giraud axioms for the underlying \(G_C\)-bundles, extended to stratified spaces:
+
+- *Object gluing.* The underlying \(G_C\)-bundle \(P\) is constructed by the standard clutching construction on each stratum, glued along the boundary via the transition \(g_{ij}\). The Čech cocycle (O4) ensures consistency at triple intersections. The result is unique up to bundle isomorphism.
+
+- *Connection gluing.* The connection 1-forms \(\{A_i\}\) glue via the matching condition (O3): on \(B_{ij}\), \(g_{ij}\) is a gauge transformation carrying \(A_j\) to \(A_i\), so \(A_i\) on \(S_i\) and \(A_j\) on \(S_j\) define a single stratified connection on \(P\). The glued connection is unique up to gauge transformation (2-isomorphism).
+
+- *1-morphism gluing.* Given two stratified connections \((P,A)\) and \((P',A')\) and a 1-morphism \(\phi_i:P|_{S_i}\to P'|_{S_i}\) on each stratum that commutes with \(g_{ij}\) on boundaries, the \(\{\phi_i\}\) glue to a unique 1-morphism \(\phi:P\to P'\), with the boundary compatibility \(\phi\circ g_{ij}=g'_{ij}\circ\phi\) supplying the gluing data.
+
+- *2-morphism gluing.* Gauge transformations are determined locally; on overlaps they agree by the strict 2-functorial coherence condition, so 2-morphisms glue strictly.
+
+Hence \(\mathbf{StCon}(B)\) is a 2-stack (a 2-sheaf of groupoids), and the gluing theorem holds by 2-descent. \(\square\)
+
+**Remark 5** (Proof status of Theorem 2). The proof reduces the gluing to the 2-stack descent property for stratified \(G_C\)-bundles: the Giraud-type axioms for the underlying bundles are cited, not re-proved, and the extension from smooth spaces to stratified spaces (stratum-by-stratum clutching with boundary matching) is verified here at the level of construction, with the coherence of the boundary 2-cells checked on triple intersections. The piecewise holonomy consequences (Theorem 3), by contrast, are machine-verified in five loop geometries and all three structure-group regimes (Remarks 7–11).
+
+**Theorem 3** (Piecewise holonomy). Let \((P,A)\in\mathbf{StCon}(B)\) be a stratified connection, and let \(\gamma:[0,1]\to B\) be a smooth loop that crosses finitely many boundaries transversally at points \(\{p_k\}_{k=1}^n\) in cyclic order (\(p_1<p_2<\cdots<p_n\)). Decompose \(\gamma=\gamma_1\sqcup\gamma_2\sqcup\cdots\sqcup\gamma_n\) where each piece \(\gamma_k\) lies in stratum \(S_{i_k}\). Then the stratified holonomy is
+\[
+\mathrm{Hol}^{\mathrm{strat}}(\gamma)
+=\mathrm{Hol}_{S_{i_n}}(\gamma_n)\cdot g_{i_n i_1}(p_n)\cdot
+\mathrm{Hol}_{S_{i_{n-1}}}(\gamma_{n-1})\cdot\cdots\cdot
+g_{i_1 i_2}(p_1)\cdot\mathrm{Hol}_{S_{i_1}}(\gamma_1),
+\]
+a product of stratum holonomies with boundary-transition maps, the order fixed by the chronological (right-to-left) traversal of the loop. For a *closed* loop the number of transversal crossings of any single wall is necessarily even: a small loop of area \(\varepsilon^2\) centred on a wall \(B_{+-}\) crosses it twice, at points \(p_+\neq p_-\) with \(|p_+-p_-|=O(\varepsilon)\). For such a loop the piecewise curvature formula is
+\[
+\mathrm{Hol}^{\mathrm{strat}}(\gamma_\varepsilon)
+=\exp\Bigl(-\varepsilon^2\Bigl[\iint_{\Sigma\cap S_+}F_+\,dA+\iint_{\Sigma\cap S_-}F_-\,dA\Bigr]
+-\bigl[\log g_{+-}(p_+)-\log g_{+-}(p_-)\bigr]
++O(\varepsilon^2)\Bigr),
+\]
+where \(F_\pm\) are the curvature 2-forms on strata \(S_\pm\) and \(\Sigma\) is the small enclosed disk. For affine wall transitions the terms neglected beyond the displayed \(O(\varepsilon)\) and \(O(\varepsilon^2)\) contributions are \(O(\varepsilon^3)\)—the regime the numerics of Remark 7 verify. For general transitions, second-order Taylor terms of \(\log g_{+-}\) along the wall and commutators of the two resets enter at \(O(\varepsilon^2)\) (Open Problem 1). The two boundary resets cancel at leading order by the cocycle condition (\(g_{-+}=g_{+-}^{-1}\) on the wall): the residual boundary contribution \(\log g_{+-}(p_+)-\log g_{+-}(p_-)\) is the *tangential variation* of the transition function between the two crossing points, of order \(O(\varepsilon)\). It vanishes identically when the transition function is constant along the wall, and it is linear in the wall-coordinate difference in the machine-verified regime of Remark 7. An \(O(1)\) reset term \(\log g_{+-}(p_*)\) arises only for an *open arc* that crosses the wall once and is not closed by the reverse transition.
+
+*Proof.* By Theorem 2 the stratified connection \(A\) exists and is unique up to 2-isomorphism, so the holonomy is well-defined. Decompose \(\gamma\) into pieces \(\{\gamma_k\}\) on strata \(\{S_{i_k}\}\) separated by boundary crossings \(\{p_k\}\). Parallel transport of \(A\) along \(\gamma\) factorises as the product of stratum-parallel transports on each \(\gamma_k\) (using \(A|_{S_{i_k}}=A_{i_k}\) and Stokes’ theorem on each stratum) interleaved with the boundary transitions \(g_{i_k i_{k+1}}(p_k)\) applied at each crossing. The ordering (right-to-left) follows the chronological traversal of the loop; the composition order is genuinely order-dependent for non-abelian \(G_C\) (Remark 8). For an \(\varepsilon\)-small *closed* loop crossing the wall twice, the stratum holonomies reduce by Stokes to \(\varepsilon^2\iint_{\Sigma\cap S}F_S\,dA\) on each stratum, while the two boundary transitions contribute \(\log g_{+-}(p_+)-\log g_{+-}(p_-)\) in the Lie algebra: the \(O(1)\) parts of the reset pair cancel by the cocycle condition, and the residual is the tangential variation of the transition function between the crossing points, of order \(O(\varepsilon)\). For abelian \(G_C\) with the matching condition the cancellation is exact at leading order: along the short segment of \(\gamma\) inside \(S_-\), the jump \(A_--A_+=d\alpha_{+-}\) integrates to \(\alpha(p_-)-\alpha(p_+)\), which cancels the reset variation identically, so the holonomy is governed by the curvature terms at \(\varepsilon^2\) plus the stated \(O(\varepsilon)\) residual. This is the regime verified numerically in Remark 7 (boundary reset linear in the wall coordinate with slope \(\varepsilon\), the loop width). \(\square\)
+
+**Remark 6** (Regime delineation with the application paper). The two holonomy-scaling regimes are complementary, and the pair of papers states both. Loops contained in a single constant-active-set stratum accumulate curvature at \(O(\varepsilon^2)\) per loop—the smooth arm, where the companion’s quadratic law \(\kappa(a)=a^2\) and the Fisher-minimal transport law live. Loops that cross a constraint-switching wall accumulate the boundary contribution at \(O(\varepsilon)\) per crossing (Theorem 3)—the wall-crossing arm, which the application paper’s regime dichotomy measures as the piecewise-linear slope 1.00 against the smooth arm’s 2.000.
+
+**Remark 7** (Numerical verification of the piecewise holonomy formula). The piecewise holonomy formula—including the two-crossing small-loop form, with the boundary contribution \(\alpha(p_+)-\alpha(p_-)\) at its true order \(O(\varepsilon)\)—is verified on a two-stratum base \(B=\mathbb{R}^2\) with the \(x\)-axis as the boundary, \(G_C=U(1)\) (abelian, simplifying the matching condition), and constant-curvature connections \(A_\pm=(c_\pm/2)(x\,dy-y\,dx)\) on the upper (\(S_+\)) and lower (\(S_-\)) half-planes. The transition function \(g_{+-}(x,0)=e^{i\alpha(x)}\) with \(\alpha(x)=a_1 x\) is the boundary reset map. The verification: (a) computes the analytic holonomy \(H_{\mathrm{an}}(\gamma)=e^{-i(F\varepsilon^2+\alpha(p_+)-\alpha(p_-))}\) for a rectangular loop of side \(\varepsilon\) centred at \((x_c,0)\) crossing the boundary twice; (b) computes the numerical holonomy by parallel transport along the loop with the connection 1-form \(A\) and the boundary transitions; (c) confirms that \(|H_{\mathrm{an}}|=|H_{\mathrm{num}}|\) to within \(10^{-13}\) (machine precision) for all tested \(\varepsilon\in\{0.05,0.1,0.2,0.4,0.8\}\), with the boundary crossings correctly detected (\(n_{\mathrm{cross}}=2\) per loop); (d) verifies that the boundary reset term is linear in \(a_1\) with slope \(\varepsilon\) (the loop width), as predicted by \(\alpha(p_+)-\alpha(p_-)=a_1\cdot\varepsilon\).
+
+**Remark 8** (Non-abelian extension to \(G_C=SO(3)\), the \(n=4\) prototype’s policy fibre). The abelian verification of Remark 7 is extended to the non-abelian \(G_C=SO(3)\) setting of the \(n=4\) prototype’s policy fibre; the deposited verification artefacts cover both settings. The \(\mathfrak{so}(3)\)-valued connection on each stratum is \(A_\pm=(F/2)(x\,dy-y\,dx)\,T_z\) where \(T_z\) is the \(\mathfrak{so}(3)\) generator of rotations about the \(z\)-axis, and the boundary transition \(g_{+-}(x,0)=\exp(\alpha(x)\,T_y)\) is a rotation about the \(y\)-axis by \(\alpha(x)=a_1 x\). The commutator \([T_y,T_z]=T_x\neq0\) makes the matrix product in the piecewise holonomy formula genuinely order-dependent: the boundary reset \(R_b=\alpha(p_*)T_y\) lies in a different \(\mathfrak{so}(3)\) direction than the stratum curvature \(F T_z\). The verification: (a) computes the analytic piecewise holonomy \(H_{\mathrm{an}}\in SO(3)\) as the ordered matrix product of stratum holonomies \(\exp(-(F/2)\int(x\,dy-y\,dx)T_z\,ds)\) and boundary transitions \(\exp(\pm\alpha(p_k)T_y)\) in the traversal order; (b) computes the numerical \(SO(3)\) holonomy by segment-by-segment matrix-exponential parallel transport; (c) confirms \(\|H_{\mathrm{num}}-H_{\mathrm{an}}\|_F<10^{-10}\) for all tested \(\varepsilon\in\{0.05,0.1,0.2,0.4,0.8\}\), with \(\det(H_{\mathrm{num}})=+1\) and \(H_{\mathrm{num}}^\top H_{\mathrm{num}}=I_3\) (genuine special-orthogonal matrices); (d) recovers the abelian limit \(\alpha=0\Rightarrow H=\exp(-F\varepsilon^2 T_z)\) (single \(z\)-rotation by \(F\varepsilon^2\)); (e) detects the non-abelian mixing via the off-diagonal entry \(H_{\mathrm{num}}[0,2]\) (the \(x\to z\) block), which is zero at \(a_1=0\) and grows linearly in \(a_1\) (slope \(\approx\varepsilon\cdot F\varepsilon^2/2\) in the small-loop regime), demonstrating that the boundary \(y\)-rotation rotates the holonomy matrix out of the stratum-curvature \(T_z\) direction. The non-abelian verification thus confirms Theorem 3 in the regime matching the \(n=4\) prototype.
+
+**Remark 9** (Third verification regime: non-abelian \(G_C=\mathrm{CO}(3)\) for endogenous reversibility). The piecewise holonomy formula is further verified in the third structure-group regime of Definition 2, \(G_C=\mathrm{CO}(3)=\mathbb{R}_+\ltimes SO(3)\), corresponding to endogenous reversibility in the policy-fibre hierarchy. The Lie algebra \(\mathfrak{co}(3)=\mathbb{R}S\oplus\mathfrak{so}(3)\) decomposes as a direct sum of the *central* scaling direction \(S=I_3\) (\([S,\,\cdot\,]=0\)) and the non-abelian rotation part \(\mathfrak{so}(3)\). The two-stratum base and stratum connection match the \(SO(3)\) setup, but the boundary transition is now a \(\mathrm{CO}(3)\)-valued map
+\[
+g_{+-}(x,0)=\exp\bigl(\alpha(x)\,T_y+\beta(x)\,S\bigr)
+=R_y\bigl(\alpha(x)\bigr)\cdot\Lambda\bigl(\beta(x)\bigr),
+\]
+where \(\Lambda(\beta)=e^\beta I_3\) is uniform scaling by \(e^\beta\), \(\alpha(x)=a_1 x\) is the rotation amplitude (as in the \(SO(3)\) test), and \(\beta(x)=b_1 x\) is the scaling amplitude (new in \(\mathrm{CO}(3)\)). The boundary reset thus combines a \(T_y\)-direction rotation with an \(S\)-direction scaling; since \(S\) is central, the scaling factors compose multiplicatively (abelian), while the rotations compose non-commutatively (as in the \(SO(3)\) regime). The \(\mathrm{CO}(3)\) holonomy is consequently a product of non-abelian rotation matrices and abelian scaling factors, with \(\det(H)=\lambda_{\mathrm{total}}^3>0\) and \(H^\top H=\lambda_{\mathrm{total}}^2\cdot I_3\) (conformal orthogonality: \(\mathrm{CO}(3)\) preserves angles up to uniform scaling). The numerical verification confirms: (a) \(\|H_{\mathrm{num}}-H_{\mathrm{an}}\|_F<10^{-10}\) for all tested \(\varepsilon\in\{0.05,0.1,0.2,0.4,0.8\}\); (b) \(\det(H_{\mathrm{num}})=\lambda_{\mathrm{total}}^3\) to within \(10^{-9}\); (c) \(\|H_{\mathrm{num}}^\top H_{\mathrm{num}}-\lambda_{\mathrm{total}}^2 I_3\|_F<10^{-9}\); (d) the abelian limit (\(\alpha=\beta=0\)) recovers \(H=\exp(-F\varepsilon^2 T_z)\) (same as the \(SO(3)\) abelian limit, since the scaling direction contributes nothing when the boundary transition vanishes); (e) the pure-scaling limit (\(\alpha=0\), \(\beta\neq0\)) recovers \(H=\exp(-F\varepsilon^2 T_z)\cdot\Lambda(b_1\varepsilon)\) to machine precision (rotation holonomy composed with uniform scaling). The \(\mathrm{CO}(3)\) verification completes the confirmation of Theorem 3 in all three structure-group regimes: abelian \(U(1)\), non-abelian \(SO(3)\), and endogenous-reversibility \(\mathrm{CO}(3)\).
+
+**Remark 10** (Topologically distinct loop: triangular geometry). To verify that the piecewise holonomy formula is geometry-independent (and not an artefact of the rectangular loop shape), the \(SO(3)\) verification is repeated on a triangular loop with vertices \(V_1=(0,+\varepsilon)\), \(V_2=(+\varepsilon,-\varepsilon)\), \(V_3=(-\varepsilon,-\varepsilon)\) (traversed counterclockwise). The triangle is topologically distinct from the rectangle: 3 vertices and 3 edges instead of 4 and 4; boundary crossings at non-perpendicular angles (the triangle’s edges cross the \(x\)-axis at oblique angles, not vertically); an asymmetric distribution of stratum pieces (3 pieces in \(S_-\), 2 in \(S_+\); the rectangular loop splits its 4 pieces symmetrically with 2 per stratum). The triangle has signed area \(2\varepsilon^2\) (twice the rectangular loop’s \(\varepsilon^2\) at the same scale). The boundary crossings occur at \(p_1=(\varepsilon/2,0)\) on edge \(V_1\to V_2\) and \(p_3=(-\varepsilon/2,0)\) on edge \(V_3\to V_1\), giving 5 stratum pieces in total. Verification: (a) \(\|H_{\mathrm{num}}-H_{\mathrm{an}}\|_F<10^{-10}\) for all \(\varepsilon\in\{0.05,0.1,0.2,0.4,0.8\}\) (machine precision); (b) \(\det(H_{\mathrm{num}})=+1\) and \(H_{\mathrm{num}}^\top H_{\mathrm{num}}=I\) (genuine \(SO(3)\)); (c) the abelian limit (\(\alpha=0\)) recovers \(H=\exp(-F\cdot\mathrm{Area}(\triangle)\,T_z)=\exp(-2F\varepsilon^2 T_z)\) (the triangle’s larger area produces twice the rectangular loop’s rotation angle, exactly matching the area formula \(F\cdot\mathrm{Area}\)); (d) the non-abelian feature is detected (\(H_{\mathrm{num}}[0,2]=0\) at \(a_1=0\), grows linearly in \(a_1\)). The triangular-loop verification confirms that the piecewise holonomy formula holds for arbitrary loop geometry, not just axis-aligned rectangles.
+
+**Remark 11** (Pentagon, circle and ellipse loop topologies). To further validate geometry-independence, the \(SO(3)\) verification is repeated on three additional loop topologies that are topologically and geometrically distinct from both the rectangular and triangular loops:
+
+- *Pentagon* (5-vertex regular polygon, inscribed in a circle of radius \(\varepsilon\)): a polygonal loop with higher vertex count than the triangle (3) or rectangle (4). Pentagon area: \((5/2)\varepsilon^2\sin(2\pi/5)\approx2.38\varepsilon^2\) (at \(\varepsilon=1\)). Pentagon boundary crossings: 2 (the polygon spans both strata), but with 5 edges contributing to the piecewise decomposition.
+
+- *Circle* (smooth non-polygonal curve, 200 equal-angle sample points starting at angle \(\pi/n\) to avoid placing a sample exactly on the boundary): a smooth curve, the analytic limit of polygonal refinement. Circle area: \(\pi\varepsilon^2\).
+
+- *Ellipse* (smooth anisotropic curve, 200 equal-angle sample points with semi-major axis \(a=\varepsilon\) and semi-minor axis \(b=\varepsilon/2\)): a loop with broken rotational symmetry, testing that the piecewise formula extends to anisotropic loop geometry. Ellipse area: \(\pi\varepsilon\cdot(\varepsilon/2)=\pi\varepsilon^2/2\).
+
+For each topology the verification is run on the same two-stratum base as the rectangular (\(U(1)\) and \(SO(3)\)) and triangular (\(SO(3)\)) verifications: \(F_+=F_-=2\), \(\alpha(x)=1.5x\), \(\varepsilon\in\{0.05,0.1,0.2,0.4,0.8\}\). The numerical holonomy is computed by the same segment-by-segment matrix-exponential parallel transport, with 2000 sample points (numerical) and 8000 sample points (analytic reference). For all three topologies: (a) \(\|H_{\mathrm{num}}-H_{\mathrm{an}}\|_F<10^{-10}\) for all \(\varepsilon\) (machine precision); (b) \(\det(H_{\mathrm{num}})=+1\) and \(H_{\mathrm{num}}^\top H_{\mathrm{num}}=I\) (genuine \(SO(3)\)); (c) \(n_{\mathrm{crossings}}=2\) per loop (entry + exit); (d) the abelian limit (\(\alpha=0\)) recovers \(H=\exp(-F\cdot\mathrm{Area}(\mathrm{loop})\cdot T_z)\) within machine precision for the corresponding area formula (pentagon \((5/2)\varepsilon^2\sin(2\pi/5)\), circle \(\pi\varepsilon^2\), ellipse \(\pi\varepsilon^2/2\)); (e) the non-abelian feature is detected (\(H_{\mathrm{num}}[0,2]=0\) at \(a_1=0\), grows linearly in \(a_1\) in all three topologies). Combined with the rectangular (\(U(1)\), \(SO(3)\)), \(\mathrm{CO}(3)\) and triangular verifications, the piecewise holonomy formula (Theorem 3) is verified on five distinct loop shapes (rectangle, triangle, pentagon, circle, ellipse), confirming that the formula is geometry-independent: it holds for any loop shape, polygonal or smooth, isotropic or anisotropic.
+
+**Remark 12** (Pathwise viability versus endpoint viability). A small loop with bounded endpoint holonomy does not imply that intermediate points of the loop are viable: the endpoint bound is a weaker statement than pathwise viability. To control intermediate points, the calibration protocol of the abelian \(n=3\) prototype applies a Nagumo inward-pointing condition along the path, equivalently a viability tube of radius \(\varepsilon\) around the loop. A loop with bounded endpoint holonomy but intermediate viability violation is a false negative for the holonomy prediction; the tube check excludes it. The tube is operationalised by verifying that the entire \(\varepsilon\)-neighbourhood of \(\gamma_a([0,1])\) lies inside the closed viability kernel \(\{x:V(x)\ge V_{\max}-\varepsilon\}\); this is a binary check that produces a separate falsifiable verdict on the pathwise viability content of the holonomy prediction.
+
+## 3.2 Fisher-minimal transport on constant-active-set strata
+
+On a constant-active-set stratum of a SAVGS, the active viability constraints are represented locally by \(c(\theta,p)=0\) with \(J_p=D_pc\) of full row rank and \(J_\theta=D_\theta c\). For an environmental velocity \(\dot\theta\), the Fisher-minimal policy velocity is the unique solution of \(J_pv+J_\theta\dot\theta=0\) minimising \(\tfrac12 v^\top G(p)v\), where \(G(p)\) is the Fisher information metric on the open simplex \(\Delta^{n-1}\).
+
+**Proposition 8** (Fisher-minimal horizontal lift, KKT form). On a constant-active-set stratum where \(J_p\) has full row rank, the unique Fisher-minimal policy velocity is
+\[
+v^*(\theta,p,\dot\theta)
+=-G(p)^{-1}J_p^\top\bigl(J_p G(p)^{-1}J_p^\top\bigr)^{-1}J_\theta\dot\theta,
+\]
+which defines the connection 1-form \(A_i=G^{-1}J_p^\top(J_p G^{-1}J_p^\top)^{-1}\partial_ic\) on the stratum, satisfying \(\dot p=-A_i(\theta,p)\,\dot\theta^i\). The horizontal lift \(H_i=\partial_{\theta^i}-A_i\) is a genuine smooth connection on each constant-rank stratum, with curvature \(F_{ij}=\partial_i A_j-\partial_j A_i+[A_i,A_j]\).
+
+*Proof.* The constrained minimum of \(\tfrac12 v^\top Gv\) subject to \(J_pv+J_\theta\dot\theta=0\) is found by Lagrange multipliers. Setting \(\nabla_v[\tfrac12 v^\top Gv+\mu^\top(J_pv+J_\theta\dot\theta)]=Gv+J_p^\top\mu=0\) gives \(v=-G^{-1}J_p^\top\mu\). Substituting into the constraint: \(-J_p G^{-1}J_p^\top\mu+J_\theta\dot\theta=0\), so \(\mu=(J_p G^{-1}J_p^\top)^{-1}J_\theta\dot\theta\). The full-row-rank hypothesis on \(J_p\) guarantees the inverse exists. The horizontal subspace \(H_{(\theta,p)}=\ker(J_p)\cap T_p\Delta^{n-1}\) varies smoothly in \((\theta,p)\) on the stratum (constant-rank hypothesis), so the resulting 1-form \(A_i\) is \(C^2\); the curvature \(F_{ij}\) is then the standard Ehresmann-curvature expression by direct computation. \(\square\)
+
+**Remark 13** (Projected differential inclusion at constraint-switching boundaries). At a constraint-switching boundary—where an inequality enters or leaves the active set—the full-row-rank hypothesis of Proposition 8 fails: the rank of \(J_p\) jumps, and the smooth connection \(A_i\) is no longer defined. The correct replacement is the projected differential inclusion
+\[
+\dot p\in\arg\min_{v\in T_{\mathcal{K}}(\theta,p;\dot\theta)}\tfrac12\bigl\|v-v_0\bigr\|_{F,p}^2,
+\]
+where \(T_{\mathcal{K}}(\theta,p;\dot\theta)\) is the Bouligand contingent cone to the viability kernel \(\mathcal{K}\) at \((\theta,p)\) in the direction \(\dot\theta\) and \(v_0\) is the unconstrained Fisher-minimal velocity. This is viability dynamics, not ordinary smooth-connection theory; the SAVGS 2-categorical span of Definition 9 glues the smooth-stratum connections across the boundary via the matching condition on the boundary 2-cell.
+
+**Theorem 4** (Small-loop viability–holonomy). Let \((B,E,\mathcal{P},\varepsilon,\Gamma)\) be a SAVGS as in Definition 9, on a constant-active-set stratum where Proposition 8 applies and the connection 1-form \(A_i\) is \(C^2\). Let \(\gamma_\varepsilon:[0,1]\to B\) be a square loop of side \(\varepsilon\) in the \((\theta^1,\theta^2)\)-plane at \(\theta_0\), contained entirely in a single stratum, and let \(h_\alpha(\theta,x)\) be a \(C^2\) viability function with \(h_\alpha(\theta_0,x_0)>0\). Then the parallel transport of the policy around \(\gamma_\varepsilon\) satisfies
+\[
+p_{\mathrm{end}}-p_0=\varepsilon^2 F_{12}(\theta_0,p_0)+O(\varepsilon^3),
+\]
+up to the orientation convention for \(F_{12}\). The induced change in the viability margin is
+\[
+h_\alpha(x_{\mathrm{end}})-h_\alpha(x_0)
+=\varepsilon^2 D_p h_\alpha\bigl(F_{12}(\theta_0,p_0)\bigr)
++O(\varepsilon^3)+\Delta_\alpha^{\mathrm{other}},
+\]
+where \(\Delta_\alpha^{\mathrm{other}}\) collects all non-returning energy, integrity, repair and environmental contributions along the loop. In particular, the endpoint remains viable whenever
+\[
+h_\alpha(x_0)+\varepsilon^2 D_p h_\alpha(F_{12})-C_\alpha\varepsilon^3-|\Delta_\alpha^{\mathrm{other}}|>0
+\qquad\text{for every }\alpha,
+\]
+where \(C_\alpha\) depends on the \(C^2\) bounds of \(h_\alpha\) and \(A_i\).
+
+*Proof.* The expansion of \(p_{\mathrm{end}}-p_0\) is the standard non-abelian Stokes formula for parallel transport around an infinitesimal loop: writing the path-ordered exponential \(\mathcal{P}\exp(-\oint A)=1-\iint_S F_{12}\,d\theta^1 d\theta^2+O(\varepsilon^3)\) on a square \(S\) of side \(\varepsilon\) gives \(p_{\mathrm{end}}-p_0=-\varepsilon^2 F_{12}+O(\varepsilon^3)\) (the sign convention is fixed by the orientation of \(A_i\) and is absorbed into \(F_{12}\)). The margin expansion follows by Taylor expansion of \(h_\alpha\) at \(x_0\) to first order in \(p_{\mathrm{end}}-p_0\) and second order in \(\varepsilon\), with \(\Delta_\alpha^{\mathrm{other}}\) collecting the integral of \(D_\theta h_\alpha\,\dot\theta\) along the loop plus the \(O(\varepsilon^3)\) remainder. The sufficient condition is then the requirement that the worst-case \(O(\varepsilon^3)\) remainder plus the non-returning contribution not exceed the initial margin minus the leading-order curvature contribution. \(\square\)
+
+**Proposition 9** (Vulnerability bound). Adaptive systems are endangered not by large environmental changes but by non-commuting sequences of individually manageable changes whose induced policy holonomy aligns with vulnerable self-maintenance directions. The upper bound on vulnerability is the viability-weighted curvature \(\kappa\) of Definition 8 on a \(G_C\)-structured stratified connection; the lower bound is 0, attained when \(\kappa\equiv0\) (flat connection).
+
+*Proof.* On a constant-active-set stratum, integrate Theorem 4 along the loop: the endpoint margin change is bounded above in magnitude by \(\varepsilon^2 D_p h_\alpha(F_{12})\le\varepsilon^2\kappa\) per unit loop area, with the positive part in Definition 8 discarding viability-restoring curvature; summing over the loop gives the upper bound. The flat connection \(F\equiv0\) gives \(p_{\mathrm{end}}=p_0\) to \(O(\varepsilon^3)\), hence zero holonomy-induced vulnerability and the lower bound. \(\square\)
+
+**Remark 14** (What Theorem 4 does and does not claim). Theorem 4 bounds the *endpoint* viability margin by the leading-order curvature contribution plus an \(O(\varepsilon^3)\) remainder. It does *not* bound the *pathwise* viability margin: a loop with bounded endpoint holonomy may transit non-viable regions. Pathwise viability requires the additional Nagumo inward-pointing condition of Remark 12—equivalently a viability tube of radius \(\varepsilon\) around \(\gamma_a([0,1])\) contained in the closed viability kernel. Curvature is therefore neither necessary nor sufficient for survival in isolation; the bidirectional “equivalence” is replaced by the unidirectional upper bound “vulnerability \(\le\kappa\)” of Proposition 9, with the trivial lower bound 0 attained when \(\kappa\equiv0\).
+
+## 3.3 Square-root embedding and gauge invariance
+
+**Proposition 10** (Square-root embedding). The square-root embedding \(\psi_a=2\sqrt{p_a}\) places the open simplex \(\Delta^{n-1}\) on the positive orthant of the sphere of radius 2, \(\{x\in\mathbb{R}^n:\|x\|=2\}\) (the map \(p\mapsto\psi(p)\) has \(\|\psi\|=2\) since \(\sum_ap_a=1\)). The Fisher–Rao distance between probability vectors \(p,q\in\Delta^{n-1}\) becomes
+\[
+d_{\mathrm{FR}}(p,q)=2\arccos\Bigl(\sum_a\sqrt{p_a q_a}\Bigr),
+\]
+the standard round metric on the positive orthant. All geometric quantities computed in this embedding are gauge-invariant; logit coordinates are recovered as a stereographic projection.
+
+*Proof.* Direct computation of the Fisher–Rao metric tensor in the square-root embedding. The induced metric on the positive orthant of \(S^{n-1}\) is the standard round metric; the stereographic projection onto the tangent plane at any fixed reference point gives the logit coordinates. Gauge invariance follows from the round metric’s \(SO(n)\)-invariance. \(\square\)
+
+## 3.4 An intervention-based autopoiesis closure test
+
+The SAVGS framework supplies an operational distinction between autopoietic and homeostatic systems that is falsifiable. The core distinction is between *homeostasis* (the agent remains inside a prescribed viable set, possibly via externally supplied maintenance) and *autopoiesis* (the agent regenerates the sensing, control, repair and boundary-maintenance machinery required to remain there). The maintenance graph \(\Gamma=(M,R,E)\) of Definition 9 encodes this distinction: \(M\) is the set of maintained components (sensors, policy updater, boundary, energy converter, repair modules); \(R\) is the set of processes that produce, repair or enable those components; \(E\) is the edge set encoding consumption, production, catalysis and enablement.
+
+**Definition 11** (Operational closure criteria). These criteria are the dynamical counterpart of the closed, self-maintaining sets of chemical organisation theory and of the categorical-autopoiesis formalisations of Hirota and of Segura. A SAVGS is *operationally closed* at the maintenance graph \(\Gamma=(M,R,E)\) when all four criteria hold:
+
+1. Every indispensable component \(m\in M_{\mathrm{ess}}\subseteq M\) degrades at a strictly positive rate.
+2. Every \(m\in M_{\mathrm{ess}}\) is regenerated by at least one internal process \(r\in R\).
+3. Every \(r\in R\) is enabled by components belonging to the same organisational closure (i.e., the enablers of \(r\) lie in \(M_{\mathrm{ess}}\)).
+4. External inputs may supply matter and free energy, but not preassembled replacements for any \(m\in M_{\mathrm{ess}}\).
+
+The indispensable maintenance subgraph \(\Gamma_{\mathrm{ess}}\subseteq\Gamma\) is required to lie in a productive strongly connected component, and the associated fluxes must support a feasible positive steady state (a flux-feasibility linear program on \(\Gamma\) must admit a strictly positive solution).
+
+**Definition 12** (Autopoiesis closure test—dynamical closure with viability threshold). The SAVGS carries concentration dynamics \(\dot x=Nv(x)-Dx+u_{\mathrm{food}}\) on the maintenance species \(x\in\mathbb{R}^M_{\ge0}\) (stoichiometry \(N\), reaction rates \(v\), degradation \(D\), allowed external food input \(u_{\mathrm{food}}\); cf. Definition 11). Fix a strictly positive viability concentration threshold \(x_{\mathrm{thresh}}>0\) and a recovery horizon \(T\). For each purportedly self-maintained component \(m_j\in M_{\mathrm{ess}}\):
+
+(i) *Knockout.* Set the internal repair flux of \(m_j\) to zero: \(r_j:=0\). Keep the external food supply \(u_{\mathrm{food}}\) unchanged (no preassembled replacement for \(m_j\) is supplied).
+
+(ii) *Drift under dynamics.* Integrate the concentration dynamics \(\dot x=Nv(x)-Dx+u_{\mathrm{food}}\) forward for \(T\) steps from the pre-knockout steady state \(x^*\).
+
+(iii) *Recovery above threshold.* Record the post-recovery concentration \(\mathrm{rec}_j(T):=x_j(T)\). The component \(m_j\) is *recovered* if and only if \(\mathrm{rec}_j(T)>x_{\mathrm{thresh}}\) (not merely nonzero—the concentration must exceed the declared viability threshold, which removes the trivial reinsertion failure mode of binary node-reappearance tests).
+
+(iv) *Downstream cascade.* Every \(m_{j'}\) whose enabling chain depends on \(m_j\) must also drop below \(x_{\mathrm{thresh}}\) during step (ii) and recover above \(x_{\mathrm{thresh}}\) in step (iii) (predicted downstream effect).
+
+(v) *Restoration control.* Restore the repair pathway (\(r_j:=r_j^{\mathrm{pre-knockout}}\)) and verify that all knocked-down and downstream concentrations return to \(x^*\) within \(T\) steps (recovery control).
+
+A component \(m_j\) is *causally internal* to the organisational closure if and only if steps (i)–(v) hold as stated. The system is *autopoietic* if and only if every \(m_j\in M_{\mathrm{ess}}\) is causally internal; otherwise it is *homeostatic* with respect to the failing component. The default viability threshold used in the operational network benchmarks is \(x_{\mathrm{thresh}}=0.1\) in normalised concentration units; the threshold is a declared operational parameter, not a fitted one, and may be varied in the robustness sweeps documented in the project repository.
+
+**Remark 15** (Why the test is non-circular and dynamical). The closure test of Definition 12 prevents “autopoiesis” from being satisfied by a simulator that silently repairs the agent from outside: the external intervention in step (i) is the only externally imposed change; the recovery in step (iii) must be produced by the endogenous regeneration rules \(R\) alone, with concentrations crossing the declared viability threshold \(x_{\mathrm{thresh}}>0\) rather than merely registering a nonzero symbolic presence. A homeostatic system that depends on a hidden external repair mechanism fails the test on step (iii): the knocked-down component’s concentration does not exceed \(x_{\mathrm{thresh}}\) within \(T\) steps. The threshold requirement removes the principal circularity of the older node-reappearance formulation, where any nonzero reinsertion (including a trivial simulator-level reset) would pass. The test is falsifiable in three independent directions: (a) if a non-food maintenance node \(m_j\) fails to recover above \(x_{\mathrm{thresh}}\) in step (iii), the system is homeostatic with respect to \(m_j\); (b) if knockout of an essential catalytic hub does not cause the predicted downstream collapse in step (iv), the maintenance graph \(\Gamma\) is mis-specified; (c) if restoration of the repair pathway fails to recover \(x^*\) in step (v), the steady-state viability is unstable and the autopoiesis verdict is unreliable.
+
+**Proposition 11** (Closure test as a finite-time viability probe). Let \(V:=\{x\in\mathbb{R}^M_{\ge0}:x_j\ge x_{\mathrm{thresh}}\text{ for all }m_j\in M_{\mathrm{ess}}\}\) be the viability constraint set determined by the declared threshold, and write the dynamics of Definition 12 in control form by splitting the repair reactions off the rate law: \(\dot x=N_{\mathrm{fix}}v_{\mathrm{fix}}(x)+N_{\mathrm{rep}}u-Dx+u_{\mathrm{food}}\), with control entries \(u_k\in[0,\bar r_k]\) the repair-reaction rates and \(\bar r\) their pre-knockout values; the *endogenous law* sets \(u_k=v_k(x)\). For \(m_j\in M_{\mathrm{ess}}\), let \(\Sigma_j\) be the restricted system with \(u_j\equiv0\) (the knockout).
+
+(i) If the solution of \(\Sigma_j\) under the endogenous law launched at the pre-knockout steady state \(x^*\) remains in \(V\) for all \(t\ge0\)—\(x^*\) lies in the feedback viability kernel of \(V\) for that law—then step (iii) of Definition 12 passes at every horizon at which the trajectory meets the interior of \(V\).
+
+(ii) If steps (i)–(iii) pass under the autonomous post-knockout law, then \(x^*\) belongs to the horizon-\(T\) recovery set \(\{x_0:x_j(T;x_0)\ge x_{\mathrm{thresh}}\}\) of that law; and if the post-knockout solution is uniformly persistent (\(\liminf_{t\to\infty}x_j(t)>x_{\mathrm{thresh}}\)), then its \(\omega\)-limit set is contained in \(V\)—the trajectory-level relaxation of kernel membership appropriate when the perturbation forces an excursion below the threshold.
+
+(iii) Step (v) passes if and only if, under the restored law, the post-knockout state is recaptured by the steady state within the horizon: the restoration flux solves the finite-horizon capture problem for the target \(\{x^*\}\) under the constraint \(V\).
+
+*Proof.* (i) Viability under the stationary law means \(x(t)\in V\) for all \(t\ge0\), in particular \(x_j(T)\ge x_{\mathrm{thresh}}\), and the conclusion is the strict form of this inequality at horizons where the trajectory is interior. (ii) The first clause is the definition of passing step (iii); under uniform persistence there exists \(T_0\) with \(x_j(t)\ge x_{\mathrm{thresh}}\) for all \(t\ge T_0\), so every accumulation point of the solution lies in the closed set \(V\), which is the stated containment. (iii) Step (v) is the definition of finite-horizon capture of \(x^*\) under the restored dynamics, restated in the vocabulary of viability theory. \(\square\)
+
+**Remark 16** (Nagumo tangentiality and the scope of the probe). Three comments. First, at the threshold face \(\{x_j=x_{\mathrm{thresh}}\}\) the contingent cone to \(V\) is \(\{w:w_j\ge0\}\), so re-entry through the face requires the \(j\)-th velocity component of the recovery dynamics to be non-negative there—Nagumo’s inward-pointing condition for the box \(V\); at constraint-switching boundaries of the stratified law the same requirement is enforced by the projected differential inclusion of Remark 13, whose Bouligand contingent cone is the general form of the tangent cone. Second, the protocol is deliberately stronger than viability-kernel membership in the existential sense of viability theory (some admissible control keeps the state in \(V\)): it fixes the *endogenous* feedback and forbids exogenous rescue, so a positive verdict certifies that the system’s own control law is a viable one at the probed horizon—the property the non-circularity reading of Definition 12 requires. Third, the probe is single-perturbation and finite-horizon: guaranteed viability under a *family* of persistent disturbances (the invariance-kernel problem) is the stronger program-level property, and the pathwise levels—the occupation fractions of Phase II/III (Definition 13)—are the occupation-measure approximations of that property over the sampled window.
+
+**Definition 13** (Closure-aware viability curvature). Restricting the viability covectors of \(\kappa\) (Definition 8) to the repair-machinery margins \(h_j^{\mathrm{repair}}=r_j-r_{j,\min}\) gives the closure-aware viability curvature
+\[
+\kappa_{\mathrm{closure}}(\theta,x)
+=\sup_{\|u\wedge v\|_{g_F}=1}
+\max_{j\in M_{\mathrm{ess}}}
+\frac{\bigl[-Dh_j^{\mathrm{repair}}(F(u,v))\bigr]^+}{h_j^{\mathrm{repair}}(\theta,x)}.
+\]
+The quantity \(\kappa_{\mathrm{closure}}\) distinguishes three failure modes: (i) harmless behavioural hysteresis (the curvature projects onto non-maintenance directions); (ii) metabolic viability erosion (\(\kappa>0\) but \(\kappa_{\mathrm{closure}}=0\)); (iii) autopoietic failure proper (\(\kappa_{\mathrm{closure}}>0\), the curvature erodes the machinery that makes future adaptation possible). Only the third is specifically autopoietic failure.
+
+**Remark 17** (The operational, data-side curvature is not defined here). An operational curvature is deliberately *not* defined here. An indicator-masked, gene-knockout flux-rerouting statistic imports the model’s own essentiality call into the predictor and is circular as a result. The application paper instead derives a measure-theoretic sensitivity metric from the atomic curvature measure of parametric FBA, one whose selection-rule dependence is exposed and stress-tested rather than masked (tie-break robustness across the five-rule stage-3 selection battery—declared plus four variants—of the lexicographic protocol class) and whose empirical validation carries an explicit protein-layer null. The categorical framework of the present paper is independent of that choice: Definition 8 is the geometric object; the application paper’s metric is one faithful operationalisation of it.
+
+# 4. Bregman-divergence Noether correspondence
+
+A Noether-type correspondence for the Lagrangian \(L=\mathbb{E}[d]+\lambda I\) requires \(G\)-invariance of both the distortion measure \(d\) and the source prior in the same group \(G\). Bregman divergences in dual affine coordinates are affine-invariant (Definition 6), which supplies both.
+
+**Proposition 12** (Bregman–Hessian Noether correspondence). Let \(Q\subset\mathbb{R}^r\) be open convex, \(\phi\in C^3\) strictly convex, and \(g_\phi=\nabla^2\phi\) the Hessian metric on \(Q\). Let \(L(q,\dot q)=\tfrac12 g_\phi(q)(\dot q,\dot q)-U(q)\) be the geodesic Lagrangian with potential \(U\in C^2\), and let \(S[q]=\int_a^b L(q,\dot q)\,dt\) be the action on the configuration space of smooth curves \(q:[a,b]\to Q\). Let \(\xi\) be a complete affine vector field on \(Q\) whose flow \(g_t=\mathrm{flow}_t(\xi)\) preserves the Hessian metric,
+\[
+\mathcal{L}_\xi g_\phi=0,
+\]
+and preserves the potential, \(\xi(U)=0\). Then \(S\) is invariant under the lifted flow \(\tilde g_t\cdot(q,\dot q)=(g_t\cdot q,\,Dg_t\cdot\dot q)\), and by Noether’s theorem the momentum
+\[
+J_\xi(q,\dot q)=g_\phi(q)(\dot q,\xi(q))
+=\bigl\langle\nabla^2\phi(q)\,\dot q,\;\xi(q)\bigr\rangle
+=\bigl\langle\dot q^{\mathrm{dual}},\,\xi(q)\bigr\rangle
+\]
+is conserved along Euler–Lagrange trajectories of \(S\): \(\frac{d}{dt}J_\xi(q(t),\dot q(t))=0\) on-shell. Here \(\dot q^{\mathrm{dual}}:=\nabla^2\phi(q)\,\dot q\) is the Hessian-dual velocity—the tangent-vector instance of the Bregman dual coordinate of Definition 6.
+
+*Proof.* Hessian-metric preservation gives \(\mathcal{L}_\xi L=\xi(U)=0\) (the kinetic term is invariant by \(\mathcal{L}_\xi g_\phi=0\), and the potential term is invariant by \(\xi(U)=0\)); hence \(S[\tilde g_t\cdot q]=S[q]\) for all \(t\), and \(\tilde g_t\) is a continuous variational symmetry of \(S\). By Noether’s theorem in its standard field-theoretic form, the one-parameter symmetry yields the conserved momentum \(J_\xi(q,\dot q)=\partial L/\partial\dot q\cdot\xi(q)=g_\phi(q)(\dot q,\xi(q))\). The dual-coordinate form follows from \(\partial L/\partial\dot q=g_\phi(q)\,\dot q=\nabla^2\phi(q)\,\dot q=\dot q^{\mathrm{dual}}\). \(\square\)
+
+**Corollary 2** (Affine Bregman invariance; sufficient condition). A one-parameter affine flow \(g_t\) on \(Q\) that satisfies \(\phi\circ g_t=\phi+\ell_t\) for an affine function \(\ell_t\) preserves the Hessian metric \(g_\phi=\nabla^2\phi\) (the affine map \(g_t\) has vanishing second derivative, so \(\nabla^2(\phi\circ g_t)=(\nabla^2\phi)\circ g_t=\nabla^2\phi\), and \(\nabla^2\ell_t=0\)). Therefore the hypothesis \(\mathcal{L}_\xi g_\phi=0\) is satisfied, and the Bregman divergence \(D_\phi\) is invariant in the paired primal-dual sense required by Proposition 12.
+
+**Proposition 13** (Falsifiable precondition check). The Bregman–Hessian Noether correspondence has a falsifiable precondition check: verify (i) that \(\phi\) is \(C^3\) strictly convex (positive-definite Hessian \(g_\phi=\nabla^2\phi\succ0\)), (ii) that the vector field \(\xi\) generates an affine Hessian isometry (\(\mathcal{L}_\xi g_\phi=0\), equivalently \(\mathcal{L}_\xi(\nabla^2\phi)=0\)), and (iii) that \(\xi(U)=0\). If all three conditions hold, the correspondence applies; failure of any condition refutes the theorem at that point.
+
+*Proof.* Operational verification: (i) compute the Hessian \(\nabla^2\phi\) and verify positive definiteness; (ii) compute the Lie derivative \(\mathcal{L}_\xi(\nabla^2\phi)\) via Cartan’s formula \(\mathcal{L}_\xi T=[i_\xi,d]T\) and verify it vanishes; (iii) compute the directional derivative \(\xi(U)\) and verify it is zero. All three checks are mechanical and produce a binary verdict. \(\square\)
+
+**Remark 18** (Application to gauge invariance of \(\kappa\)). If the policy connection and viability margins of Definition 8 are constructed from a Bregman generator \(\phi\) and the gauge group acts by affine Hessian isometries preserving the margins, the curvature \(F\) and the viability-weighted curvature \(\kappa\) are gauge-covariant (and gauge-invariant when the margins themselves are gauge-invariant). This is the rigorous replacement for the earlier Bregman–Noether proposition: not divergence invariance alone (which is false in general under arbitrary affine transformations holding \(\phi\) fixed), but affine isometries of the Hessian metric yield conserved momenta by Noether’s theorem.
+
+# 5. A seven-claim falsification hierarchy
+
+**Definition 14** (Falsification hierarchy). The viability-weighted curvature \(\kappa\) of Definition 8 generates a seven-claim falsification hierarchy on the abelian \(n=3\) prototype. Each claim is a specific quantitative prediction; failure of any prediction refutes the corresponding level of the hierarchy.
+
+- **A.** (Held-out margin erosion) \(\kappa\) predicts held-out margin erosion with linear-regression slope \(\approx1\) and \(R^2\ge0.9\).
+- **B.** (Orientation reversal amplitude) The holonomy \(H(a)=\pi a^2\) reverses orientation when \(|H|>\pi\), i.e. at \(a_{\mathrm{rev}}=1\).
+- **C.** (Holonomy-area scaling) The holonomy increment of a loop of amplitude \(a\) has mean \(\pi a^2+O(\sigma^3)\) and, under the amplitude-scaled exposure \(\sigma^2=\nu a\), leading fluctuation scale \(C_{\mathrm{fat}}\,a^{3/2}\) with \(C_{\mathrm{fat}}=\sqrt{5\nu}/2\). The operational two-term law \(H(a)=c_1 a^2+c_2 a^{3/2}\) (\(c_1\sim\pi\), \(c_2\) the calibrated operating value of \(C_{\mathrm{fat}}\), \(R^2\ge0.95\)) treats the fluctuation scale as a deterministic per-loop correction under the envelope convention of Remark 20.
+- **D.** (Repeated-loop fatigue) Under the same convention, the per-loop fractional erosion is \(F_k=a_k\,\kappa(a_k)+C_{\mathrm{fat}}\,a_k^{3/2}+\eta_k\): the conservative sufficient safety condition \(\sum_{k=1}^K(a_k\,\kappa(a_k)+C_{\mathrm{fat}}\,a_k^{3/2})<1\) guarantees survival through \(K\) loops, and the failure condition \(\sum_{k=1}^K(a_k\,\kappa(a_k)+C_{\mathrm{fat}}\,a_k^{3/2}+\eta_k)>1\) predicts fatigue failure; \(V_{\max,K}=\prod_k(1-F_k)<e^{-1}\) at \(K_{\mathrm{obs}}\); relative error \(<15\%\). In fluctuation form the cumulative sum has mean \(\sum_k a_k\,\kappa(a_k)\) and the \(C_{\mathrm{fat}}\) term contributes a standard deviation \(\bigl(\sum_k(C_{\mathrm{fat}}\,a_k^{3/2})^2\bigr)^{1/2}\).
+- **E.** (Total-variance discrimination) \(T=|H_{\mathrm{corr}}-H_{\mathrm{geo}}|/\sigma_{\mathrm{total}}\) is small under the loop condition and large under the no-loop control, with \(T_{\mathrm{control}}/T_{\mathrm{loop}}\ge5\).
+- **F.** (Non-abelian commuting control) At \(n\ge4\), the structure group \(G_C\) has non-abelian \(\mathfrak{so}(3)\) when \(G_C=SO(3)\); same-axis rotations commute (machine precision), distinct-plane rotations do not (nonzero non-abelian signature).
+- **G.** (CPTP–Zeno lift) The CPTP lift of the self-referential predictive paradox resolves via the Zeno measurement schedule, with Zeno scaling exponent \(\alpha_{\mathrm{Zeno}}\approx2\) distinguishable from the classical \(\alpha_{\mathrm{cl}}\approx1\).
+
+The hierarchy is cumulative: failure at level \(k\) renders the subsequent levels operationally meaningless but does not refute the underlying categorical construction (Theorem 5).
+
+**Remark 19** (Three objects, one family). Three objects appear under the \(\kappa\) symbol family in this paper: the pointwise geometric curvature \(\kappa(\theta,x)\) of Definition 8; the loop-amplitude functional \(\kappa(a)\) (the prototype law \(\kappa(a)=a^2\) of the radially symmetric regime); and the loop-averaged viability depth \(D_V(a)\) of Definition 1. They are one object at different resolutions—the pointwise curvature, its trajectory functional, and its loop-averaged statistic—paralleling the resolution structure of the application paper, whose Discussion relates the atomic measure, its coarse-grainings, and its trajectory integrals as one object at different resolutions. The empirical sections use \(\kappa(a)\) throughout; every such use is the prototype instantiation of Definition 8 under radial symmetry.
+
+**Remark 20** (Fluctuation status of the fatigue term). The derivation establishes \(C_{\mathrm{fat}}\,a^{3/2}\) as the standard deviation of the leading stochastic correction to the holonomy: the per-loop increment has mean \(\pi a^2+O(\sigma^3)\), and its \(a^{3/2}\) term is a fluctuation scale, not a drift. Claims C and D, the \(n=3\)/\(n=4\) operational batteries, and the heavy-tail stress test therefore adopt a declared *envelope convention*: the fluctuation scale enters the fatigue increment as a deterministic per-loop term (the conservative upper-envelope reading), so that the two-term law and the failure conditions remain directly testable against the deposited simulations. Under the pure fluctuation reading the failure condition would instead read \(\sum_k a_k\kappa(a_k)+z\bigl(\sum_k(C_{\mathrm{fat}}\,a_k^{3/2})^2\bigr)^{1/2}>1\) at confidence \(z\); both readings are stated, and the operational artefacts implement the envelope one. The constant’s operating value (\(c_2=0.0500\), i.e. \(C_{\mathrm{fat}}\) at \(\nu=0.002\)) is a calibration of the exposure parameter \(\nu\)—the derivation’s Monte Carlo uses \(\nu=0.1\), and the \(n=4\) battery plants the calibrated value in the synthetic data and recovers it within \(5\%\) (a calibration-recovery check).
+
+**Remark 21** (Recommended experimental ordering). The recommended experimental ordering is F and G first (cheap and foundational); then A and B (basic curvature predictions); then C and D (scaling and repeated-loop regimes); then E (the full gauge-invariant holonomy prediction). This ordering implements the principle that cheap foundational tests should precede expensive derivative tests. If F or G fails, the derivative tests are unnecessary.
+
+# 6. The single composition theorem
+
+**Construction 1** (Seven-optic endofunctor). Let \(\mathcal{C}\) be a category with finite limits. Let \(\mathrm{O}_1,\ldots,\mathrm{O}_7\) be the seven optics corresponding to the seven arcs of domain unification, typed as strict feedback morphisms (Remark 3) with carrier pairs \((M_i,C_i)\):
+
+1. \(\mathrm{O}_1\): the RAF optic (forward = catalytic closure, backward = decoder, residual = the viability-kernel distance \(D_\varphi(\mathrm{dist}_D(R),\mathrm{dist}_D(R_0))\));
+2. \(\mathrm{O}_2\): the RPSI optic (forward = CPTP predictive update, backward = posterior decoder, residual = the ensemble Holevo bound \(\chi=S(\sum_x p_x\rho_x)-\sum_x p_x S(\rho_x)\) of the prediction ensemble);
+3. \(\mathrm{O}_3\): the IFS optic (forward = iterated-function-system contraction, backward = decoder, residual = contraction quotient \(c_i\) of \(f_i\));
+4. \(\mathrm{O}_4\): the Noether optic (forward = symmetry-action update, backward = conserved-quantity decoder, residual = the viability-preserving projection);
+5. \(\mathrm{O}_5\): the perturbation optic (forward = perturbed Blahut–Arimoto update, backward = perturbation decoder, residual = perturbation tensor \(\partial d/\partial p\));
+6. \(\mathrm{O}_6\): the WCIG optic (forward = worldview-constrained information-gain update, backward = decoder, residual = Fisher–Rao metric \(g_{\mathrm{FR}}\));
+7. \(\mathrm{O}_7\): the \(n=3\) Fisher–Rao optic (forward = parallel-transport update on \(SO(2)\), backward = decoder, residual = loop-area invariant; for \(n\ge4\), lifted to \(SO(n-1)\) with viability margin \(\varepsilon\) and maintenance graph \(\Gamma\)).
+
+The compatibility condition \(A_i=M_{i+1}\) holds by construction.
+
+**Remark 22** (Optic decompositions of the arcs). The forward components are the encoding operations of each arc; the backward components are the decoding operations; the residuals are the information that flows from the forward pass to the backward pass. The IFS optic (\(\mathrm{O}_3\)) is a pure coalgebra on the category of compact metric spaces, while the perturbation optic (\(\mathrm{O}_5\)) is a coalgebra with residual, the prototypical Blahut–Arimoto structure. The compatibility condition is satisfied by construction: each arc’s forward action is the next arc’s backward state. Two arcs deserve comment. The RPSI arc’s forward component is a CPTP channel, not a deterministic function, because the RPSI self-reference paradox requires the quantum lift of §6.1. The \(n=3\) Fisher–Rao arc’s residual is the viability margin \(\varepsilon\) and the maintenance graph \(\Gamma\), which together encode the autopoietic structure of §3.
+
+**Table 1.** Seven-optic composition. Each arc is decomposed as a strict feedback optic with carrier pair \((M_i,C_i)\) (Remark 3) and residual \(\mathrm{Res}_i\): forward \(\varphi_i:M_i\times\mathrm{Res}_i\to M_{i+1}\) (encoder), backward \(\rho_i:\mathrm{Res}_i\times C_{i+1}\to C_i\) (decoder), the residual the object transported from the forward to the backward pass. The compatibility condition \(A_i=M_{i+1}\) holds by construction. The total residual of \(T\) is the product \(\mathrm{Res}_1\times\cdots\times\mathrm{Res}_7\) in \(\mathcal{C}\), the representative-level form of the composite residual of Riley’s Proposition 2.3.
+
+| Arc | Forward \(\varphi_i\) (encoder) | Backward \(\rho_i\) (decoder) | Residual \(\mathrm{Res}_i\) |
+|---|---|---|---|
+| \(\mathrm{O}_1\) RAF | catalytic closure | RAF transition decoder | \(D_\varphi(\mathrm{dist}_D(R),\mathrm{dist}_D(R_0))\) |
+| \(\mathrm{O}_2\) RPSI | CPTP predictive update | posterior decoder | ensemble Holevo bound \(\chi\) |
+| \(\mathrm{O}_3\) IFS | Hutchinson contraction | deconvolution | contraction quotient \(c_i\) |
+| \(\mathrm{O}_4\) Noether | symmetry-action update | conserved-quantity decoder | viability-preserving projection |
+| \(\mathrm{O}_5\) Perturb. | perturbed BA update | perturbation decoder | perturbation tensor \(\partial d/\partial p\) |
+| \(\mathrm{O}_6\) WCIG | worldview-constrained IG update | decoder | Fisher–Rao metric \(g_{\mathrm{FR}}\) |
+| \(\mathrm{O}_7\) \(n{=}3\) FR | parallel transport on \(SO(2)\) | decoder | loop-area invariant \((\varepsilon,\Gamma)\) |
+
+**Remark 23** (Physical reading of the seven-optic composition). The seven-fold composition admits a single-sentence physical reading: a self-maintaining agent (RAF, \(\mathrm{O}_1\)) computes its next internal state by predicting its own sensory input (RPSI, \(\mathrm{O}_2\)), which under the Zeno lift is a quantum channel; the prediction contracts toward a stable perceptual fixed point (IFS, \(\mathrm{O}_3\)); the conserved quantity under the agent’s symmetry group stabilises the contraction (Noether, \(\mathrm{O}_4\)); small perturbations of the encoding cost are absorbed by the Blahut–Arimoto update (perturbation, \(\mathrm{O}_5\)); the agent’s worldview constrains information gain (WCIG, \(\mathrm{O}_6\)); and the policy is finally transported on the Fisher–Rao sphere of probability parameters (\(n=3\) Fisher–Rao, \(\mathrm{O}_7\)). The compatibility condition \(A_i=M_{i+1}\) expresses that the encoding output of arc \(i\) is the state on which arc \(i+1\) acts. The fixed point of \(T\) is then the self-consistent “agent-state-prediction-policy” quadruple, whose existence is decoupled from definitional rhetoric and reduced to the empirical contraction-rate question settled in §6.1.
+
+**Theorem 5** (Composition as a typed endo-optic). Under Construction 1, suppose typed interfaces \(I_0,I_1,\ldots,I_7\) are introduced with an interface isomorphism \(\sigma:I_7\cong I_0\), and each \(\mathrm{O}_i:I_{i-1}\rightleftarrows I_i\) is a well-typed optic. Then the seven-fold composition
+\[
+T=\sigma\circ\mathrm{O}_7\circ\mathrm{O}_6\circ\cdots\circ\mathrm{O}_1
+\]
+is a well-defined typed endo-optic on \(I_0\). The composition is associative and unital. The residual of \(T\) is the product \(\mathrm{Res}_1\times\cdots\times\mathrm{Res}_7\) in \(\mathcal{C}\). The fixed point of \(T\), when it exists, is the unification object. The stronger claim that \(T\) descends to an endofunctor on the whole optic category \(\mathrm{Optic}(\mathcal{C})\) requires explicit functorial semantics (object map, morphism map, identity and composition preservation) and is not established here; the operational fixed-point claim is instead realised through the realisation construction of Definition 15—which evaluates an endo-optic as an endomap on a complete metric state space \(S\)—and proved under an explicit Lipschitz contraction bound (Theorem 6).
+
+*Proof.* Optic composition is associative and unital: in the strict feedback form of Remark 3 the composition law reduces associativity to the associativity of function composition together with the canonical associativity of the finite products \(\mathrm{Res}_1\times\mathrm{Res}_2\times\mathrm{Res}_3\) in \(\mathcal{C}\), and unitality to the product/unitality isomorphisms of \(\mathcal{C}\); the same holds for the coend classes of Definition 3 by Riley’s Proposition 2.3, whose composite residual is \(R\otimes R'\) (the cartesian product in \(\mathbf{Set}\)). The seven-fold composition \(T=\mathrm{O}_7\circ\cdots\circ\mathrm{O}_1\) is therefore well-defined as the iterated composite. Associativity gives \((\mathrm{O}_7\circ\mathrm{O}_6)\circ(\mathrm{O}_5\circ\mathrm{O}_4)\circ(\mathrm{O}_3\circ\mathrm{O}_2)\circ\mathrm{O}_1=\mathrm{O}_7\circ(\mathrm{O}_6\circ\mathrm{O}_5)\circ(\mathrm{O}_4\circ\mathrm{O}_3)\circ(\mathrm{O}_2\circ\mathrm{O}_1)=\cdots=\) the canonical seven-fold composite. All parenthesizations are equal modulo the canonical associativity isomorphisms. The unitality axioms \(T\circ\mathrm{Id}=T\) and \(\mathrm{Id}\circ T=T\) hold with the trivial-residual unit. The residual of \(T\) is \(\mathrm{Res}_T=\mathrm{Res}_1\times\cdots\times\mathrm{Res}_7\), with the canonical associativity and unitality isomorphisms from \(\mathcal{C}\) (which is a category with finite limits, so finite products exist and are well-defined up to canonical isomorphism). The forward component of \(T\) takes a state in \(S_1\) and a residual in \(\mathrm{Res}_T\), applies \(\mathrm{fwd}_1\) to produce an action in \(A_1=M_2\), applies \(\mathrm{fwd}_2\) to produce an action in \(A_2=M_3\), and so on. The backward component runs the \(\mathrm{bwd}_i\) in reverse order. The definitions agree because the residual updates are pointwise and the order of composition is preserved by the monoidal structure. \(\square\)
+
+**Corollary 3** (Unification object). Under the conditions of Theorem 5, let \(O\) be the typed endo-optic with realisation \(R(O):S\to S\) (Definition 15), and suppose \(R(O)\) is a contraction on the complete metric state space \(S\) (Theorem 6). Then \(R(O)\) has a unique fixed point \(x^*\in S\). The unification object of the cross-domain unification is the pair \((O,x^*)\): the endo-optic \(O\) encodes the entire RAF \(\to\) RPSI \(\to\) IFS \(\to\) Noether \(\to\) perturbation \(\to\) WCIG \(\to\) \(n=3\) Fisher–Rao chain in a single typed morphism (forward components encoding, backward components decoding, residual the product of the seven residuals), and \(x^*\) is the self-consistent state it synthesises. The endo-optic \(T\) itself is a morphism and has no object-level fixed points; fixed points live on the realised state space.
+
+**Proposition 14** (Sufficient condition for fixed-point existence). A sufficient condition for the existence of the fixed point \(x^*\) of Corollary 3 is the contraction of the Krasnoselskii–Mann-averaged realisation \(R(O)_{\mathrm{reg}}\). Under this condition \(R(O)_{\mathrm{reg}}\) has a unique fixed point by Banach’s fixed-point theorem.
+
+**Remark 24.** Theorem 5 replaces the seven “bridge-rung” correspondences of prior work with a single endofunctor. The unification object is no longer a definitional or rhetorical construct but an empirical question: existence reduces to measuring whether \(T\) is contractive on the operational state space. The full proof of the composition theorem is contained in this article (Theorem 5 together with the per-optic Lipschitz analysis of §6.1); the optic decomposition table is Table 1, and the sufficient-condition argument is Proposition 14. A separate treatment of free cornerings of monoidal categories appears elsewhere, but the proofs needed here are self-contained, and the sufficient condition is confirmed numerically across the 375-configuration robustness grid documented in the project repository.
+
+**Remark 25** (Typed endo-optic, not automatic endofunctor). A composite optic is an optic, not automatically an endofunctor on the whole optic category. To make the typing rigorous: introduce typed interfaces \(I_0,I_1,\ldots,I_7\) with an interface isomorphism \(\sigma:I_7\cong I_0\), and let \(O_i:I_{i-1}\rightleftarrows I_i\) be well-typed optics. Then \(O=\sigma\circ O_7\circ\cdots\circ O_1\) is a well-defined endo-optic on \(I_0\) (true by associativity and unitality of optic composition). The stronger claim of an *endofunctor* on a category of periodic typed systems \(\mathsf{Sys}_7\) (objects are 7-tuples \((X_1,\ldots,X_7,f_1,\ldots,f_7)\) with \(f_i:X_i\to X_{i+1}\) and \(X_8=X_1\); morphisms are compatible families) requires explicit functorial semantics: an object map, a morphism map, identity preservation, and composition preservation. The full functorial construction is open and is recorded as the endofunctor-semantics analogue of the contraction agenda closed in §6.1. The operational fixed-point claim—that the realised update map \(T=R(O):S\to S\) (Definition 15) has a unique fixed point whenever \(T\) is a contraction—is established in Theorem 6 (analytic upper bound on \(\mathrm{Lip}(T_{\mathrm{reg}})\)) with numerical evidence across 375 configurations in the project repository.
+
+# 6.1 Independent per-optic Lipschitz constants and unconditional Banach contraction
+
+A direct analysis gives a conditional Banach contraction: the regularised update \(T_{\mathrm{reg}}\) is contractive *provided* the per-optic product \(\prod_{i=1}^7\mathrm{Lip}(f_i)<1\). This section removes the conditional character of the bound by giving explicit analytic Lipschitz constants for each of the seven forward maps of Construction 1, computing the product analytically, and verifying numerically that the bound holds throughout the dimensional range \(d\in\{2,3,5,10,20\}\). The same machinery settles the Zeno self-reference by contraction: the projected CPTP channel \(\Psi(\rho)=P\Phi(P\rho P)P/\mathrm{tr}(\cdot)\) is shown to be a strict contraction in trace distance for any depolarising channel \(\Phi\) with \(p>0\), with an explicit Lipschitz constant \(\mu<1\).
+
+### Explicit instantiation of the seven forward maps
+
+For each \(i\in\{1,3,4,5,6,7\}\) (the six contracting optics: RAF, IFS, Noether, perturbation, WCIG, \(n=3\) Fisher–Rao), instantiate the forward map on \(X=[-1.5,1.5]^d\) as
+\[
+f_i(x)=(1-\alpha_i)\,x+\alpha_i\,s_i\,\sigma(W_i x+b_i),
+\]
+where \(\sigma=\tanh\) (componentwise, 1-Lipschitz), \(W_i\in\mathbb{R}^{d\times d}\) is a linear operator with operator norm \(\|W_i\|_{\mathrm{op}}=\rho_i\), \(b_i\in\mathbb{R}^d\) is a bias, and \(\alpha_i\in[0,1]\), \(s_i\in[0,1)\) are mixing and saturation parameters. For the expansion optic (\(i=2\), RPSI), instantiate
+\[
+f_2(x)=M_2 x,\qquad M_2=\lambda_2 I_d,\quad\lambda_2>1.
+\]
+The mixing parameters \(\alpha_i=0.40\), saturation scalings \(s_i=1.00\), and operator norms \(\rho_i=0.80\) for \(i\in\{1,3,4,5,6,7\}\), together with \(\lambda_2=1.15\), are chosen so that the per-optic analytic bounds below are uniform across the dimensional range and the product bound is comfortably below 1.
+
+*Box invariance (the hypothesis \(T:X\to X\)).* The maps \(W_i,b_i\) are not pinned to single values; the bounds below are uniform over *all* pairs \((W_i,b_i)\) with the declared operator norm \(\|W_i\|_{\mathrm{op}}=\rho_i\)—the box-invariance computation never uses \(b_i\) (the range of \(\tanh\) absorbs any bias) and uses \(W_i\) only through its operator norm. Each contracting \(f_i\) maps the closed box of half-width \(B\), \([-B,B]^d\), into \((1-\alpha)[-B,B]+\alpha s(-1,1)^d\subseteq[-(0.6B+0.4),\,0.6B+0.4]^d\) (with \(\alpha=0.40\), \(s=1.00\)); the chain’s widest image is attained immediately after the expansion \(f_2=1.15\,\mathrm{Id}\), giving half-width \(C=1.15\,(0.6B+0.4)\); every subsequent contracting map shrinks any box of half-width \(\ge1\) (since \(0.6C+0.4\le C\) iff \(C\ge1\)). Invariance of \(X=[-1.5,1.5]^d\) requires \(C\le B\), i.e. \(1.15\,(0.6B+0.4)\le B\), i.e. \(0.69B+0.46\le B\), i.e. \(B\ge0.46/0.31\approx1.484\); \(B=1.5\) satisfies it with margin (\(C=1.15\cdot1.3=1.495\le1.5\)). Hence \(T:X\to X\) and \(\mathrm{Lip}(T)\le0.92^6\cdot1.15=0.697<1\): Banach’s theorem applies on the enlarged box. (On the smaller box \([0,1]^d\) the hypothesis fails: the chain’s image reaches approximately \([-1.0,1.01]^d\) on the low side and 1.15 on the high side.)
+
+**Lemma 2** (Per-optic analytic Lipschitz bounds). The Lipschitz constants of the seven forward maps admit the analytic upper bounds
+\[
+\mathrm{Lip}(f_i)\le
+\begin{cases}
+(1-\alpha_i)+\alpha_i s_i\rho_i\,\mathrm{Lip}(\sigma)
+=(1-\alpha_i)+\alpha_i s_i\rho_i,
+& i\in\{1,3,4,5,6,7\},\\[4pt]
+\lambda_2, & i=2,
+\end{cases}
+\]
+where \(\mathrm{Lip}(\sigma)=\mathrm{Lip}(\tanh)=1\). Substituting the parameters: \(\mathrm{Lip}(f_i)\le(1-0.40)+0.40\cdot1.00\cdot0.80=0.60+0.32=0.92\) for \(i\in\{1,3,4,5,6,7\}\), and \(\mathrm{Lip}(f_2)=1.15\).
+
+*Proof.* The Lipschitz chain rule gives \(\mathrm{Lip}(f+g)\le\mathrm{Lip}(f)+\mathrm{Lip}(g)\) for the sum, \(\mathrm{Lip}(\alpha f)\le\alpha\,\mathrm{Lip}(f)\) for scalar multiplication, \(\mathrm{Lip}(\sigma\circ W)\le\mathrm{Lip}(\sigma)\cdot\|W\|_{\mathrm{op}}\) for composition with a linear map, and \(\mathrm{Lip}(\tanh)=1\) since \(|\tanh'(x)|=1-\tanh^2(x)\le1\). Combining: \(\mathrm{Lip}(f_i)\le(1-\alpha_i)+\alpha_i s_i\rho_i\) for the contracting form; and \(\mathrm{Lip}(f_2)=\|M_2\|_{\mathrm{op}}=\lambda_2\) for the linear expansion form. \(\square\)
