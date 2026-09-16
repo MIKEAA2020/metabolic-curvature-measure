@@ -52,7 +52,7 @@ from scipy.optimize import linprog
 
 warnings.filterwarnings("ignore")
 
-BASE = "/home/z/my-project"
+BASE = "/home/z/my-project/metabolic-curvature-measure"
 OUT = os.path.join(BASE, "download", "deepseek_bridge")
 os.makedirs(OUT, exist_ok=True)
 DL = os.path.join(BASE, "download")
@@ -489,7 +489,7 @@ plt.rcParams["axes.unicode_minus"] = False
 
 fig, axes = plt.subplots(3, 2, figsize=(11.5, 11.0),
                          constrained_layout=True)
-titles = {"P0_glucose_decline": "P0 glucose decline (V6 control)",
+titles = {"P0_glucose_decline": "P0 glucose decline (layer-decision control)",
           "P1_oxygen_limitation": "P1 oxygen limitation (q$_{glc}$=5)",
           "P2_acetate_switch": "P2 acetate switch (q$_{O2}$=22)"}
 for row, pname in enumerate(PATHS):
@@ -532,7 +532,11 @@ for row, pname in enumerate(PATHS):
     ax.set_xticklabels(names, fontsize=8.5)
     ax.set_ylabel("Pearson r (matched response)")
     ax.set_title(f"({chr(97 + row)}2) layer arms")
-fig.suptitle("V7 - path robustness: value-kink census and layer arms "
+    # headroom so the two-line annotations stay inside the axes
+    finite_rs = [r_ for r_ in rs_ if np.isfinite(r_)]
+    top = max(finite_rs + [0.0])
+    ax.set_ylim(min(finite_rs + [0.0]) - 0.10, top + 0.16)
+fig.suptitle("Path robustness: value-kink census and layer arms "
              "across three trajectories", fontsize=11)
 fig.savefig(os.path.join(OUT, "v7_path_robustness.png"), dpi=170)
 plt.close(fig)

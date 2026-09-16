@@ -400,22 +400,22 @@ for i, (r_, n_) in enumerate(zip(rs, ns)):
     ax.text(i, r_ + 0.012, f"{r_:+.3f}\n(n={n_})", ha="center",
             fontsize=8.5)
 ax.set_xticks(range(3))
-ax.set_xticklabels(["E22 $\\kappa_V$\n(baseline)", "$\\kappa_V$ lex\n"
-                    "(engine ctrl)", "$\\kappa^\\mu$\n(measure)"],
+ax.set_xticklabels(["precursor $\\kappa_V$\n(plain FBA)",
+                    "$\\kappa_V^{\\mathrm{lex}}$\n(engine control)",
+                    "$\\kappa^\\mu$\n(measure)"],
                    fontsize=9)
 ax.set_ylabel("Pearson r (nonzero panel)")
-ax.set_title("(b) the decisive comparison")
+ax.set_title("(b) metric comparison")
 ax.axhline(0, color="k", lw=0.6)
+# headroom so the two-line annotations stay inside the axes
+ax.set_ylim(-0.06, max(rs) + 0.14)
 ax = axes[2]
 ax.scatter(np.log10(kv_e22.values)[m], x_mu[m], s=9, alpha=0.45,
            color="#595959", edgecolors="none")
-ax.set_xlabel(r"$\log_{10}\,\kappa_V$ (E22 artifact)")
+ax.set_xlabel(r"$\log_{10}\,\kappa_V$ (precursor, plain FBA)")
 ax.set_ylabel(r"$\log_{10}\,\kappa^\mu$")
 ax.set_title(f"(c) predictor agreement "
              f"rho = {sp_mu_kv[0]:+.2f}")
-fig.suptitle("V5 - E24 recalibration: measure-theoretic "
-             r"$\kappa^\mu$ vs the E22 time-course $\kappa_V$",
-             fontsize=11)
 fig.savefig(os.path.join(OUT, "v5_e24_recalibration.png"), dpi=170)
 plt.close(fig)
 

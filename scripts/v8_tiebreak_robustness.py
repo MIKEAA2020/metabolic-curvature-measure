@@ -55,7 +55,7 @@ from scipy import stats
 
 warnings.filterwarnings("ignore")
 
-BASE = "/home/z/my-project"
+BASE = "/home/z/my-project/metabolic-curvature-measure"
 OUT = os.path.join(BASE, "download", "deepseek_bridge")
 os.makedirs(OUT, exist_ok=True)
 DL = os.path.join(BASE, "download")
@@ -431,7 +431,7 @@ ax.set_xticks(range(len(binds)))
 ax.set_xticklabels(lab, fontsize=9)
 ax.set_ylabel("grid points where stage 3 binds")
 ax.set_title("(c) where the tie-break matters (of 57)")
-fig.suptitle("V8 - tie-break robustness: the association is a property "
+fig.suptitle("Tie-break robustness: the association is a property "
              "of the lexicographic protocol class, not of one rule",
              fontsize=11)
 fig.savefig(os.path.join(OUT, "v8_tiebreak_robustness.png"), dpi=170)

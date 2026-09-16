@@ -68,7 +68,7 @@ import numpy as np
 from scipy.optimize import linprog
 
 RNG = np.random.default_rng(20260902)
-BASE = "/home/z/my-project"
+BASE = "/home/z/my-project/metabolic-curvature-measure"
 OUT = os.path.join(BASE, "download", "alexandrov_bridge")
 os.makedirs(OUT, exist_ok=True)
 
@@ -869,9 +869,9 @@ ax.loglog(l1s[atom], ct[atom], "o", ms=10, color="#c00000",
           label=f"value atom, n={int(atom.sum())}")
 ax.axhline(1e-6, color="#1f4e79", lw=1.0, ls="--",
            label="noise floor")
-ax.set_xlabel(r"$\|$flux slope jump$\|_1$ (iML1515, M4c cut)")
+ax.set_xlabel(r"$\|$flux slope jump$\|_1$ (iML1515 cut)")
 ax.set_ylabel(r"$|c^\top \Delta v'|$")
-ax.set_title("(a) AX-8c: visibility dichotomy on the real cut")
+ax.set_title("(a) visibility dichotomy on the real cut")
 ax.legend(fontsize=8, loc="upper left")
 ax = axes[1]
 rr = np.array(ratios)
@@ -883,7 +883,7 @@ ax.plot(xx, 2.0 / np.sin(np.radians(xx)), "-", color="#c00000",
 ax.set_yscale("log")
 ax.set_xlabel(r"angle between codim-1 jumps (deg)")
 ax.set_ylabel("product / atom (log)")
-ax.set_title("(b) AX-9: product formula vs determinant law")
+ax.set_title("(b) product formula vs determinant law")
 ax.legend(fontsize=8)
 ax = axes[2]
 lams = np.array([r["lam"] for r in collapse_rows])
@@ -894,10 +894,10 @@ ax.loglog(lams, 1.0 / (2.0 * lams), "--", color="#c00000",
           label=r"$1/(2\lambda)$ law")
 ax.set_xlabel(r"$\lambda$ (semiconvexity attempt)")
 ax.set_ylabel(r"largest violating scale $h$")
-ax.set_title("(c) AX-10: semiconvexity collapse for PWL")
+ax.set_title("(c) semiconvexity collapse for PWL")
 ax.legend(fontsize=8)
-fig.suptitle("Coupling battery: Theorem C, Propositions S and M "
-             "(machine-verified)", fontsize=11)
+fig.suptitle("Coupling battery: value--flux crease coupling and the "
+             "atom laws (machine-verified)", fontsize=11)
 fig.savefig(os.path.join(OUT, "coupling_figures.png"), dpi=170)
 plt.close(fig)
 

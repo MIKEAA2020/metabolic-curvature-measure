@@ -483,5 +483,5 @@
   "C1_e24_gene_panel": "STABILIZES AT GC RATE",
   "C2_e24_trajectory": "uniform thinning: structural anchor effect at small m; anchor-preserving: resolution-limited stabilization (see curves)"
  },
- "runtime_s": 76.5
+ "runtime_s": 75.4
 }

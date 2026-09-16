@@ -78,7 +78,7 @@ from scipy.sparse import csr_matrix
 
 warnings.filterwarnings("ignore")
 
-BASE = "/home/z/my-project"
+BASE = "/home/z/my-project/metabolic-curvature-measure"
 OUT = os.path.join(BASE, "download", "deepseek_bridge")
 DL = os.path.join(BASE, "download")
 M1M3 = os.path.join(DL, "m1_m3")
@@ -805,7 +805,8 @@ ax.plot([n for n, _, _ in a1_split], [m for _, m, _ in a1_split], "^-",
 ax.set_xscale("log", base=2); ax.set_yscale("log")
 ax.set_xlabel("panel size $n$ (random cuts)")
 ax.set_ylabel("$d_{BL}$")
-ax.set_title("(a) M4b plane: random cuts (event locations, $d{=}1$)")
+ax.set_title("(a) random cuts through the signature plane "
+           "(event locations, $d{=}1$)")
 ax.legend(fontsize=7)
 
 ax = axes[0, 1]
@@ -817,7 +818,7 @@ ax.plot(b_sizes, [m for _, m, _ in b_null], "s--", ms=4,
 ax.set_xscale("log", base=2); ax.set_yscale("log")
 ax.set_xlabel("panel size $k$ (sweeps, of 13)")
 ax.set_ylabel("$d_{BL}$")
-ax.set_title("(b) M1 sweeps: mean-field event measure")
+ax.set_title("(b) parameter sweeps: mean-field event measure")
 ax.legend(fontsize=7)
 
 ax = axes[1, 0]
@@ -831,7 +832,7 @@ ax.plot(c1_sizes[:-1], [p for _, p in c1_pred][:-1], ":",
 ax.set_xscale("log", base=2); ax.set_yscale("log")
 ax.set_xlabel("panel size $m$ (genes, of 424)")
 ax.set_ylabel("$d_{BL}$ on $\\log_{10}\\kappa^\\mu$")
-ax.set_title("(c) E24 panel: $\\kappa^\\mu$ distribution")
+ax.set_title("(c) gene panel: $\\kappa^\\mu$ distribution")
 ax.legend(fontsize=7)
 
 ax = axes[1, 1]
@@ -847,13 +848,13 @@ ax.plot(c2_sizes, [max(e, 1e-5) for _, e, _ in c2b_mass], "^-",
 ax.set_xscale("log", base=2); ax.set_yscale("log")
 ax.set_xlabel("panel size $m$ (grid points, of 57)")
 ax.set_ylabel("$d_{BL}$ / relative mass error")
-ax.set_title("(d) E24 trajectory: $L^1$-reconstruction regime")
+ax.set_title("(d) reference trajectory: $L^1$-reconstruction regime")
 ax.annotate("anchor-preserving: $d_{BL}\\equiv0$, mass error $\\equiv0$,"
             "\\n4 value kinks $\\equiv4$ at every $m\\geq8$ (design exact)",
             xy=(0.97, 0.05), xycoords="axes fraction", ha="right",
-            fontsize=7, style="italic")
+            va="bottom", fontsize=7, style="italic")
 ax.legend(fontsize=7)
-fig.suptitle("E32: event-measure stabilization across growing panels "
+fig.suptitle("Event-measure stabilization across growing panels "
              "(bounded-Lipschitz $= W_1$)", fontsize=11)
 fig.savefig(os.path.join(OUT, "e32_event_measure_stabilization.png"),
             dpi=170)

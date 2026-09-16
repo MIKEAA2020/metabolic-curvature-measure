@@ -6278,3 +6278,100 @@ Stage Summary:
   class, non-anonymized submission route documented).
 - Both audits green after the edits (98/98 main, 301/301 companion);
   v7 ZIPs fresh-dir verified; everything pushed to origin/main.
+---
+Task ID: formal-tone-v5-v4-figure-repair
+Agent: main (Super Z)
+Task: Per user directive: (1) restore the new-version-per-revision
+convention (never overwrite); (2) fix the main paper Fig 3 middle
+panel collision; (3) brief single-sentence declarations in both
+papers; (4) remove all meta-commentary/changelog/strawman/internal
+prose while keeping proofs at full length; push everything with the
+new PAT.
+
+Work Log:
+- Versioning breach acknowledged and repaired: this round's
+  manuscripts are NEW files -- scripts/journal_manuscript_v5.tex
+  (+ journal_manuscript_v5_bmb_refs.tex) and
+  scripts/companion_categorical_v4.tex; v4/v3 and all earlier
+  versions untouched. Also restored the pre-existing
+  scripts/audit_v5_numbers.py that this round had briefly
+  overwritten (git checkout; it audits v4+v3 with 110 checks).
+- Fig 3 (v5_e24_recalibration.png): the middle panel's bar
+  annotations collided with the panel title (VLM-confirmed on the
+  raw PNG); regenerated from the deposited CSV+JSON only
+  (scripts/fig3_v5_regen.py; values identical: bars +0.3739 /
+  +0.3954 / +0.3954, n 433/424/424, rho 0.93) with explicit
+  y-headroom; internal experiment codes removed from the figure
+  (no suptitle; "E22 kappa_V" -> "precursor kappa_V (plain FBA)"
+  etc.); caption "(b) the decisive comparison" -> "(b) metric
+  comparison" in v5 to match.
+- Same collision found and fixed in v7_path_robustness.png panel
+  (b2); a clipped annotation in e32 panel (d) fixed (va="bottom");
+  all six main-paper figures regenerated without internal codes
+  (V5/V7/V8/E32/M4b/M1/AX-8c/9/10/Theorem-C labels replaced by
+  manuscript terminology). Deterministic re-runs: v7/v8/alexandrov
+  data artifacts byte-identical; e32 differs only in runtime_s.
+  M3D compendium re-downloaded (sha256 matches the recorded
+  manifest) to enable the v7/e32 re-runs.
+- Main v5 edits: clean header comment; duplicate lineno package
+  removed; categorical-subsection meta-commentary removed and the
+  active-set-bridge paragraph rewritten (fixing a duplicated
+  sentence fragment and "the analogue survival covectors" grammar);
+  "after the discovery of" -> "resolving"; "the discrepancy that
+  motivated" -> factual phrasing; "locked" jargon -> "declared" /
+  "fixed"; "naive three-facet patch" -> "unweighted"; cover-letter
+  reference removed from the Discussion; "What this paper is and is
+  not" -> "Scope of the contribution"; verbatim-passage defenses
+  removed (kept "neither depends on the other's claims");
+  declarations rewritten as brief single sentences (Funding: None;
+  no competing interests; AI: GLM (Z.ai) and DeepSeek AI ...;
+  Ethics: Not applicable; A.A. conceived ...).
+- Companion v4 edits: clean header; abstract "The companion paper"
+  -> "The application paper"; Status note below the abstract
+  removed (Keywords + AMS lines retained); division-of-labor
+  verbatim defense removed; "A tempting construction" strawman
+  phrasing -> factual; "Medium audit" remark retitled "Medium
+  construction and the wild-type optima" with the
+  deposited-record/correction-history phrasing removed; fabZ
+  deposited-endpoint references rewritten as factual
+  (essential-in-every-regime + apparent-loss-is-artifact); Pi
+  artifact calls "so the corrected label counts" -> "excluded from
+  the label counts reported above"; "iron/phosphate round" and
+  "we disclose in full"/"served as an independent audit" rewritten
+  as scientific observation; "now turns"/"now satisfy"/"met" tense
+  fixes; "run under canonical selection to complete the table" ->
+  "computed under canonical selection"; "cherry-picked" ->
+  "applied uniformly"; "the external novelty assessment explicitly
+  asked for" removed; "honestly reported" -> "reported as a
+  negative result"; "on a model no one modified for the purpose" ->
+  "on an unmodified model"; "This subsection benchmarks" ->
+  passive; declarations rewritten (the "X is the sole author"
+  placeholder replaced by A.A.); label rem:keio-medium-audit ->
+  rem:keio-medium (unreferenced).
+- Proofs untouched: 12 proof subsections + 12 qeds in main v5;
+  companion proofs unchanged (byte-comparable regions).
+- Compiles: main v5 tectonic 27 pp, 0 errors, 0 undefined refs (2
+  trivial 1.5pt overfull warnings); companion v4 tectonic 74 pp, 0
+  undefined refs (known benign bbl consistency quirk). New Fig 3
+  page VLM-verified clean in the compiled PDF.
+- Audits: new cumulative round audit scripts/audit_v13_numbers.py
+  retargeted to journal_manuscript_v5.tex + companion_categorical_v4.tex
+  (companion read + Status-note abstract delimiter -> Keywords
+  line; main tex2 + v5_bmb_refs anchors): 301/301 PASS (incl.
+  JP-1..JP-6 on v5; outputs v13_number_audit.json/md). The clobbered
+  audit_v5 + its outputs restored from git.
+- Package v8: build_submission_zips_v8.sh (v5/v4 + regenerated
+  figures + updated READMEs); fresh-dir tectonic verification (main
+  27 pp; companion 74 pp); download PDF copies refreshed
+  (journal_manuscript_v5.pdf, companion_categorical_v4.pdf); cover
+  letters' cross-referenced filenames updated (BMB -> v4 companion;
+  TAC -> v5 main); links doc: new v8 revision note prepended
+  (newest-first), PDF rows retargeted to v5/v4 with stack entries;
+  staging dirs gitignored.
+
+Stage Summary:
+- Both manuscripts now exist as clean new versions (v5 main / v4
+  companion) with formal journal tone: brief declarations, zero
+  meta/changelog/strawman prose, proofs full-length; all six
+  figures repaired and code-free; audits 301/301 PASS; v8 ZIPs
+  fresh-dir verified. Ready for commit+push with the new PAT.
