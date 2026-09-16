@@ -6452,3 +6452,36 @@ Stage Summary:
   artifact, all phantom/strawman/process remnants, and the X-author
   cross-citations; proofs complete and uncondensed; audit_v14
   301/301 PASS.
+
+---
+Task ID: landmark-readability-revision
+Agent: main (Super Z)
+Task: Read related landmark papers to calibrate a formal but
+reader-oriented, less jargon-heavy, more accessible prose style, then
+apply it to both manuscripts as NEW versioned files (v7 main + v6
+companion), rebuild the submission packages, and push.
+
+Work Log:
+- Read 11 landmark sources (digest research/landmark_style_digest.md):
+  Orth 2010, Edwards-Palsson 2000, Segre 2002, Lewis 2010, Baba 2006,
+  Mahadevan-Schilling 2003, Shannon 1948, Baez-Stay 2009, Baez-Fong
+  2018, Leinster 2014, BMB venue sample 2024.
+- MAIN journal_manuscript_v7.tex: plain-problem abstract (248 words,
+  all numbers kept); glossed intro + plan of the paper; plain-language
+  openers before/after the core definitions; restructured Limitations;
+  retitled safe-regime remark; conjecture-bridge lead.
+- COMPANION companion_categorical_v6.tex: plain abstract opening (264
+  words, under the 265 cap; six-axis sentence intact); intro glosses
+  for policy/connection/holonomy/optics; section leads for
+  Preliminaries, Noether, hierarchy, composition, filtered-colimit;
+  bibliography retargeted to companion_refs_v6.bib.
+- audit_v15_numbers.py 301/301 PASS; builds 28/75 pp zero undefined;
+  ZIPs v10 fresh-dir verified; links doc + cover letters retargeted
+  (BMB letter: 98->301 audit count, factual smoothing phrasing,
+  3.5->2.5 pointer fix). Pushed as de5c795.
+
+Stage Summary:
+- Latest: journal_manuscript_v7.tex + companion_categorical_v6.tex
+  (PDFs, refs, v10 ZIPs in download/); landmark-calibrated
+  reader-oriented prose; all numerical claims unchanged; proofs
+  complete and uncondensed.
