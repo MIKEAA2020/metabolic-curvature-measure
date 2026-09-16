@@ -6151,3 +6151,68 @@ Stage Summary:
   readings resolve to +0.953/+0.969/+0.944 (iML1515) and +0.951
   (iJO1366 floor level), and the engine bracket [+0.475, +0.943]
   is superseded by a single declared-rule reading.
+
+---
+Task ID: final-proofread-alignment-package
+Agent: main (Super Z)
+Task: Per user directive: (1) final proof-read of the new deterministic
+tie-break paragraph; (2)-(3) cross-manuscript alignment audit (is the
+main paper aligned with the corrected companion; did the companion's
+corrections affect the main paper); (4) submission package for both
+manuscripts.
+
+Work Log:
+- Ground truth re-established: prior round (commit 8b44f08) verified
+  complete and pushed; both PDFs current w.r.t. their .tex sources
+  (main Sep 14, companion Sep 16); links doc + both cover letters
+  current.
+- Tie-break paragraph proof-read: every number re-verified against
+  keio_atpm_lex_pilot.json (57+48=105-gene sample; anchors
+  b0870/ltaE, b4036/lamB; cross-engine kV 5.98e-11; 40/40 floor
+  collapse in both engines; max |db| 6.4e-8; verdict PROMOTE) and
+  keio_atpm_lex_full_sweep.json (r/AUC/kappa/floor census at all four
+  floor-affected levels; lamB 200.0 every iML level; dhaKLM/fsaA/fsaB
+  block 193.6->298.8->427.2; iJO floor-level parallel-routing block
+  89.8/68.9 -> "kV 69-90"); rendered paragraph on PDF pp. 65-66
+  clean, zero undefined refs. NO defects found in the paragraph.
+- Main-paper alignment audit: the main paper's declared rule (TB0:
+  w ~ U(0.5,1.5), seed 20240901, min w^T v; three-stage split-variable
+  lex engine solved with HiGHS; rem:lock doctrine "the tie-break is
+  declared rather than eliminated") is IDENTICAL to the companion's
+  declared tie-break convention; the companion's description of the
+  main paper (five-rule stage-3 battery declared+4 variants; explicit
+  protein-layer null) matches main Section v8 and abstract exactly;
+  the companion's patch-J corrections share no numbers with the main
+  paper (the six-axis Keio battery is companion-internal; the main
+  paper has no Keio/ATPM/near-tie content). MAIN PAPER REQUIRES NO
+  CHANGES; its PDF (28 pp) is current.
+- One companion-internal alignment gap found and closed: the abstract
+  still carried the pre-closure phrasing "up to a measured
+  near-degeneracy boundary"; amended to "the declared tie-break
+  closing its near-degeneracy boundary" (mirrors the body's own
+  "acquires -- then closes -- its measured boundary"), net-zero words
+  (264 < 265).
+- Rebuilt and verified: companion tectonic 0 errors / 0 undefined
+  (74 pp; the bbl consistency warnings are the known benign tectonic
+  quirk; 0 pages with unresolved "??" refs); audit_v12 re-run
+  301/301 PASS after the amendment.
+- Submission package v6: build_submission_zips_v6.sh (v5 + this
+  round's header note); both ZIPs rebuilt and fresh-dir
+  tectonic-verified (main BMB 28 pp, companion TAC 74 pp); download
+  companion PDF refreshed (the download copy still held the
+  pre-amendment abstract -- caught by targeted text check, not by
+  page-count+first-200-chars which both matched); links doc updated
+  (new newest-first revision note; stale "71 pp" companion section
+  header corrected to 74 pp; PDF-row revision stack extended).
+- Environment note: the sandbox python env was reset between sessions
+  (cobra/optlang gone); cobra 0.32.1 reinstalled into /home/z/.venv
+  to restore the audit.
+
+Stage Summary:
+- The tie-break paragraph is verified correct number-by-number; the
+  two manuscripts are in FULL alignment (identical declared-rule
+  convention, matching cross-descriptions, no shared numbers
+  affected); the companion's corrections did NOT require any
+  main-paper change; the sole finding (stale abstract phrasing) is
+  closed; both submission packages are rebuilt, verified, and links
+  doc current. Ready for commit+push.
