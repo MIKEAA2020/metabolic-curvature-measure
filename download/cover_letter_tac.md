@@ -1,7 +1,7 @@
 # Cover Letter — Theory and Applications of Categories
 
 **To:** The Editors, Theory and Applications of Categories
-**Date:** [Submission date]
+**Date:** September 16, 2026
 **Manuscript type:** Research Article
 **Title:** Stratified Connections, Optic Composition, and the Homotopy
 Fixed-Point Extension: A Categorical Framework for Viability-Weighted
@@ -165,9 +165,10 @@ Thank you for your consideration.
 
 Sincerely,
 
-X
-[Affiliation]
-[Email]
+Amin Abaee
+Independent Researcher, Tehran, Iran
+amin\_abaee@ut.ac.ir
+ORCID: 0000-0002-0019-1842
 
 **Suggested reviewers (optional):** [To be completed by the submitter,
 if desired.]

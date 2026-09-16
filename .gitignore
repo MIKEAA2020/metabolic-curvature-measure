@@ -40,3 +40,9 @@ scripts/zipcheck_v4/
 # Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v5.sh)
 scripts/overleaf_stage_v5/
 scripts/zipcheck_v5/
+# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v6.sh)
+scripts/overleaf_stage_v6/
+scripts/zipcheck_v6/
+# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v7.sh)
+scripts/overleaf_stage_v7/
+scripts/zipcheck_v7/

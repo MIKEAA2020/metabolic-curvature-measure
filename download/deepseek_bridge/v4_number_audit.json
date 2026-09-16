@@ -840,7 +840,7 @@
    "id": "JP-3",
    "claim": "BMB retarget: abstract <= 300 words; no Author Summary; keywords line with <= 6 terms",
    "artifact": "v3 front matter",
-   "value": "abstract 298w, keywords 6",
+   "value": "abstract 246w, keywords 6",
    "status": "PASS",
    "note": ""
   },

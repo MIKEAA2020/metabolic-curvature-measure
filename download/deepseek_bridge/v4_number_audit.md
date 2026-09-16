@@ -100,7 +100,7 @@ Manuscript defects found and fixed: D-N1 (13 sweeps / 10 knockdowns), D-N2 (1.5e
 | E22R-2 | distinctness b2097 shared with MAPPED-15; non-zero variation 435/435 ( | PASS | both texts present | v21 sec E22 + v2 Sec 6.1 |
 | JP-1 | tie-break robustness table present (5 rules TB0-TB4, rho_S >= 0.99897, | PASS | TB4 + 0.99897 + 9.3 present | v3 E-V8 table |
 | JP-2 | BMB retarget: author-year citations (natbib round); no table of conten | PASS | all present | v3 preamble/backmatter |
-| JP-3 | BMB retarget: abstract <= 300 words; no Author Summary; keywords line  | PASS | abstract 298w, keywords 6 | v3 front matter |
+| JP-3 | BMB retarget: abstract <= 300 words; no Author Summary; keywords line  | PASS | abstract 246w, keywords 6 | v3 front matter |
 | JP-4 | backmatter: Data/Software/Code Availability, Funding, Competing Intere | PASS | all present | v3 backmatter |
 | JP-5 | BMB-style references: 27 entries, alphabetical with natbib author-year | PASS | 27 entries, labels True, all keys resolve True | v3 refs (verbatim v2) |
 | JP-6 | in-text 'Fig' abbreviation throughout (no 'Figure~') | PASS | Figure~ absent | v3 text |

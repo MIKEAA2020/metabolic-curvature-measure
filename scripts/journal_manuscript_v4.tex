@@ -28,6 +28,8 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage[round]{natbib}
+\usepackage{lineno}
+\usepackage{lineno}
 \usepackage[labelsep=period]{caption}
 \renewcommand{\figurename}{Fig}
 \usepackage{enumitem}
@@ -64,57 +66,60 @@
  pdftitle={A Measure-Theoretic Discrete Curvature Framework for
            Metabolic Gene Sensitivity: From Active-Set Geometry to
            Transcriptional Response},
- pdfauthor={X},
+ pdfauthor={Amin Abaee},
  pdfsubject={parametric FBA, discrete curvature measures, active-set
              stratification, metabolic gene sensitivity},
- pdfkeywords={discrete curvature, active set, parametric linear
-              programming, flux rerouting, carbon depletion,
-              transcriptional response, epistasis, holonomy}}
+ pdfkeywords={flux balance analysis, discrete curvature, active
+              set, parametric linear programming, flux rerouting,
+              epistasis}}
 
 \title{A Measure-Theoretic Discrete Curvature Framework for Metabolic
        Gene Sensitivity: From Active-Set Geometry to Transcriptional
        Response}
-\author{X}
+\author{Amin Abaee\thanks{Independent Researcher, Tehran, Iran.\\
+  Email: amin\_abaee@ut.ac.ir; ORCID: 0000-0002-0019-1842.}}
 \date{September 2026}
 
 \begin{document}
+\linenumbers
 \maketitle
 
 \begin{abstract}
 \noindent
-Parametric flux balance analysis defines, for every metabolic network, a
-piecewise-affine map from environmental and genetic parameters to optimal
-fluxes. We show that the distributional second derivative of this map is a
-matrix-valued Radon measure concentrated on the codimension-one strata of the
-active-set complex, and that this measure --- not a smooth curvature ---
-is the canonical carrier of the network's rerouting geometry: loop holonomy
-scales linearly in loop size (slope $1.00$, versus the quadratic scaling of
-any smooth map), and the second-order response mass concentrates
-($93.4$--$100.0\%$ per boundary-crossing sweep) on operational active-set
-switches. We prove a refinement--resolution bridge: under mesh refinement the
-atomic measure converges weakly to the smooth curvature density, the dual-cell reconstruction converges strongly in $L^1$, and an exact counterexample calculus shows that total-variation convergence fails in general; a resolution parameter $\sigma$ separates the discrete and smooth
+Parametric flux balance analysis defines a piecewise-affine map from
+environmental and genetic parameters to optimal fluxes. We show that the
+distributional second derivative of this map is a matrix-valued Radon
+measure concentrated on codimension-one strata of the active-set
+complex, and that this measure --- not a smooth curvature --- is the
+canonical carrier of the network's rerouting geometry: loop holonomy
+scales linearly in loop size (slope $1.00$; smooth maps scale
+quadratically), and second-order response mass concentrates
+($93.4$--$100.0\%$ per boundary-crossing sweep) on active-set
+switches. We prove a refinement--resolution bridge: under mesh refinement
+the atomic measure converges weakly to the smooth curvature density, the
+dual-cell reconstruction converges strongly in $L^1$, and an exact
+counterexample calculus shows total-variation convergence fails in
+general; a resolution parameter $\sigma$ separates the discrete and smooth
 regimes through the measured window $h \ll \sigma \ll L_{\mathrm{var}}$
-($L_{\mathrm{var}}$: the variation scale of the smooth object).
-From the measure we derive a gene-level sensitivity metric $\kmu$ (measure
-mass along a parametric trajectory) and show, on
-\emph{E.~coli} (M3D microarrays, $n=424$ genes), that $\kmu$ predicts
+($L_{\mathrm{var}}$: smooth variation scale).
+From the measure we derive a gene-level sensitivity metric $\kmu$ that, on
+\emph{E.~coli} (M3D microarrays, $n=424$), predicts
 carbon-depletion transcriptional response ($r = +0.395$,
-$p = 2.6 \times 10^{-17}$; partial $r = +0.269$ controlling reference
-level; metric-invariant $\rho = 0.99998$ against the lexicographic
-definition; tie-break-robust across all five selection rules tested (declared plus four variants), and the underlying event measures stabilize at the Glivenko--Cantelli rate across random panels), while the
-association does not propagate to the protein layer
---- consistent with a model in which cells transcribe the potential for
-rerouting while buffering its translation. Double-knockout epistasis aligns
-with active-set structure ($\rho_S = 0.865$), and genotype loops close with
-phenotypic memory ($66\%$ non-reverting). The framework unifies three
-previously distinct sensitivity objects as one measure at different
-resolutions.
+$p = 2.6 \times 10^{-17}$; partial $r = +0.269$ with reference-level
+control; metric-invariant $\rho = 0.99998$ (lexicographic
+definition); tie-break-robust across five selection rules; event measures
+stabilizing at the Glivenko--Cantelli rate),
+while the association does not propagate to the protein layer: cells
+transcribe rerouting potential while buffering its translation.
+Double-knockout epistasis aligns with active-set structure
+($\rho_S = 0.865$), and genotype loops close with phenotypic memory
+($66\%$ non-reverting). The framework unifies three distinct sensitivity
+objects at different resolutions.
 \end{abstract}
 
 \medskip
-\noindent\textbf{Keywords:} discrete curvature; active set; parametric
-linear programming; flux rerouting; transcriptional response;
-carbon depletion
+\noindent\textbf{Keywords:} flux balance analysis; discrete curvature;
+active set; parametric linear programming; flux rerouting; epistasis
 
 \bigskip
 
@@ -1985,7 +1990,7 @@ author, who takes full responsibility for the final content of the
 manuscript and for the integrity of its results.
 
 \section*{Author Contributions}
-X is the sole author of this manuscript. X conceived the study
+Amin Abaee is the sole author of this manuscript and conceived the study
 design, developed the methodology and analysis code, performed the
 data analysis, and drafted and revised the manuscript, and approved
 the submitted version.

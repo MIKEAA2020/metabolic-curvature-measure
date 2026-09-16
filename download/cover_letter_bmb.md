@@ -1,7 +1,7 @@
 # Cover Letter — Bulletin of Mathematical Biology
 
 **To:** The Editors, Bulletin of Mathematical Biology
-**Date:** [Submission date]
+**Date:** September 16, 2026
 **Manuscript type:** Original Research Article
 **Title:** A Measure-Theoretic Discrete Curvature Framework for Metabolic
 Gene Sensitivity: From Active-Set Geometry to Transcriptional Response
@@ -122,9 +122,10 @@ Thank you for your consideration.
 
 Sincerely,
 
-X
-[Affiliation]
-[Email]
+Amin Abaee
+Independent Researcher, Tehran, Iran
+amin\_abaee@ut.ac.ir
+ORCID: 0000-0002-0019-1842
 
 **Suggested reviewers (optional):** [To be completed by the submitter,
 if desired.]

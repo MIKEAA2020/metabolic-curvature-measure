@@ -1,10 +1,40 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-16 (final proof-read + cross-manuscript alignment audit + v6
+Generated 2026-09-16 (author-finalization + journal-guideline-compliance + v7
 package round). All repository links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-16, author-finalization +
+journal-guideline-compliance + v7 package round): (1) Author identity
+finalized in both manuscripts and both cover letters: Amin Abaee,
+Independent Researcher, Tehran, Iran; amin_abaee@ut.ac.ir; ORCID
+0000-0002-0019-1842 (main paper: \author + \thanks title-page
+footnote, Author Contributions, pdfauthor; companion: title block,
+pdfauthor; cover letters: signature block and date filled). (2) BMB
+guideline compliance for the main paper, re-verified against the
+Springer submission guidelines: abstract trimmed to 245 words
+(guideline 150-250; was 291 rendered), six keywords re-selected for
+discoverability (flux balance analysis; discrete curvature; active
+set; parametric linear programming; flux rerouting; epistasis --
+flux balance analysis and epistasis added as non-title search
+handles; transcriptional response and carbon depletion dropped as
+title/abstract-indexed duplicates), and continuous line numbering
+enabled (lineno package) per the instructions to authors. (3) TAC
+indexing requirements for the companion: visible Keywords line
+(optic category; stratified connection; 2-category; filtered
+colimit; homotopy type theory; applied category theory) and AMS
+2020 Subject Classification (18D05; 18N99; 92B05) added below the
+abstract; review-model facts re-verified from the official pages
+(BMB single-blind per the SMB society page; TAC non-anonymized --
+no anonymized-review option, submission by email to a named
+Editorial Board member). (4) Rebuilt and verified: both PDFs
+recompiled tectonic-clean (main 28 pp with line numbers; companion
+74 pp, zero undefined references), audit_v4 98/98 PASS and
+audit_v12 301/301 PASS re-run after the edits, submission ZIPs
+rebuilt via build_submission_zips_v7.sh with fresh-dir standalone
+compiles verified, and the download PDF copies refreshed.
 
 Revision note (2026-09-16, final proof-read + alignment audit + v6
 package round): (1) Final proof-read of the deterministic tie-break
@@ -281,6 +311,8 @@ Sensitivity: From Active-Set Geometry to Transcriptional Response
 | Submission portal (Editorial Manager) | https://www.editorialmanager.com/bmab |
 | Society page (SMB, official journal of the society) | https://smb.org/Bulletin-of-Mathematical-Biology |
 
+> Review model (verified via the SMB society page): single-blind peer review -- the author identity is known to reviewers, and the name, affiliation, corresponding e-mail, and ORCID are on the title page as the Springer Title Page guideline requires.
+>
 > Portal code verified as **bmab** (via the SMB society page and multiple
 > journal directories). Do not confuse with `editorialmanager.com/jomb`,
 > which is the *Journal of Mathematical Biology* — a different Springer journal.
@@ -290,7 +322,7 @@ Sensitivity: From Active-Set Geometry to Transcriptional Response
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
-| Manuscript PDF (28 pp, full proofs in appendices, declarations in backmatter) | [download/journal_manuscript_v4.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v4.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v4.pdf) |
+| Manuscript PDF (28 pp, full proofs in appendices, declarations in backmatter, + v7 author-finalization/BMB-compliance revision: author identity, affiliation, e-mail, and ORCID on the title page; abstract 245 words within the Springer 150-250 guideline; six discoverability-optimized keywords; continuous line numbering enabled) | [download/journal_manuscript_v4.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v4.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v4.pdf) |
 | Cover letter (with declarations, companion disclosure) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
 | LaTeX source | [scripts/journal_manuscript_v4.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v4.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v4.tex) |
 | Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v3_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v3_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v3_bmb_refs.tex) |
@@ -340,14 +372,20 @@ submit the article as **a PDF compiled from TeX source to any member of the
 Editorial Board except the Managing Editor or TeXnical editors**, copying
 every submission to the Managing Editor at **tac@mta.ca**; an article may be
 submitted to only one Editor; TeX source plus a compiled PDF are required
-only after acceptance.
+only after acceptance. Review model: **not anonymized** -- the
+author information page (fetched and verified in full) contains no
+anonymization provisions, and submissions go by email to a named
+Editorial Board member, so the author identity is on the paper; TAC
+also asks that the final accepted source include keywords and an AMS
+2020 Subject Classification for external indexing (both now present
+below the abstract of the submitted PDF).
 
 ### Package files (GitHub)
 
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (74 pp, + final proof-read/alignment/v6-package revision: the tie-break paragraph verified number-by-number against the pilot and full-sweep artifacts, the abstract closure clause (the declared tie-break closing its near-degeneracy boundary), and the cross-manuscript alignment audit confirming the main paper's declared TB0 convention (w ~ U(0.5, 1.5), seed 20240901, min w^T v) is identical to the companion's declared rule -- no main-paper changes required, + deterministic-tie-break promotion revision: the declared three-stage lexicographic rule measured engine-invariant at the near-tie levels (cross-engine vertex distance 6e-11, pre-registered pilot), the maintenance-level readings resolved under the declared rule (+0.953/+0.969/+0.944 iML1515, +0.951 iJO1366; labels kappa 1.000; floors collapsing to the rule-determined rerouting sets), the symmetric iJO1366 second-engine confirmation, and the feature-count fix -- patch J), on top of the proof-read/second-engine revision: the measured near-tie engine bracket on the iML1515 maintenance levels ([+0.475, +0.943]; labels and the near-tie itself engine-invariant, the kV floor disclosed as the deposited simplex path's realization -- patch I), the PGI range correction (45-201) and the post-patch compensable count (1,127), on top of the sixth-axis revision: prop:keio-atpm + rem:keio-multiaxis -- the non-medium ATPM-maintenance-stress probe with the trace-quota integrity corrections (six HiGHS-adjudicated calls; endpoint re-stratification purely one-directional) and the measured near-tie boundary in the canonical-selection subsection (now a six-axis, 32-row table), plus the restored nh4_-5 canonical level -- on top of the fifth-axis/arginine-symmetry revision: prop:keio-iron + rem:keio-iron-invariance -- the trace-metal axis closing the supply side across all five classical nutrient classes, the arginine-substitution canonical levels completing the axis x selection table symmetry -- on top of the fourth-axis/canonical-selection revision: prop:keio-phosphate + rem:keio-p-invariance + the canonical-selection subsection with the solver-tolerance integrity disclosures, the nitrogen-axis, oxygen-probe, glucose-only, viability-kernel + Poincare/averaging, 3rd-wave repair, and restoration revisions) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
+| Manuscript PDF (74 pp, + author-finalization revision: Amin Abaee / Independent Researcher, Tehran, Iran / ORCID 0000-0002-0019-1842 in the title block, TAC indexing keywords (optic category; stratified connection; 2-category; filtered colimit; homotopy type theory; applied category theory) and AMS 2020 Subject Classification (18D05; 18N99; 92B05) added below the abstract, + final proof-read/alignment/v6-package revision: the tie-break paragraph verified number-by-number against the pilot and full-sweep artifacts, the abstract closure clause (the declared tie-break closing its near-degeneracy boundary), and the cross-manuscript alignment audit confirming the main paper's declared TB0 convention (w ~ U(0.5, 1.5), seed 20240901, min w^T v) is identical to the companion's declared rule -- no main-paper changes required, + deterministic-tie-break promotion revision: the declared three-stage lexicographic rule measured engine-invariant at the near-tie levels (cross-engine vertex distance 6e-11, pre-registered pilot), the maintenance-level readings resolved under the declared rule (+0.953/+0.969/+0.944 iML1515, +0.951 iJO1366; labels kappa 1.000; floors collapsing to the rule-determined rerouting sets), the symmetric iJO1366 second-engine confirmation, and the feature-count fix -- patch J), on top of the proof-read/second-engine revision: the measured near-tie engine bracket on the iML1515 maintenance levels ([+0.475, +0.943]; labels and the near-tie itself engine-invariant, the kV floor disclosed as the deposited simplex path's realization -- patch I), the PGI range correction (45-201) and the post-patch compensable count (1,127), on top of the sixth-axis revision: prop:keio-atpm + rem:keio-multiaxis -- the non-medium ATPM-maintenance-stress probe with the trace-quota integrity corrections (six HiGHS-adjudicated calls; endpoint re-stratification purely one-directional) and the measured near-tie boundary in the canonical-selection subsection (now a six-axis, 32-row table), plus the restored nh4_-5 canonical level -- on top of the fifth-axis/arginine-symmetry revision: prop:keio-iron + rem:keio-iron-invariance -- the trace-metal axis closing the supply side across all five classical nutrient classes, the arginine-substitution canonical levels completing the axis x selection table symmetry -- on top of the fourth-axis/canonical-selection revision: prop:keio-phosphate + rem:keio-p-invariance + the canonical-selection subsection with the solver-tolerance integrity disclosures, the nitrogen-axis, oxygen-probe, glucose-only, viability-kernel + Poincare/averaging, 3rd-wave repair, and restoration revisions) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
 | LaTeX source | [scripts/companion_categorical_v3.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v3.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v3.tex) |
 
