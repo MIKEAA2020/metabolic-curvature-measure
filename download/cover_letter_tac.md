@@ -75,9 +75,12 @@ four layers, each stated with its proof status explicitly labeled:
    readings -- and the canonical rule's own boundary measured:
    near-tied parsimony optima on one reconstruction's extreme
    maintenance level, making the transitive statistic
-   solver-path-dependent (measured engine bracket [+0.475,
-   +0.943]; a stateless second engine restores it) while the
-   essentiality ranking stays engine-invariant); and an
+   solver-path-dependent under the two-stage rule (measured engine
+   bracket [+0.475, +0.943]) while the essentiality ranking stays
+   engine-invariant --- a boundary the deterministic tie-break now
+   closes under a declared rule (the same vertex under both simplex
+   implementations; maintenance levels +0.953/+0.969/+0.944 and
+   +0.951 at the floor level, labels unchanged)); and an
    independent-engine audit (24,282 gene-level comparisons, a
    7,133-comparison cross-arm scan of the iron levels, and the
    six-call ATPM-endpoint adjudication) that surfaced and

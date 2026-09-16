@@ -6035,3 +6035,119 @@ Stage Summary:
   is disclosed as the deposited simplex path's realization with the
   measured engine bracket [+0.475, +0.943]. All deliverables rebuilt
   on the amended tree.
+
+---
+Task ID: 4 (symmetric iJO second-engine sweep + deterministic
+tie-break promotion)
+Agent: main (Super Z)
+Task: User directives: (1) the symmetric iJO1366 second-engine
+sweep; (2) promote the deterministic lex tie-break only if
+genuinely and highly merited; commit and push.
+
+Work Log:
+- State survey: interim commit 40209de verified (iML second-engine
+  round + Patch I + audit v11 285/285 + clean push). Baseline iJO
+  deposits read from keio_atpm_pfba_control.json ijo_levels
+  (canonical r +0.9685/+0.9494/+0.9639/+0.9371, plain eroding
+  +0.9489 -> +0.4444) and the deposited floor structure censused:
+  a MASSIVE kV~200 floor at atpm_40 only (961/971 compensables,
+  median kV 200.000) vanishing at 60/80/100 -- the mirror image of
+  iML's growing floor.
+- scripts/atpm_ijo_second_engine.py built mirroring the iML
+  round: the validated HighsCanonical class verbatim, the probe's
+  exact iJO medium inlined with the run-verified zinc id (EX_zn2_e
+  at -1000; the committed probe list carries a latent EX_zn_e typo
+  that get_by_id would reject -- the diagnostic's inlined list is
+  the run convention; WT assertions re-verified per level at
+  4e-16..1e-7), proper GPR parsing (the iJO deposit's own
+  convention, vs iML's substring), all 1,367 genes, 20-gene
+  checkpointing, a nitrogen-figure snapshot/restore guard around
+  the flat-probe import, and the same floor census + label/kV
+  comparisons. Five foreground chunks.
+- RESULT (keio_atpm_ijo_second_engine.json): labels fully
+  engine-invariant at ALL FOUR levels (kappa 1.000, zero flips,
+  max |db| 1.2e-7, essential 298/298/299/331 identical); the
+  canonical restoration is engine-invariant (r within 0.002 at
+  60/80/100; +0.9685 -> +0.9496 at atpm_40 where the 961-of-971
+  floor collapses to one gene); the atpm_100 endpoint r +0.9371 ->
+  +0.9391 is genuine, not a GLPK artifact. The one genuine floor
+  gene in both models is lamB (b4036), kV = 200.0 exactly.
+- Merit assessment for the lex tie-break promotion, run as a
+  PRE-REGISTERED pilot before any manuscript change
+  (scripts/atpm_lex_tiebreak_pilot.py): the declared three-stage
+  rule (stage 3 = min w^T v over the wild-type-pinned,
+  parsimony-pinned face, weights U(0.5,1.5) fixed seed 20240901,
+  pin tolerances two orders below the measured near-tie gap)
+  solved under BOTH the GLPK warm-start path (persistent model,
+  sequential per-gene KO blocks, probe order, 30 s simplex limit)
+  and stateless cold-start HiGHS, on a stratified sample (40
+  random floor genes per level, the near-tie gene ltaE, lamB, the
+  stateless top-rerouting blocks, controls; 57 + 48 = 105 genes +
+  WT at the two worst levels: iML1515 atpm_100 and iJO1366
+  atpm_40). Decision rules P1/P2/P3 fixed in the docstring before
+  running.
+- VERDICT: PROMOTE, by enormous margins -- P1 cross-engine vertex
+  distance max 5.98e-11 (iML) / 0.0 (iJO) against the 0.1 bar; P2
+  floor collapse 40/40 random floor genes in BOTH engines at both
+  levels; P3 labels within 6.4e-8 of the deposit. The pilot's
+  instructive contrast: the stateless two-stage reading keeps lamB
+  at kV = 200 on iJO1366 while the declared rule returns 0 -- even
+  a stateless engine's vertex is a path; only a declared rule
+  makes the kV statistic well posed.
+- Full declared-rule sweeps at the four floor-affected levels
+  (scripts/atpm_lex_full_sweep.py, reusing the pilot's import-safe
+  HighsLex; the remaining levels skipped as empty computation
+  since their vertices are already unique and both engines agree
+  to 0.002): iML1515 atpm 60/80/100 read +0.9534/+0.9686/+0.9440
+  (AUC 0.9919/0.9920/0.9844) and iJO1366 atpm_40 reads +0.9510
+  (AUC 1.0000); labels kappa = 1.000 vs the deposit at all four
+  levels, essential counts identical; floors collapse to the
+  rule-determined rerouting sets (6/1/1/0): lamB 200.0 at every
+  iML1515 level, the dhaKLM/fsaA/fsaB block deepening
+  193.6 -> 298.8 -> 427.2 as maintenance demand grows, and the
+  iJO1366 floor level carrying the parallel-routing block
+  (pfkB b1723, fbaB b2097, ydjI b1773 at 89.8; fsaA/fsaB/dhaM
+  at 68.9) with lamB at 0 there. One format-string bug (doubled
+  atpm_ key prefix) caught by FileNotFoundError and fixed mid-run;
+  resumability preserved all data.
+- Patch J (scripts/companion_v3_patch_j.py, 6 anchored edits,
+  count-asserted): the deterministic-tie-break paragraph in the
+  canonical-selection subsection (the promotion proper -- the
+  declared rule, the pre-registered pilot, the lamB contrast, the
+  full-sweep readings, and the upgraded necessity/sufficiency
+  closing); prop:keio-atpm's engine-bracket sentence extended with
+  the symmetric iJO confirmation + the declared-rule closure;
+  rem:canonical-protocol's third requirement closed constructively;
+  the tab:canonical-selection caption clause; rem:keio-multiaxis;
+  and the latent feature-count defect fixed ('Four features
+  matter' -> 'Five features'; five listed since patch H).
+- audit_v12_numbers.py (built from v11 by make_audit_v12.py):
+  301/301 PASS (v11's 285 + 16 new checks P-15..P-30 + R9's
+  expectation updated): the iJO second-engine label/r/floor/WT
+  claims, the pilot verdict and all its numbers, the full-sweep
+  r/AUC/kappa/floor/top-gene values, patch-J presence and
+  regression strings, and the WT agreements. Two transformer
+  escaping/paren defects caught by compile before any run; the
+  R9 stale expectation and a self-inflicted figure clobber (my own
+  keio_tables lookup re-executed the flat probe) caught by the
+  audit itself and fixed.
+- Builds: companion 74 pp, 0 errors / 0 undefined / 0 overfull
+  (one pre-existing float-size warning at line 3163, untouched
+  region); ZIPs rebuilt via build_submission_zips_v5.sh +
+  fresh-dir standalone reverified (main 28 pp, companion 74 pp);
+  download PDF, links doc (update_links_doc_v7.py: new revision
+  note + 74-pp row), TAC cover letter (near-tie clause extended
+  with the declared-rule closure) refreshed.
+
+Stage Summary:
+- The engine-invariance audit is now complete and symmetric across
+  both models: labels engine-invariant at all seven ATPM levels of
+  both models; both models' kV floors identified as simplex-path
+  realizations; both models' one genuine floor gene is lamB.
+- The deterministic lex tie-break PROMOTED on measured merit
+  (pre-registered pilot + full sweeps): the near-tie boundary is
+  closed constructively -- under the declared three-stage rule the
+  canonical vertex is a property of the protocol, the maintenance
+  readings resolve to +0.953/+0.969/+0.944 (iML1515) and +0.951
+  (iJO1366 floor level), and the engine bracket [+0.475, +0.943]
+  is superseded by a single declared-rule reading.

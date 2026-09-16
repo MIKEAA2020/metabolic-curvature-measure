@@ -1,0 +1,781 @@
+{
+  "method_note": "Full canonical sweeps under the declared lexicographic tie-break (3-stage lex pFBA: max biomass -> min L1 -> deterministic tie-break min w^T v, w = U(0.5,1.5) fixed seed 20240901) at the four floor-affected ATPM levels, stateless cold-start HiGHS via the pilot's HighsLex class. Engine-invariance of the lex vertex is the pilot's measured claim (cross-engine distance <= 6e-11, 105-gene stratified sample + WT at both worst levels). Medium, knockout, kV, label, and statistics conventions identical to the probe.",
+  "levels": {
+    "iml_atpm_60": {
+      "model": "iml",
+      "atpm_bound": 60.0,
+      "wild_type_biomass": 0.3983895354016796,
+      "wt_L1": 738.4130726704803,
+      "n_genes": 1516,
+      "n_essential": 295,
+      "n_essential_glpk": 295,
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.9534395314573353,
+        "pearson_p_value": 0.0,
+        "spearman_rho": 0.7898918645843224,
+        "spearman_p_value": 0.0,
+        "partial_r_given_n_gpr_rxns": 0.9529562781830723,
+        "partial_p_value": 0.0,
+        "bootstrap_95ci": [
+          0.9425789923178466,
+          0.9643967633382086
+        ],
+        "n_essential": 295,
+        "n_genes": 1516,
+        "held_out": {
+          "n_test": 455,
+          "n_test_essential": 89,
+          "accuracy": 0.9912087912087912,
+          "mcc": 0.9728979126476236,
+          "roc_auc": 0.9918646773500338,
+          "sensitivity": 1.0,
+          "specificity": 0.9890710382513661,
+          "confusion": {
+            "tn": 362,
+            "fp": 4,
+            "fn": 0,
+            "tp": 89
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.6,
+            "base_rate": 0.1945910290237467,
+            "lift": 3.0833898305084744
+          },
+          "K=25": {
+            "precision": 0.56,
+            "base_rate": 0.1945910290237467,
+            "lift": 2.8778305084745766
+          },
+          "K=50": {
+            "precision": 0.58,
+            "base_rate": 0.1945910290237467,
+            "lift": 2.9806101694915252
+          },
+          "K=100": {
+            "precision": 0.79,
+            "base_rate": 0.1945910290237467,
+            "lift": 4.059796610169492
+          },
+          "K=200": {
+            "precision": 0.895,
+            "base_rate": 0.1945910290237467,
+            "lift": 4.599389830508475
+          },
+          "K=500": {
+            "precision": 0.59,
+            "base_rate": 0.1945910290237467,
+            "lift": 3.032
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1331,
+        "binary_n": 1325,
+        "binary_n_E": 114,
+        "pearson_r": 0.4115724405839013,
+        "pearson_p": 2.5445404459249082e-55,
+        "spearman_rho": 0.40081266058541043,
+        "spearman_p": 2.6578340307475755e-52,
+        "point_biserial_r": 0.4115724405839013,
+        "bootstrap_95ci": [
+          0.35548493905543727,
+          0.46548756787300516
+        ],
+        "roc_auc": 0.8213162965216508,
+        "held_out": {
+          "n_test": 398,
+          "n_test_E": 34,
+          "accuracy": 0.7864321608040201,
+          "sensitivity": 0.6764705882352942,
+          "specificity": 0.7967032967032966,
+          "precision": 0.23711340206185566,
+          "f1": 0.3511450381679389,
+          "mcc": 0.30806460481498893,
+          "roc_auc": 0.7386069812540401,
+          "confusion": {
+            "tp": 23,
+            "fp": 74,
+            "tn": 290,
+            "fn": 11
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.8253629172201677,
+          "n_high_conf": 69,
+          "low_conf_auc": 0.782204789430223,
+          "n_low_conf": 34
+        },
+        "n_model_gaps_pecE_insilicoN": 13,
+        "n_medium_mismatch_insilicoE_keioN": 184
+      },
+      "solve_sources": {
+        "ok": 1502,
+        "infeasible": 14
+      },
+      "vs_glpk_deposit": {
+        "label_kappa": 1.0,
+        "label_flips": [],
+        "max_abs_db_ko": 3.81084053202585e-13,
+        "kV_spearman_lex_vs_glpk": 0.7440222936150462,
+        "glpk_canon_r": 0.7033644326510976
+      },
+      "vs_stateless_2stage": {
+        "kV_spearman_lex_vs_stateless": 0.7807084806026364,
+        "stateless_canon_r": 0.9518361414189732
+      },
+      "floor_census_lex": {
+        "n_compensable": 1127,
+        "n_floor_190_210": 6,
+        "floor_kv_median": 193.57677678493116,
+        "n_kv_le_0p1": 1114,
+        "n_kv_0p1_to_190": 7,
+        "n_kv_gt_210": 0,
+        "compensable_kv_median": 0.0
+      },
+      "floor_census_glpk": {
+        "n_compensable": 1127,
+        "n_floor_190_210": 500,
+        "floor_kv_median": 200.1870341950448,
+        "n_kv_le_0p1": 517,
+        "n_kv_0p1_to_190": 104,
+        "n_kv_gt_210": 6,
+        "compensable_kv_median": 0.7754953659315487
+      },
+      "floor_census_stateless": {
+        "n_compensable": 1127,
+        "n_floor_190_210": 1,
+        "floor_kv_median": 200.0,
+        "n_kv_le_0p1": 917,
+        "n_kv_0p1_to_190": 209,
+        "n_kv_gt_210": 0,
+        "compensable_kv_median": 1.7199558672213427e-05
+      },
+      "top8_compensable_kV_lex": [
+        {
+          "gene_id": "b4036",
+          "gene_name": "lamB",
+          "kV_lex": 200.0
+        },
+        {
+          "gene_id": "b3946",
+          "gene_name": "fsaB",
+          "kV_lex": 193.57677678503552
+        },
+        {
+          "gene_id": "b0825",
+          "gene_name": "fsaA",
+          "kV_lex": 193.57677678503552
+        },
+        {
+          "gene_id": "b1200",
+          "gene_name": "dhaK",
+          "kV_lex": 193.5767767848268
+        },
+        {
+          "gene_id": "b1199",
+          "gene_name": "dhaL",
+          "kV_lex": 193.5767767848268
+        },
+        {
+          "gene_id": "b1198",
+          "gene_name": "dhaM",
+          "kV_lex": 193.5767767848268
+        },
+        {
+          "gene_id": "b2097",
+          "gene_name": "fbaB",
+          "kV_lex": 30.383920143540745
+        },
+        {
+          "gene_id": "b1723",
+          "gene_name": "pfkB",
+          "kV_lex": 30.38392014353923
+        }
+      ]
+    },
+    "iml_atpm_80": {
+      "model": "iml",
+      "atpm_bound": 80.0,
+      "wild_type_biomass": 0.23903372124100783,
+      "wt_L1": 743.0478412431644,
+      "n_genes": 1516,
+      "n_essential": 297,
+      "n_essential_glpk": 297,
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.9685741915191635,
+        "pearson_p_value": 0.0,
+        "spearman_rho": 0.7994058998743879,
+        "spearman_p_value": 0.0,
+        "partial_r_given_n_gpr_rxns": 0.9685001967799534,
+        "partial_p_value": 0.0,
+        "bootstrap_95ci": [
+          0.959944658828091,
+          0.9771733645656532
+        ],
+        "n_essential": 297,
+        "n_genes": 1516,
+        "held_out": {
+          "n_test": 455,
+          "n_test_essential": 89,
+          "accuracy": 0.9868131868131869,
+          "mcc": 0.9599396012061185,
+          "roc_auc": 0.9919874746730521,
+          "sensitivity": 1.0,
+          "specificity": 0.9836065573770492,
+          "confusion": {
+            "tn": 360,
+            "fp": 6,
+            "fn": 0,
+            "tp": 89
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 1.0,
+            "base_rate": 0.195910290237467,
+            "lift": 5.104377104377105
+          },
+          "K=25": {
+            "precision": 0.64,
+            "base_rate": 0.195910290237467,
+            "lift": 3.2668013468013473
+          },
+          "K=50": {
+            "precision": 0.54,
+            "base_rate": 0.195910290237467,
+            "lift": 2.756363636363637
+          },
+          "K=100": {
+            "precision": 0.77,
+            "base_rate": 0.195910290237467,
+            "lift": 3.9303703703703707
+          },
+          "K=200": {
+            "precision": 0.885,
+            "base_rate": 0.195910290237467,
+            "lift": 4.517373737373738
+          },
+          "K=500": {
+            "precision": 0.594,
+            "base_rate": 0.195910290237467,
+            "lift": 3.032
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1331,
+        "binary_n": 1325,
+        "binary_n_E": 114,
+        "pearson_r": 0.40956433700067824,
+        "pearson_p": 9.494471388136934e-55,
+        "spearman_rho": 0.4010377524801918,
+        "spearman_p": 2.304108556489856e-52,
+        "point_biserial_r": 0.40956433700067824,
+        "bootstrap_95ci": [
+          0.3529173547697632,
+          0.4642701599194647
+        ],
+        "roc_auc": 0.8211750474452025,
+        "held_out": {
+          "n_test": 398,
+          "n_test_E": 34,
+          "accuracy": 0.7864321608040201,
+          "sensitivity": 0.6764705882352942,
+          "specificity": 0.7967032967032966,
+          "precision": 0.23711340206185566,
+          "f1": 0.3511450381679389,
+          "mcc": 0.30806460481498893,
+          "roc_auc": 0.7495151906916613,
+          "confusion": {
+            "tp": 23,
+            "fp": 74,
+            "tn": 290,
+            "fn": 11
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.8245969913474311,
+          "n_high_conf": 69,
+          "low_conf_auc": 0.7832734249769272,
+          "n_low_conf": 34
+        },
+        "n_model_gaps_pecE_insilicoN": 13,
+        "n_medium_mismatch_insilicoE_keioN": 184
+      },
+      "solve_sources": {
+        "ok": 1500,
+        "infeasible": 16
+      },
+      "vs_glpk_deposit": {
+        "label_kappa": 1.0,
+        "label_flips": [],
+        "max_abs_db_ko": 7.38726134014156e-08,
+        "kV_spearman_lex_vs_glpk": 0.7268276615540404,
+        "glpk_canon_r": 0.6554283193209263
+      },
+      "vs_stateless_2stage": {
+        "kV_spearman_lex_vs_stateless": 0.7793409959239993,
+        "stateless_canon_r": 0.9680607917172057
+      },
+      "floor_census_lex": {
+        "n_compensable": 1127,
+        "n_floor_190_210": 1,
+        "floor_kv_median": 200.0,
+        "n_kv_le_0p1": 1116,
+        "n_kv_0p1_to_190": 5,
+        "n_kv_gt_210": 5,
+        "compensable_kv_median": 0.0
+      },
+      "floor_census_glpk": {
+        "n_compensable": 1127,
+        "n_floor_190_210": 650,
+        "floor_kv_median": 200.0380564457559,
+        "n_kv_le_0p1": 380,
+        "n_kv_0p1_to_190": 91,
+        "n_kv_gt_210": 6,
+        "compensable_kv_median": 200.0380564457557
+      },
+      "floor_census_stateless": {
+        "n_compensable": 1127,
+        "n_floor_190_210": 1,
+        "floor_kv_median": 200.0,
+        "n_kv_le_0p1": 962,
+        "n_kv_0p1_to_190": 159,
+        "n_kv_gt_210": 5,
+        "compensable_kv_median": 6.191841122010098e-06
+      },
+      "top8_compensable_kV_lex": [
+        {
+          "gene_id": "b1200",
+          "gene_name": "dhaK",
+          "kV_lex": 298.8486360699165
+        },
+        {
+          "gene_id": "b1199",
+          "gene_name": "dhaL",
+          "kV_lex": 298.8486360699165
+        },
+        {
+          "gene_id": "b1198",
+          "gene_name": "dhaM",
+          "kV_lex": 298.8486360699165
+        },
+        {
+          "gene_id": "b3946",
+          "gene_name": "fsaB",
+          "kV_lex": 298.84863606978365
+        },
+        {
+          "gene_id": "b0825",
+          "gene_name": "fsaA",
+          "kV_lex": 298.84863606978365
+        },
+        {
+          "gene_id": "b4036",
+          "gene_name": "lamB",
+          "kV_lex": 200.0
+        },
+        {
+          "gene_id": "b2097",
+          "gene_name": "fbaB",
+          "kV_lex": 10.93821091821659
+        },
+        {
+          "gene_id": "b1723",
+          "gene_name": "pfkB",
+          "kV_lex": 10.93821091821592
+        }
+      ]
+    },
+    "iml_atpm_100": {
+      "model": "iml",
+      "atpm_bound": 100.0,
+      "wild_type_biomass": 0.07967790708033622,
+      "wt_L1": 747.6826098158579,
+      "n_genes": 1516,
+      "n_essential": 329,
+      "n_essential_glpk": 329,
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.9439830716512003,
+        "pearson_p_value": 0.0,
+        "spearman_rho": 0.7897339930664202,
+        "spearman_p_value": 2e-323,
+        "partial_r_given_n_gpr_rxns": 0.9452322085380253,
+        "partial_p_value": 0.0,
+        "bootstrap_95ci": [
+          0.9340786182174665,
+          0.9540221782647738
+        ],
+        "n_essential": 329,
+        "n_genes": 1516,
+        "held_out": {
+          "n_test": 455,
+          "n_test_essential": 99,
+          "accuracy": 0.9846153846153847,
+          "mcc": 0.9568687671821302,
+          "roc_auc": 0.9844228804902961,
+          "sensitivity": 1.0,
+          "specificity": 0.9803370786516854,
+          "confusion": {
+            "tn": 349,
+            "fp": 7,
+            "fn": 0,
+            "tp": 99
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 1.0,
+            "base_rate": 0.2170184696569921,
+            "lift": 4.60790273556231
+          },
+          "K=25": {
+            "precision": 1.0,
+            "base_rate": 0.2170184696569921,
+            "lift": 4.60790273556231
+          },
+          "K=50": {
+            "precision": 0.96,
+            "base_rate": 0.2170184696569921,
+            "lift": 4.423586626139818
+          },
+          "K=100": {
+            "precision": 0.84,
+            "base_rate": 0.2170184696569921,
+            "lift": 3.87063829787234
+          },
+          "K=200": {
+            "precision": 0.92,
+            "base_rate": 0.2170184696569921,
+            "lift": 4.239270516717325
+          },
+          "K=500": {
+            "precision": 0.658,
+            "base_rate": 0.2170184696569921,
+            "lift": 3.032
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1331,
+        "binary_n": 1325,
+        "binary_n_E": 114,
+        "pearson_r": 0.3559853665580679,
+        "pearson_p": 7.22153081988163e-41,
+        "spearman_rho": 0.40204760452019905,
+        "spearman_p": 1.2123975061284788e-52,
+        "point_biserial_r": 0.3559853665580679,
+        "bootstrap_95ci": [
+          0.30214875443750017,
+          0.41169296208086703
+        ],
+        "roc_auc": 0.8149456009967113,
+        "held_out": {
+          "n_test": 398,
+          "n_test_E": 34,
+          "accuracy": 0.7939698492462312,
+          "sensitivity": 0.6764705882352942,
+          "specificity": 0.804945054945055,
+          "precision": 0.24468085106382978,
+          "f1": 0.359375,
+          "mcc": 0.3168178408885922,
+          "roc_auc": 0.761069812540401,
+          "confusion": {
+            "tp": 23,
+            "fp": 71,
+            "tn": 293,
+            "fn": 11
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.8211383573283547,
+          "n_high_conf": 69,
+          "low_conf_auc": 0.777748093457036,
+          "n_low_conf": 34
+        },
+        "n_model_gaps_pecE_insilicoN": 12,
+        "n_medium_mismatch_insilicoE_keioN": 211
+      },
+      "solve_sources": {
+        "ok": 1470,
+        "infeasible": 46
+      },
+      "vs_glpk_deposit": {
+        "label_kappa": 1.0,
+        "label_flips": [],
+        "max_abs_db_ko": 9.123737060301451e-08,
+        "kV_spearman_lex_vs_glpk": 0.7059037942121139,
+        "glpk_canon_r": 0.47549545367761054
+      },
+      "vs_stateless_2stage": {
+        "kV_spearman_lex_vs_stateless": 0.7749212424270742,
+        "stateless_canon_r": 0.9432075104782303
+      },
+      "floor_census_lex": {
+        "n_compensable": 1127,
+        "n_floor_190_210": 1,
+        "floor_kv_median": 200.0,
+        "n_kv_le_0p1": 1118,
+        "n_kv_0p1_to_190": 3,
+        "n_kv_gt_210": 5,
+        "compensable_kv_median": 0.0
+      },
+      "floor_census_glpk": {
+        "n_compensable": 1127,
+        "n_floor_190_210": 782,
+        "floor_kv_median": 200.01359920787323,
+        "n_kv_le_0p1": 339,
+        "n_kv_0p1_to_190": 1,
+        "n_kv_gt_210": 5,
+        "compensable_kv_median": 200.012047172916
+      },
+      "floor_census_stateless": {
+        "n_compensable": 1127,
+        "n_floor_190_210": 1,
+        "floor_kv_median": 200.0,
+        "n_kv_le_0p1": 1118,
+        "n_kv_0p1_to_190": 3,
+        "n_kv_gt_210": 5,
+        "compensable_kv_median": 6.879823468900145e-07
+      },
+      "top8_compensable_kV_lex": [
+        {
+          "gene_id": "b1200",
+          "gene_name": "dhaK",
+          "kV_lex": 427.18372507919713
+        },
+        {
+          "gene_id": "b1199",
+          "gene_name": "dhaL",
+          "kV_lex": 427.18372507919713
+        },
+        {
+          "gene_id": "b1198",
+          "gene_name": "dhaM",
+          "kV_lex": 427.18372507919713
+        },
+        {
+          "gene_id": "b3946",
+          "gene_name": "fsaB",
+          "kV_lex": 427.1837250788603
+        },
+        {
+          "gene_id": "b0825",
+          "gene_name": "fsaA",
+          "kV_lex": 427.1837250788603
+        },
+        {
+          "gene_id": "b4036",
+          "gene_name": "lamB",
+          "kV_lex": 200.0
+        },
+        {
+          "gene_id": "b2097",
+          "gene_name": "fbaB",
+          "kV_lex": 1.215356583434864
+        },
+        {
+          "gene_id": "b1723",
+          "gene_name": "pfkB",
+          "kV_lex": 1.2153565834347957
+        }
+      ]
+    },
+    "ijo_atpm_40": {
+      "model": "ijo",
+      "atpm_bound": 40.0,
+      "wild_type_biomass": 0.6947359182109591,
+      "wt_L1": 747.0868199203926,
+      "n_genes": 1367,
+      "n_essential": 298,
+      "n_essential_glpk": 298,
+      "transitive_calibration": {
+        "pearson_r_log_kV_delta_b": 0.9509500432427163,
+        "pearson_p_value": 0.0,
+        "spearman_rho": 0.7988800981491277,
+        "spearman_p_value": 1.1987160679193972e-303,
+        "partial_r_given_n_gpr_rxns": 0.9503857489055602,
+        "partial_p_value": 0.0,
+        "bootstrap_95ci": [
+          0.9400520329459731,
+          0.961094956898723
+        ],
+        "n_essential": 298,
+        "n_genes": 1367,
+        "held_out": {
+          "n_test": 411,
+          "n_test_essential": 90,
+          "accuracy": 0.9902676399026764,
+          "mcc": 0.9723764739844752,
+          "roc_auc": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 0.9875389408099688,
+          "confusion": {
+            "tn": 317,
+            "fp": 4,
+            "fn": 0,
+            "tp": 90
+          }
+        },
+        "precision_at_k": {
+          "K=10": {
+            "precision": 0.9,
+            "base_rate": 0.21799561082662766,
+            "lift": 4.128523489932886
+          },
+          "K=25": {
+            "precision": 0.84,
+            "base_rate": 0.21799561082662766,
+            "lift": 3.8532885906040266
+          },
+          "K=50": {
+            "precision": 0.92,
+            "base_rate": 0.21799561082662766,
+            "lift": 4.220268456375839
+          },
+          "K=100": {
+            "precision": 0.96,
+            "base_rate": 0.21799561082662766,
+            "lift": 4.4037583892617445
+          },
+          "K=200": {
+            "precision": 0.98,
+            "base_rate": 0.21799561082662766,
+            "lift": 4.495503355704698
+          },
+          "K=500": {
+            "precision": 0.596,
+            "base_rate": 0.21799561082662766,
+            "lift": 2.7339999999999995
+          }
+        }
+      },
+      "direct_arm": {
+        "n_merged": 1212,
+        "binary_n": 1206,
+        "binary_n_E": 130,
+        "pearson_r": 0.34332361339938544,
+        "pearson_p": 1.0801195400223718e-34,
+        "spearman_rho": 0.33926070757150184,
+        "spearman_p": 7.2314339289866494e-34,
+        "point_biserial_r": 0.34332361339938544,
+        "bootstrap_95ci": [
+          0.2823622587221875,
+          0.4034049230173003
+        ],
+        "roc_auc": 0.7561659994280812,
+        "held_out": {
+          "n_test": 362,
+          "n_test_E": 39,
+          "accuracy": 0.7624309392265194,
+          "sensitivity": 0.7692307692307693,
+          "specificity": 0.7616099071207431,
+          "precision": 0.2803738317757009,
+          "f1": 0.410958904109589,
+          "mcc": 0.36069139331024197,
+          "roc_auc": 0.7815749781694054,
+          "confusion": {
+            "tp": 30,
+            "fp": 77,
+            "tn": 246,
+            "fn": 9
+          }
+        },
+        "pec_stratification": {
+          "high_conf_auc": 0.7338024429102495,
+          "n_high_conf": 84,
+          "low_conf_auc": 0.7619490175252257,
+          "n_low_conf": 35
+        },
+        "n_model_gaps_pecE_insilicoN": 30,
+        "n_medium_mismatch_insilicoE_keioN": 189
+      },
+      "solve_sources": {
+        "ok": 1362,
+        "infeasible": 5
+      },
+      "vs_glpk_deposit": {
+        "label_kappa": 1.0,
+        "label_flips": [],
+        "max_abs_db_ko": 2.3914759061938184e-11,
+        "kV_spearman_lex_vs_glpk": 0.8098673496841401,
+        "glpk_canon_r": 0.9685388051298617
+      },
+      "vs_stateless_2stage": {
+        "kV_spearman_lex_vs_stateless": 0.8099588029649207,
+        "stateless_canon_r": 0.9495930530303833
+      },
+      "floor_census_lex": {
+        "n_compensable": 971,
+        "n_floor_190_210": 0,
+        "floor_kv_median": null,
+        "n_kv_le_0p1": 956,
+        "n_kv_0p1_to_190": 15,
+        "n_kv_gt_210": 0,
+        "compensable_kv_median": 0.0
+      },
+      "floor_census_glpk": {
+        "n_compensable": 971,
+        "n_floor_190_210": 961,
+        "floor_kv_median": 200.00005230473508,
+        "n_kv_le_0p1": 2,
+        "n_kv_0p1_to_190": 0,
+        "n_kv_gt_210": 8,
+        "compensable_kv_median": 200.00005230473508
+      },
+      "floor_census_stateless": {
+        "n_compensable": 971,
+        "n_floor_190_210": 1,
+        "floor_kv_median": 199.99999999999727,
+        "n_kv_le_0p1": 955,
+        "n_kv_0p1_to_190": 15,
+        "n_kv_gt_210": 0,
+        "compensable_kv_median": 9.600839797979829e-08
+      },
+      "top8_compensable_kV_lex": [
+        {
+          "gene_id": "b1773",
+          "gene_name": NaN,
+          "kV_lex": 89.84851685961952
+        },
+        {
+          "gene_id": "b2097",
+          "gene_name": NaN,
+          "kV_lex": 89.84851685961952
+        },
+        {
+          "gene_id": "b1723",
+          "gene_name": NaN,
+          "kV_lex": 89.848516859619
+        },
+        {
+          "gene_id": "b3946",
+          "gene_name": NaN,
+          "kV_lex": 68.86457414256361
+        },
+        {
+          "gene_id": "b0825",
+          "gene_name": NaN,
+          "kV_lex": 68.86457414256361
+        },
+        {
+          "gene_id": "b1198",
+          "gene_name": NaN,
+          "kV_lex": 68.86457414255315
+        },
+        {
+          "gene_id": "b1199",
+          "gene_name": NaN,
+          "kV_lex": 68.86457414255315
+        },
+        {
+          "gene_id": "b1200",
+          "gene_name": NaN,
+          "kV_lex": 68.86457414255315
+        }
+      ]
+    }
+  }
+}

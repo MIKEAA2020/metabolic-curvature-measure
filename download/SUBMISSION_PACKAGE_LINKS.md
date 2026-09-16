@@ -1,9 +1,55 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-16 (proof-read + second-engine round). All repository links follow
+Generated 2026-09-16 (symmetric iJO second-engine + deterministic tie-break promotion round). All repository links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-16, symmetric iJO second-engine +
+deterministic tie-break promotion round): the engine-invariance
+audit completed symmetrically and the near-tie boundary closed
+constructively. (1) The symmetric iJO1366 re-run
+(scripts/atpm_ijo_second_engine.py, keio_atpm_ijo_second_engine.json):
+all four ATPM levels re-solved under stateless cold-start
+scipy/HiGHS with the probe's exact conventions -- labels fully
+engine-invariant (kappa = 1.000 at all four levels, zero flips, max
+|db| 1.2e-7, essential counts 298/298/299/331 identical), the
+canonical restoration itself engine-invariant (r within 0.002 at
+the three deeper levels; +0.9685 -> +0.9496 at the mildest level,
+whose massive 961-of-971 kV~200 floor collapses to one gene -- the
+mirror of the iML1515 finding, the one genuine floor gene in both
+models being lamB, b4036). (2) The deterministic tie-break
+promotion, gated by a PRE-REGISTERED merit pilot
+(scripts/atpm_lex_tiebreak_pilot.py, keio_atpm_lex_pilot.json,
+verdict PROMOTE): the declared three-stage lexicographic rule
+(stage 3 = min w^T v over the parsimony-pinned face, fixed seeded
+weights U(0.5,1.5)) returns the SAME vertex under the GLPK
+warm-start path and stateless HiGHS -- maximum cross-engine vertex
+distance 6e-11 on the 105-gene stratified sample + WT at the two
+worst levels -- collapses the floor for 40/40 random floor genes in
+both engines, and preserves labels (max |db| 6.4e-8). The pilot's
+instructive contrast: the stateless two-stage reading keeps lamB at
+kV = 200 on iJO1366 while the declared rule returns 0 -- even a
+stateless engine's vertex is a path; only a declared rule makes the
+statistic well posed. (3) The full declared-rule sweeps at the four
+floor-affected levels (scripts/atpm_lex_full_sweep.py,
+keio_atpm_lex_full_sweep.json): iML1515 ATPM 60/80/100 read
++0.9534/+0.9686/+0.9440 and iJO1366 ATPM 40 reads +0.9510 (labels
+kappa = 1.000 vs the deposit at all four; floors collapse to the
+rule-determined rerouting sets: lamB 200.0 at every iML1515 level,
+the dhaKLM/fsaA/fsaB block deepening 194 -> 427 with maintenance
+demand, the iJO1366 floor level carrying the parallel-routing block
+pfkB/fbaB/fsaA/fsaB/dhaKLM/ydjI at kV 69-90). (4) Patch J
+(scripts/companion_v3_patch_j.py, 6 anchored edits): the
+deterministic-tie-break paragraph in the canonical-selection
+subsection (the promotion proper), the prop:keio-atpm engine-bracket
+sentence extended with the symmetric iJO confirmation and the
+declared-rule readings, rem:canonical-protocol's third requirement
+closed constructively, the tab caption and rem:keio-multiaxis
+clauses, and the latent feature-count defect fixed ('Four
+features matter' -> 'Five features'; five listed since patch H).
+audit_v12: 301/301 PASS (v11's 285 + 16 new checks P-15..P-30).
+Companion 74 pp, 0 errors / 0 undefined / 0 overfull.
 
 Revision note (2026-09-16, proof-read + second-engine round): final
 proof-read of the sixth-axis prop against every deposited artifact.
@@ -264,7 +310,7 @@ only after acceptance.
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (73 pp, + proof-read/second-engine revision: the measured near-tie engine bracket on the iML1515 maintenance levels ([+0.475, +0.943]; labels and the near-tie itself engine-invariant, the kV floor disclosed as the deposited simplex path's realization -- patch I), the PGI range correction (45-201) and the post-patch compensable count (1,127), on top of the sixth-axis revision: prop:keio-atpm + rem:keio-multiaxis -- the non-medium ATPM-maintenance-stress probe with the trace-quota integrity corrections (six HiGHS-adjudicated calls; endpoint re-stratification purely one-directional) and the measured near-tie boundary in the canonical-selection subsection (now a six-axis, 32-row table), plus the restored nh4_-5 canonical level -- on top of the fifth-axis/arginine-symmetry revision: prop:keio-iron + rem:keio-iron-invariance -- the trace-metal axis closing the supply side across all five classical nutrient classes, the arginine-substitution canonical levels completing the axis x selection table symmetry -- on top of the fourth-axis/canonical-selection revision: prop:keio-phosphate + rem:keio-p-invariance + the canonical-selection subsection with the solver-tolerance integrity disclosures, the nitrogen-axis, oxygen-probe, glucose-only, viability-kernel + Poincare/averaging, 3rd-wave repair, and restoration revisions) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
+| Manuscript PDF (74 pp, + deterministic-tie-break promotion revision: the declared three-stage lexicographic rule measured engine-invariant at the near-tie levels (cross-engine vertex distance 6e-11, pre-registered pilot), the maintenance-level readings resolved under the declared rule (+0.953/+0.969/+0.944 iML1515, +0.951 iJO1366; labels kappa 1.000; floors collapsing to the rule-determined rerouting sets), the symmetric iJO1366 second-engine confirmation, and the feature-count fix -- patch J), on top of the proof-read/second-engine revision: the measured near-tie engine bracket on the iML1515 maintenance levels ([+0.475, +0.943]; labels and the near-tie itself engine-invariant, the kV floor disclosed as the deposited simplex path's realization -- patch I), the PGI range correction (45-201) and the post-patch compensable count (1,127), on top of the sixth-axis revision: prop:keio-atpm + rem:keio-multiaxis -- the non-medium ATPM-maintenance-stress probe with the trace-quota integrity corrections (six HiGHS-adjudicated calls; endpoint re-stratification purely one-directional) and the measured near-tie boundary in the canonical-selection subsection (now a six-axis, 32-row table), plus the restored nh4_-5 canonical level -- on top of the fifth-axis/arginine-symmetry revision: prop:keio-iron + rem:keio-iron-invariance -- the trace-metal axis closing the supply side across all five classical nutrient classes, the arginine-substitution canonical levels completing the axis x selection table symmetry -- on top of the fourth-axis/canonical-selection revision: prop:keio-phosphate + rem:keio-p-invariance + the canonical-selection subsection with the solver-tolerance integrity disclosures, the nitrogen-axis, oxygen-probe, glucose-only, viability-kernel + Poincare/averaging, 3rd-wave repair, and restoration revisions) | [download/companion_categorical_v3.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v3.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v3.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
 | LaTeX source | [scripts/companion_categorical_v3.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v3.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v3.tex) |
 

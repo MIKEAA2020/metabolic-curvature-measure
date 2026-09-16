@@ -1,0 +1,103 @@
+{
+  "method_note": "Pre-registered lexicographic tie-break pilot: 3-stage lex pFBA (biomass max -> parsimony min -> deterministic tie-break min w^T v, w = U(0.5,1.5) fixed seed 20240901, the declared TB0 convention) solved under the GLPK warm-start path (persistent model, sequential per-gene KO blocks in probe order, 30 s simplex time limit) and the stateless cold-start scipy/HiGHS engine, at the two worst near-tie levels (iML1515 ATPM 100, iJO1366 ATPM 40) on a stratified gene sample. Decision rule P1/P2/P3 pre-registered in the script docstring; verdict computed mechanically.",
+  "models": {
+    "iml_atpm_100": {
+      "atpm_bound": 100.0,
+      "n_sample": 57,
+      "sample_meta": {
+        "n_floor_pick": 40,
+        "anchors": [
+          "b0870",
+          "b4036"
+        ],
+        "stateless_top_kV_block": [
+          "b3946",
+          "b0825",
+          "b1200",
+          "b1199",
+          "b1198",
+          "b4036"
+        ],
+        "n_controls": 10,
+        "n_total": 57,
+        "n_floor_available": 782
+      },
+      "wt": {
+        "glpk_b": 0.07967797278807259,
+        "glpk_s2": 747.6826046579882,
+        "highs_b": 0.07967790708033622,
+        "highs_s2": 747.6826090681775,
+        "wt_determinism_glpk": 3.4528079763150202e-12,
+        "wt_cross_engine_kV": 5.6610458026819527e-11,
+        "t_glpk_wt_s": 4.057850122451782,
+        "t_highs_wt_s": 0.8234329223632812
+      },
+      "median_t_glpk_s": 1.443699598312378,
+      "median_t_highs_s": 0.7976627349853516
+    },
+    "ijo_atpm_40": {
+      "atpm_bound": 40.0,
+      "n_sample": 48,
+      "sample_meta": {
+        "n_floor_pick": 40,
+        "anchors": [
+          "b0870",
+          "b4036"
+        ],
+        "stateless_top_kV_block": [
+          "b4036",
+          "b1723",
+          "b1773",
+          "b2097",
+          "b1198",
+          "b1199"
+        ],
+        "n_controls": 1,
+        "n_total": 48,
+        "n_floor_available": 961
+      },
+      "wt": {
+        "glpk_b": 0.6947359182109635,
+        "glpk_s2": 747.0868199393321,
+        "highs_b": 0.6947359182109591,
+        "highs_s2": 747.0868191733083,
+        "wt_determinism_glpk": 0.0,
+        "wt_cross_engine_kV": 0.0,
+        "t_glpk_wt_s": 3.467834949493408,
+        "t_highs_wt_s": 0.7232217788696289
+      },
+      "median_t_glpk_s": 1.2402621507644653,
+      "median_t_highs_s": 0.7114324569702148
+    }
+  },
+  "verdict": {
+    "P1_engine_invariance": true,
+    "P2_floor_collapse": true,
+    "P3_label_preservation": true,
+    "VERDICT": "PROMOTE"
+  },
+  "verdict_detail": {
+    "iml_atpm_100": {
+      "n_sample": 57,
+      "n_both_engines_ok": 57,
+      "n_glpk_fail": 0,
+      "cross_engine_kV_max": 5.982749736343581e-11,
+      "n_floor_sampled": 40,
+      "floor_collapse_frac_glpk": 1.0,
+      "floor_collapse_frac_highs": 1.0,
+      "max_abs_db_vs_deposited_glpk": 6.380317199572438e-08,
+      "max_abs_db_vs_deposited_highs": 6.380317799092872e-08
+    },
+    "ijo_atpm_40": {
+      "n_sample": 48,
+      "n_both_engines_ok": 48,
+      "n_glpk_fail": 0,
+      "cross_engine_kV_max": 0.0,
+      "n_floor_sampled": 40,
+      "floor_collapse_frac_glpk": 1.0,
+      "floor_collapse_frac_highs": 1.0,
+      "max_abs_db_vs_deposited_glpk": 4.729550084903167e-14,
+      "max_abs_db_vs_deposited_highs": 1.3924306152546251e-11
+    }
+  }
+}

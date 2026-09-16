@@ -5382,7 +5382,15 @@ simplex path reads $r=+0.703$, $+0.655$, $+0.475$ --- the near-tie
 boundary of Remark~\ref{rem:canonical-protocol}, where a stateless
 second engine resolves the near-tie consistently and restores the
 same statistic to $+0.952$, $+0.968$, $+0.943$ (labels unchanged at
-$\kappa=1.000$; maximum biomass discrepancy $9\times10^{-8}$). Since the wild-type optimum is
+$\kappa=1.000$; maximum biomass discrepancy $9\times10^{-8}$); the
+symmetric re-run of the iJO1366 levels confirms the restoration
+itself is engine-invariant --- labels $\kappa=1.000$ at all four
+levels, canonical $r$ within $0.002$ at the three deeper levels and
+$+0.9685$ to $+0.9496$ at the mildest, whose $961$-of-$971$ floor is
+the deposited path's realization --- and the deterministic tie-break
+of the selection subsection closes the near-tie under a declared
+rule, the iML1515 maintenance levels reading $+0.953$, $+0.969$,
+$+0.944$. Since the wild-type optimum is
 unique at every level on this axis, the plain endpoint collapse
 establishes that wild-level flux-variability width is a sufficient
 but not necessary indicator: the operative mechanism is per-knockout
@@ -5404,9 +5412,9 @@ synthase itself load-bearing. The nitrogen-substitution losses
 remain the only re-wiring-driven losses. The association is the
 invariant object under canonical selection on all five supply
 axes in both models ($r\ge+0.843$, held-out AUC $\ge0.979$),
-is restored on the maintenance axis in iJO1366, and acquires its
-measured boundary on the maintenance axis in iML1515 ---
-to which the selection subsection now turns.
+is restored on the maintenance axis in iJO1366, and acquires --- then closes, by the
+deterministic tie-break --- its measured boundary on the maintenance
+axis in iML1515, to which the selection subsection now turns.
 \end{remark}
 
 \subsection{Canonical Vertex Selection and Solver-Tolerance Integrity}
@@ -5488,7 +5496,8 @@ AUC/MCC the held-out $70/30$ logistic). Labels agree with the plain
 sweeps at $\kappa=1.000$ at every level (after the
 solver-tolerance corrections below); the iML1515 maintenance rows'
 canonical $r$ is the deposited simplex path's realization, the
-stateless second engine reading $+0.952$, $+0.968$, $+0.943$
+stateless second engine reading $+0.952$, $+0.968$, $+0.943$ and
+the declared deterministic tie-break $+0.953$, $+0.969$, $+0.944$
 (Remark~\ref{rem:canonical-protocol}). Under canonical selection the
 association is the invariant object at every level of every axis ---
 including across the anaerobic regime switch, where the plain
@@ -5498,7 +5507,7 @@ re-stratify.}
 \end{table}
 
 Table~\ref{tab:canonical-selection} reports the homogenized
-statistics. Four features matter. First, canonical selection
+statistics. Five features matter. First, canonical selection
 sharpens even the unique-optimum levels: the baselines rise from
 $r=+0.603$ to $+0.945$ (iJO1366) and $+0.875$ to $+0.937$ (iML1515),
 and the deepest oxygen limitation from $+0.519$ to $+0.945$ --- the
@@ -5557,10 +5566,48 @@ collapses the floor band to the one genuinely forced knockout
 (\emph{lamB}, $kV=200.0$ at every level) with a single further
 five-gene rerouting block (\emph{dhaKLM}, \emph{fsaA}/\emph{fsaB},
 $kV$ $162$--$416$ across the levels), and restores the transitive
-association to $+0.952$, $+0.968$, $+0.943$. Canonical selection is
-necessary everywhere and sufficient precisely where the parsimony
-stage is discriminating --- or where the engine resolves a near-tie
-consistently.
+association to $+0.952$, $+0.968$, $+0.943$.
+
+\paragraph{The deterministic tie-break.}
+The near-tie boundary is not only measurable but closable, and the
+closure is the selection rule's own completion: a third
+lexicographic stage minimizing a fixed functional $w^{T}v$ over the
+wild-type-pinned, parsimony-pinned face (weights
+$w\sim U(0.5,1.5)$ under a fixed seed, the optimum generically
+unique) selects a unique vertex by construction, so the returned
+canonical vertex becomes a property of the declared protocol rather
+than of the solver's path. A pre-registered pilot at the two worst
+levels verified exactly this. On a stratified sample of $105$ genes
+plus the wild types (the random $40$-gene floor draw at each level,
+the near-tie gene \emph{ltaE}, \emph{lamB}, the stateless
+top-rerouting blocks, and compensable controls), the GLPK
+warm-start path and the stateless cold-start engine return the
+\emph{same} tie-broken vertex --- maximum cross-engine squared
+distance $6\times10^{-11}$, against two-stage vertices some
+$kV\approx200$ apart at the same genes --- and every one of the
+$80$ randomly drawn floor genes collapses to $kV\le0.1$ under the
+declared rule in both engines, with labels unchanged (maximum
+biomass discrepancy $6\times10^{-8}$). The pilot also exposes the
+limit of engine substitution alone: the stateless two-stage reading
+had kept \emph{lamB} at $kV=200$ on iJO1366 --- its one-gene floor
+--- while the declared rule returns $kV=0$ there; even a stateless
+engine's vertex is a path, and only a declared rule makes the
+statistic well posed. Full sweeps under the declared rule at the
+four floor-affected levels close the boundary in the instrument's
+own terms: the transitive association reads $r=+0.953$, $+0.969$,
+$+0.944$ on the iML1515 maintenance levels and $+0.951$ at the
+iJO1366 floor level (labels $\kappa=1.000$ against the deposit at
+all four; held-out AUC $0.992$, $0.992$, $0.984$, $1.000$), and the
+floor census collapses to the rule-determined rerouting sets:
+\emph{lamB} at $kV=200.0$ at every iML1515 level with the
+\emph{dhaKLM}/\emph{fsaA}/\emph{fsaB} block deepening from $194$
+to $427$ as maintenance demand grows, and the iJO1366 floor level
+carrying instead a parallel-routing block (\emph{pfkB},
+\emph{fbaB}, \emph{fsaA}/\emph{fsaB}, \emph{dhaKLM}, and the
+putative receptor \emph{ydjI}) at $kV$ $69$--$90$. Canonical
+selection is necessary everywhere, and with the deterministic
+tie-break it is sufficient at every level measured, including the
+near-tied maintenance levels.
 
 The canonical control also served as an independent audit of the
 deposited plain sweeps, and it surfaced a solver-integrity boundary
@@ -5657,7 +5704,17 @@ second engine of the re-run above); the essentiality ranking is
 engine-invariant (labels $\kappa=1.000$, held-out AUC $\ge0.978$
 under both engines), which is why the table's iML1515 maintenance
 rows are reported with their AUC and MCC intact and their $r$ read
-as the deposited path's realization.
+as the deposited path's realization. The requirement is also
+closable by construction: the deterministic tie-break --- a third
+lexicographic stage minimizing the fixed functional $w^{T}v$ over
+the parsimony-pinned face, with fixed-seed weights whose optimum is
+generically unique --- returns the same vertex under both engines
+(cross-engine squared distance at most $6\times10^{-11}$ on the
+stratified pilot; labels unchanged), collapses the floor to the
+rule-determined rerouting set, and reads the maintenance levels at
+$+0.953$, $+0.969$, $+0.944$ (iML1515) and $+0.951$ (iJO1366, floor
+level) under the single declared rule; the engine bracket above
+records the two-stage spread that motivated the closure.
 \end{remark}
 
 \subsection{Benchmark against the structural closure instruments}
