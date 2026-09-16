@@ -6375,3 +6375,80 @@ Stage Summary:
   meta/changelog/strawman prose, proofs full-length; all six
   figures repaired and code-free; audits 301/301 PASS; v8 ZIPs
   fresh-dir verified. Ready for commit+push with the new PAT.
+
+---
+Task ID: formal-style-completion
+Agent: main (Super Z)
+Task: Complete the formal journal-style revision on top of the
+concurrent v5/v4 round (which had missed the user's specifically
+flagged abstract artifact and the deeper purge items), as NEW version
+files per the versioning directive: journal_manuscript_v6.tex +
+journal_manuscript_v6_bmb_refs.tex + journal_manuscript_v6_refs.bib
+(main, BMB) and companion_categorical_v5.tex + companion_refs_v5.bib
+(companion, TAC). Push with the new PAT.
+
+Work Log:
+- Discovered a concurrent session's parallel implementation on
+  origin/main (f728fb6 + ef26d44 + a46babf: author finalization, BMB
+  guideline compliance with a 245-word abstract + lineno + keywords,
+  TAC keywords + AMS MSC, all-figure repairs, declarations). Adopted
+  that state (own parallel commit preserved on local branch
+  backup-formal-style-local) and layered the missing fixes as v6/v5.
+- Main v6: abstract's "not a smooth curvature" rhetorical negation
+  removed (the user's flagged artifact) -> "this measure is the
+  canonical carrier ... (slope 1.00; smooth maps scale
+  quadratically)" (240 words, within the 150-250 guideline);
+  Discussion's undefined kappa_flux/kappa_time phantom objects
+  replaced by the framework's own resolution objects (atomic measure,
+  coarse-grainings, trajectory integrals) with the D^2 Phi
+  contraction identity restated factually; "precursor" ->
+  "geometric"/"deposited" at all 8 sites (incl. the Fig 3 caption);
+  "The dissociation observed with the precursor kappa_V predictor is
+  metric-robust" phantom reference recast factually; "is now a
+  theorem" -> "is a theorem"; author-contribution sentence aligned
+  with the author's declared wording.
+- Companion v5: "earlier drafts" (2 sites) and uncited "prior
+  formulations"/"prior work" strawman framing (2 sites) removed;
+  "fluctation" typo; "named by the novelty assessment" (2 sites);
+  "whose retirement ... records" -> "free of the circularity
+  identified in" with the label renamed rem:operational-curvature;
+  "Homogenized" (2 sites) -> "canonical-selection statistics across
+  the six axes"; "deepest degeneracy yet recorded" -> "in the
+  battery"; "now"-tense sites (4); "Rigorous" dropped from the
+  Fisher-minimal subsection title; "The decisive prediction" ->
+  "The prediction"; the duplicated designed-progression passage
+  deleted; the "same conflation" remark rewritten to parallel the
+  main paper's new Discussion phrasing; Threshold remark retitled
+  (provenance -> tuning); \bibliography retargeted to the new
+  companion_refs_v5.bib.
+- Cross-citation authorship: the "X" placeholder author in
+  zai2026categorical (main refs) and zai2026measure (companion bib)
+  replaced by Abaee in journal_manuscript_v6_bmb_refs.tex,
+  journal_manuscript_v6_refs.bib, and companion_refs_v5.bib -- the
+  previous package had shipped the X-author bib entries.
+- Fig 3 regenerated with "geometric" labels
+  (scripts/fig3_v6_regen.py from the deposited artifacts; bars
+  +0.3739/+0.3954/+0.3954, n 433/424/424, rho 0.932 unchanged;
+  VLM-verified: title "(b) metric comparison", tick "geometric
+  kappa_V (plain FBA)", no overlaps).
+- Builds: main 27 pp, companion 74 pp, zero undefined references;
+  audit_v14_numbers.py (from the concurrent round's v13; filenames
+  retargeted to v6/v5, the JP-2 refs-file anchor updated, outputs
+  v14_*): 301/301 PASS. ZIPs rebuilt via build_submission_zips_v9.sh
+  (v6_bmb_refs + v6_refs bib + companion_refs_v5 bib; fresh-dir
+  standalone tectonic compiles verified 27/74 pp). Cover letters
+  retargeted to the new versions; links doc: new newest-first
+  revision note, all file rows retargeted (the previous round's
+  table had stale v4/v3 source rows), checklist updated (author
+  metadata + cross-citations resolved, audit_v14 301/301).
+
+Stage Summary:
+- Latest versions: scripts/journal_manuscript_v6.tex (27 pp PDF at
+  download/journal_manuscript_v6.pdf) and scripts/
+  companion_categorical_v5.tex (74 pp PDF at download/
+  companion_categorical_v5.pdf); submission ZIPs at download/
+  submission_main_bmb.zip and download/submission_companion_tac.zip
+  (v9 package); both papers now free of the flagged abstract
+  artifact, all phantom/strawman/process remnants, and the X-author
+  cross-citations; proofs complete and uncondensed; audit_v14
+  301/301 PASS.

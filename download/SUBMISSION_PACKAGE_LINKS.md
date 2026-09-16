@@ -1,10 +1,45 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-16 (formal-tone revision + figure repair + v8
-package round). All repository links follow
+Generated 2026-09-16 (formal-style completion + cross-citation
+authorship + v9 package round: journal_manuscript_v6 +
+companion_categorical_v5). All repository links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-16, formal-style completion + cross-citation
+authorship + v9 package round): new manuscript versions as separate
+files, prior versions untouched -- scripts/journal_manuscript_v6.tex
+(main, BMB; from v5) and scripts/companion_categorical_v5.tex
+(companion, TAC; from v4). (1) Main: the abstract now states the
+discrete-carrier finding factually (the self-referential "not a smooth
+curvature" negation removed; 240 words, within the Springer 150-250
+guideline); remaining process vocabulary purged ("precursor" ->
+"geometric" at all eight sites including the Fig 3 caption; the
+Discussion's undefined kappa_flux/kappa_time phantom objects replaced
+by the framework's own resolution objects; "is now a theorem" ->
+"is a theorem"; "the recalibrated predictor" sentence recast); the
+author-contribution sentence matches the author's declared wording.
+(2) Companion: "earlier drafts" references (two sites), the uncited
+"prior formulations"/"prior work" strawman framing (two sites), the
+"fluctation" typo, "named by the novelty assessment" (two sites),
+"whose retirement ... records", "Homogenized" (two sites), "deepest
+degeneracy yet recorded", "now"-tense sites (four), the "Rigorous"
+subsection title, "The decisive prediction", the duplicated
+designed-progression passage, and the "same conflation" remark (now
+aligned with the main paper's rewritten Discussion) all fixed; the
+label rem:fba-kappa-superseded renamed rem:operational-curvature.
+(3) Cross-citation authorship: the "X" placeholder author in the
+zai2026categorical and zai2026measure entries replaced by Abaee in
+journal_manuscript_v6_bmb_refs.tex, journal_manuscript_v6_refs.bib,
+and the companion's new companion_refs_v5.bib (the previous package
+had shipped the X-author bib). (4) Fig 3 regenerated with "geometric"
+labels (scripts/fig3_v6_regen.py; values unchanged and re-verified).
+(5) audit_v14_numbers.py: 301/301 PASS against the new files; builds:
+main 27 pp, companion 74 pp, zero undefined references; ZIPs rebuilt
+via build_submission_zips_v9.sh with fresh-dir standalone tectonic
+compiles verified (27/74 pp); cover letters retargeted; all file
+rows below retargeted to the current versions.
 
 Revision note (2026-09-16, formal-tone revision + figure repair + v8
 package round): (1) New manuscript versions as separate files, prior
@@ -364,11 +399,11 @@ Sensitivity: From Active-Set Geometry to Transcriptional Response
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
-| Manuscript PDF (27 pp, full proofs in appendices, declarations in backmatter, + v8 formal-tone and figure-repair revision: declarations rewritten as brief single sentences; meta-commentary, self-referential prose, and internal project jargon removed (proofs untouched at full length); all six figures regenerated without internal experiment codes, with the Fig 3 panel-(b) annotation-collision fix (prior versions retained as separate files: journal_manuscript_v4.pdf and earlier), + v7 author-finalization/BMB-compliance revision: author identity, affiliation, e-mail, and ORCID on the title page; abstract 245 words within the Springer 150-250 guideline; six discoverability-optimized keywords; continuous line numbering enabled) | [download/journal_manuscript_v5.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v5.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v5.pdf) |
+| Manuscript PDF (27 pp, full proofs in appendices, declarations in backmatter; formal-style completion: factual abstract statement, geometric-metric terminology, framework-object Discussion, Abaee cross-citation; prior versions retained as separate files) | [download/journal_manuscript_v6.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v6.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v6.pdf) |
 | Cover letter (with declarations, companion disclosure) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
-| LaTeX source | [scripts/journal_manuscript_v4.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v4.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v4.tex) |
-| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v3_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v3_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v3_bmb_refs.tex) |
-| BibTeX database | [scripts/journal_manuscript_v2_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v2_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v2_refs.bib) |
+| LaTeX source | [scripts/journal_manuscript_v6.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v6.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v6.tex) |
+| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v6_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v6_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v6_bmb_refs.tex) |
+| BibTeX database | [scripts/journal_manuscript_v6_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v6_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v6_refs.bib) |
 | Reference-list generator (audit-checked) | [scripts/build_bmb_refs.py](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/build_bmb_refs.py) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/build_bmb_refs.py) |
 
 Figures (embedded in the PDF; source PNGs if the portal requests separate files):
@@ -377,7 +412,7 @@ Figures (embedded in the PDF; source PNGs if the portal requests separate files)
 |---|---|
 | Fig. M1 summary (active-set sweep) | [download/m1_m3/fig_m1_summary.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/m1_m3/fig_m1_summary.png) |
 | Coupling figures (Alexandrov bridge) | [download/alexandrov_bridge/coupling_figures.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/alexandrov_bridge/coupling_figures.png) |
-| E24 recalibration | [download/association_robustness/v5_e24_recalibration.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/association_robustness/v5_e24_recalibration.png) |
+| Primary association (metric comparison) | [download/association_robustness/v5_e24_recalibration.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/association_robustness/v5_e24_recalibration.png) |
 | V7 path robustness | [download/association_robustness/v7_path_robustness.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/association_robustness/v7_path_robustness.png) |
 | V8 tie-break robustness (E-V8) | [download/association_robustness/v8_tiebreak_robustness.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/association_robustness/v8_tiebreak_robustness.png) |
 | E32 event-measure stabilization | [download/association_robustness/e32_event_measure_stabilization.png](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/association_robustness/e32_event_measure_stabilization.png) |
@@ -386,7 +421,7 @@ Build note: for Overleaf or any standalone compiler, upload **the ZIP** (it
 contains the .tex, the input'ed reference list, the .bib database, and all
 six figures at the exact relative subpaths the .tex expects — verified to
 compile standalone, 28 pp, 0 errors). If instead you upload individual
-files, upload them together with `journal_manuscript_v3_bmb_refs.tex` and
+files, upload them together with `journal_manuscript_v6_bmb_refs.tex` and
 the three figure subfolders (`m1_m3/`, `alexandrov_bridge/`,
 `association_robustness/`) so the paths resolve; the .tex now searches both the
 upload directory and the repository layout
@@ -427,9 +462,10 @@ below the abstract of the submitted PDF).
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (74 pp, + v8 formal-tone revision: declarations rewritten as brief single sentences with the author-contribution placeholder replaced by A.A.; the Status note below the abstract removed; audit-diary and correction-history phrasing rewritten as scientific observation (proofs untouched at full length); prior version retained as companion_categorical_v3.pdf, + author-finalization revision: Amin Abaee / Independent Researcher, Tehran, Iran / ORCID 0000-0002-0019-1842 in the title block, TAC indexing keywords (optic category; stratified connection; 2-category; filtered colimit; homotopy type theory; applied category theory) and AMS 2020 Subject Classification (18D05; 18N99; 92B05) added below the abstract, + final proof-read/alignment/v6-package revision: the tie-break paragraph verified number-by-number against the pilot and full-sweep artifacts, the abstract closure clause (the declared tie-break closing its near-degeneracy boundary), and the cross-manuscript alignment audit confirming the main paper's declared TB0 convention (w ~ U(0.5, 1.5), seed 20240901, min w^T v) is identical to the companion's declared rule -- no main-paper changes required, + deterministic-tie-break promotion revision: the declared three-stage lexicographic rule measured engine-invariant at the near-tie levels (cross-engine vertex distance 6e-11, pre-registered pilot), the maintenance-level readings resolved under the declared rule (+0.953/+0.969/+0.944 iML1515, +0.951 iJO1366; labels kappa 1.000; floors collapsing to the rule-determined rerouting sets), the symmetric iJO1366 second-engine confirmation, and the feature-count fix -- patch J), on top of the proof-read/second-engine revision: the measured near-tie engine bracket on the iML1515 maintenance levels ([+0.475, +0.943]; labels and the near-tie itself engine-invariant, the kV floor disclosed as the deposited simplex path's realization -- patch I), the PGI range correction (45-201) and the post-patch compensable count (1,127), on top of the sixth-axis revision: prop:keio-atpm + rem:keio-multiaxis -- the non-medium ATPM-maintenance-stress probe with the trace-quota integrity corrections (six HiGHS-adjudicated calls; endpoint re-stratification purely one-directional) and the measured near-tie boundary in the canonical-selection subsection (now a six-axis, 32-row table), plus the restored nh4_-5 canonical level -- on top of the fifth-axis/arginine-symmetry revision: prop:keio-iron + rem:keio-iron-invariance -- the trace-metal axis closing the supply side across all five classical nutrient classes, the arginine-substitution canonical levels completing the axis x selection table symmetry -- on top of the fourth-axis/canonical-selection revision: prop:keio-phosphate + rem:keio-p-invariance + the canonical-selection subsection with the solver-tolerance integrity disclosures, the nitrogen-axis, oxygen-probe, glucose-only, viability-kernel + Poincare/averaging, 3rd-wave repair, and restoration revisions) | [download/companion_categorical_v4.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v4.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v4.pdf) |
+| Manuscript PDF (74 pp; formal-style completion: earlier-drafts references and uncited prior-formulations framing removed, process vocabulary purged, designed-progression duplication deleted, Abaee cross-citation; prior versions retained as separate files) | [download/companion_categorical_v5.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v5.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v5.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
-| LaTeX source | [scripts/companion_categorical_v3.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v3.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v3.tex) |
+| LaTeX source | [scripts/companion_categorical_v5.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v5.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v5.tex) |
+| BibTeX database | [scripts/companion_refs_v5.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v5.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v5.bib) |
 
 Figures (embedded in the PDF; source PNGs):
 
@@ -464,16 +500,21 @@ Figures (embedded in the PDF; source PNGs):
 
 ## Pre-submission checklist (already resolved / remaining)
 
-Resolved: BMB-formatted main paper (natbib author-year, 27 alphabetical refs,
-keywords, declarations in backmatter, cover letter with companion disclosure);
-self-contained TAC companion (no v21 pointers, proof statuses labeled, cover
-letter); zero cross-paper verbatim prose overlap; 98/98 audit checks PASS;
+Resolved: BMB-formatted main paper (natbib author-year, 27 alphabetical
+refs, six keywords, 240-word abstract within the 150-250 guideline,
+continuous line numbering, brief declarations in backmatter, cover letter
+with companion disclosure); self-contained TAC companion (no v21 pointers,
+proof statuses labeled, keywords + AMS 2020 MSC, brief declarations, cover
+letter); zero cross-paper verbatim prose overlap; author metadata (Amin
+Abaee, Independent Researcher, Tehran, Iran; amin_abaee@ut.ac.ir; ORCID
+0000-0002-0019-1842) at all authorship sites including the cross-citations;
+formal-journal prose with no meta-commentary, changelog, version
+references, or strawman constructions in either paper; audit_v14 301/301
+PASS against journal_manuscript_v6.tex + companion_categorical_v5.tex;
 no-fee venue for both.
 
 Remaining at submission time: fill the cover-letter `[Submission date]`
-placeholders; replace the sole-author placeholder "X" with the real author
-name at all authorship sites (title blocks, pdfauthor, bib entries, cover
-letters); select the receiving Editorial Board member for TAC (from
+placeholders; select the receiving Editorial Board member for TAC (from
 geninfo.html); register/log in at the BMB Editorial Manager portal.
 
 Repository rename COMPLETED (2026-09-03): the repository is now

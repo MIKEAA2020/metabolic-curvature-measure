@@ -50,3 +50,5 @@ scripts/zipcheck_v7/
 # Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v8.sh)
 scripts/overleaf_stage_v8/
 scripts/zipcheck_v8/
+scripts/overleaf_stage_v9/
+scripts/zipcheck_v9/
