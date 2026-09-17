@@ -72,3 +72,7 @@ scripts/overleaf_stage_v15/
 scripts/zipcheck_v15/
 scripts/overleaf_stage_v16/
 scripts/zipcheck_v16/
+
+# v17 zip-build staging dirs
+scripts/overleaf_stage_v17/
+scripts/zipcheck_v17/

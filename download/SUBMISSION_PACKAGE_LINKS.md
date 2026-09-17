@@ -1,10 +1,41 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-17 (abstract round + v16 package round:
-journal_manuscript_v13 + companion_categorical_v9). All repository links follow
+Generated 2026-09-17 (abstract cap round + v17 package round:
+journal_manuscript_v14 + companion_categorical_v9). All repository links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-17, abstract cap round + v17 package round): the
+author directive to keep the abstract close to Gemini's register while
+not exceeding 255 words (the v13 abstract stood at 269 audit-style
+words) was executed as an abstract-only trim on NEW versioned files
+(prior versions untouched) -- scripts/journal_manuscript_v14.tex (from
+v13) plus its refs copies. The register and structure are kept exactly
+as rebuilt in the abstract round (two paragraphs; definition -> "We
+measure how this map bends" -> evidence -> refinement--resolution
+bridge -> "From this measure" -> "Strikingly" -> "Finally" -> "Our
+results unify"; in-words glosses for h and L_var). The 15-word trim
+removes only Gemini-side redundancy and statistics conventions: the
+M1 sweep qualifier after the 93.4-100.0% range (the range itself
+already encodes the sweep variability; Gemini's sentence ends there),
+"n = 424 evaluated genes" -> "424 genes" (Gemini's own plain form),
+"fails in general" -> "fails generically" (Gemini's exact word), the
+boundaries gloss compressed to "the boundaries between active
+constraint sets", "the measured window" -> "the window", and two
+function words tightened. Result: 254 audit-style words (~238
+rendered), under the 255 cap. Nothing lost: the body is
+byte-identical to v13 outside the abstract (verify_v14_completeness.py:
+body identity; number multiset delta = the version digit only, the
+abstract swap changed zero numeric tokens; label/citation/environment/
+section censuses and the bibliography all identical). Verified:
+audit_v22_numbers.py (make_audit_v22.py) 301/301 PASS;
+pattern_sweep_v16 16/16 clean on both; tectonic main 30 pp /
+companion 75 pp, 0 errors / 0 undefined references; clickable mailto
++ ORCID annotations verified via qpdf; ZIPs rebuilt via
+build_submission_zips_v17.sh with fresh-dir standalone compiles
+re-verified (30/75 pp); download copies and ZIP contents
+byte-identical to scripts; TAC cover letter retargeted to v14.
 
 Revision note (2026-09-17, abstract round + v16 package round): the
 author directive that the main-paper abstract was still too
@@ -684,11 +715,11 @@ Sensitivity: From Active-Set Geometry to Transcriptional Response
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
-| Manuscript PDF (30 pp, full proofs in appendices, declarations in backmatter; universal Gemini-register revision of narrative prose throughout, clickable email and ORCID, brevity round applied, abstract rebuilt on Gemini's abstract; prior versions retained as separate files) | [download/journal_manuscript_v13.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v13.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v13.pdf) |
+| Manuscript PDF (30 pp, full proofs in appendices, declarations in backmatter; universal Gemini-register revision of narrative prose throughout, clickable email and ORCID, brevity round applied, abstract rebuilt on Gemini's abstract and trimmed under the author's 255-word cap; prior versions retained as separate files) | [download/journal_manuscript_v14.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v14.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v14.pdf) |
 | Cover letter (with declarations, companion disclosure) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
-| LaTeX source | [scripts/journal_manuscript_v13.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v13.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v13.tex) |
-| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v13_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v13_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v13_bmb_refs.tex) |
-| BibTeX database | [scripts/journal_manuscript_v13_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v13_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v13_refs.bib) |
+| LaTeX source | [scripts/journal_manuscript_v14.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v14.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v14.tex) |
+| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v14_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v14_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v14_bmb_refs.tex) |
+| BibTeX database | [scripts/journal_manuscript_v14_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v14_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v14_refs.bib) |
 | Reference-list generator (audit-checked) | [scripts/build_bmb_refs.py](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/build_bmb_refs.py) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/build_bmb_refs.py) |
 
 Figures (embedded in the PDF; source PNGs if the portal requests separate files):
@@ -706,7 +737,7 @@ Build note: for Overleaf or any standalone compiler, upload **the ZIP** (it
 contains the .tex, the input'ed reference list, the .bib database, and all
 six figures at the exact relative subpaths the .tex expects — verified to
 compile standalone, 30 pp, 0 errors). If instead you upload individual
-files, upload them together with `journal_manuscript_v13_bmb_refs.tex` and
+files, upload them together with `journal_manuscript_v14_bmb_refs.tex` and
 the three figure subfolders (`m1_m3/`, `alexandrov_bridge/`,
 `association_robustness/`) so the paths resolve; the .tex searches both the
 upload directory and the repository layout
@@ -787,19 +818,18 @@ Figures (embedded in the PDF; source PNGs):
 ## Pre-submission checklist (already resolved / remaining)
 
 Resolved: BMB-formatted main paper (natbib author-year, 27 alphabetical
-refs, six keywords, v13 two-paragraph abstract rebuilt on Gemini's
-abstract at ~260 words -- the register-fidelity trade-off accepted in
-the abstract round; the audit's JP-3 gate caps at 300 and passes at
-269 audit-style words -- continuous line numbering, brief declarations
-in backmatter, cover letter
+refs, six keywords, v14 two-paragraph abstract in Gemini's register,
+trimmed under the author's 255-word cap at 254 audit-style words
+(the audit's JP-3 gate remains <= 300) -- continuous line numbering,
+brief declarations in backmatter, cover letter
 with companion disclosure); self-contained TAC companion (no v21 pointers,
 proof statuses labeled, keywords + AMS 2020 MSC, brief declarations, cover
 letter); zero cross-paper verbatim prose overlap; author metadata (Amin
 Abaee, Independent Researcher, Tehran, Iran; amin_abaee@ut.ac.ir; ORCID
 0000-0002-0019-1842) at all authorship sites including the cross-citations;
 formal-journal prose with no meta-commentary, changelog, version
-references, or strawman constructions in either paper; audit_v18 301/301
-PASS against journal_manuscript_v10.tex + companion_categorical_v8.tex;
+references, or strawman constructions in either paper; audit_v22 301/301
+PASS against journal_manuscript_v14.tex + companion_categorical_v9.tex;
 no-fee venue for both.
 
 Remaining at submission time: register/log in at the BMB Editorial

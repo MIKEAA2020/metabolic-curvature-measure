@@ -7099,3 +7099,81 @@ Stage Summary:
   269 audit-style words with the body byte-identical to v12;
   only the BMB Editorial Manager portal registration remains on
   the submission checklist.
+---
+Task ID: abstract-cap-round-v14
+Agent: main (Super Z)
+Task: Author directive: keep the main-paper abstract close to Gemini's
+register while not exceeding 255 words (v13 stood at 269 audit-style
+words); create new versions, never overwrite the PAT; respond in English
+only. Also: clarify and execute the outstanding push to origin/main (the
+branch had been left 7 commits ahead).
+
+Work Log:
+- Answered the author's question about the earlier "the push remains
+  yours" wording: it meant the local commits had never been uploaded
+  because pushing authenticates against the user's GitHub account; this
+  round the push is executed by the agent as a one-off URL credential
+  (PAT never stored, never overwritten).
+- Word-count engineering against the JP-3 counter
+  (scripts/abstract_v14_wordcount.py): graded drafts; the chosen Draft F
+  lands at 254 audit-style words (~238 rendered) under the author's 255
+  cap while keeping every number, both in-words glosses (h, L_var),
+  "Finally,", and "matched quantitative proteomics" (Gemini's exact
+  phrase).
+- New versioned files (prior versions untouched):
+  scripts/journal_manuscript_v14.tex (from v13) plus
+  journal_manuscript_v14_bmb_refs.tex and journal_manuscript_v14_refs.bib
+  (byte-identical copies). Abstract-only change; header note documents
+  the round; \input retargeted to v14. The 15-word trim removes only
+  Gemini-side redundancy and statistics conventions: the M1 sweep
+  qualifier after the 93.4-100.0% range dropped (the range itself
+  already encodes the sweep variability; Gemini's sentence ends there),
+  "n = 424 evaluated genes" -> "424 genes" (Gemini's plain form),
+  "fails in general" -> "fails generically" (Gemini's exact word), the
+  boundaries gloss compressed to "the boundaries between active
+  constraint sets", "the measured window" -> "the window",
+  "delineates the discrete and smooth regimes" -> "delineates discrete
+  and smooth regimes", and "robust to the tie-breaking convention and
+  to random-panel sampling" -> "robust to tie-breaking convention and
+  random-panel sampling".
+- Completeness verification (scripts/verify_v14_completeness.py): body
+  byte-identical to v13 outside the abstract (after the header-comment +
+  \input-filename strip); number-multiset delta = the version digit
+  only (13 -> 14); the abstract swap changed ZERO numeric tokens
+  (stricter than the v13 check); label, citation-key, environment, and
+  section censuses identical; bmb_refs bibliography byte-identical.
+  RESULT: ALL COMPLETE.
+- Verified: audit_v22_numbers.py (make_audit_v22.py from v21, main
+  retargeted to v14) 301/301 PASS; pattern_sweep_v16 16/16 clean on
+  v14 + companion v9; tectonic journal_manuscript_v14.tex -> 30 pp,
+  zero undefined references, zero "??" in the rendered text; clickable
+  mailto: + ORCID https URI annotations verified in the built PDF via
+  qpdf; rendered page-1 read-back confirms the trimmed abstract text
+  and the two-paragraph structure.
+- Package: build_submission_zips_v17.sh -- v17 ZIPs with fresh-dir
+  standalone tectonic compiles re-verified (main 30 pp, companion
+  75 pp, zero errors); download tex/refs/pdf copies of v14
+  byte-identical to scripts; ZIP contents byte-identical to scripts;
+  SUBMISSION_PACKAGE_LINKS.md updated via update_links_doc_v18.py (new
+  newest-first revision note, header to the abstract-cap + v17 round,
+  current main rows + build note retargeted to v14, checklist abstract
+  line updated to the 254-word cap compliance and the audit status to
+  v22/v14/v9); TAC cover letter retargeted to
+  journal_manuscript_v14.tex; staging/zipcheck dirs gitignored; v22
+  audit ledger deposited at
+  download/deepseek_bridge/v22_number_audit.{json,md}.
+- Git: committed and pushed to origin/main (one-off credential URL; the
+  stored remote and the PAT were not modified).
+
+Stage Summary:
+- Latest versions: scripts/journal_manuscript_v14.tex (30-pp PDF at
+  download/journal_manuscript_v14.pdf) and the unchanged
+  scripts/companion_categorical_v9.tex (75-pp PDF at
+  download/companion_categorical_v9.pdf); ZIPs v17 at
+  download/submission_main_bmb.zip and
+  download/submission_companion_tac.zip; audit_v22 301/301 PASS; the
+  main-paper abstract stands at 254 audit-style words (~238 rendered)
+  -- under the author's 255-word cap, in Gemini's register with every
+  number kept; the branch is pushed and in sync with origin/main; only
+  the BMB Editorial Manager portal registration remains on the
+  submission checklist.
