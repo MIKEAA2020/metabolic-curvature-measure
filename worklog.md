@@ -6780,3 +6780,57 @@ Stage Summary:
   rem:2cat-span cross-referencing it; every numerical claim
   unchanged (audit 301/301, sweep 16/16 clean); stale PLOS letter
   removed; package regenerated and verified on the v10/v8 base.
+
+---
+Task ID: readthrough-alignment-v10v8
+Agent: main (Super Z)
+Task: (1) Rendered-PDF read-through of the two smooth-calculus
+compression passages for final flow; (2) ensure latest versions, PDFs,
+tex, and submission packages are fully aligned with all surviving
+findings and revisions.
+
+Work Log:
+- Read-through (rendered): main v10 PDF p2 intro lead + "The object"
+  paragraph; companion v8 PDF p3 "The problem" (Aubin et al. 2011
+  resolved) and p8 Remark 3.2 (rem:2cat-span) flowing into 3.1.
+  Flow verified: plain opening -> FBA/PhPP lineage cited -> precise
+  piecewise-affine statement -> measure object; companion remark
+  cross-references sec:role without re-arguing, forward pointers to
+  3.1/12 resolved. VLM page checks: main p2, companion p3, companion
+  p8 all CLEAN. Zero "??" refs in both PDFs; 29/75 pp.
+- Adjudicated one remaining "natural language" hit (companion
+  12.6, stochastic-programming implication): KEEP -- technical usage
+  ("the natural language for probabilistic programs with higher-order
+  conditioning, where the residual is a dependent sum type") with the
+  justification inline; unrelated to the removed intro flourish.
+- Artifact sweep: removed phrases absent from both tex sources and
+  rendered PDFs; links-doc hits are inside the revision-note chain
+  (documenting the removal) -- correct as written; no internal
+  experiment codes in either rendered PDF.
+- Surviving findings re-verified: audit_v18_numbers.py 301/301 PASS
+  (re-run; committed audit outputs restored -- re-run diff was pure
+  dict-ordering noise); pattern_sweep_v16.py 16/16 clean on both.
+- MISALIGNMENT FOUND AND FIXED: download/journal_manuscript_v10.tex
+  and download/companion_categorical_v8.tex were the PRE-compression
+  copies (still carrying the gap claim, strawman, flourish, and the
+  old expanded rem:2cat-span; missing the Danskin completion and the
+  aubin2011 cite) -- the compression round had refreshed the download
+  PDFs and ZIPs but missed these two .tex copies. Refreshed from
+  scripts/ and committed (67491ed).
+- Package alignment verified: ZIP contents byte-identical to scripts
+  tex/refs; download PDFs byte-identical to scripts PDFs; fresh-dir
+  standalone compiles from the extracted ZIPs: main 29 pp, companion
+  75 pp, zero errors, zero undefined references; refs/bib and
+  bmb_refs copies identical; cover letters (dates Sept 17 2026; TAC
+  -> Prof. Christina Vasilakopoulou cc tac@mta.ca; BMB -> companion
+  v8 pointer; TAC -> main v10 pointer; no placeholders) and
+  SUBMISSION_PACKAGE_LINKS.md (newest-first compression note, 29/75
+  page counts, audit v18 line, checklist: only BMB portal
+  registration remains) all current.
+
+Stage Summary:
+- The two revised passages read cleanly in the rendered PDFs; every
+  current-version artifact (scripts tex/pdf, download tex/pdf, ZIP
+  contents, refs, cover letters, links doc) is now verified aligned
+  on the post-compression v10/v8 base; the only defect found (stale
+  download .tex copies) is fixed in commit 67491ed.
