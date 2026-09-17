@@ -1,7 +1,7 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-17 (Gemini-alignment revision + v13 package
-round: journal_manuscript_v10 + companion_categorical_v8). All repository links follow
+Generated 2026-09-17 (universal Gemini-register revision + v14 package
+round: journal_manuscript_v11 + companion_categorical_v9). All repository links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
@@ -48,6 +48,69 @@ both; audit_v18_numbers.py 301/301 PASS; tectonic builds main 29 pp
 / companion 75 pp, zero undefined references; ZIPs rebuilt via
 build_submission_zips_v13.sh with fresh-dir standalone compiles
 re-verified (29/75 pp).
+
+Revision note (2026-09-17, Gemini-alignment revision + v13 package
+round): both papers revised toward the accessible register of the
+evaluated Gemini humanization attempts, as new versioned files (prior
+versions untouched) -- scripts/journal_manuscript_v10.tex (from v9)
+and scripts/companion_categorical_v8.tex (from v7), plus their refs
+files. MAIN v10: an accessible-motivation lead paragraph opens the
+Introduction (the rerouting question, why smooth calculus cannot
+answer it, geometric measure theory as the natural language); a
+self-contained parametric-FBA setup with the LP display and the
+chamber-complex reading opens Section 2; wall-crossing and
+integrated-boundary-impedance glosses in the categorical subsection;
+the partial-correlation motivation (baseline-expression confound) at
+the primary association; the protein-layer central question and a
+buffering close at the abundance/change dissociation; discussion
+sentences for the resolution-window breakdown and the
+objective-invisibility of most rerouting; Limitations restructured as
+a labeled list with every item kept. COMPANION v8: a narrative
+harm-in-sequence abstract opening (264 words, under the 265 cap; the
+six-axis sentence intact); the concrete closed-cycle example
+(temperature/nutrients) in the Introduction; the intuitive gloss at
+the viability-weighted-curvature definition; an in-words gloss at the
+optic-category definition; the stabilization question at the head of
+the Lipschitz section; the application-bridge numbers (r = +0.395,
+n = 424; r = -0.083, n = 366) in the Introduction; a compact
+Conclusion section before Future directions. The Gemini attempts'
+defects remain rejected (fabricated "Zai, A." author, changelog
+remnants, ASCII art, adverbial register, proof-argument swaps, and the
+companion attempt's content loss). All numerical claims unchanged:
+audit_v18_numbers.py 301/301 PASS; builds: main 29 pp, companion
+75 pp, zero errors / zero undefined references; ZIPs rebuilt via
+build_submission_zips_v13.sh with fresh-dir standalone tectonic
+compiles verified (29/75 pp); cover letters retargeted to the new
+filenames.
+
+Revision note (2026-09-17, universal Gemini-register revision + v14
+package round): both papers carry the evaluated Gemini register
+universally across their narrative prose, as new versioned files
+(prior versions untouched) -- scripts/journal_manuscript_v11.tex
+(from v10) and scripts/companion_categorical_v9.tex (from v8), plus
+their refs files. The email (mailto:) and ORCID
+(https://orcid.org/0000-0002-0019-1842) are now CLICKABLE in both
+papers (main: author footnote; companion: title block; verified as
+URI annotations in both built PDFs). MAIN v11: register-level
+revision of the narrative prose -- intro lead, section leads and
+interstitial prose of Sections 2-4, the computational-validation and
+empirical result narratives (M1 sweeps, epistasis, regime dial, value
+carrier, primary association with the partial-correlation motivation,
+panel construction, platform 2x2, protein abundance/change and the
+protein-layer null with the buffering close), discussion, methods
+connectives, and the positioning paragraph recast in Gemini's
+short-sentence form; every number, proof, citation, and the
+compressed smooth-calculus statement unchanged. COMPANION v9:
+abstract connective polish (word count kept under the 265 cap),
+Preliminaries / SAVGS / Empirical-Verdicts section leads, the
+four-point Conclusion opener, and the clickable author block; the
+bibliography pointer retargeted to companion_refs_v9.bib. Verified:
+number-integrity multiset diff (zero missing/added numeric tokens
+beyond the ORCID link digits); pattern_sweep_v16 16/16 clean on
+both; audit_v19_numbers.py 301/301 PASS; tectonic main 30 pp /
+companion 75 pp, 0 errors / 0 undefined references; ZIPs rebuilt via
+build_submission_zips_v14.sh with fresh-dir standalone compiles
+re-verified (30/75 pp); cover letters retargeted to v11/v9.
 
 Revision note (2026-09-17, Gemini-alignment revision + v13 package
 round): both papers revised toward the accessible register of the
@@ -562,11 +625,11 @@ Sensitivity: From Active-Set Geometry to Transcriptional Response
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
-| Manuscript PDF (29 pp, full proofs in appendices, declarations in backmatter; Gemini-alignment revision: accessible intro lead, self-contained LP setup, wall-crossing/boundary-impedance glosses, protein-layer central question, labeled Limitations; prior versions retained as separate files) | [download/journal_manuscript_v10.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v10.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v10.pdf) |
+| Manuscript PDF (30 pp, full proofs in appendices, declarations in backmatter; universal Gemini-register revision of narrative prose throughout, clickable email and ORCID; prior versions retained as separate files) | [download/journal_manuscript_v11.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v11.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v11.pdf) |
 | Cover letter (with declarations, companion disclosure) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
-| LaTeX source | [scripts/journal_manuscript_v10.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v10.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v10.tex) |
-| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v10_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v10_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v10_bmb_refs.tex) |
-| BibTeX database | [scripts/journal_manuscript_v10_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v10_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v10_refs.bib) |
+| LaTeX source | [scripts/journal_manuscript_v11.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v11.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v11.tex) |
+| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v11_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v11_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v11_bmb_refs.tex) |
+| BibTeX database | [scripts/journal_manuscript_v11_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v11_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v11_refs.bib) |
 | Reference-list generator (audit-checked) | [scripts/build_bmb_refs.py](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/build_bmb_refs.py) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/build_bmb_refs.py) |
 
 Figures (embedded in the PDF; source PNGs if the portal requests separate files):
@@ -584,7 +647,7 @@ Build note: for Overleaf or any standalone compiler, upload **the ZIP** (it
 contains the .tex, the input'ed reference list, the .bib database, and all
 six figures at the exact relative subpaths the .tex expects — verified to
 compile standalone, 29 pp, 0 errors). If instead you upload individual
-files, upload them together with `journal_manuscript_v10_bmb_refs.tex` and
+files, upload them together with `journal_manuscript_v11_bmb_refs.tex` and
 the three figure subfolders (`m1_m3/`, `alexandrov_bridge/`,
 `association_robustness/`) so the paths resolve; the .tex searches both the
 upload directory and the repository layout
@@ -626,10 +689,10 @@ below the abstract of the submitted PDF).
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (75 pp; Gemini-alignment revision: narrative abstract opening, closed-cycle example, intuitive glosses, stabilization question, Conclusion section; prior versions retained as separate files) | [download/companion_categorical_v8.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v8.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v8.pdf) |
+| Manuscript PDF (75 pp; universal Gemini-register revision of narrative leads and conclusion, clickable email and ORCID; prior versions retained as separate files) | [download/companion_categorical_v9.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v9.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v9.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
-| LaTeX source | [scripts/companion_categorical_v8.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v8.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v8.tex) |
-| BibTeX database | [scripts/companion_refs_v8.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v8.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v8.bib) |
+| LaTeX source | [scripts/companion_categorical_v9.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v9.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v9.tex) |
+| BibTeX database | [scripts/companion_refs_v9.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v9.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v9.bib) |
 
 Figures (embedded in the PDF; source PNGs):
 

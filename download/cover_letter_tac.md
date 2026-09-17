@@ -140,7 +140,7 @@ results as its own. The application manuscript is available for the
 editors' inspection in the same public repository as this paper's
 machine-verification code
 (https://github.com/MIKEAA2020/metabolic-curvature-measure, file
-`scripts/journal_manuscript_v10.tex`, compiled PDF included) and will
+`scripts/journal_manuscript_v11.tex`, compiled PDF included) and will
 be provided as a PDF on request; it is not under consideration
 elsewhere.
 
