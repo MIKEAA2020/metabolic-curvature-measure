@@ -6997,3 +6997,105 @@ Stage Summary:
   full brevity with completeness against the pre-humanized base
   verified by census; only the BMB Editorial Manager portal
   registration remains on the submission checklist.
+---
+Task ID: abstract-round-v13
+Agent: main (Super Z)
+Task: Author directive: the main-paper abstract was still too
+jargon-heavy, highly technical, and inaccessible to a broad
+readership; adopt Gemini's abstract more faithfully. Constraints:
+no errors introduced, final version complete against the pre-round
+state, English only, PAT untouched.
+
+Work Log:
+- Re-read Gemini's abstract in full (external_audits/humanized/
+  curvature humanized.txt L721-727) and diagnosed the gap: the
+  v7-era abstract carried the right content inventory but a
+  compressed telegraphic register (parenthetical glosses like
+  "(L_var: smooth variation scale)", clause stacks like "while
+  total-variation convergence fails in general; a resolution
+  parameter separates ... through the measured window", and the
+  cryptic closers "genotype loops close with phenotypic memory
+  (66% non-reverting)" and "unifies the atomic measure, its smooth
+  coarse-grainings, and its trajectory integrals") -- exactly the
+  jargon-wall feel the author flagged. Gemini's abstract reads
+  fuller: definition -> "Here, we demonstrate" -> colon-structured
+  evidence -> bridge signpost -> "From this geometric measure" ->
+  "Strikingly" -> "Finally, we show" -> "Our results unify".
+- Word-count engineering against the audit's own JP-3 counter
+  (scripts/abstract_v13_wordcount.py, exact JP-3 method): drafted
+  to 269 audit-style words (<= 300 gate; ~260 rendered vs v12's
+  ~249) by dropping only Gemini-side redundancy ("canonical
+  mathematical", "holonomy"/"counterexample calculus"/
+  "triangulation anisotropy" left to the body where fully
+  reported) -- every load-bearing number and claim kept.
+- New versioned file scripts/journal_manuscript_v13.tex (from v12;
+  prior versions untouched) + journal_manuscript_v13_bmb_refs.tex
+  + journal_manuscript_v13_refs.bib. Abstract-only change:
+  two-paragraph theory/biology structure per Gemini; opening hook
+  kept (project-adjudicated), then Gemini's definition sentence;
+  "Its second derivative, taken in the sense of distributions" ->
+  "Its distributional second derivative" (parenthetical clause ->
+  adjective); the carrier appositive and the v7 in-words gloss
+  ("the boundaries where the network switches between active
+  constraint sets") kept; S5-S7 rebuilt with Gemini's
+  connectives, the refinement--resolution bridge as a named
+  signpost, "dual-cell reconstructions" plural, in-words glosses
+  for BOTH h and L_var; biology paragraph: "From this measure we
+  derive a gene-level sensitivity metric, kappa_mu"; protein-layer
+  punchline now quantified ("Strikingly, it vanishes at the
+  protein layer (r = -0.083 across 366 genes in matched
+  quantitative proteomics): cells transcribe rerouting potential
+  while buffering its translation"); epistasis sentence in
+  Gemini's explained form ("mirrors active-set footprint overlap
+  ... cyclical genotype modifications induce permanent phenotypic
+  memory: 66% of loops fail to revert"); closer replaced by
+  Gemini's plain field-level form ("Our results unify
+  multi-parametric linear programming, discrete differential
+  geometry, and transcriptional regulation into one predictive
+  framework"). Robustness stays ONE non-defensive sentence (M1
+  adjudication); every number is an audited body claim (the two
+  additions r = -0.083 and n = 366 re-quote the protein-layer
+  null, body line ~1298). Keywords line unchanged.
+- Completeness verification (scripts/verify_v13_completeness.py):
+  body byte-identical to v12 outside the abstract (after the
+  header-comment + \input-filename strip); number-multiset delta
+  fully explained (adds: the two re-quoted body numbers + the
+  version digit 13; drops: the version digit 12); label,
+  citation-key, environment, and section censuses identical;
+  bmb_refs bibliography byte-identical. RESULT: ALL COMPLETE.
+- Verified: audit_v21_numbers.py (make_audit_v21.py from v20,
+  main retargeted to v13) 301/301 PASS; pattern_sweep_v16 16/16
+  clean on v13 + companion v9; tectonic journal_manuscript_v13.tex
+  -> 30 pp, zero undefined references; clickable mailto: + ORCID
+  https URI annotations verified in the built PDF via qpdf; VLM
+  render checks CLEAN (p1: two-paragraph abstract with visible
+  break, opening sentences verbatim, no typographic defects, blue
+  underlined email + ORCID; p2: intro flows, no defects; the
+  "multiparametric" pdftotext artifact adjudicated a line-break
+  hyphen extraction false-positive).
+- Package: build_submission_zips_v16.sh -- v16 ZIPs with fresh-dir
+  standalone tectonic compiles re-verified (main 30 pp, companion
+  75 pp, zero errors); download tex/refs/pdf copies of v13
+  byte-identical to scripts; ZIP contents byte-identical to
+  scripts; SUBMISSION_PACKAGE_LINKS.md updated via
+  update_links_doc_v17.py (new newest-first revision note, header
+  to the abstract + v16 round, current main rows + build note
+  retargeted to v13, checklist abstract line updated honestly to
+  the ~260-word register-fidelity trade-off); TAC cover letter
+  retargeted to journal_manuscript_v13.tex; staging/zipcheck dirs
+  gitignored; v21 audit ledger deposited at
+  download/deepseek_bridge/v21_number_audit.{json,md}.
+
+Stage Summary:
+- Latest versions: scripts/journal_manuscript_v13.tex (30-pp PDF
+  at download/journal_manuscript_v13.pdf) and the unchanged
+  scripts/companion_categorical_v9.tex (75-pp PDF at
+  download/companion_categorical_v9.pdf); ZIPs v16 at
+  download/submission_main_bmb.zip and
+  download/submission_companion_tac.zip; audit_v21 301/301 PASS;
+  the main-paper abstract now adopts Gemini's abstract faithfully
+  (two-paragraph structure, narrative connectives, in-words
+  glosses, quantified protein-layer punchline, plain closer) at
+  269 audit-style words with the body byte-identical to v12;
+  only the BMB Editorial Manager portal registration remains on
+  the submission checklist.
