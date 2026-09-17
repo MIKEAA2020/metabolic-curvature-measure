@@ -60,3 +60,7 @@ scripts/zipcheck_v11/
 # v12 staging + verify dirs (rebuilt by build_submission_zips_v12.sh)
 scripts/overleaf_stage_v12/
 scripts/zipcheck_v12/
+
+# v13 staging + verify dirs (rebuilt by build_submission_zips_v13.sh)
+scripts/overleaf_stage_v13/
+scripts/zipcheck_v13/

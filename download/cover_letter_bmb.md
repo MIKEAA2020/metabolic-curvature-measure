@@ -89,7 +89,7 @@ own. The companion is available for the editors' and reviewers'
 inspection in the same public repository as the submitted
 manuscript's code and data
 (https://github.com/MIKEAA2020/metabolic-curvature-measure, file
-`scripts/companion_categorical_v7.tex`, compiled PDF included) and will
+`scripts/companion_categorical_v8.tex`, compiled PDF included) and will
 be provided as a PDF on request; it is not under consideration
 elsewhere.
 

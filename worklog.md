@@ -6615,3 +6615,98 @@ Stage Summary:
   PASS; M3 (TikZ schematic) deferred per author decision; the
   merged-synthesis plan fully implemented with seamless-flow
   grafts only (no rebase).
+
+---
+Task ID: gemini-alignment-v10-v8
+Agent: main (Super Z)
+Task: Per user directive, revise both articles to align more
+faithfully with Gemini's more accessible versions (the two Gemini
+attempts previously evaluated in
+download/Humanized_Versions_Evaluation_and_Synthesis_Plan.md) while
+remaining accurate, complete, and free of error; new versioned files,
+full verification pipeline, push with the PAT.
+
+Work Log:
+- Re-read both Gemini attempts in full (curvature humanized.txt
+  lines 718-1704; companion humanized.txt lines 1-714) and the
+  current v9/v7 manuscripts; built the graft list under the standing
+  rejects (fabricated "Zai, A." author, "our previously explored"
+  changelog remnants, ASCII art, markdown hybrid, adverbial register,
+  proof-argument swaps, the companion attempt's content loss).
+- MAIN journal_manuscript_v10.tex (from v9; + v10_bmb_refs +
+  v10_refs.bib): accessible-motivation lead paragraph opening the
+  Introduction (the rerouting question; piecewise-affine maps have
+  vanishing second derivatives a.e., so smooth calculus cannot
+  describe rerouting; geometric measure theory as the natural
+  language); self-contained parametric-FBA setup at the head of
+  Sec. 2 (LP display eq:fba_lp; chamber-complex reading; the
+  switching boundaries named before Definition 1); wall-crossing
+  gloss in the categorical subsection's strata paragraph; the
+  integrated-boundary-impedance reading of kappa_mu closing the
+  regime-delineation paragraph; the baseline-expression confound
+  motivation at the primary association (partial r sentence
+  restructured; every number kept: +0.395 / 2.6e-17 / +0.414 /
+  +0.269 / 1.8e-8 / 1.92 / 0.89 / 1.3e-7); the protein-layer central
+  question opening sec:e26 with the buffering close (transcript-level
+  capacity, deferred translational cost); Discussion: the
+  resolution-window breakdown sentence (smooth representation
+  breaks down outside h << sigma << L_var) and the
+  objective-invisibility sentence (cells exploit equal-growth
+  pathways; most rerouting is objective-invisible) before the M2c
+  separation sentence; Limitations restructured as a seven-item
+  labeled list (Design and scope / Operational active sets /
+  Selection dependence / Path dependence / Cross-platform generality
+  / Census sensitivity / Stabilization limits) with every v9 item
+  kept verbatim in content plus the E.-coli-scope open question.
+- COMPANION companion_categorical_v8.tex (from v7; +
+  companion_refs_v8.bib): narrative harm-in-sequence abstract
+  opening ("...a closed sequence of manageable changes can
+  accumulate into a threat") with the SAVGS item's articles
+  compressed and "seven-map" dropped from item (iii) to hold the
+  264-word count under the 265 cap (six-axis sentence and all
+  audited substrings intact); the concrete closed-cycle example
+  (temperature, then nutrients, then reversals) in the Introduction's
+  problem paragraph; the "In intuitive terms" gloss at
+  Definition def:kv (ignores harmless rotations, responds only to
+  margin-consuming shifts); an in-words gloss after def:optic
+  (forward map + residual -> external action; feedback + residual ->
+  internal adjustment); the stabilization question at the head of
+  the Lipschitz section; the application-bridge numbers in the
+  Introduction's relation paragraph (r = +0.395, n = 424; r =
+  -0.083, n = 366 -- the application paper's audited values); a
+  compact four-point Conclusion section before Future directions
+  (constraint switches carry exact geometric data / linear holonomy
+  scaling with the small-loop bound / optic composition with the
+  0.697 product bound and 375-configuration grid / the biological
+  reading) with a pointer to the open problems; header and
+  bibliography retargeted to v8.
+- Verification: audit_v18_numbers.py (make_audit_v18.py from v17;
+  full retarget main v9->v10, companion v7->v8, outputs v18_*):
+  301/301 PASS. pattern_sweep_v16.py 16-pattern clean on both
+  (incl. the Zai guard). tectonic: main 29 pp, companion 75 pp,
+  0 errors / 0 undefined references (companion's benign
+  rerun-at-6-passes quirk unchanged from v7); four most-changed
+  pages VLM-verified CLEAN (main p2 equation, main p16 Limitations
+  list, companion p3 cycle example, companion p68 Conclusion);
+  new content confirmed rendered via pdftotext. Main abstract
+  untouched (249 words per BMB counting); companion abstract 264
+  words by the audit's own counting method.
+- Packaging: build_submission_zips_v13.sh (v13; fresh-dir standalone
+  compiles re-verified 29/75 pp); download copies added (v10/v8
+  PDF, tex, refs); cover letters retargeted (BMB -> companion v8
+  pointer; TAC -> main v10 pointer); SUBMISSION_PACKAGE_LINKS.md
+  via update_links_doc_v13.py (new newest-first revision note, all
+  current-package rows retargeted to v10/v8, audit line to v18,
+  historical notes preserved); staging dirs gitignored.
+
+Stage Summary:
+- Latest versions: scripts/journal_manuscript_v10.tex (29-pp PDF at
+  download/journal_manuscript_v10.pdf) and
+  scripts/companion_categorical_v8.tex (75-pp PDF at
+  download/companion_categorical_v8.pdf) with their refs files;
+  submission ZIPs at download/submission_main_bmb.zip and
+  download/submission_companion_tac.zip (v13 package); audit_v18
+  301/301 PASS; both papers now carry Gemini's accessible register at
+  the flagged sites while every numerical claim, proof, and
+  completeness standard is unchanged; the Gemini attempts' defects
+  remain rejected.
