@@ -6834,3 +6834,90 @@ Stage Summary:
   contents, refs, cover letters, links doc) is now verified aligned
   on the post-compression v10/v8 base; the only defect found (stale
   download .tex copies) is fixed in commit 67491ed.
+
+---
+Task ID: universal-gemini-register-v11v9
+Agent: main (Super Z)
+Task: (1) Make email amin_abaee@ut.ac.ir and ORCID
+0000-0002-0019-1842 clickable in both papers; (2) adopt Gemini's
+prose register, word choice, sentence structure, and stylistic
+writing universally and throughout both manuscripts (superseding the
+earlier graft-only synthesis policy), while ensuring accuracy and
+error-free delivery.
+
+Work Log:
+- New versioned files (prior untouched): journal_manuscript_v11.tex
+  (from v10) + v11_bmb_refs.tex + v11_refs.bib;
+  companion_categorical_v9.tex (from v8) + companion_refs_v9.bib.
+- Clickable contacts: \href{mailto:amin_abaee@ut.ac.ir}{...} and
+  \href{https://orcid.org/0000-0002-0019-1842}{...} in the main
+  author footnote and the companion title block; URI annotations
+  verified present in both built PDFs via qpdf decompression.
+- MAIN v11 register revision (narrative prose only; math, proofs,
+  numbers, citations, and the compressed smooth-calculus statement
+  unchanged): intro opener ("must continuously balance conflicting
+  physiological demands as ... shift around them"); positioning
+  paragraph in Gemini's short-sentence form ("We find that it does.
+  We also find that ..."); 2.1 lead ("In parametric flux balance
+  analysis ..."); "In words" gloss closed with the walls-between-
+  chambers image; rem:support and the classical-lineage paragraph
+  ("This formulation bridges several classical bodies of
+  mathematics"); 2.2 lead (directed-shifts framing); rem:lock opener
+  ("fixed as follows"); 2.3 lead (maximum-achievable-growth-rate
+  gloss); 2.4 lead (inner-product coupling motive); categorical lead;
+  refinement-section lead ("A fundamental question for any discrete
+  representation ..."); tv-counter lead sentence (directional
+  anisotropy, Gemini's phrasing); computational-validation opener
+  ("operational rather than merely formal"); M1 narrative ("To this
+  end we executed thirteen high-resolution parameter sweeps ... The
+  result is unambiguous"); epistasis, regime-dial, value-carrier
+  narratives restructured into flowing sentences; empirical lead
+  (question-answer framing); primary association ("The association
+  is present and strong ... One confound deserves a direct look");
+  gene-panel four checks as labeled narrative items; multi-condition
+  close ("the measure sees more of the network as the environment
+  demands more of it"); layer-decision opener ("Which layer carries
+  the association?"); platform 2x2 ("The question has a clean 2x2
+  answer"); protein sections with "answer it in the negative" and
+  the "Strikingly, the association that is robust at the transcript
+  layer vanishes entirely at the protein layer" close; discussion
+  open-items recast ("Two items remain open"); methods engine
+  connectives ("the engine that makes every preceding experiment
+  reproducible", "Stage 3 exists for a reason").
+- COMPANION v9: abstract connective polish (reverted one word to
+  hold the 264-word cap); Preliminaries lead ("one definition at a
+  time ... none is used before it is stated"); SAVGS lead (five-
+  component assembly sentence; an added component-necessity claim
+  was removed as unverifiable); Empirical-Verdicts lead (test
+  ordering with semicolon rhythm); Conclusion opener ("Four
+  statements carry the weight of the claim") and per-item polish.
+- Guardrail incidents caught and fixed in-round: (a) transcription
+  slip acetate +0.195 -> +0.166 caught by the number-integrity
+  multiset diff; (b) audit anchor "0$ failures over $120$" line-break
+  split restored; (c) companion \bibliography pointer left at
+  companion_refs_v8 caused a silent BibTeX failure in the fresh-dir
+  ZIP compile (75 -> 72 pp, missing bibliography) -- retargeted to
+  companion_refs_v9 and re-verified at 75 pp; (d) abstract word cap
+  (264 < 265) enforced after one word over.
+- Verified: number-integrity multiset diff zero missing/added
+  numeric tokens beyond the ORCID digits; pattern_sweep_v16 16/16
+  clean both; audit_v19_numbers.py (make_audit_v19.py from v18)
+  301/301 PASS; tectonic main 30 pp / companion 75 pp, 0 errors /
+  0 undefined; build_submission_zips_v14.sh with fresh-dir
+  standalone compiles re-verified (30/75); download PDF/tex/refs
+  copies byte-identical to scripts; VLM checks CLEAN (main p1-p2,
+  companion p1, p68); cover letters retargeted to v11/v9; links doc:
+  new newest-first revision note, header to v11/v9, current rows
+  retargeted (labels + URLs), 30-pp main count; v19 audit ledger
+  deposited; staging dirs gitignored.
+
+Stage Summary:
+- Latest versions: scripts/journal_manuscript_v11.tex (30-pp PDF at
+  download/journal_manuscript_v11.pdf) and
+  scripts/companion_categorical_v9.tex (75-pp PDF at
+  download/companion_categorical_v9.pdf) with their refs files; ZIPs
+  v14 at download/submission_main_bmb.zip and
+  download/submission_companion_tac.zip; audit_v19 301/301 PASS;
+  both papers now carry the Gemini register across their narrative
+  prose with clickable author contacts, every numerical claim
+  unchanged; commit 8c56e18.
