@@ -33,7 +33,8 @@ results make the work suitable for the journal's readership:
 
 2. **A validated, robustly tested gene-sensitivity metric.** From the
    measure the manuscript derives a per-gene sensitivity score and
-   shows, in *E. coli* (M3D microarrays, n = 424), that it predicts
+   shows, in *E. coli* (M3D microarray compendium, n = 424 evaluated
+   genes), that it predicts
    carbon-depletion transcriptional response
    (r = +0.395, p = 2.6 × 10⁻¹⁷; partial r = +0.269). The association
    survives every robustness check in the manuscript: metric invariance
@@ -125,9 +126,6 @@ Amin Abaee
 Independent Researcher, Tehran, Iran
 amin\_abaee@ut.ac.ir
 ORCID: 0000-0002-0019-1842
-
-**Suggested reviewers (optional):** [To be completed by the submitter,
-if desired.]
 
 **Declarations:**
 - Funding: this research received no specific grant from any funding

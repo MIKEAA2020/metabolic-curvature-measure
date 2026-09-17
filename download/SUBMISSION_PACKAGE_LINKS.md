@@ -1,10 +1,40 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-17 (merged-synthesis revision + v11 package
-round: journal_manuscript_v8 + companion_categorical_v7). All repository links follow
+Generated 2026-09-17 (post-synthesis flow polish + v12 package
+round: journal_manuscript_v9 + companion_categorical_v7). All repository links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-17, post-synthesis flow polish + v12 package
+round): new main version as a separate file, prior versions untouched
+-- scripts/journal_manuscript_v9.tex (from v8); companion_categorical_v7.tex
+stands unchanged. The round closed the five post-synthesis directives:
+(1) flow -- the abstract's subject repetition smoothed ("The association
+does not propagate" -> "It does not propagate"; 249 words, within the
+150-250 guideline) and the Reproducibility sentence recast as "An
+automated suite of 301 numeric checks re-derives every manuscript
+number..."; (2) remnant/redundancy -- the 16-pattern forbidden-list
+sweep clean on both papers, rendered-PDF scans clean (duplicate
+sentences, placeholders, punctuation artifacts: all extraction
+false-positives, verified in context); (3) error check -- the
+humanizing-turn diffs re-audited line by line, every grafted number
+re-verified against the body and artifacts; (4) content-loss scan
+against the pre-humanized baselines (v6 main / v5 companion) -- no
+substantive loss found: every item removed from the abstracts is fully
+reported in the introduction/body (rho = 0.99998, five selection rules,
+Glivenko-Cantelli rate, boundary-reset true-order, codimension-one
+strata, thirteen sweeps, all Limitations items), and the standing
+rejections from the humanized-file evaluation remain correct; (5) the
+cover letters finalized: dates filled (September 17, 2026) and the TAC
+board-member choice made -- Prof. Christina Vasilakopoulou (NTUA),
+Transmitting Editor, cc tac@mta.ca, per TAC's author information
+(submit to any Editorial Board member except the Managing Editor or
+TeXnical editors). All numerical claims unchanged:
+audit_v17_numbers.py 301/301 PASS; builds: main 29 pp, companion
+74 pp, zero errors / zero undefined references; ZIPs rebuilt via
+build_submission_zips_v12.sh with fresh-dir standalone tectonic
+compiles verified (29/74 pp).
 
 Revision note (2026-09-17, merged-synthesis revision + v11 package
 round): new manuscript versions as separate files, prior versions
@@ -455,11 +485,11 @@ Sensitivity: From Active-Set Geometry to Transcriptional Response
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
-| Manuscript PDF (29 pp, full proofs in appendices, declarations in backmatter; merged-synthesis revision: compressed abstract robustness clause, glossed value function and coupling, reconciled check count; prior versions retained as separate files) | [download/journal_manuscript_v8.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v8.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v8.pdf) |
+| Manuscript PDF (29 pp, full proofs in appendices, declarations in backmatter; post-synthesis flow polish on the merged-synthesis revision: smoothed abstract transition, 249-word abstract, suite-of-checks Reproducibility sentence; prior versions retained as separate files) | [download/journal_manuscript_v9.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v9.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v9.pdf) |
 | Cover letter (with declarations, companion disclosure) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
-| LaTeX source | [scripts/journal_manuscript_v8.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v8.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v8.tex) |
-| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v8_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v8_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v8_bmb_refs.tex) |
-| BibTeX database | [scripts/journal_manuscript_v8_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v8_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v8_refs.bib) |
+| LaTeX source | [scripts/journal_manuscript_v9.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v9.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v9.tex) |
+| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v9_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v9_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v9_bmb_refs.tex) |
+| BibTeX database | [scripts/journal_manuscript_v9_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v9_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v9_refs.bib) |
 | Reference-list generator (audit-checked) | [scripts/build_bmb_refs.py](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/build_bmb_refs.py) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/build_bmb_refs.py) |
 
 Figures (embedded in the PDF; source PNGs if the portal requests separate files):
@@ -477,7 +507,7 @@ Build note: for Overleaf or any standalone compiler, upload **the ZIP** (it
 contains the .tex, the input'ed reference list, the .bib database, and all
 six figures at the exact relative subpaths the .tex expects — verified to
 compile standalone, 29 pp, 0 errors). If instead you upload individual
-files, upload them together with `journal_manuscript_v8_bmb_refs.tex` and
+files, upload them together with `journal_manuscript_v9_bmb_refs.tex` and
 the three figure subfolders (`m1_m3/`, `alexandrov_bridge/`,
 `association_robustness/`) so the paths resolve; the .tex searches both the
 upload directory and the repository layout
@@ -499,6 +529,7 @@ Curvature (Research Article; 74 pp current build; electronic-only, free — no a
 | Author information (format for submission) | http://www.tac.mta.ca/tac/authinfo.html |
 | Editorial board / general info | http://www.tac.mta.ca/tac/geninfo.html |
 | Managing Editor contact | tac@mta.ca |
+| Chosen Transmitting Editor | Prof. Christina Vasilakopoulou, NTUA — cvasilak@math.ntua.gr |
 
 Submission route (from the official author information, fetched and verified):
 submit the article as **a PDF compiled from TeX source to any member of the
@@ -557,7 +588,7 @@ Figures (embedded in the PDF; source PNGs):
 ## Pre-submission checklist (already resolved / remaining)
 
 Resolved: BMB-formatted main paper (natbib author-year, 27 alphabetical
-refs, six keywords, 240-word abstract within the 150-250 guideline,
+refs, six keywords, 249-word abstract within the 150-250 guideline,
 continuous line numbering, brief declarations in backmatter, cover letter
 with companion disclosure); self-contained TAC companion (no v21 pointers,
 proof statuses labeled, keywords + AMS 2020 MSC, brief declarations, cover
@@ -565,13 +596,17 @@ letter); zero cross-paper verbatim prose overlap; author metadata (Amin
 Abaee, Independent Researcher, Tehran, Iran; amin_abaee@ut.ac.ir; ORCID
 0000-0002-0019-1842) at all authorship sites including the cross-citations;
 formal-journal prose with no meta-commentary, changelog, version
-references, or strawman constructions in either paper; audit_v16 301/301
-PASS against journal_manuscript_v8.tex + companion_categorical_v7.tex;
+references, or strawman constructions in either paper; audit_v17 301/301
+PASS against journal_manuscript_v9.tex + companion_categorical_v7.tex;
 no-fee venue for both.
 
-Remaining at submission time: fill the cover-letter `[Submission date]`
-placeholders; select the receiving Editorial Board member for TAC (from
-geninfo.html); register/log in at the BMB Editorial Manager portal.
+Remaining at submission time: register/log in at the BMB Editorial
+Manager portal. Resolved this round: the cover-letter dates are filled
+(September 17, 2026, both letters) and the TAC receiving board member
+is selected -- Prof. Christina Vasilakopoulou (NTUA), Transmitting
+Editor, with the submission emailed to her and copied to tac@mta.ca
+per TAC's author information (any Editorial Board member except the
+Managing Editor or TeXnical editors).
 
 Repository rename COMPLETED (2026-09-03): the repository is now
 `metabolic-curvature-measure`; the URL string has been updated in both
