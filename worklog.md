@@ -6921,3 +6921,79 @@ Stage Summary:
   both papers now carry the Gemini register across their narrative
   prose with clickable author contacts, every numerical claim
   unchanged; commit 8c56e18.
+
+---
+Task ID: brevity-round-v12
+Agent: main (Super Z)
+Task: (1) Tighten "We find that it does." to "It does." per the
+author directive; (2) adopt Gemini's prose throughout while
+maintaining brevity without sacrificing substance (both papers);
+(3) ensure no errors are introduced and the final version is
+complete against the pre-humanized versions.
+
+Work Log:
+- Re-read both Gemini sources in full (curvature humanized.txt
+  L718-1704; companion humanized.txt L1-714) to map the target
+  register, then line-level re-reads of journal_manuscript_v11.tex
+  (2,211 lines) and companion_categorical_v9.tex (narrative
+  sections: abstract, intro, Preliminaries/SAVGS/Verdicts leads,
+  conclusion, future directions).
+- Ran systematic wordiness scans on both files (filler patterns:
+  "at this point", "in the present", "In order to", "the fact
+  that", scaffolding phrases, hedges, pleonasms, authorial
+  throat-clearing) -- both manuscripts came back clean except two
+  main-paper sites and zero companion sites (the companion's two
+  "present article/operationalization" hits adjudicated KEEP:
+  one is the riley2023 provenance sentence constructed in an
+  earlier repair round, the other a technical parameter
+  declaration).
+- New versioned file (prior versions untouched):
+  scripts/journal_manuscript_v12.tex (from v11) +
+  journal_manuscript_v12_bmb_refs.tex + journal_manuscript_v12_refs.bib.
+  Two edits only: (i) Positioning paragraph -- "We find that it
+  does." tightened to "It does." with the dependent "We also find
+  that" connective dropped ("The transcript-level association does
+  not propagate to the protein layer --- consistent with ...");
+  (ii) sec:e26 opener -- "A central question at this point is
+  whether" -> "A central question is whether". Header comment
+  updated; \input retargeted to v12_bmb_refs.
+- Companion: ZERO edits -- companion_categorical_v9.tex unchanged
+  (already at the brevity-tight register from the v9 round).
+- Completeness verification vs the pre-humanized v10
+  (scripts/verify_v12_completeness.py): number multiset v12-vs-v11
+  identical except the \input filename bump; v12-vs-v10 identical
+  except the ORCID href digits (clickable-contacts round), the
+  v11-round audited digit reshuffles (context-verified identical
+  between v11 and v12), and the filename; label, citation-key,
+  environment, and section censuses identical; 27-entry bibitem
+  list identical. RESULT: ALL COMPLETE -- nothing lost vs the
+  pre-humanized base.
+- Verified: audit_v20_numbers.py (make_audit_v20.py from v19,
+  main retargeted to v12) 301/301 PASS; pattern_sweep_v16 16/16
+  clean on v12 + v9; tectonic journal_manuscript_v12.tex -> 30
+  pp, zero undefined references, clickable mailto + ORCID URI
+  annotations verified in the built PDF; VLM render checks of the
+  two changed passages (p2 Positioning, p15 e26 opener) CLEAN with
+  the tightened text confirmed verbatim and no typographic
+  defects.
+- Package: build_submission_zips_v15.sh -- v15 ZIPs with fresh-dir
+  standalone tectonic compiles re-verified (main 30 pp, companion
+  75 pp, zero errors); download tex/refs/pdf copies of v12
+  byte-identical to scripts; ZIP contents byte-identical;
+  SUBMISSION_PACKAGE_LINKS.md updated (new newest-first revision
+  note, header to the v15 round, current main rows retargeted to
+  v12, build note to v12_bmb_refs + 30 pp); TAC cover letter
+  retargeted to journal_manuscript_v12.tex; staging dirs
+  gitignored; v20 audit ledger deposited.
+
+Stage Summary:
+- Latest versions: scripts/journal_manuscript_v12.tex (30-pp PDF
+  at download/journal_manuscript_v12.pdf) and the unchanged
+  scripts/companion_categorical_v9.tex (75-pp PDF at
+  download/companion_categorical_v9.pdf); ZIPs v15 at
+  download/submission_main_bmb.zip and
+  download/submission_companion_tac.zip; audit_v20 301/301 PASS;
+  the Gemini register is now adopted throughout both papers at
+  full brevity with completeness against the pre-humanized base
+  verified by census; only the BMB Editorial Manager portal
+  registration remains on the submission checklist.

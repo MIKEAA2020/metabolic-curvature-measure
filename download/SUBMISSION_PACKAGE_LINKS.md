@@ -1,10 +1,35 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-17 (universal Gemini-register revision + v14 package
-round: journal_manuscript_v11 + companion_categorical_v9). All repository links follow
+Generated 2026-09-17 (brevity round + v15 package round:
+journal_manuscript_v12 + companion_categorical_v9). All repository links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-17, brevity round + v15 package round): the
+author directive to tighten "We find that it does." and adopt Gemini's
+prose throughout with brevity, without sacrificing substance, was
+executed as a full sweep of both manuscripts against the Gemini
+sources (curvature humanized.txt L718-1704; companion humanized.txt
+L1-714). Outcome: MAIN only, as new versioned files (prior versions
+untouched) -- scripts/journal_manuscript_v12.tex (from v11) plus its
+refs copies: (i) the Positioning paragraph's "We find that it does."
+shortened to "It does." with the dependent "We also find that"
+connective dropped; (ii) the "at this point" filler removed from the
+protein-layer central question. COMPANION: zero edits (already at the
+brevity-tight register; the two "present article/operationalization"
+sites are legitimate technical or adjudicated provenance usages). No
+substance lost: verified by the completeness censuses against the
+pre-humanized v10 -- number multiset (content tokens identical; only
+the \input filename bump, the ORCID link digits, and the v11-round
+audited digit reshuffles), label census, citation-key census,
+environment census, section census, and the 27-entry bibitem list all
+identical. Verified: audit_v20_numbers.py 301/301 PASS;
+pattern_sweep_v16 16/16 clean on both; tectonic main 30 pp /
+companion 75 pp, 0 errors / 0 undefined references; ZIPs rebuilt via
+build_submission_zips_v15.sh with fresh-dir standalone compiles
+re-verified (30/75 pp); download copies and ZIP contents
+byte-identical to scripts; TAC cover letter retargeted to v12.
 
 Revision note (2026-09-17, smooth-calculus positioning compression +
 perimeter artifact sweep, same versioned files): the "why smooth
@@ -625,11 +650,11 @@ Sensitivity: From Active-Set Geometry to Transcriptional Response
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
-| Manuscript PDF (30 pp, full proofs in appendices, declarations in backmatter; universal Gemini-register revision of narrative prose throughout, clickable email and ORCID; prior versions retained as separate files) | [download/journal_manuscript_v11.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v11.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v11.pdf) |
+| Manuscript PDF (30 pp, full proofs in appendices, declarations in backmatter; universal Gemini-register revision of narrative prose throughout, clickable email and ORCID, brevity round applied; prior versions retained as separate files) | [download/journal_manuscript_v12.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v12.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v12.pdf) |
 | Cover letter (with declarations, companion disclosure) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
-| LaTeX source | [scripts/journal_manuscript_v11.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v11.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v11.tex) |
-| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v11_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v11_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v11_bmb_refs.tex) |
-| BibTeX database | [scripts/journal_manuscript_v11_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v11_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v11_refs.bib) |
+| LaTeX source | [scripts/journal_manuscript_v12.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v12.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v12.tex) |
+| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v12_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v12_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v12_bmb_refs.tex) |
+| BibTeX database | [scripts/journal_manuscript_v12_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v12_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v12_refs.bib) |
 | Reference-list generator (audit-checked) | [scripts/build_bmb_refs.py](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/build_bmb_refs.py) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/build_bmb_refs.py) |
 
 Figures (embedded in the PDF; source PNGs if the portal requests separate files):
@@ -646,8 +671,8 @@ Figures (embedded in the PDF; source PNGs if the portal requests separate files)
 Build note: for Overleaf or any standalone compiler, upload **the ZIP** (it
 contains the .tex, the input'ed reference list, the .bib database, and all
 six figures at the exact relative subpaths the .tex expects — verified to
-compile standalone, 29 pp, 0 errors). If instead you upload individual
-files, upload them together with `journal_manuscript_v11_bmb_refs.tex` and
+compile standalone, 30 pp, 0 errors). If instead you upload individual
+files, upload them together with `journal_manuscript_v12_bmb_refs.tex` and
 the three figure subfolders (`m1_m3/`, `alexandrov_bridge/`,
 `association_robustness/`) so the paths resolve; the .tex searches both the
 upload directory and the repository layout
