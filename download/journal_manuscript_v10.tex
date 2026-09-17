@@ -135,12 +135,14 @@ first-order response of the resulting optimum --- marginal growth
 yields and shadow prices --- is classical, analyzed under the name of
 phenotype phase planes \citep{edwards2001, ibarra2002}. The
 higher-order question --- how the optimal fluxes reroute when the
-environment shifts --- has remained largely unaddressed, and for a
-structural reason: piecewise-affine maps have vanishing second
-derivatives almost everywhere, so smooth calculus cannot describe
-rerouting; the response concentrates on discrete transitions across
-constraint boundaries, where the optimal pathway pattern switches.
-The natural language for this question is geometric measure theory.
+environment shifts --- is the subject of this paper. Its answer
+cannot be a classical second derivative: the optimal response is
+piecewise affine, so that derivative vanishes away from the
+constraint boundaries and is undefined at them, and the second-order
+response concentrates at the discrete transitions where the active
+constraint set switches. The object that carries it is a measure ---
+the distributional second derivative, in the language of geometric
+measure theory.
 
 \paragraph{The object.}
 Let a metabolic network with $m$ reactions be operated by flux balance
@@ -156,7 +158,14 @@ boundaries --- the active-set strata of the constraint complex --- are
 where the map bends. Its distributional second derivative
 $\mu = D^2 v$ is therefore not a function but a \emph{measure},
 concentrated on the switching boundaries: the discrete curvature
-carrier of the network's rerouting geometry.
+carrier of the network's rerouting geometry. Degeneracy sharpens the
+choice of object: when the optimum is non-unique, classical
+sensitivity analysis still sees the value layer (Danskin envelopes
+\citep{danskin1967}), but the reroutings inside optimal faces are
+invisible to it and the flux map itself becomes
+selection-dependent --- which is why the deterministic lexicographic
+tie-break is declared as part of the metric (Remark~\ref{rem:lock})
+rather than left to the solver.
 
 \paragraph{The claim structure.}
 This manuscript establishes, in order:

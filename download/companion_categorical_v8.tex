@@ -197,7 +197,7 @@ nutrients, then reverse temperature, then reverse nutrients --- the
 same two changes can still return the system to its starting
 environment with its internal reserves degraded. The order matters,
 not only the magnitudes: adjustments governed by active constraints
-need not commute. Classical viability theory supplies
+need not commute. Classical viability theory \citep{aubin2011} supplies
 set-valued dynamics and tangential conditions, but no
 \emph{geometric} object that measures how a non-commuting sequence
 of individually manageable changes accumulates into a viability
@@ -624,33 +624,25 @@ non-strict inequalities on each stratum. The viability-weighted
 curvature of Definition~\ref{def:kv} is computed on this
 object.
 
-\begin{remark}[Why the 2-categorical span is needed: smooth-connection
-breakdown at constraint-switching boundaries]
+\begin{remark}[Why the 2-categorical span is needed]
 \label{rem:2cat-span}
-The Ehresmann connection of the geometric construction requires
-smooth variation of horizontal subspaces across the base manifold.
-At a constraint-switching boundary---where the active set of
-inequality constraints on the viability margin $\varepsilon$
-changes---this requirement fails in three ways at once: the
-horizontal subspaces vary discontinuously, the connection
-coefficients (the local sensitivity gains of the active constraints)
-jump, and the curvature integral, which presupposes a smooth
-connection, is no longer defined. The holonomy of a loop that
-crosses such a boundary is therefore defined only after the
-boundary behavior itself is specified. The fifth SAVGS component
-resolves this by introducing a 2-categorical span
+At a constraint-switching boundary of the viability margin
+$\varepsilon$ the smooth connection breaks down in the manner
+described in \S\ref{sec:role}, and the holonomy of a
+boundary-crossing loop is defined only after the boundary behavior
+itself is specified. The fifth SAVGS component supplies exactly that
+specification: a 2-categorical span
 $\Stab_1\leftarrow\mathrm{Boundary}\rightarrow\Stab_2$ that glues the
 two smooth strata via a boundary 2-cell; the connection is defined
-piecewise on each stratum and a matching condition on the boundary
-supplies the 2-categorical compatibility. The formal development of
-the 2-categorical structure --- the lax-functorial gluing and the
+piecewise on each stratum, and a matching condition on the boundary
+supplies the 2-categorical compatibility. The formal development --- the lax-functorial gluing and the
 boundary $2$-cell's coherence with the connection $1$-forms --- is
 given in Section~\ref{sec:2cat-gluing} below, and the
 homotopy-theoretic well-definedness of the resulting holonomy is
 treated in Section~\ref{sec:hott}. The operational requirement on the abelian and non-abelian
 prototypes is that the active set
 remains constant along each loop, which places the loop entirely
-within a single smooth stratum and avoids the boundary discontinuity.
+within a single smooth stratum.
 \end{remark}
 
 \subsection{2-categorical gluing theorem for stratified connections}
