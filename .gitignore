@@ -1,78 +1,70 @@
-skills/
-node_modules/
-tool-results/
-.ipynb_checkpoints/
 
-# Raw external-data archives & large expression matrices.
+# E27 (v20) Schmidt 2016: raw archives not committed (re-download per data/schmidt2016/README.md)
+# LaTeX build artifacts of the v4-round sources
+# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips.sh)
+# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v4.sh)
+# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v5.sh)
+# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v6.sh)
+# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v7.sh)
+# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v8.sh)
 # Provenance + sha256 checksums in data/m3d/README.md; re-download per instructions there.
+# Python bytecode of repo scripts (not committed)
+# Raw external-data archives & large expression matrices.
+# v11 staging + verify dirs (rebuilt by build_submission_zips_v11.sh)
+# v12 staging + verify dirs (rebuilt by build_submission_zips_v12.sh)
+# v13 staging + verify dirs (rebuilt by build_submission_zips_v13.sh)
+# v15 zip-build staging dirs
+# v17 zip-build staging dirs
+.ipynb_checkpoints/
 data/m3d/E_coli_v4_Build_6.tar.gz
 data/m3d/E_coli_v4_Build_6/*.tab
 data/precise.tar.gz
 data/precise/data/log_tpm*.csv
 data/precise/modulons.pdf
-
-# E27 (v20) Schmidt 2016: raw archives not committed (re-download per data/schmidt2016/README.md)
-data/schmidt2016/NIHMS65833-supplement-Supplementary_tables.xlsx
-data/schmidt2016/epmc_suppl.zip
 data/schmidt2016/NIHMS65833-supplement-Supplementary_figures_and_notes.pdf
+data/schmidt2016/NIHMS65833-supplement-Supplementary_tables.xlsx
 data/schmidt2016/emss-*.gif
 data/schmidt2016/emss-*.jpg
-
-# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips.sh)
-scripts/overleaf_stage/
-
-# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v4.sh)
-scripts/overleaf_stage_v4/
-# LaTeX build artifacts of the v4-round sources
+data/schmidt2016/epmc_suppl.zip
+node_modules/
+scripts/__pycache__/
 scripts/companion_categorical_v3.aux
 scripts/companion_categorical_v3.bbl
-scripts/companion_categorical_v3.out
-scripts/companion_categorical_v3.toc
 scripts/companion_categorical_v3.blg
 scripts/companion_categorical_v3.log
+scripts/companion_categorical_v3.out
+scripts/companion_categorical_v3.toc
 scripts/journal_manuscript_v4.log
-
-# Python bytecode of repo scripts (not committed)
-scripts/__pycache__/
 scripts/nitrogen_probe.log
 scripts/o2_pfba_control.log
-scripts/zipcheck_v4/
-# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v5.sh)
-scripts/overleaf_stage_v5/
-scripts/zipcheck_v5/
-# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v6.sh)
-scripts/overleaf_stage_v6/
-scripts/zipcheck_v6/
-# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v7.sh)
-scripts/overleaf_stage_v7/
-scripts/zipcheck_v7/
-
-# Overleaf ZIP build staging (rebuilt by scripts/build_submission_zips_v8.sh)
-scripts/overleaf_stage_v8/
-scripts/zipcheck_v8/
-scripts/overleaf_stage_v9/
-scripts/zipcheck_v9/
-
-# v11 staging + verify dirs (rebuilt by build_submission_zips_v11.sh)
+scripts/overleaf_stage/
 scripts/overleaf_stage_v11/
-scripts/zipcheck_v11/
-
-# v12 staging + verify dirs (rebuilt by build_submission_zips_v12.sh)
 scripts/overleaf_stage_v12/
-scripts/zipcheck_v12/
-
-# v13 staging + verify dirs (rebuilt by build_submission_zips_v13.sh)
 scripts/overleaf_stage_v13/
-scripts/zipcheck_v13/
 scripts/overleaf_stage_v14/
-scripts/zipcheck_v14/
-
-# v15 zip-build staging dirs
 scripts/overleaf_stage_v15/
-scripts/zipcheck_v15/
 scripts/overleaf_stage_v16/
-scripts/zipcheck_v16/
-
-# v17 zip-build staging dirs
 scripts/overleaf_stage_v17/
+scripts/overleaf_stage_v18/
+scripts/overleaf_stage_v4/
+scripts/overleaf_stage_v5/
+scripts/overleaf_stage_v6/
+scripts/overleaf_stage_v7/
+scripts/overleaf_stage_v8/
+scripts/overleaf_stage_v9/
+scripts/zipcheck_v11/
+scripts/zipcheck_v12/
+scripts/zipcheck_v13/
+scripts/zipcheck_v14/
+scripts/zipcheck_v15/
+scripts/zipcheck_v16/
 scripts/zipcheck_v17/
+scripts/zipcheck_v18/
+scripts/zipcheck_v4/
+scripts/zipcheck_v5/
+scripts/zipcheck_v6/
+scripts/zipcheck_v7/
+scripts/zipcheck_v8/
+scripts/zipcheck_v9/
+skills/
+tool-results/

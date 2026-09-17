@@ -7177,3 +7177,131 @@ Stage Summary:
   number kept; the branch is pushed and in sync with origin/main; only
   the BMB Editorial Manager portal registration remains on the
   submission checklist.
+
+---
+Task ID: merged-register-round-v15
+Agent: main (Super Z)
+Task: Author directive: (1) jointly evaluate and verify the two
+humanized audits at external_audits/humanized/gemini,grok
+humanized.txt (Gemini's rewrite and Grok's rewrite of the main
+paper) together with journal_manuscript_v14.tex, and provide a joint
+implementation plan giving Gemini's prose and tone the most weight;
+(2) provide v15 adopting the merged rewrite from Grok's, Gemini's,
+and v14, primarily Gemini's register; (3) ensure v15 is free from
+error, accurate, and complete against v14.
+
+Work Log:
+- Repo synced: local main was 13 commits behind origin/main (the
+  v11-v14 rounds plus the author's upload of the audits); fast-
+  forwarded; the uploaded file is a single file whose name is
+  "gemini,grok humanized.txt" (902 lines: Gemini L1-532, Grok
+  L533-902). Environment restored (cobra 0.32.1 reinstalled after a
+  sandbox reset); audit_v22 re-run on v14 as the baseline: 301/301
+  PASS.
+- Joint evaluation (scripts/verify_audits_v15.py): both audits
+  parsed and their numeric tokens compared against v14's audited
+  claims. Findings: Gemini = digest-style humanization (~60% content
+  coverage; omits the categorical reading, regime dial, canonical-
+  carrier section, event-measure stabilization, platform 2x2,
+  multi-condition, panel construction, layer decision, PRECISE
+  dissociation, Props twolayer/dualface/semiconvex/maatom, Lemma lex,
+  Corollary, Conjecture, appendices) with the accessible register
+  (guiding questions, plain glosses, city-street and impulse and
+  standby-mRNA images, concrete triggers); Grok = complete
+  restructure (~100% coverage) in a terse register with British
+  spellings and its own environment numbering. Numeric flags
+  adjudicated and NOT adopted: Gemini's decile dispersions
+  (+/-0.12, +/-0.08), PaxDb p-value 1.2e-12, model sizes 2,712/
+  1,366, and the noise-floor compression 10^-11 to 10^-14 (looser
+  than v14's <=1.2e-10 with 8e-14 statement); Grok's stale "98
+  checks" (the current count is 301); both audits' bibliography
+  years/pages and section numbers (formatting noise). Verdict: the
+  audits' claims are otherwise faithful to v14's audited numbers.
+- Joint implementation plan (register merge policy): v14 as the
+  completeness skeleton (all sections, 301 audited numbers, labels,
+  table, figures); Gemini's register primary; Grok secondary where it
+  sharpens without conflicting; rejected items listed above plus
+  the L_var formula (verbal gloss already present; keeps the numeric
+  delta at zero) and a title change (stability + cross-citation
+  lock-in; flagged for the author).
+- v15 created as NEW versioned files (prior versions untouched):
+  scripts/journal_manuscript_v15.tex (from v14) plus
+  journal_manuscript_v15_bmb_refs.tex and
+  journal_manuscript_v15_refs.bib (byte-identical copies). Twelve
+  surgical merged-register edits: (1) intro object paragraph --
+  concrete rerouting triggers ("when a nutrient becomes depleted or
+  an enzyme capacity saturates, the path crosses into the
+  neighboring region") + "the network's operational bottlenecks"
+  gloss on the active set; (2) In-words gloss of Definition 2.1 --
+  the atom as "an impulse of curvature delivered on that wall";
+  (3) Sec 2.3 opener -- the value-vs-flux guiding question
+  replacing the flat "This subsection develops that layer."; (4)
+  Sec 3 opener -- Gemini's question "Can discrete linear-programming
+  switches be approximated by smooth, continuous curves?"; (5) the
+  exact-counterexample remark -- the city-street analogy ("like
+  navigating a city whose streets run only in fixed directions
+  instead of walking as the crow flies"); (6) In-words toll sentence
+  after the regime dichotomy (smooth maps drift by the enclosed
+  area; active-set maps pay a toll per wall crossed); (7) decile
+  gloss "--- more than double"; (8) path-robustness opener question
+  ("Does the association generalize beyond glucose limitation, or is
+  it a quirk of the reference trajectory?"); (9) tie-break subsection
+  plain lead ("A linear program can have many optimal flux
+  distributions, so the flux layer needs a selection rule") + "The
+  experiment asks whether the biology depends on the convention";
+  (10) tie-break findings coda ("a feature of the network's
+  active-set architecture, not an artifact of solver mechanics");
+  (11) Discussion -- new translational-buffering interpretation
+  paragraph ("Why transcribe a rerouting program without translating
+  it? ... standby model, for which kochanowski2013 is the prior art
+  at the metabolite level"), re-quoting the audited +0.419/-0.083/
+  n=366; (12) protein-layer-null tightening (sentence merge,
+  "Transcription does not propagate through translation"). Abstract
+  byte-identical to v14 (254 audit-style words, under the 255 cap).
+- Verified: verify_v15_completeness.py ALL COMPLETE (abstract
+  identical; number-multiset delta = the version digit, the digits
+  of the new \\citet{kochanowski2013} key and \\S\\ref{sec:e27}
+  label, and the three re-quoted audited body claims only; label/
+  environment/section censuses identical; citation census =
+  kochanowski2013 +1; bibliography byte-identical; 13 unified-diff
+  hunks outside the header, matching the 12 adjudicated edits);
+  audit_v23_numbers.py (make_audit_v23.py, retargeted v14->v15)
+  301/301 PASS; pattern_sweep_v16 16/16 clean on v15 + companion
+  v9; tectonic v15 -> 30 pp, 0 errors, 0 undefined references, 0
+  '??' in the rendered text; clickable mailto: + ORCID https URI
+  annotations verified via qpdf --json; identical overfull-box
+  profile to v14 (3 pre-existing, none new); all twelve edited
+  passages confirmed present in the rendered PDF (lineno-aware
+  probes) and absent from v14; VLM spot-check of the four edited
+  pages (pp. 2, 8, 9, 17): CLEAN.
+- Package: build_submission_zips_v18.sh -- v18 ZIPs with fresh-dir
+  standalone tectonic compiles re-verified (main 30 pp, companion
+  75 pp); download tex/refs/pdf copies of v15 byte-identical to
+  scripts; ZIP contents byte-identical to scripts;
+  SUBMISSION_PACKAGE_LINKS.md updated via update_links_doc_v19.py
+  (new newest-first revision note, header to the merged-register +
+  v18 round, current main rows + build note + checklist retargeted
+  to v15, audit status to v23; the historical v17 note's v14
+  filename restored after an over-broad replace was caught);
+  TAC cover letter retargeted to journal_manuscript_v15.tex;
+  staging/zipcheck dirs gitignored; v23 audit ledger deposited at
+  download/deepseek_bridge/v23_number_audit.{json,md}. The
+  v14-round artifacts (scripts/journal_manuscript_v14.pdf and the
+  v22 ledger) restored from git after incidental rewrites by the
+  baseline re-runs.
+- Git: committed and pushed to origin/main (one-off credential URL;
+  the stored remote and the PAT were not modified).
+
+Stage Summary:
+- Latest versions: scripts/journal_manuscript_v15.tex (30-pp PDF at
+  download/journal_manuscript_v15.pdf) and the unchanged
+  scripts/companion_categorical_v9.tex (75-pp PDF at
+  download/companion_categorical_v9.pdf); ZIPs v18 at
+  download/submission_main_bmb.zip and
+  download/submission_companion_tac.zip; audit_v23 301/301 PASS;
+  verify_v15_completeness ALL COMPLETE; pattern_sweep 16/16; the
+  joint audit evaluation is recorded in
+  scripts/verify_audits_v15.py (re-runnable) with the adjudicated
+  rejected-items list; the branch is pushed and in sync with
+  origin/main; only the BMB Editorial Manager portal registration
+  remains on the submission checklist.
