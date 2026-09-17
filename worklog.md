@@ -6710,3 +6710,73 @@ Stage Summary:
   the flagged sites while every numerical claim, proof, and
   completeness standard is unchanged; the Gemini attempts' defects
   remain rejected.
+
+---
+Task ID: smooth-calculus-compression (v2, rebased onto the concurrent
+v10/v8 state)
+Agent: main (Super Z)
+Task: Re-execute the "why smooth calculus can't capture rerouting"
+compression + perimeter artifact sweep on the CURRENT manuscript
+versions (journal_manuscript_v10.tex + companion_categorical_v8.tex,
+the concurrent session's Gemini-alignment round that had ADDED the
+accessible-motivation lead containing that discussion), after the
+first execution against the superseded v7/v6 files was discovered to
+be based on a stale local state (preserved as local branch
+backup-smooth-compression-v7base and discarded; remote had advanced
+through 9fc8f7a five-directive pass + b0c0279 Gemini alignment).
+
+Work Log:
+- Surveyed the current state: the v10 intro lead carried exactly the
+  adjudicated discussion -- "has remained largely unaddressed, and
+  for a structural reason" gap claim, "so smooth calculus cannot
+  describe rerouting" strawman sentence, "The natural language for
+  this question is geometric measure theory" flourish; the v8
+  companion's rem:2cat-span had been EXPANDED with a three-fold
+  breakdown re-argument.
+- MAIN v10 EDITS (in place; positioning edit, not a new version): the
+  intro lead now keeps the plain-problem opening + the FBA/PhPP
+  lineage citations (varma1994/orth2010/lewis2010,
+  edwards2001/ibarra2002) and states the structural fact precisely
+  (piecewise affine -> classical second derivative vanishes away
+  from constraint boundaries and is undefined at them; second-order
+  response concentrates at active-set transitions; carried by a
+  measure, the distributional second derivative, in the language of
+  geometric measure theory); gap-claim framing, strawman sentence,
+  and "natural language" flourish removed. "The object" paragraph
+  completed with the degeneracy argument (Danskin envelopes
+  danskin1967 visible value layer; degenerate reroutings invisible;
+  flux map selection-dependent; tie-break declared as part of the
+  metric, Remark rem:lock).
+- COMPANION v8 EDITS: intro "The problem" now cites aubin2011 at the
+  classical-viability-theory gap claim; rem:2cat-span retitled "Why
+  the 2-categorical span is needed", no longer re-argues the
+  breakdown (cross-references sec:role; three-fold enumeration
+  absorbed), keeps the boundary-specification necessity folded into
+  the resolution + forward pointers + operational requirement;
+  rem:pdi retained unchanged as the precise hypothesis-failure
+  statement.
+- PERIMETER: re-removed download/cover_letter_plos_compbio.md
+  (still present on this base; same artifact list as before:
+  "rather than any smooth curvature" negation, "replacing earlier
+  total-variation claims" changelog, unfilled placeholders,
+  pre-rename URL, 98-check audit count, multi-author phrasing);
+  verified both current cover letters (dates Sept 17, 2026; TAC
+  letter addressed to Prof. Christina Vasilakopoulou with cc
+  tac@mta.ca -- the concurrent session's independent choice matches
+  this session's earlier recommendation; BMB "any smooth map would
+  scale quadratically" is the factual C^2 statement, kept).
+- VERIFIED: pattern_sweep_v16.py 16/16 patterns clean on both
+  current files; audit_v18_numbers.py 301/301 PASS; tectonic main
+  29 pp / companion 75 pp, zero undefined references; ZIPs rebuilt
+  via build_submission_zips_v13.sh, fresh-dir standalone compiles
+  re-verified (29/75 pp); download PDFs refreshed; links doc: new
+  newest-first revision note + stale header page counts corrected
+  (28->29 main, 74->75 companion).
+
+Stage Summary:
+- Both current manuscripts now carry the smooth-calculus positioning
+  exactly once each in citation-complete form; the companion states
+  the smooth-connection breakdown only in its intro (cited), with
+  rem:2cat-span cross-referencing it; every numerical claim
+  unchanged (audit 301/301, sweep 16/16 clean); stale PLOS letter
+  removed; package regenerated and verified on the v10/v8 base.

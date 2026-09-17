@@ -128,7 +128,7 @@ Manuscript defects found and fixed: D-N1 (13 sweeps / 10 knockdowns), D-N2 (1.5e
 | O2-10 | iML anaerobic (CORRECTED round 8): 286->292, +6/-0, kappa 0.987, Jacca | PASS | labels=292, +6/-0, k=0.9872, J=0.9795, WT=0.13411 | keio_o2_limited_e16_results.json:levels.0.0 |
 | O2-11 | flip identities (CORRECTED): gains eno/pgk/gapA/gpmA/gpmM/hemN; no los | PASS | gains=['b0755', 'b1779', 'b2779', 'b2926', 'b3612', 'b3867'], loss=[] | keio_o2_limited_e16_results.json:levels.0.0.flips_vs_gl |
 | O2-12 | anaerobic stats (CORRECTED): r +0.258 AUC 0.682; direct +0.125 AUC 0.6 | PASS | r=0.2583, AUC=0.6815, direct r=0.1246, direct AUC=0.6730 | keio_o2_limited_e16_results.json:levels.0.0 |
-| O2-13 | flip ratios (CORRECTED): glycolysis six 0.70-1.00 aerobically -> 0 ana | PASS | {'b3612': (np.float64(0.843), np.float64(0.0)), 'b1779': (np.float64(0 | keio_o2_limited_e16_sweep.csv + keio_glucose_only_e16_s |
+| O2-13 | flip ratios (CORRECTED): glycolysis six 0.70-1.00 aerobically -> 0 ana | PASS | {'b2779': (np.float64(0.81), np.float64(0.0)), 'b1779': (np.float64(0. | keio_o2_limited_e16_sweep.csv + keio_glucose_only_e16_s |
 | O2-14 | 5 of 6 flips in glycolysis/gluconeogenesis, ~30x enrichment | PASS | [{'subsystem': 'Glycolysis/Gluconeogenesis', 'n_flip': 5, 'expected':  | keio_o2_limited_e16_results.json:levels.0.0...subsystem |
 | O2-15 | prop:keio-o2-limited + rem:keio-o2-invariance in companion; abstract p | PASS | labels present: True / True; abstract words: 264 | companion_categorical_v8.tex (abstract + Keio section) |
 | N-1 | iJO WT: nh4 -10/-5/-2.5 = 0.9259/0.4629/0.2315; glu -10 = 0.9259 (matc | PASS | 0.9259/0.4629/0.2315/0.9259/1.2595 | keio_nitrogen_source_e12_results.json:levels.*.wild_typ |

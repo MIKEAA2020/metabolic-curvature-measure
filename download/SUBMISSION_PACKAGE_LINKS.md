@@ -6,6 +6,49 @@ the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
 
+Revision note (2026-09-17, smooth-calculus positioning compression +
+perimeter artifact sweep, same versioned files): the "why smooth
+calculus cannot describe rerouting" framing introduced with the
+accessible-motivation lead was adjudicated and compressed to its
+load-bearing, citation-complete form in both papers (edits in place --
+a positioning edit, not a new manuscript version). MAIN
+journal_manuscript_v10.tex: the intro lead keeps the plain-problem
+opening and the FBA/phenotype-phase-plane lineage
+(varma1994/orth2010/lewis2010 + edwards2001/ibarra2002) but replaces
+the gap-claim framing ("has remained largely unaddressed, and for a
+structural reason"), the "smooth calculus cannot describe rerouting"
+strawman sentence, and the "natural language" flourish with the
+precise statement (classical second derivative vanishes away from
+the constraint boundaries and is undefined at them; the second-order
+response concentrates at the active-set transitions and is carried
+by a measure -- the distributional second derivative, in the
+language of geometric measure theory); the "The object" paragraph is
+completed with the degeneracy argument (value layer visible to
+classical sensitivity via Danskin envelopes, danskin1967; degenerate
+reroutings invisible; flux map selection-dependent; deterministic
+lexicographic tie-break declared as part of the metric ->
+Remark rem:lock). COMPANION companion_categorical_v8.tex: the
+smooth-connection breakdown is now stated once, in the introduction
+(§1), where it is now cited (aubin2011) at the claim site; the
+remark "Why the 2-categorical span is needed" (rem:2cat-span) no
+longer re-argues the breakdown (the three-fold-failure enumeration
+is absorbed into the cross-reference to §1) and keeps only the
+boundary-specification necessity, the resolution, forward pointers,
+and the operational requirement; the mathematically precise
+hypothesis-failure statement (rem:pdi) is retained unchanged. Swept
+the package perimeter: the stale orphaned PLOS Comp Bio cover letter
+removed from download/ (it predated the venue decision and still
+carried the "rather than any smooth curvature" negation, the
+"replacing earlier total-variation claims" changelog phrase, an
+unfilled [Submission date], a [Corresponding author name] block, the
+pre-rename repository URL, the stale 98-check audit count, and
+multi-author phrasing on a sole-author paper; it was referenced by no
+package component). Verified: pattern_sweep_v16 16-pattern clean on
+both; audit_v18_numbers.py 301/301 PASS; tectonic builds main 29 pp
+/ companion 75 pp, zero undefined references; ZIPs rebuilt via
+build_submission_zips_v13.sh with fresh-dir standalone compiles
+re-verified (29/75 pp).
+
 Revision note (2026-09-17, Gemini-alignment revision + v13 package
 round): both papers revised toward the accessible register of the
 evaluated Gemini humanization attempts, as new versioned files (prior
@@ -495,7 +538,7 @@ undefined / 0 overfull.
 
 **Title:** A Measure-Theoretic Discrete Curvature Framework for Metabolic Gene
 Sensitivity: From Active-Set Geometry to Transcriptional Response
-(Original Research Article; 28 pp; subscription route — no author charges).
+(Original Research Article; 29 pp; subscription route — no author charges).
 
 
 ### Journal / submission-portal links (all verified)
@@ -553,7 +596,7 @@ upload directory and the repository layout
 
 **Title:** Stratified Connections, Optic Composition, and the Homotopy
 Fixed-Point Extension: A Categorical Framework for Viability-Weighted
-Curvature (Research Article; 74 pp current build; electronic-only, free — no author charges).
+Curvature (Research Article; 75 pp current build; electronic-only, free — no author charges).
 
 ### Journal / submission links (all verified)
 
