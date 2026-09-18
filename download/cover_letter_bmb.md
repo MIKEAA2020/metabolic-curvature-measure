@@ -1,19 +1,20 @@
 # Cover Letter — Bulletin of Mathematical Biology
 
 **To:** The Editors, Bulletin of Mathematical Biology
-**Date:** September 17, 2026
+**Date:** September 18, 2026
 **Manuscript type:** Original Research Article
-**Title:** A Measure-Theoretic Discrete Curvature Framework for Metabolic
-Gene Sensitivity: From Active-Set Geometry to Transcriptional Response
+**Title:** A Geometric Theory of Metabolic Flux Rerouting: How Active-Set
+Curvature Predicts Transcriptional Regulation and Protein-Layer
+Buffering
 
 ---
 
 Dear Editors,
 
-I am pleased to submit my manuscript "A Measure-Theoretic Discrete
-Curvature Framework for Metabolic Gene Sensitivity: From Active-Set
-Geometry to Transcriptional Response" for consideration as an Original
-Research Article in the Bulletin of Mathematical Biology.
+I am pleased to submit my manuscript "A Geometric Theory of Metabolic
+Flux Rerouting: How Active-Set Curvature Predicts Transcriptional
+Regulation and Protein-Layer Buffering" for consideration as an
+Original Research Article in the Bulletin of Mathematical Biology.
 
 Parametric flux balance analysis defines a piecewise-affine map from
 environmental and genetic parameters to optimal metabolic fluxes. The
@@ -62,10 +63,9 @@ the Bulletin's mathematical-biology readership.
 **Disclosure of a related manuscript.** In the interest of full
 transparency I disclose that a companion manuscript is in preparation
 for separate submission to *Theory and Applications of Categories*
-(a no-fee, diamond open-access journal): "Stratified Connections,
-Optic Composition, and the Homotopy Fixed-Point Extension: A
-Categorical Framework for Viability-Weighted Curvature" (theory
-paper). The two papers are related but distinct in purpose, and the
+(a no-fee, diamond open-access journal): "A Geometric and
+Category-Theoretic Theory of Viability: How Sequential Adaptations
+Induce Path-Dependent Risk" (theory paper). The two papers are related but distinct in purpose, and the
 division of labor is deliberate:
 
 - The **submitted manuscript** is the application: the
@@ -89,7 +89,7 @@ own. The companion is available for the editors' and reviewers'
 inspection in the same public repository as the submitted
 manuscript's code and data
 (https://github.com/MIKEAA2020/metabolic-curvature-measure, file
-`scripts/companion_categorical_v9.tex`, compiled PDF included) and will
+`scripts/companion_categorical_v10.tex`, compiled PDF included) and will
 be provided as a PDF on request; it is not under consideration
 elsewhere.
 

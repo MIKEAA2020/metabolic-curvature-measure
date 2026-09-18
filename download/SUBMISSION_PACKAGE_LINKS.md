@@ -1,10 +1,64 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-17 (merged-register round + v18 package round:
-journal_manuscript_v15 + companion_categorical_v9). All repository links follow
+Generated 2026-09-18 (universal Gemini-adoption round + v19 package
+round: journal_manuscript_v16 + companion_categorical_v10). All repository links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-18, universal Gemini-adoption round + v19
+package round + TAC editor change): the author directive to
+UNIVERSALLY adopt Gemini's writing was executed on NEW versioned
+files (prior versions untouched) -- scripts/journal_manuscript_v16.tex
+(from v15) plus its refs copies, and
+scripts/companion_categorical_v10.tex (from v9) plus
+companion_refs_v10.bib. MAIN v16: Gemini's rewrite
+(external_audits/humanized/gemini,grok humanized.txt, lines 1-532)
+adopted VERBATIM wherever it provides text -- the abstract rebuilt on
+Gemini's own abstract (255 audit-style words, at the author's 255
+cap, opening with Gemini's first sentence "Constraint-based models
+such as flux balance analysis (FBA) predict cellular metabolic states
+by solving linear optimization problems"), Gemini's title and
+keywords (merged to the 6-term BMB guideline cap), the intro opening
+(three-paragraph narrative + the mathematical-obstruction and
+categorical-solution passages), the five-findings claim list, the
+Sec. 2 setup and definitions, the in-words glosses, the value--flux
+coupling statement, the Sec. 3 bridge opening and TV-failure
+explanation, the holonomy proposition, the Sec. 4/5 validation and
+association narratives, the Discussion restructured into Gemini's
+three subsections, and the Methods leads. Gemini's proof variants
+are NOT adopted (they drop verified detail; v15's complete proofs
+retained), and Gemini's unaudited numbers (decile dispersions, PaxDb
+p-value, model sizes, the noise-floor compression, the 100.0000%
+token form) remain excluded per the v15-round adjudication.
+COMPANION v10: Gemini's companion rewrite (companion humanized.txt,
+lines 1-714) adopted as the register base -- Gemini's title and
+abstract (four-pillar narrative, 264 words under the 265 cap, the
+six-axis validation sentence intact), keywords, the intro
+problem/obstruction/solution narrative, bold contribution titles,
+the section leads, and the application-bridge opening; v9's
+substance retained verbatim (refs, proof-status markings, machine
+verifications). TAC EDITOR: the previously suggested Transmitting
+Editor (Prof. Christina Vasilakopoulou) is not on the live TAC
+editorial board (checked against
+https://www.tac.mta.ca/tac/geninfo.html); the cover letter is now
+addressed to Prof. Michael Shulman (University of San Diego,
+Transmitting Editor, verified on the live board; HoTT and
+higher-categorical expertise matches the paper's homotopy-theoretic
+extension), cc tac@mta.ca unchanged. Nothing lost: verify
+verify_v16_completeness.py + verify_v10_completeness.py ALL COMPLETE
+(v16 number-multiset deletions = the refs version digit and the
+abstract's M3D mention per Gemini's own abstract; additions =
+re-quotes of audited body claims, model-identifier and citation-key
+digits; v10 deletions = the bibliography version digit only). All
+numerical claims unchanged: audit_v24_numbers.py (make_audit_v24.py)
+301/301 PASS; pattern_sweep_v16 16/16 clean on both; tectonic main
+33 pp / companion 76 pp, 0 errors / 0 undefined references / 0 '??';
+clickable mailto + ORCID intact; ZIPs rebuilt via
+build_submission_zips_v19.sh with fresh-dir standalone compiles
+re-verified (33/76 pp); download copies and ZIP contents
+byte-identical to scripts; cover letters retargeted (new titles,
+Sept 18 2026 dates, Shulman address).
 
 Revision note (2026-09-17, merged-register round + v18 package round):
 the author directive to jointly evaluate and verify the two humanized
@@ -756,11 +810,11 @@ Sensitivity: From Active-Set Geometry to Transcriptional Response
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
-| Manuscript PDF (30 pp, full proofs in appendices, declarations in backmatter; universal Gemini-register revision of narrative prose throughout, clickable email and ORCID, brevity round applied, abstract rebuilt on Gemini's abstract and trimmed under the author's 255-word cap, merged-register round applied (joint Gemini/Grok audit evaluation, Gemini-weighted); prior versions retained as separate files) | [download/journal_manuscript_v15.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v15.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v15.pdf) |
+| Manuscript PDF (33 pp, full proofs in appendices, declarations in backmatter; universal verbatim adoption of Gemini's rewrite -- abstract rebuilt on Gemini's own abstract at the 255-word cap opening with Gemini's first sentence, Gemini's title and keywords, intro narrative, five-findings claim list, section narratives, Discussion in Gemini's three subsections; clickable email and ORCID; prior versions retained as separate files) | [download/journal_manuscript_v16.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v15.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v15.pdf) |
 | Cover letter (with declarations, companion disclosure) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
-| LaTeX source | [scripts/journal_manuscript_v15.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v15.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v15.tex) |
-| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v15_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v15_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v15_bmb_refs.tex) |
-| BibTeX database | [scripts/journal_manuscript_v15_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v15_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v15_refs.bib) |
+| LaTeX source | [scripts/journal_manuscript_v16.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v16.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v16.tex) |
+| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v16_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v16_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v16_bmb_refs.tex) |
+| BibTeX database | [scripts/journal_manuscript_v16_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v16_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v16_refs.bib) |
 | Reference-list generator (audit-checked) | [scripts/build_bmb_refs.py](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/build_bmb_refs.py) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/build_bmb_refs.py) |
 
 Figures (embedded in the PDF; source PNGs if the portal requests separate files):
@@ -778,7 +832,7 @@ Build note: for Overleaf or any standalone compiler, upload **the ZIP** (it
 contains the .tex, the input'ed reference list, the .bib database, and all
 six figures at the exact relative subpaths the .tex expects — verified to
 compile standalone, 30 pp, 0 errors). If instead you upload individual
-files, upload them together with `journal_manuscript_v15_bmb_refs.tex` and
+files, upload them together with `journal_manuscript_v16_bmb_refs.tex` and
 the three figure subfolders (`m1_m3/`, `alexandrov_bridge/`,
 `association_robustness/`) so the paths resolve; the .tex searches both the
 upload directory and the repository layout
@@ -800,7 +854,7 @@ Curvature (Research Article; 75 pp current build; electronic-only, free — no a
 | Author information (format for submission) | http://www.tac.mta.ca/tac/authinfo.html |
 | Editorial board / general info | http://www.tac.mta.ca/tac/geninfo.html |
 | Managing Editor contact | tac@mta.ca |
-| Chosen Transmitting Editor | Prof. Christina Vasilakopoulou, NTUA — cvasilak@math.ntua.gr |
+| Chosen Transmitting Editor | Prof. Michael Shulman, University of San Diego — shulman (at) sandiego.edu (verified on the live TAC board; HoTT/higher-category expertise) |
 
 Submission route (from the official author information, fetched and verified):
 submit the article as **a PDF compiled from TeX source to any member of the
@@ -820,9 +874,9 @@ below the abstract of the submitted PDF).
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (75 pp; universal Gemini-register revision of narrative leads and conclusion, clickable email and ORCID; prior versions retained as separate files) | [download/companion_categorical_v9.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v9.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v9.pdf) |
+| Manuscript PDF (76 pp; Gemini-register adoption as base -- title, four-pillar abstract, intro narrative, contribution titles, section leads; v9 substance retained (refs, proof statuses, machine verifications); clickable email and ORCID; prior versions retained as separate files) | [download/companion_categorical_v10.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v10.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v10.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
-| LaTeX source | [scripts/companion_categorical_v9.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v9.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v9.tex) |
+| LaTeX source | [scripts/companion_categorical_v10.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v10.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v10.tex) |
 | BibTeX database | [scripts/companion_refs_v9.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v9.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v9.bib) |
 
 Figures (embedded in the PDF; source PNGs):
@@ -870,13 +924,13 @@ Abaee, Independent Researcher, Tehran, Iran; amin_abaee@ut.ac.ir; ORCID
 0000-0002-0019-1842) at all authorship sites including the cross-citations;
 formal-journal prose with no meta-commentary, changelog, version
 references, or strawman constructions in either paper; audit_v23 301/301
-PASS against journal_manuscript_v15.tex + companion_categorical_v9.tex;
+PASS against journal_manuscript_v16.tex + companion_categorical_v10.tex;
 no-fee venue for both.
 
 Remaining at submission time: register/log in at the BMB Editorial
 Manager portal. Resolved this round: the cover-letter dates are filled
 (September 17, 2026, both letters) and the TAC receiving board member
-is selected -- Prof. Christina Vasilakopoulou (NTUA), Transmitting
+is selected -- Prof. Michael Shulman (University of San Diego), Transmitting
 Editor, with the submission emailed to her and copied to tac@mta.ca
 per TAC's author information (any Editorial Board member except the
 Managing Editor or TeXnical editors).

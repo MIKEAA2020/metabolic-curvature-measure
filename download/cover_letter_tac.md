@@ -1,21 +1,20 @@
 # Cover Letter — Theory and Applications of Categories
 
-**To:** Prof. Christina Vasilakopoulou, Transmitting Editor,
+**To:** Prof. Michael Shulman, Transmitting Editor,
 Theory and Applications of Categories
 **Cc:** tac@mta.ca (Managing Editor)
-**Date:** September 17, 2026
+**Date:** September 18, 2026
 **Manuscript type:** Research Article
-**Title:** Stratified Connections, Optic Composition, and the Homotopy
-Fixed-Point Extension: A Categorical Framework for Viability-Weighted
-Curvature
+**Title:** A Geometric and Category-Theoretic Theory of Viability: How
+Sequential Adaptations Induce Path-Dependent Risk
 
 ---
 
-Dear Professor Vasilakopoulou,
+Dear Professor Shulman,
 
-I am pleased to submit my manuscript "Stratified Connections, Optic
-Composition, and the Homotopy Fixed-Point Extension: A Categorical
-Framework for Viability-Weighted Curvature" for consideration as a
+I am pleased to submit my manuscript "A Geometric and
+Category-Theoretic Theory of Viability: How Sequential Adaptations
+Induce Path-Dependent Risk" for consideration as a
 research article in the Theory and Applications of Categories. In
 accordance with the journal's author information, this submission is
 sent to you as a member of the Editorial Board, with a copy to the
@@ -120,9 +119,9 @@ articles that significantly advance categorical methods.
 **Disclosure of a related manuscript.** In the interest of full
 transparency I disclose that a companion application manuscript is in
 preparation for separate submission to the Bulletin of Mathematical
-Biology: "A Measure-Theoretic Discrete Curvature Framework for
-Metabolic Gene Sensitivity: From Active-Set Geometry to
-Transcriptional Response." The division of labor is deliberate:
+Biology: "A Geometric Theory of Metabolic Flux Rerouting: How
+Active-Set Curvature Predicts Transcriptional Regulation and
+Protein-Layer Buffering." The division of labor is deliberate:
 
 - The **submitted manuscript** develops the full categorical theory:
   all definitions, constructions, theorems, and their proofs or
@@ -140,7 +139,7 @@ results as its own. The application manuscript is available for the
 editors' inspection in the same public repository as this paper's
 machine-verification code
 (https://github.com/MIKEAA2020/metabolic-curvature-measure, file
-`scripts/journal_manuscript_v15.tex`, compiled PDF included) and will
+`scripts/journal_manuscript_v16.tex`, compiled PDF included) and will
 be provided as a PDF on request; it is not under consideration
 elsewhere.
 

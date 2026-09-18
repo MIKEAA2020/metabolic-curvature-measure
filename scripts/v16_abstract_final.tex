@@ -1,0 +1,35 @@
+\begin{abstract}
+\noindent
+Constraint-based models such as flux balance analysis (FBA) predict cellular
+metabolic states by solving linear optimization problems. When
+nutrients or enzyme capacities vary continuously, optimal fluxes do
+not change smoothly but follow piecewise-linear trajectories, changing slope
+abruptly at bottlenecks. Here we show that the true
+``curvature'' of this response is not an ordinary function but a
+discrete measure concentrated on the boundary interfaces where active
+constraints switch: the fundamental carrier of a network's rerouting
+geometry. Path-dependent memory (holonomy) scales linearly with
+perturbation size (slope $1.00$; smooth systems quadratic), and
+$93.4$--$100.0\%$ of second-order adjustment concentrates at discrete
+bottleneck transitions. A bridge connects these switches to smooth
+differential geometry: under grid refinement they converge weakly to
+smooth curvature densities, dual-cell reconstructions strongly in
+$L^1$, but total variation fails to converge generically (grid
+anisotropy), defining the resolution window ($h \ll \sigma \ll
+L_{\mathrm{var}}$).
+
+Integrating this measure along physiological paths yields a
+parameter-free gene sensitivity metric, $\kmu$: each enzyme's
+rerouting burden. In carbon-starved \emph{E.~coli}, $\kmu$ predicts
+transcriptional log-fold changes across $424$ genes ($r = +0.395$,
+$p = 2.6 \times 10^{-17}$; partial $r = +0.269$), robust across
+tie-breaking rules and stress axes. The association vanishes at the
+protein layer ($r = -0.083$ across $366$ genes in matched quantitative
+proteomics): cells transcribe standby capacity for rerouting,
+buffering protein synthesis. Double-knockout epistasis mirrors
+active-set boundary overlaps ($\rho_S = 0.865$), and cyclic
+perturbations leave lasting metabolic memory ($66\%$ non-reverting).
+Our framework unites linear programming, discrete geometry, and
+transcriptional regulation into an accessible, predictive foundation
+for metabolic systems biology.
+\end{abstract}

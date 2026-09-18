@@ -68,3 +68,7 @@ scripts/zipcheck_v8/
 scripts/zipcheck_v9/
 skills/
 tool-results/
+
+# v19 zip-build staging dirs
+scripts/overleaf_stage_v19/
+scripts/zipcheck_v19/

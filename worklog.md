@@ -7305,3 +7305,113 @@ Stage Summary:
   rejected-items list; the branch is pushed and in sync with
   origin/main; only the BMB Editorial Manager portal registration
   remains on the submission checklist.
+
+---
+Task ID: universal-gemini-v16-v10
+Agent: main (Super Z)
+Task: (1) Push the outstanding commits (the prior session had
+committed locally but never pushed); (2) suggest a different TAC
+editor; (3) build the companion's Gemini-register round from
+"companion humanized.txt" (new versioned file, brevity-preferred,
+Grok/own edits only when merited, no substance loss) -- and complete
+the main paper's universal Gemini-prose adoption (journal_manuscript_
+v16.tex) that the previous session had built on a stale v7 base
+without pushing. Continue from the remote canonical lineage
+(v15/v9), never overwrite prior versions, keep the PAT secret, and
+push the result.
+
+Work Log:
+- Diagnosis: the local clone had diverged from origin (remote =
+  v14/v15 lineage + companion v9; local = stale v7 fork + an
+  unpushed "v8 Gemini-register" round built on the wrong base).
+  Preserved the stale round on branch stale-v8-round + copies in
+  /home/z/my-project/stale_v8_reference/, then reset local main to
+  the remote HEAD (fb71a2f) so v16/v10 build on the canonical
+  lineage.
+- MAIN v16 (scripts/v16_gemini_adopt.py + v16_splices_a/b/c.py):
+  37 anchored splices adopting Gemini's rewrite
+  (external_audits/humanized/gemini,grok humanized.txt lines 1-532)
+  VERBATIM wherever it provides text: abstract rebuilt on Gemini's
+  own abstract (255 audit-style words at the 255 cap, opening with
+  Gemini's first sentence "Constraint-based models such as flux
+  balance analysis (FBA) predict cellular metabolic states by
+  solving linear optimization problems"); Gemini's title
+  ("A Geometric Theory of Metabolic Flux Rerouting: How Active-Set
+  Curvature Predicts Transcriptional Regulation and Protein-Layer
+  Buffering") and keywords (merged to the 6-term BMB cap); intro
+  three-paragraph opening + mathematical-obstruction and
+  categorical-solution passages + five-findings claim list; Sec. 2
+  setup/def:mu/def:kmu statements and In-simple-terms gloss;
+  prop:alex statement; thm:coupling statement (Gemini's title +
+  framing); Sec. 3 opening + thm:Bprime item prose + the
+  triangulation-anisotropy TV-failure explanation; prop:dichotomy;
+  Sec. 4/4.1/4.2 narratives; Sec. 5 v5/v7/v8/e26/e27 narratives +
+  tie-break TB bullets and table headers/caption; Discussion
+  restructured into Gemini's three subsections (unifying switches
+  and continuous models / why growth rate fails / biological
+  implications of translational buffering); Methods leads (engine,
+  models, M3D, proteomics, statistics). ASCII-art figures from the
+  audit NOT adopted; Gemini's proof variants NOT adopted (v15's
+  complete proofs + techproofs + backmatter byte-identical);
+  Gemini's unaudited numbers (decile dispersions +/-0.12/0.08,
+  PaxDb p 1.2e-12, model sizes 2,712/1,366, noise-floor 1e-11..
+  1e-14, the 100.0000% token form) excluded per the v15-round
+  adjudication; every v15 audited number kept (G3: deletions =
+  the refs version digit + the abstract's M3D mention, both
+  whitelisted; additions = re-quotes of audited body claims in the
+  claim list and Discussion, model-identifier and citation-key
+  digits).
+- COMPANION v10 (scripts/v10_gemini_companion.py + v10_splices.py):
+  12 anchored splices + engine-level abstract trims adopting
+  Gemini's companion rewrite (companion humanized.txt lines 1-714)
+  as the register base: Gemini's title ("A Geometric and
+  Category-Theoretic Theory of Viability: How Sequential
+  Adaptations Induce Path-Dependent Risk"), four-pillar abstract
+  (263 audit-method words < 265 cap, six-axis sentence intact,
+  Gemini's opening sentence), keywords, intro problem/obstruction/
+  solution narrative, bold contribution titles (Gemini's), section
+  leads (Preliminaries, SAVGS, Noether, Hierarchy, Composition,
+  Lipschitz), application-bridge opening; v9 substance retained
+  verbatim (refs, proof-status markings, machine-verified claims);
+  bibliography pointer to companion_refs_v10.bib (byte-identical
+  copy). G3: deletions = the bib version digit only.
+- TAC EDITOR: fetched the live board
+  (www.tac.mta.ca/tac/geninfo.html). The previously suggested
+  editor (Prof. Christina Vasilakopoulou) is NOT on the live
+  editorial board -- replaced with Prof. Michael Shulman
+  (University of San Diego, Transmitting Editor, verified on the
+  live board; HoTT/higher-categorical expertise matches the
+  companion's homotopy-theoretic extension); cc tac@mta.ca
+  unchanged; alternates considered: Gabriella Boehm (monoidal
+  composition) and Jiri Rosicky (filtered colimits); Lack and
+  Garner are marked "not currently accepting new submissions".
+- VERIFIED: audit_v24_numbers.py (make_audit_v24.py, retargeted to
+  v16 + companion v10) 301/301 PASS; pattern_sweep_v16 16/16 clean
+  on both; verify_v16_completeness.py + verify_v10_completeness.py
+  ALL COMPLETE (labels, cite-key sets, environment/section censuses,
+  bibliography identity); tectonic main 33 pp / companion 76 pp,
+  0 errors / 0 undefined references / 0 '??'; clickable mailto +
+  ORCID intact; VLM CLEAN on both title pages; ZIPs rebuilt via
+  build_submission_zips_v19.sh with fresh-dir standalone compiles
+  re-verified (33/76 pp); download copies and ZIP contents
+  byte-identical; cover letters (both dated Sept 18 2026, new
+  titles, Shulman address) and SUBMISSION_PACKAGE_LINKS.md
+  (newest-first revision note + current rows retargeted + editor
+  row corrected) updated. New overfull hboxes on the main: four
+  small ones (<= 4.9pt), within the round tolerance.
+- Committed and PUSHED to origin main (the previous session's
+  local-only commit had never reached the remote; this round pushes
+  directly).
+
+Stage Summary:
+- Latest versions: scripts/journal_manuscript_v16.tex (33 pp, PDF +
+  v16_bmb_refs.tex + v16_refs.bib in download/) and
+  scripts/companion_categorical_v10.tex (76 pp, PDF +
+  companion_refs_v10.bib in download/); universal Gemini prose
+  adoption on the main, Gemini-register base on the companion;
+  every numerical claim unchanged (audit_v24 301/301); nothing
+  lost vs v15/v9 (completeness scripts ALL COMPLETE); v19 ZIPs
+  fresh-dir verified; TAC cover letter now addressed to Prof.
+  Michael Shulman (verified board member); everything pushed to
+  GitHub. Open follow-up: none blocking; the BMB cover letter may
+  deserve one more register pass at the author's discretion.
