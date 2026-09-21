@@ -72,3 +72,10 @@ tool-results/
 # v19 zip-build staging dirs
 scripts/overleaf_stage_v19/
 scripts/zipcheck_v19/
+
+# v21 zip-build staging dirs
+scripts/overleaf_stage_v20/
+scripts/overleaf_stage_v21/
+scripts/zipcheck_v20/
+scripts/zipcheck_v21/
+scripts/journal_manuscript_v18.log

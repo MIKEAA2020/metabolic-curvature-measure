@@ -7629,3 +7629,110 @@ Stage Summary:
   blind resubmit; JTB primary; PLOS CB bio-first alternative.
 - Push pending: no PAT in this session (policy: never stored); commit
   is local-ready, push on PAT receipt.
+
+---
+Task ID: v18-jtb-alignment-round
+Agent: main (Super Z)
+Task: User 4-part directive: (1) standing rule -- revisions always as
+new versions, never overwrite; (2) commit AND push all future
+creations and previous unpushed commits (PAT provided this session);
+(3) assess remaining points from the committed V17 plan (4776f2d) and
+insight ledger (74934d0) worth implementing; (4) ensure title,
+abstract, keywords, sections, and supplementary are all aligned and
+in full agreement with each other and the latest findings, for the
+JTB venue.
+
+Work Log:
+- PUSH: the pending V17 commit 2dd0ab0 pushed to origin/main with the
+  provided PAT (one-off push URL, never stored; remote verified synced
+  74934d0..2dd0ab0). Standing rules confirmed in worklog: new versions
+  only; commit + push every round.
+- REMAINING-POINTS ANALYSIS (4776f2d + 74934d0 vs v17): systematically
+  grepped every ledger item against journal_manuscript_v17.tex --
+  A1 anatomy, A2 MCA, A3 worked example, Lines I/II/III/IV/V content,
+  iModulons, the five-metabolite-sensing-regulator chemical hook,
+  cross-condition arms (+0.378/+0.391), platform honesty, iJO
+  one-chamber 6.5e-9, census bracket 421-440, AUC honesty, and the
+  order-prevalence stat (already present as "25% of active pairs" =
+  the ledger's 19.4% with the 124-active-pair denominator) -- ALL
+  ALREADY IMPLEMENTED. The only non-implemented items: Line VI
+  community priority effects (deliberately excluded per the plan's
+  scope discipline; follow-up program), Part C decorative category
+  (correctly refused), and A4 buffering elevation (superseded by the
+  implemented Line-III deduction; "current form adequate for JTB" per
+  the plan itself). Verdict: nothing further from the two commits
+  merits implementation for this paper.
+- JTB GUIDE VERIFIED LIVE (page_reader on the official Guide for
+  Authors): abstract "does not exceed 250 words"; keywords 1-7;
+  Highlights REQUIRED as a separate editable file, 3-5 bullets, each
+  <= 85 characters incl. spaces, "featuring the biological
+  applications as well as any theoretical advancements"; CRediT
+  authorship statement required; scope requires biological
+  significance stated (v17 content satisfies); article type "Regular
+  Article"; submit portal https://submit.elsevier.com/JTB ->
+  editorialmanager.com/JTB (code JTB, verified; the lowercase jtbi
+  code does NOT resolve).
+- GAPS FOUND vs JTB: abstract 254 audit-style words > 250 cap; NO
+  Highlights file; Author Contributions not in CRediT taxonomy; cover
+  letter said "Original Research Article"; header/refs/README still
+  BMB-branded; main ZIP named submission_main_bmb.zip.
+- BUILT v18 AS A NEW VERSIONED FILE (scripts/v18_jtb_alignment.py,
+  11 anchored edits, v17 untouched): abstract trimmed 254 -> 249
+  audit-style words via five word-level trims ('that' after 'we
+  show'; 'abruptly'; second 'discrete'; 'the' before 'global carbon';
+  'accessible') -- every number, both in-words glosses, and the full
+  connective arc kept; keywords 6 -> 7 adding 'path dependence'
+  (indexes holonomy / 66% non-reversion / construction-order /
+  memory); CRediT Authorship Contribution Statement replacing the
+  prose Author Contributions; venue-neutral refs file
+  journal_manuscript_v18_refs.tex (29 entries byte-identical) +
+  journal_manuscript_v18_refs.bib; header comment retargeted BMB ->
+  JTB (stale v14/v16 refs names fixed).
+- HIGHLIGHTS FILE (JTB-required): download/highlights_jtb.docx via
+  scripts/v18_make_highlights.js (docx skill route; Times New Roman,
+  1.3x spacing; 5 bullets, lengths 66/69/72/76/76 chars, all <= 85,
+  featuring biological applications + theoretical advancement);
+  postcheck 9/9 PASS; bullet count/length gate re-verified inside
+  audit_v26.
+- VERIFIED: audit_v26_numbers.py (make_audit_v26.py, retargeted to
+  v18; JP-3 recapped to the JTB limits; +3 gates V18-FM1/2/3: CRediT,
+  7-term keywords, highlights file) 347/347 PASS (344 carried + 3
+  new); pattern_sweep_v16 16/16 clean on both; verify_v18_completeness
+  ALL COMPLETE (numeric delta = the \input filename version digit
+  only; labels/citations/environments/sections identical; 2,646 v17
+  body lines preserved verbatim outside the replaced regions);
+  tectonic 38 pp, 0 errors / 0 undefined / 0 '??'; clickable mailto +
+  ORCID via qpdf; VLM CLEAN on the changed pages (p1 title/abstract/
+  keywords, p37 CRediT + references).
+- PACKAGES: v21 ZIPs (build_submission_zips_v21.sh): main renamed
+  submission_main_bmb.zip -> submission_main_jtb.zip with a JTB README
+  (Regular Article, 249-word abstract, 7 keywords, highlights-upload
+  instruction, CRediT note, YPYW reference-style note); companion ZIP
+  rebuilt unchanged; fresh-dir standalone compiles re-verified
+  38/76 pp; download copies and ZIP contents byte-identical to
+  scripts; superseded submission_main_bmb.zip removed (git history
+  preserves it; the venue-neutral jtb zip serves the BMB fallback
+  path).
+- COVER LETTER (cover_letter_jtb.md): retargeted to "Regular Article"
+  (two sites) + the 347/347 audit count.
+- LINKS DOC (update_links_doc_v21.py, 16 anchored edits): newest-first
+  v18 note; Paper 1 retitled to Journal of Theoretical Biology with
+  live-verified portal links (sciencedirect home, guide-for-authors,
+  submit.elsevier.com/JTB, editorialmanager.com/JTB, aims-and-scope)
+  + scope-fit blockquote + BMB fallback links; package rows retargeted
+  to v18 files + jtb zip + highlights row; checklist updated (JTB
+  requirements resolved; only the EM account remains).
+- Worklog for this round appended (this entry); commit + push next.
+
+Stage Summary:
+- Remaining points from 4776f2d/74934d0: NONE worth implementing --
+  everything merited is already in v17; Line VI stays deferred
+  (follow-up paper), Part C stays refused, A4 superseded.
+- journal_manuscript_v18.tex (38 pp) = v17 + full JTB alignment
+  (abstract 249 <= 250; keywords 7; CRediT; venue-neutral refs), every
+  v17 number unchanged (audit_v26 347/347).
+- JTB package complete: submission_main_jtb.zip + the required
+  highlights_jtb.docx + cover_letter_jtb.md (Regular Article) +
+  links doc; only the Editorial Manager account/upload remains.
+- Pushed: 2dd0ab0 (V17) at round start; the v18 commit pushed at
+  round end (PAT one-off URL, never stored).
