@@ -1,0 +1,125 @@
+\subsection{The chemical coordinates of the walls}\label{sec:walls}
+
+Where, chemically, does the curvature mass sit? The eleven
+boundary-crossing sweeps of \S\ref{sec:m1} answer directly: each
+sweep's per-reaction curvature masses, normalized by that sweep's
+own total, aggregate to a per-reaction distribution over the
+network, and the distribution is strikingly concentrated. Fifty
+reactions --- $1.8\%$ of the network --- carry $85.9\%$ of all
+curvature mass, and twenty-three of the twenty-five heaviest
+reactions participate in every one of the eleven sweeps. The
+heaviest are the enzymes of central carbon metabolism:
+glucose-6-phosphate isomerase ($3.7\%$ of all mass), ATP synthase
+($3.5\%$), phosphofructokinase and fructose-bisphosphate aldolase
+($3.3\%$ each), and the pentose-phosphate entry block
+(glucose-6-phosphate dehydrogenase,
+6-phosphogluconolactonase, phosphogluconate dehydrogenase; $3.2\%$
+each).
+
+Rolling the per-reaction mass up to the metabolites those
+reactions share gives the wall coordinates of
+Table~\ref{tab:walls}: the forks of central carbon. The
+hexose-phosphate pool, the triose-phosphate pool, the PEP/pyruvate
+energy fork, the anaplerotic TCA forks, and coenzyme A are the
+heaviest coordinates; together the top twenty branch metabolites
+carry $59.7\%$ of the total mass. Including the energy and redox
+currency layer (ATP, NAD(P)(H), ubiquinone, protons) brings
+branch- and currency-adjacent reactions to $98.6\%$ of the mass.
+The geometry of rerouting lives, almost entirely, at the chemical
+coupling layer --- exactly where one metabolite feeds several
+enzymes.
+
+Two honesty notes bound the claim. First, the reaction-level
+enrichment is a concentration effect, not a distributional shift:
+$46.3\%$ of reactions are branch-adjacent and carry $60.9\%$ of
+the mass (permutation $p = 0.017$; under a tighter branch-degree
+threshold, $28.1\%$ of reactions carry $50.6\%$, $p = 0.002$),
+while the rank AUC is $\sim 0.5$ --- branch degree alone does not
+predict a reaction's mass. The strong statement is the
+concentration one: the mass that exists attaches to branch
+chemistry, and a handful of forks carry most of it. Second, of the
+fifty heaviest reactions, $56\%$ are branch-adjacent against the
+$46.3\%$ baseline: the concentration is on central branch-point
+chemistry, not on branching as such.
+
+\begin{table}[t]
+\centering
+\caption{Wall coordinates: the ten branch metabolites carrying the
+most curvature mass over the eleven boundary-crossing M1 sweeps
+(each sweep normalized by its own total mass; each reaction's mass
+split over the branch metabolites it connects). The full top-twenty
+list carries $59.7\%$ of all curvature mass. Degree is the number
+of reactions the metabolite participates in.}
+\label{tab:walls}
+\small
+\begin{tabular}{llrl}
+\toprule
+metabolite & role & degree & mass share \\
+\midrule
+fructose-6-phosphate & carbon branch point & 18 & $8.1\%$ \\
+glyceraldehyde-3-phosphate & carbon branch point & 15 & $6.9\%$ \\
+glucose-6-phosphate & carbon branch point & 14 & $5.5\%$ \\
+dihydroxyacetone phosphate & carbon branch point & 16 & $4.9\%$ \\
+phosphoenolpyruvate & carbon branch point & 34 & $4.5\%$ \\
+2-oxoglutarate & nitrogen branch point & 30 & $3.6\%$ \\
+pyruvate & carbon branch point & 72 & $3.6\%$ \\
+coenzyme A & acyl-transfer hub & 80 & $3.6\%$ \\
+oxaloacetate & carbon branch point & 13 & $2.1\%$ \\
+succinate & carbon branch point & 28 & $2.1\%$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The table converts the discrete measure into a wet-lab observable:
+targeted metabolomics of roughly twenty pools during a nutrient
+transition is a direct experimental readout of the theory's
+central object. The prediction is developed in
+\S\ref{sec:memory}, where the same pools reappear as the candidate
+substrate of metabolic memory.
+
+\subsection{A conserved interior architecture}\label{sec:interior}
+
+A natural expectation is that the walls sit at the network's
+boundary with its environment --- at the exchange and transport
+reactions, where nutrients enter and leave. The sweeps say
+otherwise. Exchange reactions are $12.4\%$ of the network but
+carry $3.9\%$ of the curvature mass, and $92.6\%$ of them stay
+flat across every sweep; transport reactions are $32.7\%$ and
+carry $20.7\%$ ($90.4\%$ flat); internal reactions are $54.9\%$ of
+the network and carry $75.4\%$ of the mass ($74.3\%$ flat;
+permutation $p = 0.0012$). The interface with the environment is
+flat; the walls sit on internal chemistry. The split is stable
+across sweep families --- nutrient sweeps place $74.1\%$ of the
+mass on internal reactions, enzyme-knockdown sweeps $75.7\%$ --- so
+it is not an artifact of perturbing uptake bounds rather than
+internal capacities.
+
+The subsystem rollup names the walls: glycolysis and
+gluconeogenesis ($23.4\%$ of all curvature mass), the pentose
+phosphate pathway ($19.7\%$), the citric acid cycle ($13.9\%$),
+oxidative phosphorylation ($11.6\%$), and anaplerosis ($4.7\%$)
+--- $73.3\%$ of the mass in five central subsystems, with
+branch-point chemistry carrying $74.4\%$ of the internal mass.
+The iJO1366 glucose sweep completes the picture from the other
+side: its total second-difference mass is $6.5 \times 10^{-9}$
+across all $2{,}583$ reactions --- an entire trajectory traversing
+a single chamber, every kink an anchor corner of the trajectory
+design --- while its active-reaction support moves between $421$
+and $440$ reactions, bracketing the endpoint census of $438$
+(\S\ref{sec:e22}).
+
+The architectural reading inverts the interface picture. The walls
+of the flux geometry sit at the conserved, internal, branch-point
+chemistry of central carbon metabolism; the exchange interface is
+flat. The species-specific layer is then not the wall chemistry
+--- the forks of central carbon are shared across biology --- but
+its regulon curation (\S\ref{sec:anatomy}): which regulators price
+crossings of the same walls. This offers a mechanism for a
+familiar observation, the deep conservation of central branch
+chemistry alongside the divergence of its transcriptional wiring:
+the chemistry is where the geometry has to be; the regulation is
+how each species prices crossings of it. A cross-species
+prediction follows, partially checkable with the machinery
+already deposited: the branch-metabolite concentration of
+curvature mass should be conserved across reconstructions, while
+the regulon membership of the same wall-adjacent genes diverges.

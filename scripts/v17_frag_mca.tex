@@ -1,0 +1,37 @@
+\subsection{Relation to metabolic control analysis}\label{sec:mca}
+
+Metabolic control analysis \citep{kacser1973, heinrich1974} asks a
+sister question with different machinery: how much does a
+steady state move when one enzyme's kinetics change? Its answers
+--- flux and concentration control coefficients, elasticity
+coefficients --- are \emph{local smooth sensitivities}: first
+derivatives at a single stable steady state of a kinetic model,
+defined exactly where the response is differentiable. The objects
+of this paper are their complements. $\kmu$ is a global,
+path-integrated, second-order measure concentrated precisely where
+differentiability fails --- on active-set boundaries --- and it
+needs only stoichiometry and bounds, not kinetic parameters. The
+two frameworks meet in the middle of the resolution window: the
+$\sigma$-smoothed curvature densities of Theorem~\ref{thm:Bprime}
+are the regime in which smooth sensitivity language is valid, and
+there the averaged discrete measure plays the role that control
+analysis assigns to smooth response coefficients. Outside the
+window --- at a wall --- the steady state is not unique or the
+response is kinked, control coefficients are undefined, and the
+discrete measure is exactly at home.
+
+The structural analogies are exact enough to be worth naming. The
+flux-control summation theorem ($\sum_i C_i = 1$) says that the
+system-level view sees a fixed contraction of the enzyme layer;
+the coupling identity $D^2\Phi = \sum_r c_r\,D^2 v^*_r$
+(Theorem~\ref{thm:coupling}) is the parametric-LP form of the same
+statement, and the invisible events of
+Theorem~\ref{thm:coupling}(i) are the degenerate faces where a
+control coefficient would have to divide its response among
+infinitely many co-optimal states. The empirical dissociation adds
+a sharper point: control analysis lives at the enzyme level ---
+kinetic parameters set the response --- whereas the transcriptional
+association here lives on rerouting geometry that the protein
+layer does not carry (\S\ref{sec:e27}). Regulation tracks the
+geometry of the option set, not the kinetic magnitudes of the
+enzymes that implement it.

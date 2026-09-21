@@ -1,0 +1,33 @@
+Constraint-based models such as flux balance analysis (FBA) predict cellular
+metabolic states by solving linear optimization problems. When
+nutrients or enzyme capacities vary continuously, optimal fluxes do
+not change smoothly but follow piecewise-linear trajectories, changing slope
+abruptly at bottlenecks. Here we show that the response's true
+``curvature'' is not an ordinary function but a
+discrete measure concentrated on the boundary interfaces where active
+constraints switch. Path-dependent memory (holonomy) scales linearly with
+perturbation size (slope $1.00$; smooth systems quadratic), and
+$93.4$--$100.0\%$ of second-order adjustment concentrates at discrete
+bottleneck transitions. These switches bridge to smooth
+geometry: under refinement they converge weakly to
+curvature densities and strongly in $L^1$, but total variation
+fails to converge generically, defining the resolution window ($h \ll
+\sigma \ll L_{\mathrm{var}}$).
+
+Integrating this measure along physiological paths yields a
+parameter-free gene sensitivity metric, $\kmu$: each enzyme's
+rerouting burden. In carbon-starved \emph{E.~coli}, $\kmu$
+predicts transcriptional induction in $424$ genes
+($r = +0.395$, $p = 2.6 \times 10^{-17}$),
+robust across tie-breaking rules and stress axes. Induced
+genes sit in operons of the global carbon and energy regulons;
+the rerouting mass concentrates on the fork metabolites of
+central carbon. The association vanishes at the protein layer
+($r = -0.083$, $366$ genes, matched proteomics):
+cells transcribe standby capacity for rerouting, buffering protein
+synthesis, so cyclic-perturbation memory ($66\%$ non-reverting)
+must live in fast post-translational state.
+Double-knockout epistasis mirrors active-set boundary overlaps
+($\rho_S = 0.865$). Our framework unites linear programming,
+discrete geometry, and transcriptional regulation into an
+accessible, predictive foundation for metabolic systems biology.

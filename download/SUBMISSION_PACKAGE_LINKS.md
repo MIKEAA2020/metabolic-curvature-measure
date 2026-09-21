@@ -1,10 +1,60 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-18 (universal Gemini-adoption round + v19 package
-round: journal_manuscript_v16 + companion_categorical_v10). All repository links follow
+Generated 2026-09-21 (V17 enrichment + venue-evaluation round + v20
+package round: journal_manuscript_v17 + companion_categorical_v10). All repository links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-21, V17 enrichment round + venue-evaluation
+round + v20 package round): the committed V17 revision plan
+(download/V17_Revision_Plan.md, commit 4776f2d) and its computed
+insight ledger (download/v17_insight_substantiation.json +
+download/V17_Insight_Development.md, commit 74934d0) were implemented
+on a NEW versioned file -- scripts/journal_manuscript_v17.tex (from
+v16, v16 untouched) + journal_manuscript_v17_bmb_refs.tex (27 -> 29
+entries: kacser1973 + heinrich1974) + journal_manuscript_v17_refs.bib.
+ADDED CONTENT (all in the paper's humanized Gemini register, every
+number from the deposited ledger): Sec. 2 "A worked example" (three
+chambers, two walls, one growth-silent; machine-verified by
+scripts/v17_worked_example_verify.py, 16/16, deposited as
+download/v17_worked_example_verification.json); Sec. 4 "The chemical
+coordinates of the walls" (Table tab:walls: the twenty branch
+metabolites carrying 59.7% of curvature mass) + "A conserved interior
+architecture" (the revised Line-V claim: walls on internal
+branch-point chemistry, flat exchange interface) + "Construction
+order as a design variable" (the order rule with its honest null);
+Sec. 5 "Anatomy of one switch" (Table tab:regulons: eleven enriched
+regulons led by CRP q = 8.6e-16; operon granularity with the GPR
+disjoint-reaction control; the growth-silent partition 0/433 on all
+three paths); Discussion "Relation to metabolic control analysis"
+(Kacser-Burns / Heinrich-Rapoport) + "Where metabolic memory lives"
+(the memory-substrate deduction); the abstract rebuilt with the
+bio-anchoring sentences at 254 words under the 255 cap; Limitations
+item 8 (enrichment and prediction provenance); Methods enrichment
+protocols. VENUE EVALUATION delivered per the author question "can
+we resubmit to BMB?": download/V17_Venue_Evaluation.md -- verdict:
+BMB resubmission mechanically possible but not advisable as a blind
+new submission (desk verdict was a fit judgment; pre-submission
+inquiry draft included in the memo); primary recommendation JTB
+(regulatory-FBA lineage, Covert-Schilling-Palsson JTB 213:73
+precedent; cover_letter_jtb.md written); PLOS Comp Bio the
+biology-maximizing alternative (Machado 2014 genre precedent, APC ~
+US$2.5k); companion/TAC unaffected. VERIFIED: audit_v25_numbers.py
+(make_audit_v25.py from audit_v24, retargeted to v17) 344/344 PASS
+(301 carried + 43 new V17 checks); pattern_sweep_v16 16/16 clean;
+verify_v17_completeness.py ALL COMPLETE (removed tokens exactly the
+abstract's partial-r re-quote and the two 301 audit counts; added
+tokens confined to the v17 fragments; +9 labels; +2 tables; +7
+subsections; refs +2); tectonic main 38 pp / companion 76 pp, 0
+errors / 0 undefined / 0 '??'; VLM CLEAN on all 12 new-content
+pages (pp. 8-9, 12-18, 23-25); v20 ZIPs
+(build_submission_zips_v20.sh) with fresh-dir standalone compiles
+re-verified (38/76 pp); download copies and ZIP contents
+byte-identical to scripts; BMB cover letter rewritten as the
+transparent resubmission-aware version (prior desk decision flagged
+in sentence one, point-by-point response, 344-check audit line);
+JTB cover letter written; this checklist updated.
 
 Revision note (2026-09-18, universal Gemini-adoption round + v19
 package round + TAC editor change): the author directive to
@@ -784,9 +834,20 @@ undefined / 0 overfull.
 
 ## Paper 1 (Main) — Bulletin of Mathematical Biology
 
-**Title:** A Measure-Theoretic Discrete Curvature Framework for Metabolic Gene
-Sensitivity: From Active-Set Geometry to Transcriptional Response
-(Original Research Article; 29 pp; subscription route — no author charges).
+**Title:** A Geometric Theory of Metabolic Flux Rerouting: How
+Active-Set Curvature Predicts Transcriptional Regulation and
+Protein-Layer Buffering (Original Research Article; 38 pp).
+
+**Venue status (2026-09-21):** BMB desk-rejected the earlier
+version ("biological impact and implications not sufficiently
+strong for our readership"). The V17 enrichment addresses that
+verdict with computed, named-biology substance. Recommendation in
+download/V17_Venue_Evaluation.md: **JTB primary** (cover letter
+download/cover_letter_jtb.md); **BMB only via pre-submission
+inquiry** (draft inside the memo; the resubmission-aware BMB
+letter is download/cover_letter_bmb.md); **PLOS Comp Bio** the
+biology-maximizing alternative (APC). The package below is
+venue-neutral and compiles identically for all three.
 
 
 ### Journal / submission-portal links (all verified)
@@ -809,12 +870,14 @@ Sensitivity: From Active-Set Geometry to Transcriptional Response
 
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
-| **One-file upload ZIP (compile-ready)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
-| Manuscript PDF (33 pp, full proofs in appendices, declarations in backmatter; universal verbatim adoption of Gemini's rewrite -- abstract rebuilt on Gemini's own abstract at the 255-word cap opening with Gemini's first sentence, Gemini's title and keywords, intro narrative, five-findings claim list, section narratives, Discussion in Gemini's three subsections; clickable email and ORCID; prior versions retained as separate files) | [download/journal_manuscript_v16.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v15.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v15.pdf) |
-| Cover letter (with declarations, companion disclosure) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
-| LaTeX source | [scripts/journal_manuscript_v16.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v16.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v16.tex) |
-| Reference list (BMB alphabetical, 27 entries) | [scripts/journal_manuscript_v16_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v16_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v16_bmb_refs.tex) |
-| BibTeX database | [scripts/journal_manuscript_v16_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v16_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v16_refs.bib) |
+| **One-file upload ZIP (compile-ready, venue-neutral)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
+| Venue evaluation (BMB resubmission analysis + recommendation + pre-submission inquiry draft) | [download/V17_Venue_Evaluation.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/V17_Venue_Evaluation.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/V17_Venue_Evaluation.md) |
+| Manuscript PDF (38 pp, full proofs in appendices, declarations in backmatter; v17 enrichment round on the Gemini-register base: worked example, wall coordinates, interior architecture, construction-order rule, anatomy of one switch, MCA comparison, memory-substrate deduction; abstract bio-anchored at the 254-word cap; clickable email and ORCID; prior versions retained as separate files) | [download/journal_manuscript_v17.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v17.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v17.pdf) |
+| Cover letter -- JTB (primary recommendation; declarations, companion disclosure) | [download/cover_letter_jtb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_jtb.md) |
+| Cover letter -- BMB resubmission-aware version (prior desk decision flagged) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
+| LaTeX source | [scripts/journal_manuscript_v17.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v17.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v17.tex) |
+| Reference list (alphabetical, 29 entries -- kacser1973 + heinrich1974 added) | [scripts/journal_manuscript_v17_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v17_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v17_bmb_refs.tex) |
+| BibTeX database | [scripts/journal_manuscript_v17_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v17_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v17_refs.bib) |
 | Reference-list generator (audit-checked) | [scripts/build_bmb_refs.py](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/build_bmb_refs.py) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/build_bmb_refs.py) |
 
 Figures (embedded in the PDF; source PNGs if the portal requests separate files):
@@ -831,8 +894,8 @@ Figures (embedded in the PDF; source PNGs if the portal requests separate files)
 Build note: for Overleaf or any standalone compiler, upload **the ZIP** (it
 contains the .tex, the input'ed reference list, the .bib database, and all
 six figures at the exact relative subpaths the .tex expects — verified to
-compile standalone, 30 pp, 0 errors). If instead you upload individual
-files, upload them together with `journal_manuscript_v16_bmb_refs.tex` and
+compile standalone, 38 pp, 0 errors). If instead you upload individual
+files, upload them together with `journal_manuscript_v17_bmb_refs.tex` and
 the three figure subfolders (`m1_m3/`, `alexandrov_bridge/`,
 `association_robustness/`) so the paths resolve; the .tex searches both the
 upload directory and the repository layout
@@ -927,8 +990,10 @@ references, or strawman constructions in either paper; audit_v23 301/301
 PASS against journal_manuscript_v16.tex + companion_categorical_v10.tex;
 no-fee venue for both.
 
-Remaining at submission time: register/log in at the BMB Editorial
-Manager portal. Resolved this round: the cover-letter dates are filled
+Remaining at submission time: the author's venue decision (JTB vs
+PLOS Comp Bio vs the BMB pre-submission inquiry path), then the
+portal account (Editorial Manager bmab for BMB, Elsevier EM for JTB,
+or PLOS Submission System). Resolved this round: the cover-letter dates are filled
 (September 17, 2026, both letters) and the TAC receiving board member
 is selected -- Prof. Michael Shulman (University of San Diego), Transmitting
 Editor, with the submission emailed to her and copied to tac@mta.ca

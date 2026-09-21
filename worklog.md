@@ -7556,3 +7556,76 @@ Stage Summary:
   defensible for bio-first framing; JTB/Math Biosciences remain fully
   adequate. v17 build awaits the author's venue pick + green light;
   then Part D pipeline (audit_v25 etc.) on a new versioned file.
+
+---
+Task ID: v17-enrichment-round
+Agent: main (Super Z)
+Task: User 3-part directive: (1) implement the committed V17 revision plan
+(4776f2d) + insight substantiation (74934d0) as a new version, (2) ensure
+the implementations follow the humanized/Gemini register and flow
+seamlessly, (3) evaluate best journal fit and whether resubmission to BMB
+is possible after the desk rejection.
+
+Work Log:
+- Surveyed both commits in full (V17_Revision_Plan.md Parts A-D +
+  V17_Insight_Development.md six lines); extracted every number from
+  download/v17_insight_substantiation.json for the audit discipline.
+- Designed and machine-verified the A3 worked example
+  (scripts/v17_worked_example_verify.py, 16/16 PASS deposited as
+  download/v17_worked_example_verification.json): two-pathway switch
+  network, three chambers, two walls; atomic measure as point deltas;
+  coupling identity by hand; kappa(g1)=1 vs kappa(g2)=2; the a=b
+  degenerate variant (growth-silent wall, tie-break moves the kink).
+  Two solver bugs caught and fixed during verification (stage-3 growth
+  constraint sign; wrong objective-variable mapping).
+- Built journal_manuscript_v17.tex from v16 via
+  scripts/v17_enrichment_patch.py (anchored splices, v16 untouched) +
+  journal_manuscript_v17_bmb_refs.tex (27 -> 29 entries: kacser1973,
+  heinrich1974) + journal_manuscript_v17_refs.bib. New content, all in
+  the paper's Gemini register: Sec 2 "A worked example"; Sec 4 "The
+  chemical coordinates of the walls" (Table tab:walls), "A conserved
+  interior architecture", "Construction order as a design variable";
+  Sec 5 "Anatomy of one switch" (Table tab:regulons); Discussion
+  "Relation to metabolic control analysis" + "Where metabolic memory
+  lives"; abstract bio-anchored at 254 words under the 255 cap;
+  intro plan paragraph updated; Limitations item 8; Methods enrichment
+  protocols.
+- Ledger corrections against the dev doc caught by the audit: TCA
+  14.0% -> 13.9% (JSON 0.13946), top-25 sweep participation 21 -> 23
+  (JSON ground truth), both fixed in the manuscript.
+- VERIFIED: audit_v25_numbers.py (make_audit_v25.py, retargeted to v17,
+  43 new V17 checks) 344/344 PASS; pattern_sweep_v16 16/16 clean;
+  verify_v17_completeness.py ALL COMPLETE (removed = exactly the
+  abstract partial-r re-quote + two 301 counts; added confined to the
+  fragments; +9 labels, +2 tables, +7 subsections, refs +2; 2,199 v16
+  body lines preserved verbatim); tectonic main 38 pp 0 errors /
+  0 undefined; VLM CLEAN on all 12 new-content pages (8-9, 12-18,
+  23-25); one 37pt overfull caught and fixed (walls paragraph
+  parentheticals).
+- VENUE EVALUATION (download/V17_Venue_Evaluation.md, web-verified):
+  BMB resubmission mechanically possible but NOT advisable as a blind
+  new submission (desk verdict was a fit judgment; desk will recognize
+  the paper; v17 makes the paper more biological on the same math
+  chassis); professional path = pre-submission inquiry (ready-to-send
+  draft included); primary recommendation JTB (regulatory-FBA lineage:
+  Covert-Schilling-Palsson JTB 213:73-88, 2001; no APC; cover letter
+  written: download/cover_letter_jtb.md); PLOS Comp Bio the bio-first
+  alternative (Machado 2014 genre precedent; APC ~ US$2.5k); Math
+  Biosciences zero-risk backup; companion/TAC unaffected.
+- Packages: v20 ZIPs (build_submission_zips_v20.sh from make_zips_v20.py)
+  with fresh-dir standalone compiles re-verified 38/76 pp; download
+  copies byte-identical; BMB cover letter rewritten as the
+  resubmission-aware version (prior desk decision flagged in sentence
+  one, point-by-point response, 344-check audit line); links doc
+  updated (newest-first v17 note, package rows retargeted, stale v15
+  raw links repaired, venue-status header).
+
+Stage Summary:
+- journal_manuscript_v17.tex (38 pp) = v16 + the full V17 plan
+  (A1 anatomy, A2 MCA, A3 worked example, A4/Line-III elevation, Lines
+  I/II/IV/V integrated; Line VI correctly excluded per plan), all in
+  the humanized register, every number audited (344/344).
+- Venue answer: BMB resubmission = pre-submission inquiry first, not a
+  blind resubmit; JTB primary; PLOS CB bio-first alternative.
+- Push pending: no PAT in this session (policy: never stored); commit
+  is local-ready, push on PAT receipt.

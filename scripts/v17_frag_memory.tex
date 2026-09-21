@@ -1,0 +1,35 @@
+\subsection{Where metabolic memory lives}\label{sec:memory}
+
+Two established results, put side by side, force a structural
+conclusion. First, $66\%$ of closed genotype cycles retain
+flux-state drift after full restoration (\S\ref{sec:computational}):
+the flux state after an $A \to AB \to B \to A$ cycle is not the
+initial state, with a median residual drift of $\sim 110$ $\ell_1$
+units. Second, the protein layer does not carry the association:
+protein fold change explains at most $0.7\%$ of the curvature
+variance ($r = -0.083$, $R^2 = 0.007$, $n = 366$;
+\S\ref{sec:e27}), while transcripts on the same genes carry $r =
++0.420$; under the locked $\kmu$ metric the picture is unchanged
+(protein $r = -0.098$, $p = 0.06$; transcript $r = +0.339$). A
+state difference of median size $110$ cannot be stored
+in a layer that moves by less than one percent of the signal:
+enzyme abundance is quantitatively excluded as the carrier of
+metabolic hysteresis. Transcripts carry the association but are
+instructions, not state --- the menu, not the meal. The persistent
+state variable must therefore be fast and post-translational:
+metabolite pools and their modification states.
+
+This deduction tells the wet-lab investigator where not to look
+(enzyme titers) and where to look. \citet{kochanowski2013}
+document metabolite-level passive coordination on precisely this
+class of timescales, and the wall coordinates of
+\S\ref{sec:walls} name the candidate pools: the
+F6P/GAP/PEP forks that carry most of the curvature mass. A
+testable prediction follows. In public metabolomics time series
+across nutrient transitions, branch-metabolite pools should show
+slope kinks at wall crossings while dedicated-metabolite pools
+respond smoothly; and the same pools, not dedicated ones, should
+carry the non-reverting offset after a restoration cycle. The
+branch-metabolite table is thus the shared substrate of two of
+this paper's claims --- the chemical coordinates of the walls and
+the carrier of their memory.

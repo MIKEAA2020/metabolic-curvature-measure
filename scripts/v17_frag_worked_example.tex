@@ -1,0 +1,85 @@
+\subsection{A worked example}\label{sec:example}
+
+Every object of this section can be built by hand on a network
+small enough to check line by line. Take one internal metabolite
+pool, an import reaction $v_0$ whose upper bound is the parameter
+$\theta$ (the external substrate supply), and two pathways out of
+the pool: a high-yield pathway $v_1$ limited by an enzyme capacity
+$c$, and a low-yield pathway $v_2$ limited by a capacity $d$. The
+stoichiometric balance is $v_0 = v_1 + v_2$, and growth is
+$\Phi = a\,v_1 + b\,v_2$ with $a > b$: the first pathway converts
+each unit of substrate to more biomass than the second. We sweep
+$\theta$ upward --- a progressive nutrient repletion --- and watch
+the optimal flux map $v^*(\theta)$ and the value function
+$\Phi(\theta)$.
+
+Because the high-yield pathway is worth more per unit, the optimum
+fills $v_1$ first, and the parameter axis splits into three
+chambers:
+\begin{center}
+\small
+\begin{tabular}{lcccl}
+\toprule
+phase & $v_0$ & $v_1$ & $v_2$ & binding constraints \\
+\midrule
+I: $\theta \le c$ & $\theta$ & $\theta$ & $0$ & import bound \\
+II: $c < \theta \le c + d$ & $\theta$ & $c$ & $\theta - c$ & import, $v_1$ capacity \\
+III: $\theta > c + d$ & $c + d$ & $c$ & $d$ & both capacities \\
+\bottomrule
+\end{tabular}
+\end{center}
+The fluxes are continuous in $\theta$ everywhere; their slopes are
+not. At $\theta = c$ the capacity of the high-yield pathway binds
+and the network crosses its first wall: $v_1$ flattens (slope $1
+\to 0$) while $v_2$ opens ($0 \to 1$) to carry the overflow. At
+$\theta = c + d$ the import bound stops binding --- the network is
+saturated downstream --- and $v_0$ flattens. These are exactly the
+codimension-one boundary crossings of Definition~\ref{def:mu}: the
+atomic measure of $v_1$ carries a point mass $-\delta_{c}$, that of
+$v_2$ carries $\delta_c - \delta_{c+d}$, and that of $v_0$ carries
+$-\delta_{c+d}$. The curvature is not spread over the sweep; it
+sits at the two walls, as point masses with exactly computable
+weights.
+
+The value function is $\Phi(\theta) = a\theta$, then $ac + b(\theta
+- c)$, then the constant $ac + bd$; its measure is $D^2\Phi = (b -
+a)\,\delta_c - b\,\delta_{c+d}$. The coupling identity of
+Theorem~\ref{thm:coupling} checks by arithmetic: at the first
+wall, $a\,\Delta v_1' + b\,\Delta v_2' = a(-1) + b(+1) = b - a$;
+at the second, $a\,(0) + b\,(-1) = -b$, the import reaction having
+objective coefficient zero. The objective value sees each wall
+exactly as the weighted sum of the flux-layer jumps --- the
+contraction made visible, on a network small enough to check by
+hand.
+
+The gene metric is equally explicit. If gene $g_1$ catalyzes $v_1$
+and gene $g_2$ catalyzes $v_2$, integrating along the sweep gives
+$\kmu(g_1) = 1$ and $\kmu(g_2) = 2$ (up to the common $1/T$
+normalization of Definition~\ref{def:kmu}). The low-yield pathway
+is crossed by both walls --- it opens at the first and closes at
+the second --- so it carries twice the rerouting burden of the
+high-yield pathway. The bypass, not the main road, is where the
+geometry accumulates.
+
+One further substitution sharpens the story. Set $a = b$: the two
+pathways now yield identical growth, and the first wall becomes
+\emph{objective-invisible}. Every split $v_1 + v_2 = v_0$ with $v_1
+\le c$ attains the same $\Phi$, the optimal face is a segment, and
+$\Phi(\theta) = a\min(\theta, c + d)$ has no kink at $\theta = c$
+at all --- the contraction $a(-1) + a(+1) = 0$ annihilates exactly
+this wall, while the flux layer must still choose a vertex. Which
+vertex it chooses is the declared tie-break: a stage-3 rule
+preferring $v_1$ keeps the kink in $v_1$ at $\theta = c$; a rule
+preferring $v_2$ moves the flux-layer kink to $\theta = d$. The
+wall structure --- where the degeneracy lives --- is
+selection-free; the assignment of the kink to a reaction at a
+degenerate face is not. This is, in miniature, why the
+lexicographic tie-break is declared as part of the metric
+(Remark~\ref{rem:lock}), why the value layer is the canonical
+tie-break-free carrier (Proposition~\ref{prop:alex}), and why the
+genome-scale rank stability under alternative selections
+(\S\ref{sec:v8}) is a measured property of the network rather than
+a triviality. Machine verification of every number above --- phase
+formulas, slope jumps, the coupling identity, the $\kmu$ values,
+and both tie-break variants, by LP re-solves at wall-straddling
+parameter values --- is deposited with the artifacts.

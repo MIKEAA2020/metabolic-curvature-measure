@@ -1,0 +1,37 @@
+\subsection{Construction order as a design variable}\label{sec:order}
+
+The path dependence above has a practical reading. If the same
+final genotype can be reached by different orders of introduction,
+and the orders do not commute, then which order to choose is a
+design decision --- in strain construction, in directed evolution,
+in any protocol that builds a genotype in stages. The
+double-mutant panels quantify it. Among non-synthetic-lethal
+pairs, the 90th-percentile endpoint separation between the two
+construction orders is $101.3$ in $\ell_1$ flux units, against a
+wild-type total flux magnitude of $770$: the same final genotype
+can sit roughly $13\%$ of total flux magnitude away from the other
+order's state.
+
+Is the better order predictable in advance? Yes --- from a
+quantity the singles panel already computes. For each of the $66$
+non-degenerate closed loops, let $P$ be the normalized difference
+in single-knockout curvature between the two genes (which knockout
+crosses more wall mass), and $A$ the normalized asymmetry in
+terminal drift between the two excursion orders. They track each
+other: Spearman $\rho = 0.442$ ($p = 2.0 \times 10^{-4}$), with
+sign agreement in $59$ of $66$ pairs (binomial $p = 2.4 \times
+10^{-11}$). The gene whose knockout crosses more wall mass sets
+the loop's irreversibility when it leads the excursion. The
+planning rule is one line: schedule deep wall-crossers last to
+minimize terminal drift --- the right choice when intermediate
+states must remain recoverable --- or first to lock the endpoint
+away from the initial state, when a production phenotype should
+persist.
+
+An honest null sharpens what the rule is not. Order asymmetry is
+not predicted by active-set footprint overlap ($\rho = 0.07$,
+$p = 0.38$, against the same Jaccard index that tracks epistasis
+magnitude at $\rho_S = 0.865$): epistasis alignment and order
+ranking are governed by different geometric quantities ---
+overlap versus mass --- and the machinery for either is a single
+LP per candidate gene, already a byproduct of the singles panel.

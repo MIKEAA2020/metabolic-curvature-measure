@@ -1,0 +1,102 @@
+{
+ "n_pass": 16,
+ "n_fail": 0,
+ "checks": [
+  {
+   "name": "A-phase",
+   "claim": "phase formulas on 12 sample thetas",
+   "value": "max err 0.00e+00",
+   "status": "PASS"
+  },
+  {
+   "name": "B-jump-v1-at-1.0",
+   "claim": "slope jump -1",
+   "value": "-1.000000",
+   "status": "PASS"
+  },
+  {
+   "name": "B-jump-v2-at-1.0",
+   "claim": "slope jump +1",
+   "value": "+1.000000",
+   "status": "PASS"
+  },
+  {
+   "name": "B-jump-v2-at-3.0",
+   "claim": "slope jump -1",
+   "value": "-1.000000",
+   "status": "PASS"
+  },
+  {
+   "name": "B-jump-v0-at-3.0",
+   "claim": "slope jump -1",
+   "value": "-1.000000",
+   "status": "PASS"
+  },
+  {
+   "name": "B-jump-Phi-at-1.0",
+   "claim": "Phi slope jump -1",
+   "value": "-1.000000",
+   "status": "PASS"
+  },
+  {
+   "name": "B-jump-Phi-at-3.0",
+   "claim": "Phi slope jump -1",
+   "value": "-1.000000",
+   "status": "PASS"
+  },
+  {
+   "name": "C-coupling-1.0",
+   "claim": "D2 Phi = sum c_r D2 v_r (2nd difference)",
+   "value": "lhs -1.00e-06 rhs -1.00e-06",
+   "status": "PASS"
+  },
+  {
+   "name": "C-coupling-3.0",
+   "claim": "D2 Phi = sum c_r D2 v_r (2nd difference)",
+   "value": "lhs -1.00e-06 rhs -1.00e-06",
+   "status": "PASS"
+  },
+  {
+   "name": "D-kappa-g1",
+   "claim": "kappa(g1) = 1",
+   "value": "1.000000",
+   "status": "PASS"
+  },
+  {
+   "name": "D-kappa-g2",
+   "claim": "kappa(g2) = 2",
+   "value": "2.000000",
+   "status": "PASS"
+  },
+  {
+   "name": "E-silent-wall",
+   "claim": "a=b: Phi has no kink at theta=c",
+   "value": "jump -2.22e-10",
+   "status": "PASS"
+  },
+  {
+   "name": "E-visible-wall",
+   "claim": "a=b: Phi slope jumps 2 -> 0 at theta=3",
+   "value": "jump -2.000000",
+   "status": "PASS"
+  },
+  {
+   "name": "E-flux-kink-stays",
+   "claim": "v1-first tie-break: v1 kinks at theta=c",
+   "value": "jump -1.000000",
+   "status": "PASS"
+  },
+  {
+   "name": "E-kink-moves",
+   "claim": "v2-first tie-break: v2 kinks at theta=d=2",
+   "value": "jump -1.000000",
+   "status": "PASS"
+  },
+  {
+   "name": "E-kink-moves-v1",
+   "claim": "v2-first tie-break: v1 activates at theta=d",
+   "value": "jump +1.000000",
+   "status": "PASS"
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+\subsection{Anatomy of one switch}\label{sec:anatomy}
+
+The association of \S\ref{sec:v5} is statistical; this subsection
+opens it up and names its parts. The switch is carbon depletion
+itself --- the progressive glucose decline of the reference
+trajectory --- and its anatomy has three layers, each computable
+from the deposited artifacts.
+
+\emph{Which chemistry reroutes.} The curvature mass of the sweeps
+concentrates on the forks of central carbon
+(\S\ref{sec:walls}), and the reactions carrying the largest mass
+are the enzymes of those forks: glucose-6-phosphate isomerase,
+phosphofructokinase, fructose-bisphosphate aldolase, and the
+pentose-phosphate entry block. The hexose-phosphate pool, the
+triose-phosphate pool, the PEP/pyruvate fork, and the anaplerotic
+TCA forks are where the rerouting of carbon depletion physically
+happens.
+
+\emph{Which regulons the genes belong to.} Partitioning the panel
+by $\kmu$ quartile and testing the top quartile ($110$ of the
+$424$ nonzero-$\kmu$ genes) for enrichment against the PRECISE
+transcriptional-regulatory annotations \citep{sastry2019}, with
+the panel as background, gives a precise answer
+(Table~\ref{tab:regulons}): the global carbon and energy regulons.
+CRP targets are enriched $2.4$-fold, with $56$ of the $89$ CRP
+panel targets in the top quartile (Benjamini--Hochberg $q = 8.6
+\times 10^{-16}$); Cra, Fur, Fnr, RpoS, Fis, ArcA, NarL, IHF,
+RpoD, and NagC follow; eleven regulons survive control at $q <
+0.10$. The enrichment is induction-specific. CRP's activation
+targets carry high curvature (median $\kmu$ $0.64$ against $0.02$
+for the rest of the panel; Mann--Whitney $p = 0.0016$), while its
+repression targets do not ($p = 0.43$): induction prices the
+option set; repression does not track the geometry.
+
+\begin{table}[t]
+\centering
+\caption{Regulon enrichment of the top-$\kmu$ quartile ($110$ of
+the $424$ nonzero-$\kmu$ panel genes) against PRECISE regulatory
+annotations, panel background, Fisher exact tests with
+Benjamini--Hochberg correction across the $31$ testable regulons;
+eleven survive $q < 0.10$ (all shown). The enriched sets are the
+global carbon, energy, and stress regulons.}
+\label{tab:regulons}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+regulon & top / panel & fold & $p$ & $q$ (BH) \\
+\midrule
+crp & 56 / 89 & 2.43 & $2.8 \times 10^{-17}$ & $8.6 \times 10^{-16}$ \\
+cra & 39 / 52 & 2.89 & $1.8 \times 10^{-15}$ & $2.8 \times 10^{-14}$ \\
+fur & 24 / 27 & 3.43 & $1.6 \times 10^{-12}$ & $1.5 \times 10^{-11}$ \\
+fnr & 46 / 77 & 2.30 & $2.0 \times 10^{-12}$ & $1.5 \times 10^{-11}$ \\
+rpoS & 26 / 33 & 3.04 & $4.4 \times 10^{-11}$ & $2.7 \times 10^{-10}$ \\
+fis & 22 / 31 & 2.74 & $5.6 \times 10^{-8}$ & $2.9 \times 10^{-7}$ \\
+arcA & 41 / 89 & 1.78 & $2.6 \times 10^{-6}$ & $1.1 \times 10^{-5}$ \\
+narL & 14 / 20 & 2.70 & $2.9 \times 10^{-5}$ & $1.1 \times 10^{-4}$ \\
+ihf & 21 / 38 & 2.13 & $5.1 \times 10^{-5}$ & $1.8 \times 10^{-4}$ \\
+rpoD & 86 / 274 & 1.21 & $3.1 \times 10^{-4}$ & $9.7 \times 10^{-4}$ \\
+nagC & 6 / 8 & 2.89 & $4.8 \times 10^{-3}$ & $1.3 \times 10^{-2}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+At operon granularity the pattern is stronger. Whole operons sit
+entirely in the top curvature quartile: the NADH dehydrogenase
+operon \emph{nuoABCEFGHIJKLMN} ($13$ of its $13$ panel genes; $q =
+4.3 \times 10^{-7}$), the ATP synthase operon \emph{atpIBEFHAGDC}
+($9$ of $9$), the succinate dehydrogenase operon
+\emph{sdhCDAB-sucABCD} ($8$ of $8$), cytochrome \emph{bo}
+oxidase \emph{cyoABCDE} ($4$ of $4$), and \emph{manXYZ},
+\emph{ptsHI-crr}, and \emph{pdhR-aceEF-lpd} ($3$ of $3$ each).
+Within-operon curvature is near-uniform: the mean
+within-operon $|\Delta\kmu|$ is $0.044$, against $1.045$ across
+operons ($381$ pairs; permutation $p < 2 \times 10^{-4}$). The
+control that makes this non-trivial is the GPR structure itself.
+Restricted to intra-operon pairs catalyzing \emph{disjoint}
+reactions --- genuinely different enzymes, such as the
+\emph{sdh} gene products against the \emph{suc} gene products ---
+the gap remains $0.082$ against $1.045$ ($205$ pairs,
+permutation $p < 2 \times 10^{-4}$), while pairs sharing a
+reaction (enzyme-complex subunits; $176$ pairs) are trivially
+identical. Co-transcribed units carry near-uniform curvature
+across their different enzymes: the option set is priced in
+pre-packaged units. The co-expression modules that light up in the
+iModulon annotations are the carbon and energy ones (DhaR/Mlc,
+Crp-2, ArcA-1, ArcA-2) --- the same sector again.
+
+\emph{What growth sees of it.} Nothing. On all three trajectories
+of \S\ref{sec:v7}, the growth-attributed curvature is identically
+zero --- $0$ of the $433$ panel genes has nonzero $\kappa_c$ on
+any path --- and the value layer carries between $0.024\%$ and
+$0.145\%$ of the flux layer's curvature mass. The association of
+\S\ref{sec:v5} is therefore carried entirely by growth-invisible
+wall mass. Transcriptional induction during carbon depletion
+concentrates on the sector where selection on growth is silent:
+the zero-cost pathway substitutions of Theorem~\ref{thm:coupling}(i),
+which is precisely the degeneracy's design space.
+
+Put together, the anatomy closes a loop that
+\citet{kochanowski2013} opened from the other side. They showed
+that the response to carbon limitation is coordinated largely at
+the metabolite level, through Crp and local metabolite
+concentrations; here the regulon that governs the response is the
+regulon whose operons carry the curvature, and its enzymes sit on
+the fork metabolites that carry the walls. One chemical corollary
+follows, as a prediction: of the $237$ regulators in the
+transcriptional network, the sensing molecules of five are
+themselves metabolites of the reconstruction (FMN, L-tryptophan,
+adenosylcobalamin, molybdopterin, spermidine); the
+metabolite-effectors of the enriched regulons should prove to be
+wall-adjacent pools from Table~\ref{tab:walls}.
+
+\emph{Provenance and honesty.} The enrichment shares the
+correlational design and the expression-level confound structure
+of the parent association (\S\ref{sec:v5}); the
+activation/repression split partially controls for direction of
+effect, but expression-matched per-gene controls are future work,
+and the PRECISE RNA-seq arms replicate the association only weakly
+(\S\ref{sec:v5}), so the magnitude of the enrichment is
+platform-dependent even where its sign is consistent.
