@@ -7415,3 +7415,42 @@ Stage Summary:
   Michael Shulman (verified board member); everything pushed to
   GitHub. Open follow-up: none blocking; the BMB cover letter may
   deserve one more register pass at the author's discretion.
+
+---
+Task ID: R2-session-web-befc00a5
+Agent: Super Z (main)
+Task: Post-BMB-desk-rejection consult + repo sync + enrichment-merit assessment. User standing rules: revisions as new files only; commit AND push every future creation (PAT used as one-off push URL, never stored).
+
+Work Log:
+- BMB desk-rejected the main paper ("biological impact and implications not
+  sufficiently strong for our readership"). Advised in chat: fit verdict, not
+  quality; no appeal; verified retarget shortlist (JTB primary, Mathematical
+  Biosciences zero-risk backup, Bioinformatics methods track, PLOS Comp Bio
+  bio-first option with APC).
+- Reviewer-suggestion request: handled per policy -- no named individuals;
+  delivered the expertise-bucket framework + Editorial Manager mechanics.
+- REPO STATE RESOLVED (corrects the provisional diagnosis): the local
+  checkout had gone stale at b851ffe (v7-era). git fetch showed remote
+  main at 51cdfb9 = the complete v16 round (journal_manuscript_v16.tex,
+  companion_categorical_v10.tex, TAC letter re-addressed to Prof. Michael
+  Shulman, audit_v24 301/301, pattern sweep 16/16). Reset local to
+  FETCH_HEAD: full v16 state restored; no work lost. Root lesson: push
+  immediately at every round so a stale checkout can never masquerade as
+  data loss.
+- Enrichment-merit assessment grounded in v16 (grep-verified): MCA/control-
+  coefficient positioning absent (0 mentions); biological anchoring thin
+  (1 regulon/TF mention); no hand-checkable worked example; buffering
+  dissociation well-carried (kochanowski 4 sites) but reads as a finding
+  bullet rather than a positioned claim.
+- Verdict delivered: three merited non-decorative additions (anchored
+  biological case study; MCA comparison subsection; minimal worked
+  example), one conditional (buffering elevation for a biology-facing
+  venue), decorative category explicitly rejected (second organism,
+  more category theory from the companion, glossaries/boxes, uncomputed
+  future-applications lists).
+- This commit + push lands the synced state and this entry on origin/main.
+
+Stage Summary:
+- Repo current at 51cdfb9 + this entry; local == remote; v16 (main) and
+  v10 (companion) are the active versions; next round on the author's
+  venue pick: v17 with the merited additions, full audit pipeline.
