@@ -7454,3 +7454,35 @@ Stage Summary:
 - Repo current at 51cdfb9 + this entry; local == remote; v16 (main) and
   v10 (companion) are the active versions; next round on the author's
   venue pick: v17 with the merited additions, full audit pipeline.
+
+---
+Task ID: R3-session-web-befc00a5
+Agent: Super Z (main)
+Task: Deliver the revision plan as a committed artifact (NOT implemented) + explore implications beyond the paper's established results, per author directive.
+
+Work Log:
+- Wrote download/V17_Revision_Plan.md: PLAN ONLY, v16 untouched. Part A =
+  the round-214d40e assessed additions (A1 anchored case study, A2 MCA
+  comparison, A3 worked example, A4 conditional buffering elevation).
+  Part B = six beyond-established insight lines (I menu/order synthesis
+  from tie-break invariance + value-layer null + coupling identity; II
+  construction-order epistasis from non-commuting knockouts + linear
+  holonomy; III memory-substrate deduction from 66% hysteresis + protein
+  buffering; IV branch-metabolite wall coordinates with metabolomics
+  readout; V drift-free interior architecture; VI community priority
+  effects -- excluded from v17, logged as follow-up). Part C = refused
+  decorative list. Part D = execution protocol (new version files,
+  audit_v25 extension, full pipeline, venue dependence, per-round
+  commit+push).
+- Novelty calibrated by grep vs v16: all six directions have zero coverage
+  in the current manuscript (priority effect/community/consortium/operon/
+  RegulonDB/Ishii/order-of-introduction/menu/metabolite pool/
+  growth-silent/evolvability: 0 hits each).
+- No manuscript edits, no new computations, no versioned tex produced:
+  implementation deferred to the author's green light + venue choice.
+
+Stage Summary:
+- Repo gains the committed v17 revision plan (this commit). v16 (main) +
+  v10 (companion) remain the active submission state. Next: author picks
+  venue + green-lights the plan; then v17 as a new file through the full
+  audit pipeline.
