@@ -1,0 +1,1191 @@
+{
+ "round": "v17-insight-substantiation",
+ "I_menu_order": {
+  "growth_silent_partition": [
+   {
+    "path": "P0_glucose_decline",
+    "interior_chamber_crossings": 0,
+    "value_over_flux_mass_ratio": 0.001447813369181117,
+    "n_genes_kappa_mu_nonzero": 424,
+    "arm_A_flux_r": 0.3954,
+    "arm_A_p": 2.5828973740050062e-17,
+    "kappa_c_nonzero_genes": 0,
+    "B2_c_attribution_n": 0,
+    "B3_dual_r": 0.0319,
+    "B3_dual_p": 0.8241752789858927,
+    "B3_dual_n": 51,
+    "cross_arm_r_vs_carbon_response": null
+   },
+   {
+    "path": "P1_oxygen_limitation",
+    "interior_chamber_crossings": 3,
+    "value_over_flux_mass_ratio": 0.0002376746282147921,
+    "n_genes_kappa_mu_nonzero": 426,
+    "arm_A_flux_r": 0.3183,
+    "arm_A_p": 1.745059566512658e-11,
+    "kappa_c_nonzero_genes": 0,
+    "B2_c_attribution_n": 0,
+    "B3_dual_r": -0.1698,
+    "B3_dual_p": 0.1661340466337405,
+    "B3_dual_n": 68,
+    "cross_arm_r_vs_carbon_response": 0.3783
+   },
+   {
+    "path": "P2_acetate_switch",
+    "interior_chamber_crossings": 4,
+    "value_over_flux_mass_ratio": 0.0005530410376821263,
+    "n_genes_kappa_mu_nonzero": 426,
+    "arm_A_flux_r": 0.2234,
+    "arm_A_p": 3.220250567521773e-06,
+    "kappa_c_nonzero_genes": 0,
+    "B2_c_attribution_n": 0,
+    "B3_dual_r": -0.0095,
+    "B3_dual_p": 0.9376305042602782,
+    "B3_dual_n": 71,
+    "cross_arm_r_vs_carbon_response": 0.391
+   }
+  ],
+  "operon": {
+   "n_operons_tested": 31,
+   "top_operons": [
+    {
+     "class": "operon",
+     "set": "nuoABCEFGHIJKLMN",
+     "n_targets_in_bg": 13,
+     "n_in_top": 13,
+     "expected": 3.3726415094339623,
+     "fold": 3.8545454545454545,
+     "OR": Infinity,
+     "p": 1.3890241718656402e-08,
+     "p_bh": 4.3059749327834844e-07
+    },
+    {
+     "class": "operon",
+     "set": "atpIBEFHAGDC",
+     "n_targets_in_bg": 9,
+     "n_in_top": 9,
+     "expected": 2.3349056603773586,
+     "fold": 3.854545454545455,
+     "OR": Infinity,
+     "p": 4.144029753026642e-06,
+     "p_bh": 6.423246117191295e-05
+    },
+    {
+     "class": "operon",
+     "set": "sdhCDAB-sucABCD",
+     "n_targets_in_bg": 8,
+     "n_in_top": 8,
+     "expected": 2.0754716981132075,
+     "fold": 3.8545454545454545,
+     "OR": Infinity,
+     "p": 1.6901140953520418e-05,
+     "p_bh": 0.00017464512318637765
+    },
+    {
+     "class": "operon",
+     "set": "cyoABCDE",
+     "n_targets_in_bg": 4,
+     "n_in_top": 4,
+     "expected": 1.0377358490566038,
+     "fold": 3.8545454545454545,
+     "OR": Infinity,
+     "p": 0.0043483645400100536,
+     "p_bh": 0.033699825185077914
+    },
+    {
+     "class": "operon",
+     "set": "manXYZ",
+     "n_targets_in_bg": 3,
+     "n_in_top": 3,
+     "expected": 0.7783018867924528,
+     "fold": 3.854545454545454,
+     "OR": Infinity,
+     "p": 0.0171089857134975,
+     "p_bh": 0.07576836530263178
+    },
+    {
+     "class": "operon",
+     "set": "ptsHI-crr",
+     "n_targets_in_bg": 3,
+     "n_in_top": 3,
+     "expected": 0.7783018867924528,
+     "fold": 3.854545454545454,
+     "OR": Infinity,
+     "p": 0.0171089857134975,
+     "p_bh": 0.07576836530263178
+    },
+    {
+     "class": "operon",
+     "set": "pdhR-aceEF-lpd",
+     "n_targets_in_bg": 3,
+     "n_in_top": 3,
+     "expected": 0.7783018867924528,
+     "fold": 3.854545454545454,
+     "OR": Infinity,
+     "p": 0.0171089857134975,
+     "p_bh": 0.07576836530263178
+    },
+    {
+     "class": "operon",
+     "set": "epd-pgk-fbaA",
+     "n_targets_in_bg": 3,
+     "n_in_top": 2,
+     "expected": 0.7783018867924528,
+     "fold": 2.5696969696969694,
+     "OR": 5.796296296296297,
+     "p": 0.1663373611034479,
+     "p_bh": 0.6445572742758606
+    }
+   ],
+   "intra_operon_mean_kappa_gap": 0.044096443916125105,
+   "inter_operon_mean_kappa_gap": 1.0449146367000781,
+   "permutation_p_gap_smaller": 0.0,
+   "n_intra_operon_pairs": 381,
+   "gpr_control": {
+    "n_disjoint_reaction_pairs": 205,
+    "disjoint_pairs_mean_gap": 0.08180202268685957,
+    "disjoint_pairs_perm_p": 0.0,
+    "shared_reaction_pairs_mean_gap": 0.00017801409794006016,
+    "n_shared_reaction_pairs": 176
+   },
+   "n_operons_BH_lt_0.10": 7
+  },
+  "regulon": {
+   "n_regulons_tested": 31,
+   "top_regulons": [
+    {
+     "class": "regulon",
+     "set": "crp",
+     "n_targets_in_bg": 89,
+     "n_in_top": 56,
+     "expected": 23.089622641509433,
+     "fold": 2.4253319713993866,
+     "OR": 8.830527497194163,
+     "p": 2.7867238273066137e-17,
+     "p_bh": 8.638843864650502e-16
+    },
+    {
+     "class": "regulon",
+     "set": "cra",
+     "n_targets_in_bg": 52,
+     "n_in_top": 39,
+     "expected": 13.49056603773585,
+     "fold": 2.890909090909091,
+     "OR": 12.71830985915493,
+     "p": 1.7894929414724287e-15,
+     "p_bh": 2.7737140592822645e-14
+    },
+    {
+     "class": "regulon",
+     "set": "fur",
+     "n_targets_in_bg": 27,
+     "n_in_top": 24,
+     "expected": 7.004716981132075,
+     "fold": 3.426262626262626,
+     "OR": 28.930232558139537,
+     "p": 1.629948155501885e-12,
+     "p_bh": 1.5497872811731946e-11
+    },
+    {
+     "class": "regulon",
+     "set": "fnr",
+     "n_targets_in_bg": 77,
+     "n_in_top": 46,
+     "expected": 19.97641509433962,
+     "fold": 2.30271546635183,
+     "OR": 6.561491935483871,
+     "p": 1.9997255240944447e-12,
+     "p_bh": 1.5497872811731946e-11
+    },
+    {
+     "class": "regulon",
+     "set": "rpoS",
+     "n_targets_in_bg": 33,
+     "n_in_top": 26,
+     "expected": 8.56132075471698,
+     "fold": 3.0369146005509644,
+     "OR": 13.57482993197279,
+     "p": 4.4049922047143485e-11,
+     "p_bh": 2.731095166922896e-10
+    },
+    {
+     "class": "regulon",
+     "set": "fis",
+     "n_targets_in_bg": 31,
+     "n_in_top": 22,
+     "expected": 8.04245283018868,
+     "fold": 2.7354838709677423,
+     "OR": 8.472222222222221,
+     "p": 5.620945685703918e-08,
+     "p_bh": 2.9041552709470247e-07
+    },
+    {
+     "class": "regulon",
+     "set": "arcA",
+     "n_targets_in_bg": 89,
+     "n_in_top": 41,
+     "expected": 23.089622641509433,
+     "fold": 1.7756894790602655,
+     "OR": 3.292874396135266,
+     "p": 2.570159438284433e-06,
+     "p_bh": 1.1382134655259632e-05
+    },
+    {
+     "class": "regulon",
+     "set": "narL",
+     "n_targets_in_bg": 20,
+     "n_in_top": 14,
+     "expected": 5.188679245283019,
+     "fold": 2.698181818181818,
+     "OR": 7.486111111111111,
+     "p": 2.8825325189792326e-05,
+     "p_bh": 0.00011169813511044527
+    },
+    {
+     "class": "regulon",
+     "set": "ihf",
+     "n_targets_in_bg": 38,
+     "n_in_top": 21,
+     "expected": 9.858490566037736,
+     "fold": 2.130143540669857,
+     "OR": 4.122273628552545,
+     "p": 5.1406060175733024e-05,
+     "p_bh": 0.0001770653183830804
+    },
+    {
+     "class": "regulon",
+     "set": "rpoD",
+     "n_targets_in_bg": 274,
+     "n_in_top": 86,
+     "expected": 71.08490566037736,
+     "fold": 1.2098208360982083,
+     "OR": 2.401595744680851,
+     "p": 0.0003137068673035526,
+     "p_bh": 0.0009724912886410131
+    },
+    {
+     "class": "regulon",
+     "set": "nagC",
+     "n_targets_in_bg": 8,
+     "n_in_top": 6,
+     "expected": 2.0754716981132075,
+     "fold": 2.890909090909091,
+     "OR": 9.0,
+     "p": 0.004770968678038502,
+     "p_bh": 0.01344545718356305
+    },
+    {
+     "class": "regulon",
+     "set": "gadE",
+     "n_targets_in_bg": 9,
+     "n_in_top": 5,
+     "expected": 2.3349056603773586,
+     "fold": 2.1414141414141414,
+     "OR": 3.6904761904761907,
+     "p": 0.05468704292550997,
+     "p_bh": 0.14127486089090077
+    }
+   ],
+   "effect_split": [
+    {
+     "regulator": "crp",
+     "effect": "+",
+     "n": 29,
+     "median_kappa_targets": 0.6398056746482865,
+     "median_kappa_rest": 0.0209638219495462,
+     "MWU_p": 0.0015851444472936562
+    },
+    {
+     "regulator": "crp",
+     "effect": "-",
+     "n": 11,
+     "median_kappa_targets": 0.0345437317140295,
+     "median_kappa_rest": 0.0215116507053871,
+     "MWU_p": 0.4336568063418958
+    },
+    {
+     "regulator": "cra",
+     "effect": "+",
+     "n": 17,
+     "median_kappa_targets": 4.222055710655454,
+     "median_kappa_rest": 0.0209638219495462,
+     "MWU_p": 1.0578641149788699e-07
+    },
+    {
+     "regulator": "cra",
+     "effect": "-",
+     "n": 16,
+     "median_kappa_targets": 0.9335331453669977,
+     "median_kappa_rest": 0.021206519425582,
+     "MWU_p": 0.00042552534987989085
+    },
+    {
+     "regulator": "fur",
+     "effect": "+",
+     "n": 13,
+     "median_kappa_targets": 0.4947003168516621,
+     "median_kappa_rest": 0.0209638219495462,
+     "MWU_p": 2.7257406416195707e-05
+    },
+    {
+     "regulator": "fur",
+     "effect": "-",
+     "n": 10,
+     "median_kappa_targets": 1.3322885368015398,
+     "median_kappa_rest": 0.021206519425582,
+     "MWU_p": 9.972494322325252e-05
+    },
+    {
+     "regulator": "fnr",
+     "effect": "+",
+     "n": 24,
+     "median_kappa_targets": 0.0339645466951306,
+     "median_kappa_rest": 0.021480433803502452,
+     "MWU_p": 0.4087659714534143
+    },
+    {
+     "regulator": "fnr",
+     "effect": "-",
+     "n": 28,
+     "median_kappa_targets": 0.4946537005405895,
+     "median_kappa_rest": 0.0209638219495462,
+     "MWU_p": 0.002042846502965753
+    },
+    {
+     "regulator": "rpoS",
+     "effect": "+",
+     "n": 33,
+     "median_kappa_targets": 0.7985855559359276,
+     "median_kappa_rest": 0.0151562239484865,
+     "MWU_p": 3.4894269355872313e-07
+    },
+    {
+     "regulator": "fis",
+     "effect": "+",
+     "n": 24,
+     "median_kappa_targets": 4.222055710655454,
+     "median_kappa_rest": 0.01726566428498815,
+     "MWU_p": 3.6646278300684525e-08
+    },
+    {
+     "regulator": "fis",
+     "effect": "-",
+     "n": 6,
+     "median_kappa_targets": 0.0339645466951306,
+     "median_kappa_rest": 0.021480433803502452,
+     "MWU_p": 0.4373320160911304
+    }
+   ]
+  },
+  "imodulon": {
+   "n_tested": 18,
+   "top": [
+    {
+     "class": "imodulon",
+     "set": "DhaR/Mlc",
+     "n_targets_in_bg": 5,
+     "n_in_top": 5,
+     "expected": 1.2971698113207548,
+     "fold": 3.8545454545454545,
+     "OR": Infinity,
+     "p": 0.0010974443839072996,
+     "p_bh": 0.00908736734881068,
+     "category": "Carbon Source Utilization"
+    },
+    {
+     "class": "imodulon",
+     "set": "ArcA-1",
+     "n_targets_in_bg": 13,
+     "n_in_top": 9,
+     "expected": 3.3726415094339623,
+     "fold": 2.6685314685314685,
+     "OR": 6.905940594059406,
+     "p": 0.001103670623227885,
+     "p_bh": 0.00908736734881068,
+     "category": "Energy Metabolism"
+    },
+    {
+     "class": "imodulon",
+     "set": "Crp-2",
+     "n_targets_in_bg": 7,
+     "n_in_top": 6,
+     "expected": 1.8160377358490567,
+     "fold": 3.3038961038961037,
+     "OR": 18.057692307692307,
+     "p": 0.00151456122480178,
+     "p_bh": 0.00908736734881068,
+     "category": "Carbon Source Utilization"
+    },
+    {
+     "class": "imodulon",
+     "set": "ArcA-2",
+     "n_targets_in_bg": 5,
+     "n_in_top": 4,
+     "expected": 1.2971698113207548,
+     "fold": 3.083636363636363,
+     "OR": 11.81132075471698,
+     "p": 0.017352045164421067,
+     "p_bh": 0.0780842032398948,
+     "category": "Energy Metabolism"
+    },
+    {
+     "class": "imodulon",
+     "set": "Crp-1",
+     "n_targets_in_bg": 5,
+     "n_in_top": 3,
+     "expected": 1.2971698113207548,
+     "fold": 2.3127272727272725,
+     "OR": 4.373831775700935,
+     "p": 0.11244905533826798,
+     "p_bh": 0.4048165992177647,
+     "category": "Miscellaneous Metabolism"
+    },
+    {
+     "class": "imodulon",
+     "set": "Lrp",
+     "n_targets_in_bg": 6,
+     "n_in_top": 3,
+     "expected": 1.5566037735849056,
+     "fold": 1.927272727272727,
+     "OR": 2.9065420560747666,
+     "p": 0.1832611488328748,
+     "p_bh": 0.5497834464986244,
+     "category": "Amino Acid and Nucleotide Biosynthesis"
+    },
+    {
+     "class": "imodulon",
+     "set": "iron-related",
+     "n_targets_in_bg": 5,
+     "n_in_top": 2,
+     "expected": 1.2971698113207548,
+     "fold": 1.5418181818181815,
+     "OR": 1.9197530864197532,
+     "p": 0.387173751396048,
+     "p_bh": 0.9955896464469804,
+     "category": "Biological Enrichment"
+    },
+    {
+     "class": "imodulon",
+     "set": "SoxS",
+     "n_targets_in_bg": 8,
+     "n_in_top": 2,
+     "expected": 2.0754716981132075,
+     "fold": 0.9636363636363636,
+     "OR": 0.9506172839506173,
+     "p": 0.658308514805578,
+     "p_bh": 1.0,
+     "category": "Stress Response"
+    },
+    {
+     "class": "imodulon",
+     "set": "Leu/Ile",
+     "n_targets_in_bg": 10,
+     "n_in_top": 2,
+     "expected": 2.5943396226415096,
+     "fold": 0.7709090909090908,
+     "OR": 0.7083333333333334,
+     "p": 0.7799212369673488,
+     "p_bh": 1.0,
+     "category": "Amino Acid and Nucleotide Biosynthesis"
+    },
+    {
+     "class": "imodulon",
+     "set": "MetJ",
+     "n_targets_in_bg": 7,
+     "n_in_top": 1,
+     "expected": 1.8160377358490567,
+     "fold": 0.5506493506493506,
+     "OR": 0.4709480122324159,
+     "p": 0.8799617950075198,
+     "p_bh": 1.0,
+     "category": "Amino Acid and Nucleotide Biosynthesis"
+    }
+   ]
+  },
+  "trn_metabolite_effectors": {
+   "n_unique_regulators": 237,
+   "n_metabolite_effector_regulators": 5,
+   "examples": [
+    "FMN",
+    "L-tryptophan",
+    "adenosylcobalamin",
+    "molybdopterin",
+    "spermidine"
+   ]
+  }
+ },
+ "II_construction_order": {
+  "n_pairs": 160,
+  "frac_open_path_commutator_positive": 0.19375,
+  "frac_loop_holonomy_nonzero": 0.6625,
+  "h_loop_median": 109.3382444846047,
+  "chi_q90_nonSL": 101.28580689036129,
+  "WT_L1_flux_full_glucose": 769.7902372043568,
+  "order_rule": {
+   "n_pairs_analyzed": 66,
+   "spearman_P_vs_A_rho": 0.44168358149723885,
+   "spearman_P_vs_A_p": 0.00020518226027803555,
+   "same_sign_count": 59,
+   "binomial_p": 2.3834933267526115e-11,
+   "n_holonomy_asym_gt1": 27
+  },
+  "spearman_chi_vs_JdR_rho": 0.070529508914651,
+  "spearman_chi_vs_JdR_p": 0.3754855917147635,
+  "spearman_hasym_vs_JdR_rho": 0.070529508914651,
+  "spearman_hasym_vs_JdR_p": 0.3754855917147635
+ },
+ "III_memory_substrate": {
+  "e27_recomputed": {
+   "protein_exhaustion": {
+    "r": -0.08283762708810279,
+    "p": 0.11363216269802538,
+    "n": 366
+   },
+   "transcript_M3D": {
+    "r": 0.3747574914090162,
+    "p": 6.933256505675614e-16,
+    "n": 433
+   },
+   "transcript_M3D_on_protein_subset": {
+    "r": 0.41970616318989873,
+    "p": 5.241682691082375e-17,
+    "n": 365
+   },
+   "protein_exhaustion_kappa_mu": {
+    "r": -0.09833235416130447,
+    "p": 0.060553227437421996,
+    "n": 365
+   },
+   "transcript_M3D_kappa_mu": {
+    "r": 0.33927437236775027,
+    "p": 3.9943865817604885e-13,
+    "n": 433
+   }
+  },
+  "frac_loops_non_reverting": 0.6625,
+  "h_loop_median_L1": 109.3382444846047,
+  "protein_layer_r": -0.08283762708810279,
+  "protein_layer_r2": 0.00686207246158758,
+  "interpretation": "protein-layer fold-change carries at most 0.69% of the kappa variance; with 66.25% of closed cycles retaining flux-state drift, the carrier of path dependence cannot be enzyme abundance"
+ },
+ "IV_wall_coordinates": {
+  "d_star_primary": 9.0,
+  "branch_adjacent_reaction_count_share": 0.46267009930121367,
+  "branch_adjacent_mass_share": 0.6087977857849364,
+  "permutation_p": 0.0174,
+  "MWU_p": 0.38544288262140813,
+  "AUC": 0.5021728154050898,
+  "sensitivity": [
+   {
+    "d_star": 6,
+    "count_share": 0.6248620816476645,
+    "mass_share": 0.666925446546039,
+    "perm_p": 0.2535,
+    "MWU_p": 0.9937155922713752,
+    "AUC": 0.4808258029521402
+   },
+   {
+    "d_star": 10,
+    "count_share": 0.4303052592865024,
+    "mass_share": 0.6086719292048606,
+    "perm_p": 0.007,
+    "MWU_p": 0.09516536520752594,
+    "AUC": 0.5098389917950925
+   },
+   {
+    "d_star": 16,
+    "count_share": 0.2809856564913571,
+    "mass_share": 0.5056566937097593,
+    "perm_p": 0.0015,
+    "MWU_p": 9.467526916417294e-07,
+    "AUC": 0.5394290381757073
+   }
+  ],
+  "including_currency_d6": {
+   "count_share": 0.858403824935638,
+   "mass_share": 0.9856164326786989,
+   "perm_p": 0.0
+  },
+  "top_mass_branch_concentration": {
+   "top50_branch_fraction": 0.56,
+   "top100_branch_fraction": 0.59,
+   "baseline_branch_fraction": 0.46267009930121367,
+   "top50_mass_share": 0.8587850084433915
+  },
+  "top25_reactions": [
+   {
+    "reaction": "PGI",
+    "name": "glucose-6-phosphate isomerase",
+    "subsystem": "Glycolysis/Gluconeogenesis",
+    "class": "internal",
+    "kappa_share": 0.03662417339849762,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "f6p",
+     "g6p"
+    ]
+   },
+   {
+    "reaction": "ATPS4rpp",
+    "name": "ATP synthase (four protons for one ATP) (periplasm)",
+    "subsystem": "Oxidative Phosphorylation",
+    "class": "transport",
+    "kappa_share": 0.035443827811611386,
+    "sweep_participation": 11,
+    "branch_metabolites": []
+   },
+   {
+    "reaction": "PFK",
+    "name": "phosphofructokinase",
+    "subsystem": "Glycolysis/Gluconeogenesis",
+    "class": "internal",
+    "kappa_share": 0.03329964191491182,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "f6p"
+    ]
+   },
+   {
+    "reaction": "FBA",
+    "name": "fructose-bisphosphate aldolase",
+    "subsystem": "Glycolysis/Gluconeogenesis",
+    "class": "internal",
+    "kappa_share": 0.03329964191491182,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "dhap",
+     "g3p"
+    ]
+   },
+   {
+    "reaction": "GND",
+    "name": "phosphogluconate dehydrogenase",
+    "subsystem": "Pentose Phosphate Pathway",
+    "class": "internal",
+    "kappa_share": 0.03186115000646531,
+    "sweep_participation": 11,
+    "branch_metabolites": []
+   },
+   {
+    "reaction": "G6PDH2r",
+    "name": "glucose 6-phosphate dehydrogenase",
+    "subsystem": "Pentose Phosphate Pathway",
+    "class": "internal",
+    "kappa_share": 0.03164024519222785,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "g6p"
+    ]
+   },
+   {
+    "reaction": "PGL",
+    "name": "6-phosphogluconolactonase",
+    "subsystem": "Pentose Phosphate Pathway",
+    "class": "internal",
+    "kappa_share": 0.03164024519222785,
+    "sweep_participation": 11,
+    "branch_metabolites": []
+   },
+   {
+    "reaction": "THD2pp",
+    "name": "NAD(P) transhydrogenase (periplasm)",
+    "subsystem": "Oxidative Phosphorylation",
+    "class": "transport",
+    "kappa_share": 0.031488729883947526,
+    "sweep_participation": 5,
+    "branch_metabolites": []
+   },
+   {
+    "reaction": "DHAPT",
+    "name": "Dihydroxyacetone phosphotransferase",
+    "subsystem": "Alternate Carbon Metabolism",
+    "class": "internal",
+    "kappa_share": 0.02974797572593757,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "dhap",
+     "pep",
+     "pyr"
+    ]
+   },
+   {
+    "reaction": "F6PA",
+    "name": "fructose 6-phosphate aldolase",
+    "subsystem": "Glycolysis/Gluconeogenesis",
+    "class": "internal",
+    "kappa_share": 0.02974797572593757,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "f6p",
+     "g3p"
+    ]
+   },
+   {
+    "reaction": "PDH",
+    "name": "pyruvate dehydrogenase",
+    "subsystem": "Glycolysis/Gluconeogenesis",
+    "class": "internal",
+    "kappa_share": 0.026947972830801616,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "accoa",
+     "coa",
+     "pyr"
+    ]
+   },
+   {
+    "reaction": "ICDHyr",
+    "name": "isocitrate dehydrogenase (NADP)",
+    "subsystem": "Citric Acid Cycle",
+    "class": "internal",
+    "kappa_share": 0.025640296318447876,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "akg"
+    ]
+   },
+   {
+    "reaction": "AKGDH",
+    "name": "2-Oxoglutarate dehydrogenase",
+    "subsystem": "Citric Acid Cycle",
+    "class": "internal",
+    "kappa_share": 0.025514505130057607,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "akg",
+     "coa",
+     "succoa"
+    ]
+   },
+   {
+    "reaction": "SUCOAS",
+    "name": "succinyl-CoA synthetase (ADP-forming)",
+    "subsystem": "Citric Acid Cycle",
+    "class": "internal",
+    "kappa_share": 0.02547996905010094,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "coa",
+     "succ",
+     "succoa"
+    ]
+   },
+   {
+    "reaction": "MDH",
+    "name": "malate dehydrogenase",
+    "subsystem": "Citric Acid Cycle",
+    "class": "internal",
+    "kappa_share": 0.02153028908086353,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "mal__L",
+     "oaa"
+    ]
+   },
+   {
+    "reaction": "RPE",
+    "name": "ribulose 5-phosphate 3-epimerase",
+    "subsystem": "Pentose Phosphate Pathway",
+    "class": "internal",
+    "kappa_share": 0.021212144682357034,
+    "sweep_participation": 11,
+    "branch_metabolites": []
+   },
+   {
+    "reaction": "PFK_3",
+    "name": "phosphofructokinase (s7p)",
+    "subsystem": "Pentose Phosphate Pathway",
+    "class": "internal",
+    "kappa_share": 0.016358208833309754,
+    "sweep_participation": 11,
+    "branch_metabolites": []
+   },
+   {
+    "reaction": "FBA3",
+    "name": "Sedoheptulose 1,7-bisphosphate D-glyceraldehyde-3-phosphate-lyase",
+    "subsystem": "Pentose Phosphate Pathway",
+    "class": "internal",
+    "kappa_share": 0.016358208833309754,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "dhap"
+    ]
+   },
+   {
+    "reaction": "PPC",
+    "name": "phosphoenolpyruvate carboxylase",
+    "subsystem": "Anaplerotic Reactions",
+    "class": "internal",
+    "kappa_share": 0.015855909087221967,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "oaa",
+     "pep"
+    ]
+   },
+   {
+    "reaction": "NADH16pp",
+    "name": "NADH dehydrogenase (ubiquinone-8 & 3 protons) (periplasm)",
+    "subsystem": "Oxidative Phosphorylation",
+    "class": "transport",
+    "kappa_share": 0.015751124144365348,
+    "sweep_participation": 11,
+    "branch_metabolites": []
+   },
+   {
+    "reaction": "ICL",
+    "name": "Isocitrate lyase",
+    "subsystem": "Anaplerotic Reactions",
+    "class": "internal",
+    "kappa_share": 0.015317988899512356,
+    "sweep_participation": 5,
+    "branch_metabolites": [
+     "glx",
+     "succ"
+    ]
+   },
+   {
+    "reaction": "MALS",
+    "name": "malate synthase",
+    "subsystem": "Anaplerotic Reactions",
+    "class": "internal",
+    "kappa_share": 0.015314238692644571,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "accoa",
+     "coa",
+     "glx",
+     "mal__L"
+    ]
+   },
+   {
+    "reaction": "PGK",
+    "name": "phosphoglycerate kinase",
+    "subsystem": "Glycolysis/Gluconeogenesis",
+    "class": "internal",
+    "kappa_share": 0.013604825133379782,
+    "sweep_participation": 11,
+    "branch_metabolites": []
+   },
+   {
+    "reaction": "GAPD",
+    "name": "glyceraldehyde-3-phosphate dehydrogenase",
+    "subsystem": "Glycolysis/Gluconeogenesis",
+    "class": "internal",
+    "kappa_share": 0.013604825133379782,
+    "sweep_participation": 11,
+    "branch_metabolites": [
+     "g3p"
+    ]
+   },
+   {
+    "reaction": "PGM",
+    "name": "phosphoglycerate mutase",
+    "subsystem": "Glycolysis/Gluconeogenesis",
+    "class": "internal",
+    "kappa_share": 0.012703982560722126,
+    "sweep_participation": 11,
+    "branch_metabolites": []
+   }
+  ],
+  "top20_branch_metabolites": [
+   {
+    "base_id": "f6p",
+    "name": "D-Fructose 6-phosphate",
+    "degree": 18,
+    "curvature_mass_share": 0.08128356805960184,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "g3p",
+    "name": "Glyceraldehyde 3-phosphate",
+    "degree": 15,
+    "curvature_mass_share": 0.06924712389734136,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "g6p",
+    "name": "D-Glucose 6-phosphate",
+    "degree": 14,
+    "curvature_mass_share": 0.05474148556028938,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "dhap",
+    "name": "Dihydroxyacetone phosphate",
+    "degree": 16,
+    "curvature_mass_share": 0.04913354377318557,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "pep",
+    "name": "Phosphoenolpyruvate",
+    "degree": 34,
+    "curvature_mass_share": 0.044967420782704284,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "akg",
+    "name": "2-Oxoglutarate",
+    "degree": 30,
+    "curvature_mass_share": 0.036417162635202546,
+    "category": "nitrogen branch point"
+   },
+   {
+    "base_id": "pyr",
+    "name": "Pyruvate",
+    "degree": 72,
+    "curvature_mass_share": 0.03636814667801578,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "coa",
+    "name": "Coenzyme A",
+    "degree": 80,
+    "curvature_mass_share": 0.03565630866229486,
+    "category": "other"
+   },
+   {
+    "base_id": "oaa",
+    "name": "Oxaloacetate",
+    "degree": 13,
+    "curvature_mass_share": 0.021412458791174215,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "succ",
+    "name": "Succinate",
+    "degree": 28,
+    "curvature_mass_share": 0.02136099909663975,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "glc__D",
+    "name": "D-Glucose",
+    "degree": 30,
+    "curvature_mass_share": 0.02028685407479859,
+    "category": "other"
+   },
+   {
+    "base_id": "mal__L",
+    "name": "L-Malate",
+    "degree": 14,
+    "curvature_mass_share": 0.019754183553477345,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "accoa",
+    "name": "Acetyl-CoA",
+    "degree": 41,
+    "curvature_mass_share": 0.01857660076772131,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "succoa",
+    "name": "Succinyl-CoA",
+    "degree": 10,
+    "curvature_mass_share": 0.017055719880307758,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "r5p",
+    "name": "alpha-D-Ribose 5-phosphate",
+    "degree": 15,
+    "curvature_mass_share": 0.016108562045658126,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "ac",
+    "name": "Acetate",
+    "degree": 18,
+    "curvature_mass_share": 0.012916607607045822,
+    "category": "other"
+   },
+   {
+    "base_id": "cit",
+    "name": "Citrate",
+    "degree": 10,
+    "curvature_mass_share": 0.01290403904004927,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "glx",
+    "name": "Glyoxylate",
+    "degree": 11,
+    "curvature_mass_share": 0.011490232160723327,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "fum",
+    "name": "Fumarate",
+    "degree": 18,
+    "curvature_mass_share": 0.01045378807584623,
+    "category": "carbon branch point"
+   },
+   {
+    "base_id": "for",
+    "name": "Formate",
+    "degree": 19,
+    "curvature_mass_share": 0.007219997018737054,
+    "category": "one-carbon branch point"
+   }
+  ]
+ },
+ "V_drift_free_interior": {
+  "class_stats": [
+   {
+    "class": "exchange",
+    "n_reactions": 338,
+    "count_share": 0.12431040823832291,
+    "curvature_mass_share": 0.03944635305148811,
+    "perm_p": 0.9849,
+    "flat_fraction": 0.9260355029585798
+   },
+   {
+    "class": "transport",
+    "n_reactions": 888,
+    "count_share": 0.32659065833026846,
+    "curvature_mass_share": 0.20689422896894383,
+    "perm_p": 0.9716,
+    "flat_fraction": 0.9042792792792793
+   },
+   {
+    "class": "internal",
+    "n_reactions": 1493,
+    "count_share": 0.5490989334314086,
+    "curvature_mass_share": 0.7536594179795681,
+    "perm_p": 0.0012,
+    "flat_fraction": 0.7434695244474213
+   }
+  ],
+  "interface_vs_internal": {
+   "interface_count_share": 0.4509010665685914,
+   "interface_mass_share": 0.2463405820204319,
+   "perm_p": 0.999,
+   "MWU_p": 1.0,
+   "AUC": 0.41550263382462366,
+   "direction": "internal > interface (mass on internal branch-point chemistry, not on the exchange/transport interface)"
+  },
+  "per_family_class_shares": {
+   "nutrient": {
+    "exchange": {
+     "count_share": 0.12431040823832291,
+     "mass_share": 0.06351686943550497
+    },
+    "transport": {
+     "count_share": 0.32659065833026846,
+     "mass_share": 0.19575086370055741
+    },
+    "internal": {
+     "count_share": 0.5490989334314086,
+     "mass_share": 0.7407322668639377
+    },
+    "internal_branch_adjacent_mass_share": 0.5549762597403612
+   },
+   "knockdown": {
+    "exchange": {
+     "count_share": 0.12431040823832291,
+     "mass_share": 0.03409734941059547
+    },
+    "transport": {
+     "count_share": 0.32659065833026846,
+     "mass_share": 0.20937053236191858
+    },
+    "internal": {
+     "count_share": 0.5490989334314086,
+     "mass_share": 0.7565321182274858
+    },
+    "internal_branch_adjacent_mass_share": 0.5622209124937954
+   }
+  },
+  "internal_flatness": {
+   "branch_adjacent_flat_fraction": 0.7759009009009009,
+   "non_branch_flat_fraction": 0.6958677685950413,
+   "branch_adjacent_mass_share_within_internal": 0.7442402888110238,
+   "branch_adjacent_count_share_within_internal": 0.594775619557937
+  },
+  "top10_subsystems": [
+   {
+    "subsystem": "Glycolysis/Gluconeogenesis",
+    "mass_share": 0.23419061947583159
+   },
+   {
+    "subsystem": "Pentose Phosphate Pathway",
+    "mass_share": 0.19689155701782338
+   },
+   {
+    "subsystem": "Citric Acid Cycle",
+    "mass_share": 0.13945571195535705
+   },
+   {
+    "subsystem": "Oxidative Phosphorylation",
+    "mass_share": 0.11577127082852531
+   },
+   {
+    "subsystem": "Anaplerotic Reactions",
+    "mass_share": 0.04715094019648293
+   },
+   {
+    "subsystem": "Nucleotide Salvage Pathway",
+    "mass_share": 0.04414164586994527
+   },
+   {
+    "subsystem": "Transport, Inner Membrane",
+    "mass_share": 0.04249280438437967
+   },
+   {
+    "subsystem": "None",
+    "mass_share": 0.039446438231044316
+   },
+   {
+    "subsystem": "Transport, Outer Membrane Porin",
+    "mass_share": 0.037928004288945966
+   },
+   {
+    "subsystem": "Alternate Carbon Metabolism",
+    "mass_share": 0.03768503800235422
+   }
+  ],
+  "ijo_glucose_one_chamber": {
+   "D2_total": 6.480722854284728e-09,
+   "reactions_with_mass": 0,
+   "v7_P0_interior_crossings": 0,
+   "v6_anchor_kinks": 4
+  },
+  "ijo_active_support": {
+   "glucose_1": 421,
+   "glucose_10": 440,
+   "manuscript_E24_endpoint": 438
+  }
+ },
+ "lines_IV_V_common": {
+  "sweeps": [
+   "iml_glucose",
+   "iml_o2",
+   "kd_eno",
+   "kd_gltA",
+   "kd_gnd",
+   "kd_pfkA",
+   "kd_pgi",
+   "kd_ppc",
+   "kd_rpe",
+   "kd_tktA",
+   "kd_zwf"
+  ],
+  "sweep_D2_totals": {
+   "iml_glucose": 0.5210469951028035,
+   "iml_o2": 27.304740411122523,
+   "kd_eno": 20.39888851420844,
+   "kd_gltA": 598.1014348987865,
+   "kd_gnd": 3.010355470373863,
+   "kd_pfkA": 13.934016933609549,
+   "kd_pgi": 3.896834817261061,
+   "kd_ppc": 3.12670264579787,
+   "kd_rpe": 4.106544374886537,
+   "kd_tktA": 740.7769977570964,
+   "kd_zwf": 3.010355473013185
+  },
+  "n_sweeps": 11,
+  "mass_matches_m1_summary": true
+ }
+}

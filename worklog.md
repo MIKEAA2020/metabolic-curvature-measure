@@ -7486,3 +7486,73 @@ Stage Summary:
   v10 (companion) remain the active submission state. Next: author picks
   venue + green-lights the plan; then v17 as a new file through the full
   audit pipeline.
+
+---
+Task ID: R4-session-web-befc00a5
+Agent: Super Z (main)
+Task: Author directive: "venue depends on how much we can develop biological
+and/or biochemical impact and novelty. proceed with the previous 6
+suggestions" -- substantiate Part B of the V17 revision plan (the six
+beyond-established insight lines) from deposited artifacts; venue decision
+to follow.
+
+Work Log:
+- Recon verified all artifact lines: V7 three-trajectory arms (A/B1/B2/B3),
+  M1 sweep family per-reaction npz (D2 totals re-verified against
+  m1_summary.json), M3 both-order panels (66.25% holonomy confirmed),
+  E27 Schmidt protein-layer csv (arms re-identified: log10 kappa_V vs
+  protein exhaustion -0.0828 n=366 / transcript subset +0.4197 n=365),
+  PRECISE annotations (gene_info operons index_col fix, TRN 237 regulators,
+  92 iModulons, curated categories).
+- Wrote scripts/v17_insight_substantiation.py (self-contained, no new LP
+  solves): LINE I growth-silent partition (kappa_c identically zero 433/433
+  on all three paths; value/flux mass ratios 0.02-0.15%) + Fisher/BH
+  enrichment of the top-kappa quartile (110 of 424 nonzero) vs panel
+  background: 11 regulons BH<0.10 led by crp fold 2.43 p=2.8e-17 (cra,
+  fur, fnr, rpoS, fis, arcA, narL, ihf, rpoD, nagC), CRP activation-only
+  direction split; 31 operons testable, nuo 13/13 BH=4.3e-07, atp 9/9,
+  sdh-suc 8/8, cyo 4/4, manXYZ/ptsHI-crr/pdhR-aceEF-lpd 3/3; intra-operon
+  |dkappa| 0.044 vs inter 1.045 (p<2e-4) surviving the GPR disjoint-reaction
+  control (205 pairs, gap 0.082, p<2e-4; shared-reaction pairs gap 0.0002);
+  iModulons DhaR/Mlc, Crp-2, ArcA-1/2 (carbon/energy categories); 5 TRN
+  regulators are model metabolites (FMN, L-tryptophan, adenosylcobalamin,
+  molybdopterin, spermidine).
+- LINE II order rule: rho(normalized single-kappa difference, normalized
+  terminal-drift asymmetry) = 0.442 (p=2.0e-4), sign agreement 59/66
+  (binomial p=2.4e-11); honest null chi-vs-J_dR rho=0.07 (p=0.38);
+  magnitude calibration chi_q90=101.3 L1 vs WT flux norm 770.
+- LINE III premises re-verified (protein r=-0.0828 n=366, transcript subset
+  +0.4197 n=365, kappa_mu versions -0.098/+0.339) with R2(protein)=0.0069
+  bound; memory-substrate deduction assembled.
+- LINE IV/V per-reaction curvature mass over 11 non-degenerate M1 sweeps
+  (each sweep normalized by its own D2 total): 85.9% of mass on 50
+  reactions; metabolite rollup top-20 branch metabolites carry 59.7%
+  (F6P 8.13%, GAP 6.92%, G6P 5.47%, DHAP 4.91%, PEP 4.50%, aKG/pyr/CoA
+  ~3.6%); including currency 98.6% of mass branch/currency-adjacent;
+  honest concentration-vs-distribution split (reaction-level AUC~0.5,
+  mass-share perm p=0.017 at d*=10).
+- LINE V honest falsification of the plan's interface half: exchange 12.4%
+  of reactions -> 3.9% of mass (92.6% flat), internal 54.9% -> 75.4%,
+  stable across sweep families (nutrient 74.1% / knockdown 75.7% internal);
+  subsystem rollup glycolysis 23.4% + PPP 19.7% + TCA 14.0% + OXPHOS 11.6%
+  + anaplerosis 4.7% = 73.4%; iJO glucose whole-network one-chamber
+  (D2 6.5e-9); active-support census 421-440 bracketing the manuscript's
+  438. Architecture claim REVISED: walls at conserved internal branch-point
+  chemistry + species-specific regulon curation, not at the exchange
+  interface.
+- Wrote download/V17_Insight_Development.md (six lines developed with the
+  computed numbers, predictions labeled, honest nulls reported, venue
+  implication + green-light next steps); machine ledger
+  download/v17_insight_substantiation.json.
+- v16 and companion v10 untouched; no manuscript edits; no new LP solves.
+
+Stage Summary:
+- The six Part-B insight lines are now substantiated from committed
+  artifacts with names attached (CRP/Cra/Fnr/ArcA regulons, nuo/atp/sdh
+  operons, F6P/GAP/G6P/DHAP/PEP wall coordinates, construction-order rule
+  rho=0.44, R2<0.01 memory bound). Line V's interface half was falsified
+  by its own test and replaced by the sharper conserved-wall-chemistry
+  architecture. Venue implication delivered: PLOS Comp Bio now genuinely
+  defensible for bio-first framing; JTB/Math Biosciences remain fully
+  adequate. v17 build awaits the author's venue pick + green light;
+  then Part D pipeline (audit_v25 etc.) on a new versioned file.
