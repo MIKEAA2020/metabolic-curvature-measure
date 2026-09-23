@@ -7839,3 +7839,67 @@ Stage Summary:
   untouched as history.
 - Standing rules honored: new versions only (v18/v17/... untouched),
   commit + push every round.
+
+---
+Task ID: categorical-delegation-v11
+Agent: main (Super Z)
+Task: Decide where the categorical subsection (removed from the v19 main
+body) should be delegated -- categorical companion, appendix, or
+supplementary -- and implement the consequence.
+
+Work Log:
+- Decision analysis (evidence-based): every load-bearing element of the
+  removed v18 subsection already lives in companion_categorical_v10.tex
+  with proofs -- Definition def:kv (viability-weighted curvature + the
+  active-atom correspondence to the main paper's kappa-mu, survival
+  covectors, open ratio-form bridge), the regime-delineation remark
+  (slopes 2.000/1.00 mapped to kappa(a)=a^2 and wall-crossing O(eps)),
+  the future-directions open-problem item, and the intro
+  "Relation to the application paper" division of labor. The v19 audit
+  set loses nothing (slopes retained in the body's prop:dichotomy).
+  Appendix rejected: nothing in the main argument depends on the
+  categorical reading, and re-embedding the EIC-flagged prose in the
+  BMB submission re-creates the desk-reject risk. Supplementary
+  rejected: ESM suits data/derivations, not another paper's theorem
+  summary, and still ships the flagged prose. VERDICT: companion (in
+  effect already done by the v19 removal; the subsection was a
+  duplicate summary).
+- Found and fixed the one real gap: two companion sentences described
+  the OLD division of labor (claimed the application paper "states
+  the load-bearing definitions ... in brief, adapted form"; called the
+  active-atom bridge "stated ... and in the application paper").
+- Built companion_categorical_v11.tex (NEW file; v10 untouched) via
+  scripts/companion_v11_alignment.py: 4 anchored splices (header
+  filename line + Relation block with v11 round note; intro relation
+  paragraph clause swap; future-directions "instantiated
+  measure-theoretically in the application paper"; bibliography
+  pointer) + companion_refs_v11.bib byte-identical copy.
+- VERIFIED: tectonic 76 pp, 0 errors, 0 '??' (warning profile identical
+  to the v10 baseline); audit_v28_numbers.py (make: v27 copy,
+  companion filename retargeted) 349/349 PASS; pattern_sweep_v16
+  16/16 clean on v11 and v19; verify_v19_completeness ALL COMPLETE.
+- v23 package (build_submission_zips_v23.sh): both ZIPs rebuilt,
+  fresh-dir standalone compiles re-verified 37/76 pp; download PDF
+  copy of companion_categorical_v11.pdf added.
+- Links doc (update_links_doc_v23.py): generation header, newest-first
+  V11 revision note, companion rows -> v11 (also fixed the table's
+  stale companion_refs_v9.bib pointer), checklist updated (audit_v28,
+  v23 ZIPs, delegation decision recorded).
+- Cover letters: TAC letter retargeted (application title -> the v19
+  plain title; division-of-labor bullet -> "written in measure-
+  theoretic terms alone; one paragraph of its Discussion records the
+  division of labor"; repo file pointer -> journal_manuscript_v19.tex;
+  date); BMB letter companion file pointer -> v11 + date.
+- Environment note: fresh container -- cobra reinstalled into the
+  active venv (python3 -m pip install cobra) so audit_v28 could run
+  its LP recompute checks.
+
+Stage Summary:
+- Verdict: the removed categorical subsection is delegated to the
+  categorical companion, which already carries its full development;
+  no appendix, no supplementary in the main paper.
+- companion_categorical_v11.tex (76 pp) aligns both papers' statements
+  of the division of labor; main v19 unchanged; all 349 numerical
+  checks PASS; v23 ZIPs fresh-dir verified.
+- Standing rules honored: new versions only (v10/v19 and all earlier
+  untouched); commit + push with the one-off PAT URL next.

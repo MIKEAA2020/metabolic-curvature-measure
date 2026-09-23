@@ -1,12 +1,47 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-23 (V19 comprehension-restructure round + v22
-package round: journal_manuscript_v19 + companion_categorical_v10;
-supersedes the V18 JTB-alignment + v21 package round). All repository
+Generated 2026-09-24 (V11 companion-alignment round + v23 package
+round: journal_manuscript_v19 (unchanged) + companion_categorical_v11;
+supersedes the V19 comprehension-restructure + v22 package round). All repository
 links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-24, V11 companion-alignment + v23 package round,
+delegation of the removed categorical subsection): the categorical
+subsection removed from the v19 main body is delegated to the companion
+paper, where its full development already lives (Definition def:kv
+carries the viability-weighted curvature with the active-atom
+correspondence to the application paper's kappa-mu and survival
+covectors; the regime-delineation remark maps the application paper's
+slopes 2.000/1.00 to the companion's kappa(a)=a^2 small-loop law and
+wall-crossing O(eps) theorem; the future-directions item records the open
+ratio-form discretization correspondence; the intro "Relation to the
+application paper" paragraph carries the division of labor). No appendix
+and no supplementary section in the main paper: nothing in the main
+argument depends on the categorical reading (v18's own statement, kept
+in v19's Discussion), and re-embedding the flagged prose in the BMB
+submission -- body, appendix, or ESM -- would re-create the desk-reject
+risk. The companion was updated on a NEW versioned file --
+scripts/companion_categorical_v11.tex (from v10; v10 and all earlier
+versions untouched) via scripts/companion_v11_alignment.py -- to align
+its two cross-paper sentences with that division of labor: the intro
+paragraph no longer claims the application paper "states the load-bearing
+definitions ... in brief, adapted form" (it now cites this paper and
+records the division of labor in one Discussion paragraph), and the
+future-directions discretization-bridge item reads "instantiated
+measure-theoretically in the application paper" instead of "and in the
+application paper". Header Relation comment updated;
+companion_refs_v11.bib is a byte-identical copy. Main v19 is UNCHANGED.
+VERIFIED: audit_v28_numbers.py 349/349 PASS (identical check set to
+v27, companion filename retargeted); pattern_sweep_v16 16/16 clean on
+both; verify_v19_completeness ALL COMPLETE; tectonic companion 76 pp,
+0 errors / 0 '??'; v23 ZIPs (build_submission_zips_v23.sh) fresh-dir
+verified 37/76 pp. Cover letters retargeted (TAC letter: application
+title to the v19 plain title, division-of-labor bullet updated, repo
+file pointer to journal_manuscript_v19.tex; BMB letter: companion file
+pointer to companion_categorical_v11.tex).
 
 Revision note (2026-09-23, V19 comprehension-restructure + v22 package
 round, BMB target): after the JTB desk rejection (EIC: the article's
@@ -1035,10 +1070,10 @@ below the abstract of the submitted PDF).
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (76 pp; Gemini-register adoption as base -- title, four-pillar abstract, intro narrative, contribution titles, section leads; v9 substance retained (refs, proof statuses, machine verifications); clickable email and ORCID; prior versions retained as separate files) | [download/companion_categorical_v10.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v10.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v10.pdf) |
+| Manuscript PDF (76 pp; V11 companion-alignment round -- two cross-paper sentences updated to the v19 division of labor (the application paper is written in measure-theoretic terms alone and carries the relation as a Discussion-level pointer; the categorical definitions and the active-atom bridge are stated here alone); every theorem, proof, and number unchanged from v10 (audit_v28 349/349); clickable email and ORCID; prior versions retained as separate files) | [download/companion_categorical_v11.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v11.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v11.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
-| LaTeX source | [scripts/companion_categorical_v10.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v10.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v10.tex) |
-| BibTeX database | [scripts/companion_refs_v9.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v9.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v9.bib) |
+| LaTeX source | [scripts/companion_categorical_v11.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v11.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v11.tex) |
+| BibTeX database (V11: byte-identical copy of the v10 database; fixes this table's stale v9 pointer) | [scripts/companion_refs_v11.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v11.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v11.bib) |
 
 Figures (embedded in the PDF; source PNGs):
 
@@ -1084,9 +1119,15 @@ CRediT authorship contribution statement retained in the backmatter
 generative-AI, and research-data statements present; author-year
 references; continuous line numbering; declarations in backmatter;
 cover letter with companion disclosure (retargeted to the v19 title);
-audit_v27_numbers.py 349/349 PASS; pattern_sweep_v16 16/16;
-verify_v19_completeness ALL COMPLETE; tectonic 37 pp 0 errors;
-v22 ZIPs fresh-dir verified 37/76 pp. Earlier
+companion V11 alignment round: the removed categorical subsection
+delegated to the companion, both papers now describing the same
+division of labor (no appendix / no supplementary in the main);
+cover letters retargeted (TAC: v19 title + file pointer; BMB:
+companion v11 file pointer); audit_v28_numbers.py 349/349 PASS
+(identical check set to v27, companion retargeted to v11);
+pattern_sweep_v16 16/16; verify_v19_completeness ALL COMPLETE;
+tectonic main 37 pp / companion 76 pp, 0 errors / 0 '??';
+v23 ZIPs fresh-dir verified 37/76 pp. Earlier
 rounds resolved: self-contained TAC companion (no v21 pointers,
 proof statuses labeled, keywords + AMS 2020 MSC, brief declarations, cover
 letter); zero cross-paper verbatim prose overlap; author metadata (Amin

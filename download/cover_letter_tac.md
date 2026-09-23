@@ -3,7 +3,7 @@
 **To:** Prof. Michael Shulman, Transmitting Editor,
 Theory and Applications of Categories
 **Cc:** tac@mta.ca (Managing Editor)
-**Date:** September 18, 2026
+**Date:** September 24, 2026
 **Manuscript type:** Research Article
 **Title:** A Geometric and Category-Theoretic Theory of Viability: How
 Sequential Adaptations Induce Path-Dependent Risk
@@ -119,19 +119,22 @@ articles that significantly advance categorical methods.
 **Disclosure of a related manuscript.** In the interest of full
 transparency I disclose that a companion application manuscript is in
 preparation for separate submission to the Bulletin of Mathematical
-Biology: "A Geometric Theory of Metabolic Flux Rerouting: How
-Active-Set Curvature Predicts Transcriptional Regulation and
-Protein-Layer Buffering." The division of labor is deliberate:
+Biology: "A discrete curvature measure for flux balance analysis
+predicts transcriptional regulation and translational buffering in
+*Escherichia coli*." The division of labor is deliberate:
 
 - The **submitted manuscript** develops the full categorical theory:
   all definitions, constructions, theorems, and their proofs or
   marked proof sketches, together with the machine verifications.
 - The **application manuscript** uses a measure-theoretic
   instantiation of the viability-weighted-curvature idea on parametric
-  flux balance analysis and an empirical gene-sensitivity study; it
-  carries only a brief, adapted summary of the categorical reading
-  and cites this paper for the constructions, machine verifications,
-  and proofs at the status marked per result.
+  flux balance analysis and an empirical gene-sensitivity study. It is
+  written in measure-theoretic terms alone; one paragraph of its
+  Discussion records the division of labor and cites this paper for
+  the constructions, machine verifications, and proofs at the status
+  marked per result. All categorical definitions and the
+  active-atom bridge between the two formalisms are stated in the
+  present paper.
 
 The two manuscripts share no verbatim passages of length; each is
 self-contained for its own claims; neither presents the other's
@@ -139,7 +142,7 @@ results as its own. The application manuscript is available for the
 editors' inspection in the same public repository as this paper's
 machine-verification code
 (https://github.com/MIKEAA2020/metabolic-curvature-measure, file
-`scripts/journal_manuscript_v16.tex`, compiled PDF included) and will
+`scripts/journal_manuscript_v19.tex`, compiled PDF included) and will
 be provided as a PDF on request; it is not under consideration
 elsewhere.
 
