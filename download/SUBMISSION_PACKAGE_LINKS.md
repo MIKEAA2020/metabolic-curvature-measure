@@ -1,12 +1,53 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-21 (V18 JTB-alignment round + v21 package round:
-journal_manuscript_v18 + companion_categorical_v10; supersedes the
-V17 enrichment + venue-evaluation + v20 package round). All repository
+Generated 2026-09-23 (V19 comprehension-restructure round + v22
+package round: journal_manuscript_v19 + companion_categorical_v10;
+supersedes the V18 JTB-alignment + v21 package round). All repository
 links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-23, V19 comprehension-restructure + v22 package
+round, BMB target): after the JTB desk rejection (EIC: the article's
+structure and intent could not be followed; AI-assisted formulation a
+barrier), the main manuscript was restructured for comprehension on a
+NEW versioned file -- scripts/journal_manuscript_v19.tex (from v18; v18
+and all earlier versions untouched) via
+scripts/v19_comprehension_restructure.py, re-ordering the paper so the
+biological line of argument leads: (1) new plain title ("A discrete
+curvature measure for flux balance analysis predicts transcriptional
+regulation and translational buffering in Escherichia coli"); (2)
+bio-first abstract rebuilt as a single narrative arc (243 audit-style
+words, within the Springer/BMB 150-250 range; every audited number
+kept); (3) keywords 6 terms (BMB 4-6; the JTB-only 7th term 'path
+dependence' dropped); (4) the intro's five-finding roman-numeral
+enumeration replaced by three question-led paragraphs (what
+mathematics governs rerouting / does the geometry capture real
+rerouting / does the geometry predict regulation); (5) the
+categorical-reading subsection REMOVED from the body (the Discussion's
+companion paragraph carries the pointer; the value-flux event
+dichotomy corollary retained in the body as its own subsection); (6)
+the refinement-resolution bridge MOVED to Appendix A (appendix order:
+bridge, proofs, technical proofs); (7) the counts-disambiguation
+appendix DELETED, its essential mapping folded into Methods; (8) refs
+carried to journal_manuscript_v19_bmb_refs.tex (29 entries
+byte-identical). Package renamed
+submission_main_jtb.zip -> submission_main_bmb.zip (v22 ZIPs,
+build_submission_zips_v22.sh) with a BMB README; the JTB-required
+highlights file stays in the repository as JTB-path history
+(download/highlights_jtb.docx) but is NOT part of the BMB package; the
+companion/TAC package unchanged. VERIFIED: audit_v27_numbers.py
+(make_audit_v27.py) 349/349 PASS (347 carried v26 checks, JTB gates
+recapped to BMB, + V19 restructure gates); pattern_sweep_v16 16/16
+clean on both; v19 structural gates PASS; verify_v19_completeness.py
+ALL COMPLETE (every removed numeric token traced to an intentionally
+deleted/rewritten region; labels/citations resolve; no dangling
+references); tectonic main 37 pp, 0 errors / 0 undefined; v22 ZIPs
+fresh-dir re-verified 37/76 pp. Cover letter
+download/cover_letter_bmb.md retargeted to the v19 title + the
+349-check audit count. Remaining at submission time: the BMB
+Editorial Manager account (code bmab).
 
 Revision note (2026-09-21, V18 JTB-alignment round + v21 package
 round): the author confirmed the JTB venue, so the main manuscript was
@@ -871,35 +912,37 @@ undefined / 0 overfull.
 
 ---
 
-## Paper 1 (Main) — Journal of Theoretical Biology (Elsevier)
+## Paper 1 (Main) — Bulletin of Mathematical Biology (Springer)
 
-**Title:** A Geometric Theory of Metabolic Flux Rerouting: How
-Active-Set Curvature Predicts Transcriptional Regulation and
-Protein-Layer Buffering (Regular Article; 38 pp).
+**Title:** A discrete curvature measure for flux balance analysis
+predicts transcriptional regulation and translational buffering in
+Escherichia coli (Original Research; 37 pp).
 
-**Venue status (2026-09-21, V18 round):** the venue decision is
-**JTB (confirmed)** per the author directive; the v18 round aligns
-the full package to the live JTB Guide for Authors (abstract 249
-words under the 250 cap; 7 keywords; CRediT statement; the required
-separate Highlights file download/highlights_jtb.docx; cover letter
-download/cover_letter_jtb.md retargeted to Regular Article). The
-package itself is venue-neutral and compiles identically for any
-Elsevier/Springer target. Fallback paths remain documented in
-download/V17_Venue_Evaluation.md: BMB return only via
-pre-submission inquiry (resubmission-aware letter
-download/cover_letter_bmb.md, superseded package naming), PLOS
-Comp Bio the biology-maximizing alternative (APC).
+**Venue status (2026-09-23, V19 round):** JTB desk-rejected the v18
+submission on comprehensibility grounds (EIC: structure and intent
+hard to follow; AI-assisted formulation a barrier), so the paper was
+deeply restructured as v19 (plain title, bio-first abstract,
+question-led introduction, categorical subsection removed,
+refinement bridge to Appendix A, counts appendix folded into
+Methods) and retargeted to BMB, whose mathematical-biology
+readership matches the paper's formal content. BMB never received a
+previous submission of this manuscript, so this is a fresh first
+submission, not a resubmission. The package is venue-neutral and
+compiles identically for any Springer/Elsevier target. Fallback
+paths remain documented in download/V17_Venue_Evaluation.md (PLOS
+Comp Bio the biology-maximizing alternative, APC; Mathematical
+Biosciences the math-first alternative).
 
 
-### Journal / submission-portal links (all verified live 2026-09-21)
+### Journal / submission-portal links (BMB links verified live in the
+### earlier BMB rounds; JTB links retained for history)
 
 | Resource | Link |
 |---|---|
-| Journal home (Elsevier) | https://www.sciencedirect.com/journal/journal-of-theoretical-biology |
-| Guide for Authors (abstract <= 250 words; keywords 1-7; Highlights required; CRediT) | https://www.sciencedirect.com/journal/journal-of-theoretical-biology/publish/guide-for-authors |
-| Submit portal | https://submit.elsevier.com/JTB (resolves to Editorial Manager) |
-| Editorial Manager (direct) | https://www.editorialmanager.com/JTB/ |
-| Aims and scope | https://www.sciencedirect.com/journal/journal-of-theoretical-biology/about/aims-and-scope |
+| Journal home (Springer) | https://link.springer.com/journal/11538 |
+| Submission guidelines | https://link.springer.com/journal/11538/submission-guidelines |
+| Editorial Manager (code **bmab**) | https://www.editorialmanager.com/bmab/ |
+| JTB Guide for Authors (historical, v18 round) | https://www.sciencedirect.com/journal/journal-of-theoretical-biology/publish/guide-for-authors |
 
 > Scope fit (from the live aims & scope): JTB is "the leading forum for
 > theoretical perspectives that give insight into biological processes";
@@ -922,15 +965,15 @@ Comp Bio the biology-maximizing alternative (APC).
 
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
-| **One-file upload ZIP (compile-ready, venue-neutral, JTB README)** | — | [download/submission_main_jtb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_jtb.zip) |
-| **Highlights file (JTB-required separate upload, 5 bullets <= 85 chars)** | [download/highlights_jtb.docx](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/highlights_jtb.docx) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/highlights_jtb.docx) |
+| **One-file upload ZIP (compile-ready, venue-neutral, BMB README)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
+| Highlights file (JTB-path history only; not part of the BMB package) | [download/highlights_jtb.docx](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/highlights_jtb.docx) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/highlights_jtb.docx) |
 | Venue evaluation (BMB resubmission analysis + recommendation + pre-submission inquiry draft) | [download/V17_Venue_Evaluation.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/V17_Venue_Evaluation.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/V17_Venue_Evaluation.md) |
-| Manuscript PDF (38 pp, v18 JTB-alignment round: all v17 enrichment content -- worked example, wall coordinates, interior architecture, construction-order rule, anatomy of one switch, MCA comparison, memory-substrate deduction -- with the abstract at 249 words under the JTB 250 cap, 7 keywords, and the CRediT statement; clickable email and ORCID; prior versions retained as separate files) | [download/journal_manuscript_v18.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v18.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v18.pdf) |
-| Cover letter -- JTB (primary, Regular Article; declarations, companion disclosure) | [download/cover_letter_jtb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_jtb.md) |
-| Cover letter -- BMB resubmission-aware version (fallback inquiry path; prior desk decision flagged) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
-| LaTeX source | [scripts/journal_manuscript_v18.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v18.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v18.tex) |
-| Reference list (alphabetical, 29 entries -- kacser1973 + heinrich1974 added; venue-neutral v18 naming) | [scripts/journal_manuscript_v18_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v18_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v18_refs.tex) |
-| BibTeX database | [scripts/journal_manuscript_v18_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v18_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v18_refs.bib) |
+| Manuscript PDF (37 pp, v19 comprehension-restructure round: plain title, bio-first 243-word abstract, question-led introduction, categorical subsection removed, refinement bridge in Appendix A, counts folded into Methods; every v18 number unchanged, audit_v27 349/349; clickable email and ORCID; prior versions retained as separate files) | [download/journal_manuscript_v19.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v19.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v19.pdf) |
+| Cover letter -- BMB (primary, Original Research; declarations, companion disclosure, v19 title) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
+| Cover letter -- JTB (historical, v18 round) | [download/cover_letter_jtb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_jtb.md) |
+| LaTeX source | [scripts/journal_manuscript_v19.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v19.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v19.tex) |
+| Reference list (alphabetical, 29 entries -- kacser1973 + heinrich1974 added; v19 BMB naming) | [scripts/journal_manuscript_v19_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v19_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v19_bmb_refs.tex) |
+| BibTeX database | [scripts/journal_manuscript_v19_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v19_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v19_refs.bib) |
 | Reference-list generator (audit-checked) | [scripts/build_bmb_refs.py](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/build_bmb_refs.py) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/build_bmb_refs.py) |
 
 Figures (embedded in the PDF; source PNGs if the portal requests separate files):
@@ -947,12 +990,14 @@ Figures (embedded in the PDF; source PNGs if the portal requests separate files)
 Build note: for Overleaf or any standalone compiler, upload **the ZIP** (it
 contains the .tex, the input'ed reference list, the .bib database, and all
 six figures at the exact relative subpaths the .tex expects — verified to
-compile standalone, 38 pp, 0 errors). If instead you upload individual
-files, upload them together with `journal_manuscript_v18_refs.tex` and
+compile standalone, 37 pp, 0 errors). If instead you upload individual
+files, upload them together with `journal_manuscript_v19_bmb_refs.tex` and
 the three figure subfolders (`m1_m3/`, `alexandrov_bridge/`,
 `association_robustness/`) so the paths resolve; the .tex searches both the
 upload directory and the repository layout
-(`\graphicspath{{./}{../download/}}`).
+(`\graphicspath{{./}{../download/}}`). The v19 package: 37 pp.
+Upload `journal_manuscript_v19_bmb_refs.tex` (not the v18 refs
+name) together with the .tex.
 
 ---
 
@@ -1028,20 +1073,20 @@ Figures (embedded in the PDF; source PNGs):
 
 ## Pre-submission checklist (already resolved / remaining)
 
-Resolved (V18 JTB-alignment round, 2026-09-21): JTB-requirements
-pass -- Regular Article type; abstract 249 audit-style words under
-JTB's 250-word cap (rendered ~235); 7 keywords (JTB range 1-7); the
-REQUIRED Highlights file download/highlights_jtb.docx (5 bullets,
-each <= 85 characters incl. spaces, biological applications +
-theoretical advancement featured; postcheck 9/9); the CRediT
-authorship contribution statement in the backmatter; competing
-interests, funding, generative-AI, and research-data statements
-present; author-year references (Elsevier accepts any consistent
-style at submission); continuous line numbering; declarations in
-backmatter; cover letter with companion disclosure (retargeted to
-Regular Article); audit_v26_numbers.py 347/347 PASS;
-pattern_sweep_v16 16/16; verify_v18_completeness ALL COMPLETE;
-tectonic 38 pp 0 errors; VLM CLEAN on the changed pages. Earlier
+Resolved (V19 comprehension-restructure round, 2026-09-23, BMB
+target): the JTB desk-rejection diagnosis addressed -- plain single-
+claim title; bio-first 243-word abstract (Springer/BMB 150-250);
+6 keywords (BMB 4-6); three question-led introduction paragraphs;
+categorical subsection removed from the body; refinement bridge in
+Appendix A; counts-disambiguation appendix folded into Methods; the
+CRediT authorship contribution statement retained in the backmatter
+(Springer accepts any consistent form); competing interests, funding,
+generative-AI, and research-data statements present; author-year
+references; continuous line numbering; declarations in backmatter;
+cover letter with companion disclosure (retargeted to the v19 title);
+audit_v27_numbers.py 349/349 PASS; pattern_sweep_v16 16/16;
+verify_v19_completeness ALL COMPLETE; tectonic 37 pp 0 errors;
+v22 ZIPs fresh-dir verified 37/76 pp. Earlier
 rounds resolved: self-contained TAC companion (no v21 pointers,
 proof statuses labeled, keywords + AMS 2020 MSC, brief declarations, cover
 letter); zero cross-paper verbatim prose overlap; author metadata (Amin
@@ -1052,13 +1097,11 @@ references, or strawman constructions in either paper; audit_v23 301/301
 PASS against journal_manuscript_v16.tex + companion_categorical_v10.tex;
 no-fee venue for both.
 
-Remaining at submission time: only the JTB Editorial Manager account
-(https://www.editorialmanager.com/JTB/, via
-https://submit.elsevier.com/JTB) -- then upload the manuscript ZIP
-contents (or the single PDF, per Your Paper Your Way),
-download/highlights_jtb.docx as its own Highlights file, and
-download/cover_letter_jtb.md as the cover letter. Fallback paths
-(BMB pre-submission inquiry, PLOS Comp Bio) remain documented in
+Remaining at submission time: only the BMB Editorial Manager account
+(https://www.editorialmanager.com/bmab/, code bmab) -- then upload
+the manuscript ZIP contents (or the single PDF) and
+download/cover_letter_bmb.md as the cover letter. Fallback paths
+(PLOS Comp Bio, Mathematical Biosciences) remain documented in
 download/V17_Venue_Evaluation.md. Resolved this round: the cover-letter dates are filled
 (September 17, 2026, both letters) and the TAC receiving board member
 is selected -- Prof. Michael Shulman (University of San Diego), Transmitting
