@@ -1069,7 +1069,7 @@
    "id": "O2-13",
    "claim": "flip ratios (CORRECTED): glycolysis six 0.70-1.00 aerobically -> 0 anaerobically; fabZ 0 -> 0 (stays essential; the 0->1 reading was the tolerance artifact)",
    "artifact": "keio_o2_limited_e16_sweep.csv + keio_glucose_only_e16_sweep.csv",
-   "value": "{'b2779': (np.float64(0.81), np.float64(0.0)), 'b1779': (np.float64(0.701), np.float64(0.0)), 'b2926': (np.float64(0.701), np.float64(0.0)), 'b3867': (np.float64(1.0), np.float64(0.0)), 'b3612': (np.float64(0.843), np.float64(0.0)), 'b0755': (np.float64(0.843), np.float64(0.0))}; fabZ (np.float64(0.0), np.float64(0.0))",
+   "value": "{'b0755': (np.float64(0.843), np.float64(0.0)), 'b2926': (np.float64(0.701), np.float64(0.0)), 'b2779': (np.float64(0.81), np.float64(0.0)), 'b1779': (np.float64(0.701), np.float64(0.0)), 'b3612': (np.float64(0.843), np.float64(0.0)), 'b3867': (np.float64(1.0), np.float64(0.0))}; fabZ (np.float64(0.0), np.float64(0.0))",
    "status": "PASS",
    "note": ""
   },
