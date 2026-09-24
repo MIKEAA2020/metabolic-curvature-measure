@@ -1,12 +1,40 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-24 (V20/V13 Discover Applied Mathematics round +
-v25 package round: journal_manuscript_v20 + companion_categorical_v13;
-supersedes the V12 companion-comprehension + v24 package round). All repository
+Generated 2026-09-24 (V21/V14 final-prose round + v26 package round: journal_manuscript_v21 + companion_categorical_v14;
+supersedes the V20/V13 Discover Applied Mathematics + v25 package round). All repository
 links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-24, V21/V14 final-prose round + v26
+package round, the final read-through pass of both manuscripts' prose):
+the pass read both manuscripts end to end and applied its findings as a
+light touch-up on NEW versioned files -- scripts/journal_manuscript_
+v21.tex (from v20; v20 and all earlier versions untouched, via
+scripts/v21_v14_final_prose_fixes.py) and scripts/companion_categorical_
+v14.tex (from v13; v13 and all earlier versions untouched, same script).
+MAIN: the Discussion memory subsection's same-gene transcript
+correlation harmonized to +0.419 (the e27 artifact value gated by
+audit E27-1, matching 5.9 and the buffering subsection -- the +0.420
+token was the v17-ledger recomputation of the same quantity at slightly
+different gene matching), the unexplained 'locked' qualifier replaced
+by the actual provenance of the -0.098/+0.339 pair (the per-gene path
+metric of 5.7, the V7 P0 deposits), and the six in-text figure
+references normalized to the Springer 'Fig. n' form (Fig.~).
+COMPANION: the where-clause of the piecewise-holonomy formula restored
+to its equation (it had been displaced behind the affine-wall regime
+paragraph, leaving a lowercase fragment), the two-contractions remark's
+state space corrected to the theorem's box X = [-1.5,1.5]^d ([0,1]^d
+fails the hypothesis by the paper's own box-invariance computation), a
+punctuation repair in the Ito-expansion proof, and the figure-label
+convention aligned with the main paper and the journal's 'Fig. n' form
+(captions via the caption package; the three in-text 'Figure~'
+references normalized). Every theorem, proof, number, section, table,
+and figure unchanged. VERIFIED: audit_v31_numbers.py 366/366 PASS (the
+v30 ledger carried + 7 V21 gates); tectonic main 37 pp / companion
+76 pp, 0 errors / 0 '??'; v26 ZIPs (build_submission_zips_v26.sh)
+fresh-dir verified 37/76 pp; DAM cover letters retargeted (366/366).
 
 Revision note (2026-09-24, V20/V13 DAM round + v25 package round,
 F1-F7 light touch-up + venue alignment): the causal-coherence and
@@ -1072,7 +1100,7 @@ download/V17_Venue_Evaluation.md.
 > single-anonymous peer review; numeric square-bracket citations
 > ("identified by numbers in square brackets e.g. [1-3, 7]");
 > figure captions beginning "Fig. n" with no punctuation after the
-> number; all articles published open access. The v20 package
+> number; all articles published open access. The v21 package
 > carries every one of these elements (245-word abstract, six
 > keywords, numeric natbib mode, Fig.-label captions, CRediT +
 > declarations in the backmatter).
@@ -1088,13 +1116,13 @@ download/V17_Venue_Evaluation.md.
 | **One-file upload ZIP (compile-ready, DAM README; fresh-dir verified 37 pp)** | — | [download/submission_main_dam.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_dam.zip) |
 | Highlights file (JTB-path history only; not part of the BMB package) | [download/highlights_jtb.docx](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/highlights_jtb.docx) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/highlights_jtb.docx) |
 | Venue evaluation (BMB resubmission analysis + recommendation + pre-submission inquiry draft) | [download/V17_Venue_Evaluation.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/V17_Venue_Evaluation.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/V17_Venue_Evaluation.md) |
-| Manuscript PDF (37 pp, v20 DAM round: the F1-F7 review findings applied as a light touch-up -- the direct trajectory rank correlation reported (rho = +0.92 P1 / +0.96 P2, 424 shared genes), the GC-rate two-regime qualifier, three near-identity wordings corrected, the translation-buffering mechanism hedged and the title narrowed to the measured claim; DAM alignment: numeric square-bracket citations, Fig.-label captions, 245-word abstract, 359-count refresh; every number unchanged, audit_v30 359/359; clickable email and ORCID; prior versions retained as separate files) | [download/journal_manuscript_v20.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v20.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v20.pdf) |
-| Cover letter -- DAM (primary, Research Article; declarations, companion disclosure, v20 title, 359/359 audit) | [download/cover_letter_dam.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_dam.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_dam.md) |
+| Manuscript PDF (37 pp, v21 final-prose round: the read-through pass applied -- the Discussion memory subsection's same-gene transcript correlation harmonized to +0.419 (one audited value everywhere), the protein-layer robustness sentence's provenance named (the per-gene path metric of 5.7), and the six in-text figure references normalized to the 'Fig. n' form; every number unchanged from v20, audit_v31 366/366; clickable email and ORCID; prior versions retained as separate files) | [download/journal_manuscript_v21.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v21.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v21.pdf) |
+| Cover letter -- DAM (primary, Research Article; declarations, companion disclosure, v21 title, 366/366 audit) | [download/cover_letter_dam.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_dam.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_dam.md) |
 | Cover letter -- BMB (historical, v19 round) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) |
 | Cover letter -- JTB (historical, v18 round) | [download/cover_letter_jtb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_jtb.md) |
-| LaTeX source | [scripts/journal_manuscript_v20.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v20.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v20.tex) |
-| Reference list (alphabetical, 29 entries -- kacser1973 + heinrich1974 present; v20 DAM naming; the zai2026categorical cross-citation title aligned to the companion's actual title) | [scripts/journal_manuscript_v20_dam_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v20_dam_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v20_dam_refs.tex) |
-| BibTeX database | [scripts/journal_manuscript_v20_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v20_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v20_refs.bib) |
+| LaTeX source | [scripts/journal_manuscript_v21.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v21.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v21.tex) |
+| Reference list (alphabetical, 29 entries -- kacser1973 + heinrich1974 present; v21 naming, entries byte-identical to the v20 list; the zai2026categorical cross-citation title aligned to the companion's actual title) | [scripts/journal_manuscript_v21_dam_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v21_dam_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v21_dam_refs.tex) |
+| BibTeX database | [scripts/journal_manuscript_v21_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v21_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v21_refs.bib) |
 | Reference-list generator (audit-checked) | [scripts/build_bmb_refs.py](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/build_bmb_refs.py) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/build_bmb_refs.py) |
 
 Figures (embedded in the PDF; source PNGs if the portal requests separate files):
@@ -1112,12 +1140,12 @@ Build note: for Overleaf or any standalone compiler, upload **the ZIP** (it
 contains the .tex, the input'ed reference list, the .bib database, and all
 six figures at the exact relative subpaths the .tex expects — verified to
 compile standalone, 37 pp, 0 errors). If instead you upload individual
-files, upload them together with `journal_manuscript_v20_dam_refs.tex` and
+files, upload them together with `journal_manuscript_v21_dam_refs.tex` and
 the three figure subfolders (`m1_m3/`, `alexandrov_bridge/`,
 `association_robustness/`) so the paths resolve; the .tex searches both the
 upload directory and the repository layout
-(`\graphicspath{{./}{../download/}}`). The v20 package: 37 pp.
-Upload `journal_manuscript_v20_dam_refs.tex` (not the v19 refs
+(`\graphicspath{{./}{../download/}}`). The v21 package: 37 pp.
+Upload `journal_manuscript_v21_dam_refs.tex` (not the v20 refs
 name) together with the .tex.
 
 ---
@@ -1156,11 +1184,11 @@ superseded by the DAM target.
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready, DAM README; fresh-dir verified 76 pp)** | — | [download/submission_companion_dam.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_dam.zip) |
-| Manuscript PDF (76 pp; V13 DAM round -- the review's F2 applied: the six-axis abstract sentence now covers all three body categories (regime switches and nitrogen-source substitution); DAM alignment: abstract 248 < 250 words, keywords 9 -> 6, numeric square-bracket citations, the zai2026measure cross-citation title aligned to the v20 application title; every theorem, proof, and number unchanged from v12 (audit_v30 359/359); clickable email and ORCID; prior versions retained as separate files) | [download/companion_categorical_v13.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v13.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v13.pdf) |
-| Cover letter -- DAM (primary, Research Article; declarations, application-paper disclosure, v13 title) | [download/cover_letter_dam_companion.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_dam_companion.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_dam_companion.md) |
+| Manuscript PDF (76 pp; V14 final-prose round -- the read-through pass applied: the where-clause of the piecewise-holonomy formula restored to its equation, the two-contractions remark's state space corrected to the theorem's box X = [-1.5,1.5]^d, an Ito-proof punctuation repair, and the figure-label convention aligned with the journal's 'Fig. n' form; every theorem, proof, and number unchanged from v13 (audit_v31 366/366); clickable email and ORCID; prior versions retained as separate files) | [download/companion_categorical_v14.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v14.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v14.pdf) |
+| Cover letter -- DAM (primary, Research Article; declarations, application-paper disclosure, v14 title) | [download/cover_letter_dam_companion.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_dam_companion.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_dam_companion.md) |
 | Cover letter -- TAC (historical, v12 round) | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) |
-| LaTeX source | [scripts/companion_categorical_v13.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v13.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v13.tex) |
-| BibTeX database (V13: the zai2026measure title aligned to the v20 application title; otherwise byte-identical to the v12 database) | [scripts/companion_refs_v13.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v13.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v13.bib) |
+| LaTeX source | [scripts/companion_categorical_v14.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v14.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v14.tex) |
+| BibTeX database (V14: byte-identical to the v13 database; no reference changes in the final-prose round) | [scripts/companion_refs_v14.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v14.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v14.bib) |
 
 Figures (embedded in the PDF; source PNGs):
 
@@ -1195,7 +1223,21 @@ Figures (embedded in the PDF; source PNGs):
 
 ## Pre-submission checklist (already resolved / remaining)
 
-Resolved (V20/V13 Discover Applied Mathematics round, 2026-09-24):
+Resolved (V21/V14 final-prose round, 2026-09-24): the final
+read-through pass of both manuscripts' prose applied on NEW
+versioned files (main v21 from v20, companion v14 from v13; the
+earlier versions untouched) -- the memory-subsection transcript
+token harmonized to +0.419 (one audited value everywhere), the
+protein-layer robustness sentence's provenance named (the per-gene
+path metric), six 'Fig. n' in-text references normalized, the
+companion where-clause restored, the two-contractions state space
+corrected, an Ito-proof punctuation repair, and the companion
+figure-label captions aligned to 'Fig. n'; audit_v31_numbers.py
+366/366 PASS; tectonic 37/76 pp, 0 errors / 0 '??'; v26 ZIPs
+(submission_main_dam.zip, submission_companion_dam.zip) fresh-dir
+verified; cover letters retargeted (366/366). Earlier rounds
+resolved: the V20/V13 Discover Applied Mathematics round,
+2026-09-24:
 the F1-F7 causal-coherence/prose-alignment findings applied on NEW
 versioned files (main v20 from v19, companion v13 from v12; the
 earlier versions untouched) -- F3 the direct per-gene trajectory

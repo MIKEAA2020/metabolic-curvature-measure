@@ -8067,3 +8067,26 @@ Stage Summary:
 - Standing rules honored: new versions only (v19/v12 and all earlier
   untouched; v19.pdf restored byte-exact); PAT one-off push URL,
   never stored.
+
+---
+Task ID: v21-v14-final-prose-round
+Agent: main (Super Z)
+Task: Final read-through pass of both manuscripts' prose; findings
+applied as the V21/V14 final-prose round.
+
+Work Log:
+- Full prose read of journal_manuscript_v20.tex + companion_
+  categorical_v13.tex; findings M1-M3 (main) and C1-C4 (companion)
+  as recorded in download/Final_Prose_ReadThrough_Evaluation.md;
+  applied via scripts/v21_v14_final_prose_fixes.py on new versioned
+  files (v21/v14; earlier versions untouched); refs/bib side files
+  carried (29 entries; companion bib byte-identical).
+- audit_v31_numbers.py 366/366 PASS (v30 ledger carried + 7 V21
+  gates; count text refreshed to 366); tectonic 37/76 pp, 0 errors /
+  0 '??'; v26 DAM ZIPs fresh-dir verified; cover letters + links doc
+  retargeted.
+
+Stage Summary:
+- journal_manuscript_v21.tex + companion_categorical_v14.tex are the
+  submission heads (Discover Applied Mathematics); every theorem,
+  proof, number, section, table, and figure unchanged from v20/v13.
