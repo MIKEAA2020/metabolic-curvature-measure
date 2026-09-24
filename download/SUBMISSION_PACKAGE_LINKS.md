@@ -1,11 +1,32 @@
 # Submission Package Links — Two-Paper Package
 
 Generated 2026-09-24 (V22/V15 Zenodo-archive round + v27 package round: journal_manuscript_v22 + companion_categorical_v15;
+zip-visibility update 2026-09-25 (version-named zip copies + where-to-find
+clarifier); no manuscript, PDF, or package byte changes;
 supersedes the V21/V14 final-prose + v26 package round). All repository
 links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+WHERE THE CURRENT ZIPS LIVE (added 2026-09-25, zip-visibility round,
+all links byte-verified against the live GitHub main branch this round):
+- CURRENT packages (the ones to download and submit): the two GitHub
+  files -- download/submission_main_dam.zip (v27 build; contains
+  journal_manuscript_v22.tex; MD5 04d10994cded754c13b3869452618ddf) and
+  download/submission_companion_dam.zip (v27 build; contains
+  companion_categorical_v15.tex; MD5 482b92eb44f2de5653e08c7653683877).
+- Version-named byte-identical copies (added this round, because the
+  unversioned filenames are reused by every build round):
+  download/submission_main_dam_v22.zip and
+  download/submission_companion_dam_v15.zip.
+- ARCHIVAL snapshots (one generation behind by design): the two Zenodo
+  version DOIs 10.5281/zenodo.22941018 and 10.5281/zenodo.22940820 hold
+  the v26 packages (journal_manuscript_v21.tex /
+  companion_categorical_v14.tex), exactly as recorded in the manuscripts'
+  data availability statements. If the deposits are refreshed with the
+  v27 packages, the concept DOIs (10.5281/zenodo.22941017 /
+  10.5281/zenodo.22940819) resolve to the latest version.
 
 Revision note (2026-09-24, V22/V15 Zenodo-archive round + v27
 package round): the two archival DOIs wired into both data
@@ -1146,6 +1167,7 @@ download/V17_Venue_Evaluation.md.
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready, DAM README; v27 build, fresh-dir verified 37 pp)** | — | [download/submission_main_dam.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_dam.zip) |
+| **Version-named copy of the one-file upload ZIP (byte-identical to submission_main_dam.zip; v27 build containing journal_manuscript_v22.tex; added 2026-09-25 for unambiguous version identification)** | — | [download/submission_main_dam_v22.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_dam_v22.zip) |
 | **Zenodo archive of the submission package (version DOI 10.5281/zenodo.22941018; concept DOI 10.5281/zenodo.22941017; CC-BY 4.0; deposit = the v26 ZIP, MD5 8e7e367183a8f84493e65796bc7ebad4, byte-verified live; cited in the manuscript's Data, Software, and Code Availability statement)** | — | https://doi.org/10.5281/zenodo.22941018 |
 | Highlights file (JTB-path history only; not part of the BMB package) | [download/highlights_jtb.docx](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/highlights_jtb.docx) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/highlights_jtb.docx) |
 | Venue evaluation (BMB resubmission analysis + recommendation + pre-submission inquiry draft) | [download/V17_Venue_Evaluation.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/V17_Venue_Evaluation.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/V17_Venue_Evaluation.md) |
@@ -1217,6 +1239,7 @@ superseded by the DAM target.
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready, DAM README; v27 build, fresh-dir verified 76 pp)** | — | [download/submission_companion_dam.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_dam.zip) |
+| **Version-named copy of the one-file upload ZIP (byte-identical to submission_companion_dam.zip; v27 build containing companion_categorical_v15.tex; added 2026-09-25 for unambiguous version identification)** | — | [download/submission_companion_dam_v15.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_dam_v15.zip) |
 | **Zenodo archive of the submission package (version DOI 10.5281/zenodo.22940820; concept DOI 10.5281/zenodo.22940819; CC-BY 4.0; deposit = the v26 ZIP, MD5 6fa2d8d08386daeef563328fdfafad63, byte-verified live; cited in the manuscript's Data and code availability declaration)** | — | https://doi.org/10.5281/zenodo.22940820 |
 | Manuscript PDF (76 pp; V15 Zenodo-archive round -- the Data and code availability paragraph records the archival DOI 10.5281/zenodo.22940820 (CC-BY 4.0); every theorem, proof, and number unchanged from v14 (audit_v32 372/372); clickable email and ORCID; prior versions retained as separate files) | [download/companion_categorical_v15.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v15.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v15.pdf) |
 | Cover letter -- DAM (primary, Research Article; declarations, application-paper disclosure, v15 title, Zenodo DOI in the availability disclosure) | [download/cover_letter_dam_companion.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_dam_companion.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_dam_companion.md) |
