@@ -8090,3 +8090,86 @@ Stage Summary:
 - journal_manuscript_v21.tex + companion_categorical_v14.tex are the
   submission heads (Discover Applied Mathematics); every theorem,
   proof, number, section, table, and figure unchanged from v20/v13.
+
+---
+Task ID: v22-v15-zenodo-archive-round
+Agent: main (Super Z)
+Task: User provided the two archival DOIs (Zenodo 22941018 main /
+22940820 companion) to be wired into the two papers' data availability
+statements (follow-up to the figshare question, where both candidate
+DOIs had turned out to be stale companion deposits).
+
+Work Log:
+- Verified both Zenodo records live via the API: 22941018 = "A
+  discrete curvature measure for flux balance analysis predicts
+  transcriptional regulation in Escherichia coli" (file
+  submission_main_dam.zip, 1,091,812 bytes, CC-BY 4.0, concept DOI
+  22941017) and 22940820 = "A Geometric and Category-Theoretic
+  Theory of Viability" (file submission_companion_dam.zip, 4,588,607
+  bytes, CC-BY 4.0, concept DOI 22940819); both published 2026-09-24.
+- Environment recovery: the sandbox had been rolled back to the Sep-16
+  snapshot (local git at the v7/v6-era commit b851ffe, v21/v14
+  manuscripts gone from the working tree). Local branch was strictly
+  behind the remote (26 commits, no local-only commits), so a clean
+  `git merge --ff-only` restored the full v21/v14 + v26 state; the
+  local v26 ZIPs then matched the Zenodo deposits BYTE-EXACTLY by MD5
+  (main 8e7e367183a8f84493e65796bc7ebad4, companion
+  6fa2d8d08386daeef563328fdfafad63) -- the deposits are exactly the
+  current v26 submission packages.
+- Located the availability statements: main = backmatter section
+  "Data, Software, and Code Availability"; companion = "Data and code
+  availability." paragraph inside Declarations. Neither cited any DOI
+  before this round.
+- Applied the round on NEW versioned files via scripts/
+  v22_v15_zenodo_doi.py (count-asserted anchored edits + byte-exact
+  reverse-edit verification): journal_manuscript_v22.tex (6 edits:
+  header title + V22 round block, the availability statement gains
+  "the compile-ready submission package of this manuscript (LaTeX
+  sources, figures, and the compiled PDF) is archived on Zenodo at
+  DOI 10.5281/zenodo.22941018 (CC-BY 4.0)", the refs \input pointer
+  retargeted, and the two Reproducibility count sites 366 -> 372) and
+  companion_categorical_v15.tex (5 edits: header title + V15 round
+  block + the header application-paper pointer retargeted, the
+  availability paragraph gains its DOI 10.5281/zenodo.22940820
+  sentence, the \bibliography pointer retargeted). Side files:
+  journal_manuscript_v22_dam_refs.tex (v22 round header + the v21
+  entries verbatim, 29 entries), journal_manuscript_v22_refs.bib and
+  companion_refs_v15.bib (byte-identical copies). v21/v14 and all
+  earlier versions untouched.
+- Audit: make_audit_v32.py built audit_v32_numbers.py from the v31
+  ledger (functional retargets 10/17/28/5 + V20-9 arithmetic + 6 new
+  V22 gates: main DOI wiring, companion DOI wiring, refs/bib carry,
+  main minimal-diff reverse-edit == v21 byte-exact, companion
+  minimal-diff == v14 byte-exact, and the count-site refresh); cobra
+  0.32.1 reinstalled into the venv after the sandbox reset (pip had
+  installed to the system python); final run 372/372 PASS.
+- Rebuilt: tectonic main 37 pp / companion 76 pp, 0 errors / 0 '??'
+  in both; the DOI sentences render correctly in both PDFs; v27 ZIPs
+  (build_submission_zips_v27.sh, READMEs retargeted + Zenodo
+  availability notes) fresh-dir verified 37/76 pp; PDF copies
+  deposited in download/.
+- Cover letters retargeted via update_cover_letters_v27.py: file
+  pointers v21->v22 / v14->v15, audit counts 366/366 -> 372/372, and
+  the data-availability disclosures now carry the two Zenodo DOIs.
+- Links doc via update_links_doc_v27.py (23 anchored edits): V22/V15
+  revision note (newest-first) with the version/concept DOIs + MD5s,
+  package rows retargeted, new "Zenodo archive of the submission
+  package" rows for both papers, v27 ZIP stamps, build/upload notes,
+  and the pre-submission checklist prepended with this round.
+- Committing and pushing all new files with the user-provided PAT
+  (one-off URL, never stored).
+
+Stage Summary:
+- journal_manuscript_v22.tex (37 pp) + companion_categorical_v15.tex
+  (76 pp) complete: both data availability statements now cite their
+  Zenodo archives (version DOIs 22941018 / 22940820, byte-verified
+  against the live records; concept DOIs 22941017 / 22940819 noted in
+  the links doc); audit_v32 372/372 PASS; v27 ZIPs + cover letters +
+  links doc delivered. Standing rules honored: new versions only
+  (v21/v14 and all earlier untouched); logical precedence preserved
+  (availability-statement-level changes only -- no theorem, proof,
+  number, figure, or reference touched). NOTE for the user: the two
+  Zenodo deposits currently hold the v26 packages (v21/v14 PDFs);
+  citing the version DOIs is accurate as the archival record. If the
+  deposits are refreshed with the v27 packages, the concept DOIs
+  resolve to the latest version.
