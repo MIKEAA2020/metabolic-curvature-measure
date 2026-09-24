@@ -1,0 +1,40 @@
+{
+  "experiment": "v20 F3 direct per-gene rank stability across trajectories (kappa_mu, deposited v7 path CSVs)",
+  "inputs": {
+    "P0": "v7_P0_glucose_decline.csv",
+    "P1": "v7_P1_oxygen_limitation.csv",
+    "P2": "v7_P2_acetate_switch.csv"
+  },
+  "n_genes_per_path": {
+    "P0": 433,
+    "P1": 433,
+    "P2": 433
+  },
+  "n_nonzero_per_path": {
+    "P0": 424,
+    "P1": 426,
+    "P2": 426
+  },
+  "comparisons": {
+    "P0_vs_P1": {
+      "n_common_genes": 433,
+      "n_union_nonzero": 426,
+      "n_both_nonzero": 424,
+      "spearman_all_433_with_ties": 0.9046,
+      "spearman_union_nonzero": 0.9002,
+      "spearman_both_nonzero": 0.9176,
+      "pearson_both_nonzero": 0.7729,
+      "pearson_log10p1_both_nonzero": 0.8441
+    },
+    "P0_vs_P2": {
+      "n_common_genes": 433,
+      "n_union_nonzero": 426,
+      "n_both_nonzero": 424,
+      "spearman_all_433_with_ties": 0.9414,
+      "spearman_union_nonzero": 0.9388,
+      "spearman_both_nonzero": 0.9551,
+      "pearson_both_nonzero": 0.8726,
+      "pearson_log10p1_both_nonzero": 0.8506
+    }
+  }
+}

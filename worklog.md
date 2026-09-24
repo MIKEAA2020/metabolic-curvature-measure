@@ -7977,3 +7977,93 @@ Stage Summary:
   structure.
 - Standing rules honored: new versions only (v11/v19 and all earlier
   untouched); commit + push with the one-off PAT URL next.
+
+---
+Task ID: v20-v13-dam-round
+Agent: main (Super Z)
+Task: Apply the F1-F7 causal-coherence/prose-alignment findings as a
+light touch-up on NEW versioned files (main v20 from v19; companion
+v13 from v12), retarget both manuscripts to Discover Applied
+Mathematics (the author's venue decision), re-run the audit, rebuild
+the packages, ensure title/abstract/keywords/sections/supplementary
+alignment across both papers, and commit + push with the PAT.
+
+Work Log:
+- Recovered the round state: the earlier portion of this session had
+  created journal_manuscript_v20.tex / companion_categorical_v13.tex
+  and the v30 audit (357 PASS / 2 FAIL); the two FAILs were fixed this
+  continuation: (V20-3) the third "metric invariance" site (Discussion,
+  v19 line 1796) -> "measured metric agreement" + the header note
+  reworded so the quoted old forms no longer trip the gate;
+  (V20-9) both audit-count mentions refreshed 349 -> 359.
+  scripts/v20_main_f_fixes.py patched (16 anchored edits) and re-run;
+  v20.tex regenerated from v19; v19.pdf restored byte-exact after an
+  accidental rebuild (git checkout).
+- audit_v30_numbers.py re-run: 359/359 PASS (ledger re-deposited at
+  download/deepseek_bridge/v30_number_audit.{json,md}).
+- F3 substantiation: scripts/v20_f3_rank_stability.py computed the
+  direct per-gene Spearman rho(kappa_mu_P0, kappa_mu_P1) = 0.9176 ->
+  "+0.92" and rho(P0, P2) = 0.9551 -> "+0.96" over the 424 genes
+  nonzero on both paths, from the deposited v7 path CSVs
+  (download/deepseek_bridge/v20_path_rank_stability.json); reported
+  in situ in the v20 intro.
+- F2 on the companion: v13 abstract six-axis sentence now reads
+  "...re-stratifying only at regime switches and nitrogen-source
+  substitution" (all three body categories); abstract 246 wp / 248
+  audit-style < 250; keywords 9 -> 6; numeric square-bracket
+  citations; companion_refs_v13.bib zai2026measure title aligned to
+  the v20 application title.
+- Venue facts live-verified AGAIN this round (agent-browser past the
+  Springer client challenge, link.springer.com/journal/44585/
+  submission-guidelines): Snapp submission system; Research article;
+  abstract less than 250 words + cover letter required;
+  single-anonymous peer review; "Reference citations ... identified
+  by numbers in square brackets e.g. [1-3, 7]"; captions "begin with
+  the term Fig. followed by the figure number ... no punctuation
+  after the number"; all articles open access. The v20/v13 formatting
+  (natbib [numbers,sort&compress,square], labelsep=space +
+  \figurename 'Fig.') matches exactly.
+- Builds: tectonic journal_manuscript_v20.pdf 37 pp, 0 errors / 0
+  '??' (narrowed title, F6 hedge, all numbers intact in the text
+  layer); companion_categorical_v13.pdf 76 pp, 0 '??', F2 qualifier
+  confirmed in the compiled text.
+- v25 packages (build_submission_zips_v25.sh): submission_main_dam.zip
+  + submission_companion_dam.zip with DAM READMEs (Snapp route, caps,
+  citation style, single-anonymous, open access); fresh-dir standalone
+  compiles re-verified 37/76 pp; superseded submission_main_bmb.zip /
+  submission_companion_tac.zip removed (git history preserves);
+  download PDF copies (journal_manuscript_v20.pdf,
+  companion_categorical_v13.pdf) refreshed.
+- Cover letters: download/cover_letter_dam.md (main) + download/
+  cover_letter_dam_companion.md (companion), both quoting the actual
+  current titles, F5/F6-consistent wording ("five-decimal metric
+  agreement", "consistent with"), 359/359 audit, cross-pointers to
+  v13/v20, Snapp route, open-access disclosure.
+- Links doc (update_links_doc_v25.py, 25 anchored edits): generation
+  header, V20/V13 newest-first revision note, Paper 1 + Paper 2
+  sections retargeted to DAM (titles -- including fixing the
+  companion's stale pre-v11 title in the Paper 2 heading, venue
+  status, live DAM journal links, package rows -> v20/v13/DAM zips,
+  build note), checklist + Snapp "remaining at submission time".
+- Consistency sweep (scripts/v25_consistency_sweep.py): 34/34 PASS --
+  titles/pdftitles, abstract word counts under both counting methods
+  (main 235 wp / 245 audit-style; companion 246/248), keyword counts,
+  natbib/caption gates, 359-count agreement across manuscripts +
+  letters + links doc, cross-citation title alignment both
+  directions, F2/F3/F4/F5/F6 wording gates, no stale BMB/TAC/JTB
+  primary-venue claims, no stale package pointers.
+
+Stage Summary:
+- Latest versions: scripts/journal_manuscript_v20.tex (37 pp, PDF at
+  download/journal_manuscript_v20.pdf) + scripts/
+  companion_categorical_v13.tex (76 pp, PDF at download/
+  companion_categorical_v13.pdf) with their refs/bib files; all F1-F7
+  resolved (F1 count-refreshed, F2 qualifier added, F3 direct
+  statistic computed and reported, F4 qualifier, F5 three sites, F6
+  hedges + narrowed title, F7 moot); both papers DAM-aligned; every
+  theorem, proof, number, section, table, and figure unchanged.
+- Audit: audit_v30_numbers.py 359/359 PASS; v25 ZIPs fresh-dir
+  verified; consistency sweep 34/34 PASS.
+- Standing rules honored: new versions only (v19/v12 and all earlier
+  untouched; v19.pdf restored byte-exact); PAT one-off push URL,
+  never stored.

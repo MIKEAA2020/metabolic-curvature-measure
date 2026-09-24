@@ -1,13 +1,57 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-24 (V12 companion-comprehension round + v24
-package round: journal_manuscript_v19 (unchanged) +
-companion_categorical_v12; supersedes the V11 companion-alignment +
-v23 package round). All repository
+Generated 2026-09-24 (V20/V13 Discover Applied Mathematics round +
+v25 package round: journal_manuscript_v20 + companion_categorical_v13;
+supersedes the V12 companion-comprehension + v24 package round). All repository
 links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-24, V20/V13 DAM round + v25 package round,
+F1-F7 light touch-up + venue alignment): the causal-coherence and
+prose-alignment review (download/Causal_Coherence_and_Prose_Alignment_
+Evaluation.md, findings F1-F7) is applied on NEW versioned files --
+scripts/journal_manuscript_v20.tex (from v19; v19 and all earlier
+versions untouched, via scripts/v20_main_f_fixes.py) and
+scripts/companion_categorical_v13.tex (from v12; v12 and all earlier
+versions untouched, via scripts/v13_companion_edits.py), with the
+manuscripts retargeted to Discover Applied Mathematics (Springer
+Nature, link.springer.com/journal/44585). MAIN: F3 the direct
+per-gene trajectory rank correlation now reported in situ -- rho =
++0.92 (P1) and +0.96 (P2) over the 424 genes nonzero on both paths,
+computed from the deposited per-gene path artifacts (scripts/
+v20_f3_rank_stability.py -> download/deepseek_bridge/
+v20_path_rank_stability.json); F4 the intro Glivenko-Cantelli
+sentence gains the two-regime qualifier ("across random panels
+(designed panels reproduce them exactly)"); F5 three near-identity
+wordings corrected ("rank agreement"; "the two metrics agree to five
+decimals"; the Discussion's "measured metric agreement") since rho =
+0.99998 is agreement, not identity; F6 the translation-buffering
+mechanism hedged at the abstract and intro ("consistent with") and
+the title narrowed to the measured claim ("predicts transcriptional
+regulation"; the buffering dissociation stays a hedged,
+keyword-indexed finding); F1 the audit count refreshed to the v30
+ledger (359); F7 moot (the v19 restructure had removed the flagged
+site). COMPANION: F2 the six-axis abstract sentence now covers all
+three body categories ("...re-stratifying only at regime switches and
+nitrogen-source substitution"). VENUE (live-verified submission
+guidelines, re-verified this round): Snapp submission system;
+Research article; abstract less than 250 words (main 245, companion
+248); numeric square-bracket citations (natbib [numbers,sort&compress,
+square]) per "identified by numbers in square brackets"; "Fig. n"
+caption labels (labelsep=space, no punctuation after the number);
+single-anonymous review (author identity retained on both papers);
+companion keywords 9 -> 6 (Springer 4-6 range); cross-citation titles
+aligned both directions; reference list journal_manuscript_
+v20_dam_refs.tex (entries byte-identical). Every theorem, proof,
+number, section, table, and figure unchanged. VERIFIED:
+audit_v30_numbers.py 359/359 PASS (v29 ledger extended with the V20
+gates; first run caught 2 FAILs -- a third "metric invariance" site
+and the stale 349 count -- both fixed); tectonic main 37 pp /
+companion 76 pp, 0 errors / 0 '??'; v25 ZIPs
+(build_submission_zips_v25.sh) fresh-dir verified 37/76 pp; DAM
+cover letters written for both papers.
 
 Revision note (2026-09-24, V12 companion-comprehension + v24 package
 round, structural re-alignment of the companion): asked whether the
@@ -987,68 +1031,70 @@ undefined / 0 overfull.
 
 ---
 
-## Paper 1 (Main) — Bulletin of Mathematical Biology (Springer)
+## Paper 1 (Main) — Discover Applied Mathematics (Springer Nature)
 
 **Title:** A discrete curvature measure for flux balance analysis
-predicts transcriptional regulation and translational buffering in
-Escherichia coli (Original Research; 37 pp).
+predicts transcriptional regulation in Escherichia coli (Research
+Article; 37 pp).
 
-**Venue status (2026-09-23, V19 round):** JTB desk-rejected the v18
-submission on comprehensibility grounds (EIC: structure and intent
-hard to follow; AI-assisted formulation a barrier), so the paper was
-deeply restructured as v19 (plain title, bio-first abstract,
-question-led introduction, categorical subsection removed,
-refinement bridge to Appendix A, counts appendix folded into
-Methods) and retargeted to BMB, whose mathematical-biology
-readership matches the paper's formal content. BMB never received a
-previous submission of this manuscript, so this is a fresh first
-submission, not a resubmission. The package is venue-neutral and
-compiles identically for any Springer/Elsevier target. Fallback
-paths remain documented in download/V17_Venue_Evaluation.md (PLOS
-Comp Bio the biology-maximizing alternative, APC; Mathematical
-Biosciences the math-first alternative).
+**Venue status (2026-09-24, V20 round):** the target venue is now
+Discover Applied Mathematics (Springer Nature), per the author's
+venue decision. History: JTB desk-rejected the v18 submission on
+comprehensibility grounds; the paper was deeply restructured as v19
+(plain title, bio-first abstract, question-led introduction,
+categorical subsection removed, refinement bridge to Appendix A,
+counts appendix folded into Methods) and briefly retargeted to
+BMB (never submitted); the V20 round then applied the Discover
+Applied Mathematics submission guidelines (live-verified):
+Snapp submission system, Research article, abstract of less than
+250 words (245), numeric square-bracket citations, Fig. n caption
+labels, single-anonymous review. The v20 package has never been
+submitted to any journal. Fallback paths remain documented in
+download/V17_Venue_Evaluation.md.
 
 
-### Journal / submission-portal links (BMB links verified live in the
-### earlier BMB rounds; JTB links retained for history)
+### Journal / submission-portal links (DAM links live-verified this
+### round; BMB/JTB links retained for history)
 
 | Resource | Link |
 |---|---|
-| Journal home (Springer) | https://link.springer.com/journal/11538 |
-| Submission guidelines | https://link.springer.com/journal/11538/submission-guidelines |
-| Editorial Manager (code **bmab**) | https://www.editorialmanager.com/bmab/ |
+| Journal home (Springer Nature) | https://link.springer.com/journal/44585 |
+| Submission guidelines (live-verified: Snapp; abstract < 250; single-anonymous; numeric square-bracket citations) | https://link.springer.com/journal/44585/submission-guidelines |
+| BMB journal home (historical, v19 round) | https://link.springer.com/journal/11538 |
 | JTB Guide for Authors (historical, v18 round) | https://www.sciencedirect.com/journal/journal-of-theoretical-biology/publish/guide-for-authors |
 
-> Scope fit (from the live aims & scope): JTB is "the leading forum for
-> theoretical perspectives that give insight into biological processes";
-> papers must state the biological significance clearly, and Highlights
-> must feature the biological applications as well as theoretical
-> advancements -- the v18 package does both. Highly speculative or
-> purely-mathematical papers are out of scope; the manuscript's
-> genome-scale empirical association and named biology anchor it in
-> scope. The regulatory-FBA lineage precedent: Covert, Schilling &
-> Palsson, JTB 213:73-88, 2001.
+> Scope fit (Discover Applied Mathematics, from the live submission
+> guidelines, re-verified this round): submissions via Snapp; for
+> all article types the journal requires the manuscript file, an
+> abstract of less than 250 words, and a cover letter outlining the
+> research and why it is appropriate for the journal; article type
+> Research (new scientific results within the journal's scope);
+> single-anonymous peer review; numeric square-bracket citations
+> ("identified by numbers in square brackets e.g. [1-3, 7]");
+> figure captions beginning "Fig. n" with no punctuation after the
+> number; all articles published open access. The v20 package
+> carries every one of these elements (245-word abstract, six
+> keywords, numeric natbib mode, Fig.-label captions, CRediT +
+> declarations in the backmatter).
 >
-> Fallback path (BMB pre-submission inquiry): journal home
-> https://link.springer.com/journal/11538, submission guidelines
-> https://link.springer.com/journal/11538/submission-guidelines,
-> portal https://www.editorialmanager.com/bmab (code **bmab**, not
-> `jomb`). Review model single-blind; the v18 package compiles
-> identically for the Springer route.
+> Historical routes: BMB (Editorial Manager, code bmab) and JTB
+> (EditorialManager.com/JTB) -- both superseded by the DAM target;
+> the package is venue-neutral and compiles identically.
 
 ### Package files (GitHub)
 
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
-| **One-file upload ZIP (compile-ready, venue-neutral, BMB README)** | — | [download/submission_main_bmb.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_bmb.zip) |
+| **One-file upload ZIP (compile-ready, DAM README; fresh-dir verified 37 pp)** | — | [download/submission_main_dam.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_main_dam.zip) |
 | Highlights file (JTB-path history only; not part of the BMB package) | [download/highlights_jtb.docx](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/highlights_jtb.docx) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/highlights_jtb.docx) |
 | Venue evaluation (BMB resubmission analysis + recommendation + pre-submission inquiry draft) | [download/V17_Venue_Evaluation.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/V17_Venue_Evaluation.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/V17_Venue_Evaluation.md) |
-| Manuscript PDF (37 pp, v19 comprehension-restructure round: plain title, bio-first 243-word abstract, question-led introduction, categorical subsection removed, refinement bridge in Appendix A, counts folded into Methods; every v18 number unchanged, audit_v27 349/349; clickable email and ORCID; prior versions retained as separate files) | [download/journal_manuscript_v19.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v19.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v19.pdf) |
-| Cover letter -- BMB (primary, Original Research; declarations, companion disclosure, v19 title) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_bmb.md) |
+| Manuscript PDF (37 pp, v20 DAM round: the F1-F7 review findings applied as a light touch-up -- the direct trajectory rank correlation reported (rho = +0.92 P1 / +0.96 P2, 424 shared genes), the GC-rate two-regime qualifier, three near-identity wordings corrected, the translation-buffering mechanism hedged and the title narrowed to the measured claim; DAM alignment: numeric square-bracket citations, Fig.-label captions, 245-word abstract, 359-count refresh; every number unchanged, audit_v30 359/359; clickable email and ORCID; prior versions retained as separate files) | [download/journal_manuscript_v20.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/journal_manuscript_v20.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/journal_manuscript_v20.pdf) |
+| Cover letter -- DAM (primary, Research Article; declarations, companion disclosure, v20 title, 359/359 audit) | [download/cover_letter_dam.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_dam.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_dam.md) |
+| Cover letter -- BMB (historical, v19 round) | [download/cover_letter_bmb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_bmb.md) |
 | Cover letter -- JTB (historical, v18 round) | [download/cover_letter_jtb.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_jtb.md) |
-| LaTeX source | [scripts/journal_manuscript_v19.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v19.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v19.tex) |
-| Reference list (alphabetical, 29 entries -- kacser1973 + heinrich1974 added; v19 BMB naming) | [scripts/journal_manuscript_v19_bmb_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v19_bmb_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v19_bmb_refs.tex) |
-| BibTeX database | [scripts/journal_manuscript_v19_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v19_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v19_refs.bib) |
+| LaTeX source | [scripts/journal_manuscript_v20.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v20.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v20.tex) |
+| Reference list (alphabetical, 29 entries -- kacser1973 + heinrich1974 present; v20 DAM naming; the zai2026categorical cross-citation title aligned to the companion's actual title) | [scripts/journal_manuscript_v20_dam_refs.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v20_dam_refs.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v20_dam_refs.tex) |
+| BibTeX database | [scripts/journal_manuscript_v20_refs.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/journal_manuscript_v20_refs.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/journal_manuscript_v20_refs.bib) |
 | Reference-list generator (audit-checked) | [scripts/build_bmb_refs.py](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/build_bmb_refs.py) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/build_bmb_refs.py) |
 
 Figures (embedded in the PDF; source PNGs if the portal requests separate files):
@@ -1066,54 +1112,55 @@ Build note: for Overleaf or any standalone compiler, upload **the ZIP** (it
 contains the .tex, the input'ed reference list, the .bib database, and all
 six figures at the exact relative subpaths the .tex expects — verified to
 compile standalone, 37 pp, 0 errors). If instead you upload individual
-files, upload them together with `journal_manuscript_v19_bmb_refs.tex` and
+files, upload them together with `journal_manuscript_v20_dam_refs.tex` and
 the three figure subfolders (`m1_m3/`, `alexandrov_bridge/`,
 `association_robustness/`) so the paths resolve; the .tex searches both the
 upload directory and the repository layout
-(`\graphicspath{{./}{../download/}}`). The v19 package: 37 pp.
-Upload `journal_manuscript_v19_bmb_refs.tex` (not the v18 refs
+(`\graphicspath{{./}{../download/}}`). The v20 package: 37 pp.
+Upload `journal_manuscript_v20_dam_refs.tex` (not the v19 refs
 name) together with the .tex.
 
 ---
 
-## Paper 2 (Companion) — Theory and Applications of Categories
+## Paper 2 (Companion) — Discover Applied Mathematics (Springer Nature)
 
-**Title:** Stratified Connections, Optic Composition, and the Homotopy
-Fixed-Point Extension: A Categorical Framework for Viability-Weighted
-Curvature (Research Article; 75 pp current build; electronic-only, free — no author charges).
+**Title:** A Geometric and Category-Theoretic Theory of Viability: How
+Sequential Adaptations Induce Path-Dependent Risk (Research Article;
+76 pp).
 
-### Journal / submission links (all verified)
+### Journal / submission links (DAM links live-verified this round;
+### TAC links retained for history)
 
 | Resource | Link |
 |---|---|
-| Journal home | http://www.tac.mta.ca/tac/ |
-| Author information (format for submission) | http://www.tac.mta.ca/tac/authinfo.html |
-| Editorial board / general info | http://www.tac.mta.ca/tac/geninfo.html |
-| Managing Editor contact | tac@mta.ca |
-| Chosen Transmitting Editor | Prof. Michael Shulman, University of San Diego — shulman (at) sandiego.edu (verified on the live TAC board; HoTT/higher-category expertise) |
+| Journal home (Springer Nature) | https://link.springer.com/journal/44585 |
+| Submission guidelines (Snapp; abstract < 250; single-anonymous; numeric square-bracket citations) | https://link.springer.com/journal/44585/submission-guidelines |
+| TAC journal home (historical, v10-v12 rounds) | http://www.tac.mta.ca/tac/ |
+| TAC author information (historical) | http://www.tac.mta.ca/tac/authinfo.html |
 
-Submission route (from the official author information, fetched and verified):
-submit the article as **a PDF compiled from TeX source to any member of the
-Editorial Board except the Managing Editor or TeXnical editors**, copying
-every submission to the Managing Editor at **tac@mta.ca**; an article may be
-submitted to only one Editor; TeX source plus a compiled PDF are required
-only after acceptance. Review model: **not anonymized** -- the
-author information page (fetched and verified in full) contains no
-anonymization provisions, and submissions go by email to a named
-Editorial Board member, so the author identity is on the paper; TAC
-also asks that the final accepted source include keywords and an AMS
-2020 Subject Classification for external indexing (both now present
-below the abstract of the submitted PDF).
+Submission route (from the live DAM submission guidelines, re-verified
+this round): submissions are made using **Snapp**, the journal's
+manuscript tracking system; for all article types the journal requires
+the manuscript file, an abstract of less than 250 words, and a cover
+letter; article type **Research**. Review model: **single-anonymous**
+(reviewers know the author identity; the reviewer reports provided to
+authors are anonymous), so the author identity stays on the paper.
+Citations: numeric, square-bracket. All articles are published open
+access. The keywords and the AMS 2020 Subject Classification
+(18D05; 18N99; 92B05) are retained below the abstract. Historical
+route: the TAC email-to-board-member route (v10-v12 rounds),
+superseded by the DAM target.
 
 ### Package files (GitHub)
 
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
-| **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (76 pp; V12 companion-comprehension round -- abstract fragment repair, plan-of-the-paper paragraph mapping all sections with the two-sevens disambiguation, experiment-framing sentences in the two computational sections; every theorem, proof, and number unchanged from v11 (audit_v29 349/349); clickable email and ORCID; prior versions retained as separate files) | [download/companion_categorical_v12.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v12.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v12.pdf) |
-| Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
-| LaTeX source | [scripts/companion_categorical_v12.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v12.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v12.tex) |
-| BibTeX database (V12: byte-identical copy of the v11 database) | [scripts/companion_refs_v12.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v12.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v12.bib) |
+| **One-file upload ZIP (compile-ready, DAM README; fresh-dir verified 76 pp)** | — | [download/submission_companion_dam.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_dam.zip) |
+| Manuscript PDF (76 pp; V13 DAM round -- the review's F2 applied: the six-axis abstract sentence now covers all three body categories (regime switches and nitrogen-source substitution); DAM alignment: abstract 248 < 250 words, keywords 9 -> 6, numeric square-bracket citations, the zai2026measure cross-citation title aligned to the v20 application title; every theorem, proof, and number unchanged from v12 (audit_v30 359/359); clickable email and ORCID; prior versions retained as separate files) | [download/companion_categorical_v13.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v13.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v13.pdf) |
+| Cover letter -- DAM (primary, Research Article; declarations, application-paper disclosure, v13 title) | [download/cover_letter_dam_companion.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_dam_companion.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_dam_companion.md) |
+| Cover letter -- TAC (historical, v12 round) | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) |
+| LaTeX source | [scripts/companion_categorical_v13.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v13.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v13.tex) |
+| BibTeX database (V13: the zai2026measure title aligned to the v20 application title; otherwise byte-identical to the v12 database) | [scripts/companion_refs_v13.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v13.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v13.bib) |
 
 Figures (embedded in the PDF; source PNGs):
 
@@ -1148,8 +1195,25 @@ Figures (embedded in the PDF; source PNGs):
 
 ## Pre-submission checklist (already resolved / remaining)
 
-Resolved (V19 comprehension-restructure round, 2026-09-23, BMB
-target): the JTB desk-rejection diagnosis addressed -- plain single-
+Resolved (V20/V13 Discover Applied Mathematics round, 2026-09-24):
+the F1-F7 causal-coherence/prose-alignment findings applied on NEW
+versioned files (main v20 from v19, companion v13 from v12; the
+earlier versions untouched) -- F3 the direct per-gene trajectory
+rank correlation reported (rho = +0.92 P1 / +0.96 P2, 424 shared
+genes, computed from the deposited per-gene artifacts); F4 the
+two-regime GC qualifier; F5 three near-identity wordings corrected;
+F6 the translation-buffering mechanism hedged and the title
+narrowed; F1 the audit count refreshed (359); F7 moot; F2 the
+companion six-axis sentence completed (nitrogen-source
+substitution); DAM venue alignment on both manuscripts (numeric
+square-bracket citations, Fig.-label captions, abstracts 245/248
+< 250, companion keywords 6, cross-citation titles aligned both
+directions); audit_v30_numbers.py 359/359 PASS; tectonic 37/76 pp,
+0 errors / 0 '??'; v25 ZIPs (submission_main_dam.zip,
+submission_companion_dam.zip) fresh-dir verified; DAM cover
+letters for both papers. Earlier rounds resolved: the V19
+comprehension-restructure round, 2026-09-23 (then BMB target):
+the JTB desk-rejection diagnosis addressed -- plain single-
 claim title; bio-first 243-word abstract (Springer/BMB 150-250);
 6 keywords (BMB 4-6); three question-led introduction paragraphs;
 categorical subsection removed from the body; refinement bridge in
@@ -1182,17 +1246,18 @@ references, or strawman constructions in either paper; audit_v23 301/301
 PASS against journal_manuscript_v16.tex + companion_categorical_v10.tex;
 no-fee venue for both.
 
-Remaining at submission time: only the BMB Editorial Manager account
-(https://www.editorialmanager.com/bmab/, code bmab) -- then upload
-the manuscript ZIP contents (or the single PDF) and
-download/cover_letter_bmb.md as the cover letter. Fallback paths
-(PLOS Comp Bio, Mathematical Biosciences) remain documented in
-download/V17_Venue_Evaluation.md. Resolved this round: the cover-letter dates are filled
-(September 17, 2026, both letters) and the TAC receiving board member
-is selected -- Prof. Michael Shulman (University of San Diego), Transmitting
-Editor, with the submission emailed to her and copied to tac@mta.ca
-per TAC's author information (any Editorial Board member except the
-Managing Editor or TeXnical editors).
+Remaining at submission time: only the Snapp account (submissions to
+Discover Applied Mathematics are made via Snapp, the journal's
+manuscript tracking system; guidelines at
+https://link.springer.com/journal/44585/submission-guidelines) --
+then upload the manuscript file (the ZIP compiles standalone, or
+upload the single PDF), the abstract is in the manuscript, and use
+download/cover_letter_dam.md (main) /
+download/cover_letter_dam_companion.md (companion) as the cover
+letter. The historical routes (BMB Editorial Manager, TAC email
+submission with Prof. Shulman as Transmitting Editor) are
+superseded by the DAM target; fallback paths remain documented in
+download/V17_Venue_Evaluation.md.
 
 Repository rename COMPLETED (2026-09-03): the repository is now
 `metabolic-curvature-measure`; the URL string has been updated in both
