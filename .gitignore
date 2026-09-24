@@ -86,3 +86,7 @@ scripts/journal_manuscript_v19.log
 # v23 zip-build staging dirs
 scripts/overleaf_stage_v23/
 scripts/zipcheck_v23/
+
+# v24 zip-build staging dirs
+scripts/overleaf_stage_v24/
+scripts/zipcheck_v24/

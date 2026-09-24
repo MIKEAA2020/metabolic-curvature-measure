@@ -1,12 +1,52 @@
 # Submission Package Links — Two-Paper Package
 
-Generated 2026-09-24 (V11 companion-alignment round + v23 package
-round: journal_manuscript_v19 (unchanged) + companion_categorical_v11;
-supersedes the V19 comprehension-restructure + v22 package round). All repository
+Generated 2026-09-24 (V12 companion-comprehension round + v24
+package round: journal_manuscript_v19 (unchanged) +
+companion_categorical_v12; supersedes the V11 companion-alignment +
+v23 package round). All repository
 links follow
 the repo/blob/main pattern verified live in the 2026-09-03 pass; journal
 links verified against the official journal or society pages. Repository
 is public, so every link is directly accessible.
+
+Revision note (2026-09-24, V12 companion-comprehension + v24 package
+round, structural re-alignment of the companion): asked whether the
+companion merits the same structural re-alignment the main paper
+received after the JTB desk rejection, the diagnosis found four
+defects of the same family (structure/intent/comprehension) and fixed
+them on a NEW versioned file -- scripts/companion_categorical_v12.tex
+(from v11; v11 and all earlier versions untouched) via
+scripts/companion_v12_structure.py: (1) abstract fragment repair --
+the opening sentence was a grammatical fragment ("When adaptive
+systems navigate fluctuating environments, constantly adjusting
+their internal strategies to remain viable." -- no main verb), the
+pillar enumeration opened telegraphically ("Four pillars."), and
+pillar (iv) ended in a fragment ("... proof-sketch status marked.");
+two 40+-word semicolon run-ons were split and the vague gloss
+"measuring the accumulation through policy holonomy" was made
+explicit ("the viability loss a closed loop accumulates through
+policy holonomy"); 264 words, under the 265 audit cap, with the
+six-axis sentence and every audited token intact. (2) A
+plan-of-the-paper paragraph was added at the end of the introduction
+(the landmark-digest principle: end of introduction = one paragraph
+describing what each section does) -- it maps all fourteen sections
+and disambiguates the paper's two colliding "sevens" (the seven
+forward maps typed as optics in the composition theorem vs the seven
+claims A-G of the falsification hierarchy), which the contributions
+list left unmapped (it covered only 7 of 13 content sections). (3)
+One experiment-framing sentence in each computational section
+(verdicts; network battery) stating why experiments appear in a
+theory paper: each claim is quantitative, so its refutation is a
+terminating computation. Deliberately NOT changed: section order
+(theory -> composition -> verification -> extensions -> benchmarks is
+logical, and reordering 76 pp with ~200 cross-references is high risk
+for low gain), titles, theorems, proofs, numbers, proof-status
+conventions, and the problem/obstruction/solution introduction
+(already reader-oriented from the v6-v10 rounds). VERIFIED:
+audit_v29_numbers.py 349/349 PASS (identical check set, companion
+retargeted to v12); pattern_sweep_v16 16/16 clean; tectonic 76 pp,
+0 errors / 0 '??'; v24 ZIPs (build_submission_zips_v24.sh) fresh-dir
+verified 37/76 pp; main v19 UNCHANGED.
 
 Revision note (2026-09-24, V11 companion-alignment + v23 package round,
 delegation of the removed categorical subsection): the categorical
@@ -1070,10 +1110,10 @@ below the abstract of the submitted PDF).
 | Item | View (blob) | Direct download (raw) |
 |---|---|---|
 | **One-file upload ZIP (compile-ready)** | — | [download/submission_companion_tac.zip](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/submission_companion_tac.zip) |
-| Manuscript PDF (76 pp; V11 companion-alignment round -- two cross-paper sentences updated to the v19 division of labor (the application paper is written in measure-theoretic terms alone and carries the relation as a Discussion-level pointer; the categorical definitions and the active-atom bridge are stated here alone); every theorem, proof, and number unchanged from v10 (audit_v28 349/349); clickable email and ORCID; prior versions retained as separate files) | [download/companion_categorical_v11.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v11.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v11.pdf) |
+| Manuscript PDF (76 pp; V12 companion-comprehension round -- abstract fragment repair, plan-of-the-paper paragraph mapping all sections with the two-sevens disambiguation, experiment-framing sentences in the two computational sections; every theorem, proof, and number unchanged from v11 (audit_v29 349/349); clickable email and ORCID; prior versions retained as separate files) | [download/companion_categorical_v12.pdf](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/companion_categorical_v12.pdf) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/companion_categorical_v12.pdf) |
 | Cover letter | [download/cover_letter_tac.md](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/download/cover_letter_tac.md) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/download/cover_letter_tac.md) |
-| LaTeX source | [scripts/companion_categorical_v11.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v11.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v11.tex) |
-| BibTeX database (V11: byte-identical copy of the v10 database; fixes this table's stale v9 pointer) | [scripts/companion_refs_v11.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v11.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v11.bib) |
+| LaTeX source | [scripts/companion_categorical_v12.tex](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_categorical_v12.tex) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_categorical_v12.tex) |
+| BibTeX database (V12: byte-identical copy of the v11 database) | [scripts/companion_refs_v12.bib](https://github.com/MIKEAA2020/metabolic-curvature-measure/blob/main/scripts/companion_refs_v12.bib) | [raw](https://raw.githubusercontent.com/MIKEAA2020/metabolic-curvature-measure/main/scripts/companion_refs_v12.bib) |
 
 Figures (embedded in the PDF; source PNGs):
 
@@ -1123,11 +1163,15 @@ companion V11 alignment round: the removed categorical subsection
 delegated to the companion, both papers now describing the same
 division of labor (no appendix / no supplementary in the main);
 cover letters retargeted (TAC: v19 title + file pointer; BMB:
-companion v11 file pointer); audit_v28_numbers.py 349/349 PASS
-(identical check set to v27, companion retargeted to v11);
+companion v11 file pointer); companion V12 comprehension round:
+abstract fragment repair, plan-of-the-paper paragraph (all
+sections mapped, two sevens disambiguated), experiment-framing
+sentences in the two computational sections -- section order,
+theorems, proofs, and numbers untouched; audit_v29_numbers.py
+349/349 PASS (identical check set, companion retargeted to v12);
 pattern_sweep_v16 16/16; verify_v19_completeness ALL COMPLETE;
 tectonic main 37 pp / companion 76 pp, 0 errors / 0 '??';
-v23 ZIPs fresh-dir verified 37/76 pp. Earlier
+v24 ZIPs fresh-dir verified 37/76 pp. Earlier
 rounds resolved: self-contained TAC companion (no v21 pointers,
 proof statuses labeled, keywords + AMS 2020 MSC, brief declarations, cover
 letter); zero cross-paper verbatim prose overlap; author metadata (Amin

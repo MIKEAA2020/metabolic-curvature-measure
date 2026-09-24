@@ -7903,3 +7903,77 @@ Stage Summary:
   checks PASS; v23 ZIPs fresh-dir verified.
 - Standing rules honored: new versions only (v10/v19 and all earlier
   untouched); commit + push with the one-off PAT URL next.
+
+---
+Task ID: companion-comprehension-v12
+Agent: main (Super Z)
+Task: User asked whether the companion paper merits structural
+re-alignment similar to the main paper's v19 comprehension restructure
+(clarifying intent, presentation, structure, flow, for clarity and human
+understanding). Diagnose, decide, implement as a new version, verify,
+package, push.
+
+Work Log:
+- Diagnosis (evidence-based, calibrated against the landmark style
+  digest and the TAC exemplars Baez-Stay/Baez-Fong/Leinster): the
+  companion's introduction (problem/obstruction/solution), glossed
+  preliminaries, section leads, and proof-status conventions are
+  already reader-oriented (v6-v10 rounds) -- it does NOT need the
+  bio-first inversion the main paper needed (different audience,
+  different genre). Four defects of the same family remain:
+  (1) the abstract opened with a grammatical fragment ("When adaptive
+  systems navigate ... to remain viable." -- no main verb), a
+  telegraphic "Four pillars.", a fragment ending pillar (iv), two
+  40+-word run-ons, and a vague gloss ("measuring the accumulation
+  through policy holonomy"); (2) no plan-of-the-paper paragraph -- 14
+  sections / 76 pp with the contributions list mapping only 7 of 13
+  content sections (hierarchy, verdicts, smooth envelope, terminal
+  coalgebra, network battery unmapped); (3) two colliding "sevens"
+  (seven optic bridges vs seven hierarchy claims A-G) never
+  disambiguated; (4) two computational sections in a theory paper
+  without framing of why experiments belong there.
+- Built companion_categorical_v12.tex (NEW file; v11 untouched) via
+  scripts/companion_v12_structure.py: abstract full-block repair (264
+  words < 265 cap; six-axis sentence and every audited token intact;
+  first run hit 267 words -- trimmed to cap; first rewrap split the
+  contiguous "robust across six axes" audit token -- rewrapped);
+  plan-of-the-paper paragraph after Status conventions (maps all
+  fourteen sections, in document order, with the two-sevens
+  disambiguation); experiment-framing sentence in sec:verdicts
+  ("computations, not observations: each claim is quantitative, so
+  its refutation is a terminating computation...") and
+  sec:network-battery ("the evidence is computational: the test is a
+  terminating algorithm, exercised on designed networks and anchored
+  against one external dataset"); companion_refs_v12.bib
+  byte-identical.
+- Deliberately unchanged: section order (logical: core theory ->
+  composition -> verification -> extensions -> benchmarks; reordering
+  76 pp with ~200 cross-references is high risk for low gain),
+  titles, theorems, proofs, numbers, proof-status conventions.
+- VERIFIED: tectonic 76 pp, 0 errors, 0 '??'; audit_v29_numbers.py
+  (v28 copy, companion retargeted) 349/349 PASS after the rewrap fix;
+  pattern_sweep_v16 16/16 clean; the plan paragraph and both framing
+  sentences confirmed present in the compiled PDF text.
+- v24 package (build_submission_zips_v24.sh, modeled on v23): both
+  ZIPs rebuilt, fresh-dir standalone compiles re-verified 37/76 pp;
+  download/companion_categorical_v12.pdf added.
+- Links doc (update_links_doc_v24.py): generation header, newest-first
+  V12 revision note with the full diagnosis, companion rows -> v12,
+  checklist updated (audit_v29, v24 ZIPs).
+- BMB cover letter companion file pointer -> v12. TAC letter needed no
+  change (its four-layer description remains accurate; date current).
+- Environment note: container reset again mid-session (checkout
+  reverted to b851ffe; resynced to origin/main 50fc130; cobra
+  reinstalled for the audit).
+
+Stage Summary:
+- Verdict: yes -- a targeted structural re-alignment (abstract
+  fragment repair + plan-of-the-paper + experiment framing), NOT the
+  main paper's bio-first inversion; the companion's genre and audience
+  differ and its narrative infrastructure was already sound.
+- companion_categorical_v12.tex (76 pp) is the current companion;
+  main v19 unchanged; all 349 numerical checks PASS; v24 ZIPs
+  fresh-dir verified; both papers now carry comprehension-first
+  structure.
+- Standing rules honored: new versions only (v11/v19 and all earlier
+  untouched); commit + push with the one-off PAT URL next.
